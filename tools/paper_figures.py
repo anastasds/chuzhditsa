@@ -165,7 +165,7 @@ def fig3():
     save(img, "fig3_joints.png")
 
 def fig4():
-    img, d = canvas(1460, 1000)
+    img, d = canvas(1640, 1000)
     a700 = dict(adv=660, strokes=[("L",70,0,330,700),("L",330,700,590,0),("L",190,230,470,230)])
     e350 = dict(adv=620, strokes=[("L",500,700,160,700),("L",160,700,160,0),("L",160,0,500,0),("L",160,350,430,350)])
     ring0 = [bf.ccw(bf.circle_pts(400,350,305+45)), bf.ccw(bf.circle_pts(400,350,305-45))[::-1]]
@@ -178,12 +178,12 @@ def fig4():
     ]
     for r, row in enumerate(rows):
         base = 400 + r*460
-        rule(d, base, 40, 1420); rule(d, base-700*SC, 40, 1420)
+        rule(d, base, 40, 1600); rule(d, base-700*SC, 40, 1600)
         x = 90
         for cs, name in row:
             draw_contours(d, cs, x, base, SC)
             label(d, x+30, base+30, name)
-            x += 350
+            x += 390
     save(img, "fig4_optical.png")
 
 def fig5():
