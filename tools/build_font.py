@@ -63,7 +63,7 @@ G = {
 "zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,390,126),(L,590,700,330,390,126),(L,70,0,330,310,126),(L,590,0,330,310,126)]),
 "z": dict(adv=640, strokes=[(A,282,530,175,128,-70.15),(A,282,185,190,88,-110)]),
 "i": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700)]),
-"ibr": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(A,330,930,130,205,335)]),
+"ibr": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(A,330,955,130,205,335)]),
 # both arms end at one shared point buried in the stem band -> they chain
 # into a single mitered > and the junction is covered by the stem
 "k": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,168,360),(L,500,0,168,360)]),
@@ -90,7 +90,7 @@ G = {
 "yu": dict(adv=720, strokes=[(L,130,0,130,700),(L,130,350,270,350),(R,455,350,185)]),
 "ya": dict(adv=660, strokes=[(L,500,0,500,700),(R,325,533,175),(L,430,360,160,0)]),
 # -- extensions --------------------------------------------------------------
-"ubr": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(A,330,930,130,205,335)]),
+"ubr": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(A,330,955,130,205,335)]),
 # S spine: two tangent circles (r1+r2 spans cap height exactly), junction at
 # (335,370) shared by both arcs -> they chain into one smooth stroke
 "dz": dict(adv=640, strokes=[(A,335,540,165,40,270),(A,335,185,190,90,-140)]),
@@ -164,6 +164,11 @@ CASED = [n for n in G if n not in
 SX, SY = 0.72, 500/700  # x-height 500
 
 def lc_pt(x, y):
+    if y > 560:
+        # marks above the letter keep their ABSOLUTE clearance: scaling
+        # them by 5/7 leaves Bold dots 3 units off the lowercase (cap 700
+        # -> x-height 500, so high coordinates shift down by the same 200)
+        return (round(x*SX), round(y) - 200)
     return (round(x*SX), round(y*SY) if y >= 0 else round(y))
 
 def lc_glyph(gdef):
@@ -494,14 +499,22 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
                  if s[0] == L and s[2] == s[4]} | \
                 {(round(s[3]), round(s[4])) for s in gdef["strokes"]
                  if s[0] == L and s[2] == s[4]}
+    rings = [(s[1], s[2], s[3]) for s in gdef["strokes"] if s[0] == R]
     def cap_line_extend(x, y, weff):
         """y=700 (caps) / y=500 (x-height) endpoints are INK lines, but a
         butt-capped stroke ends exactly at its endpoint while a bar through
         the same y makes ink to y+w/2: stems next to bars read 45 units
-        short. Free stem tops therefore rise by w/2 to the same ink line."""
-        if y in (700, 500) and (round(x), round(y)) not in hbar_ends:
-            return y + weff/2.0
-        return y
+        short. Free stem tops therefore rise by w/2 to the same ink line.
+        Not when a bar shares the endpoint (its band makes the ink), and
+        not when the endpoint sits inside a ring's band — the bowl of В is
+        the silhouette there, and an extended stem pokes past it, notching
+        the shoulder."""
+        if y not in (700, 500) or (round(x), round(y)) in hbar_ends:
+            return y
+        for (rx, ry, rr) in rings:
+            if abs(math.hypot(x-rx, y-ry) - rr) <= weff/2.0 + 15:
+                return y
+        return y + weff/2.0
     for st in gdef["strokes"]:
         kind = st[0]
         if kind == L:
