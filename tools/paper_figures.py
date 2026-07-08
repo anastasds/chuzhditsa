@@ -11,7 +11,7 @@ os.makedirs(FIG, exist_ok=True)
 S = 2  # supersample
 
 try:
-    LABEL = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 26*S)
+    LABEL = ImageFont.truetype("/System/Library/Fonts/Helvetica.ttc", 22*S)
 except Exception:
     LABEL = ImageFont.load_default()
 
@@ -316,7 +316,7 @@ def fig11():
         r = 8*S
         cxp, cyp = (ox+apex[0]*sc)*S, (oy-apex[1]*sc)*S
         d.ellipse([cxp-r,cyp-r,cxp+r,cyp+r], outline=color, width=S)
-    label(d, 60, 460, "offset sides; miter point outside, exact intersection inside")
+    label(d, 60, 460, "offset sides: outer miter, inner exact")
     # (b) folded outline under even-odd
     m = [(90,0),(90,700),(330,270),(570,700),(570,0)]
     folded = offset_fold(m, 45)
@@ -352,9 +352,10 @@ def fig13():
         oy = 230 + (i // 2)*290
         for g in parts:
             draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, oy, 0.26)
-            ox += bf.G[g]["adv"]*0.26 + 12
-        draw_contours(d, bf.glyph_contours(bf.G["arrow"], 90, 50, 0), ox, oy-60, 0.26)
-        ox += bf.G["arrow"]["adv"]*0.26 + 12
+            ox += bf.G[g]["adv"]*0.26 + 10
+        ox += 16
+        draw_contours(d, bf.glyph_contours(bf.G["arrow"], 90, 50, 0), ox, oy+13, 0.26)
+        ox += bf.G["arrow"]["adv"]*0.26 + 26
         draw_contours(d, bf.glyph_contours(bf.G[fused], 90, 50, 0), ox, oy, 0.26)
     label(d, 90, 555, "the GSUB fusion inventory: нь, ль, ьѧ, ьѫ — sequence in, silhouette out")
     save(img, "fig13_fusions.png")
@@ -375,12 +376,12 @@ def unclamped_contours(gdef, w):
     return cs
 
 def fig14():
-    img, d = canvas(1460, 700)
+    img, d = canvas(1460, 1240)
     glyphs = ["lc.ubr", "lc.dz", "lc.v"]
     for row, (fn, name) in enumerate([(unclamped_contours, "Bold stroke uncapped: small arcs and bowls clog"),
                                       (lambda g,w: bf.glyph_contours(g, w, 66, 0), "stroke clamped to 0.85 of local radius")]):
-        ox, oy = 140, 250 + row*330
-        label(d, 140, oy+92, name)
+        ox, oy = 160, 470 + row*580
+        label(d, 160, oy+96, name)
         for gname in glyphs:
             g = bf.G[gname]
             draw_contours(d, fn(g, 150), ox, oy, 0.4)
@@ -419,7 +420,7 @@ def fig16():
     y = 40
     for size in (64, 44, 32, 24, 18, 13):
         f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "Chuzhditsa-Regular.ttf"), size)
-        d.text((50, y), f"{size}  Прекарахме ўӣкенда в Мӱнхен с Һӓри: ўиски, џаз и един ҫрилър.", font=f, fill="black")
+        d.text((50, y), f"{size}  Прекарахме ўӣкенда в Мӱнхен с Һӓри: ўиски и џаз.", font=f, fill="black")
         y += size + 24
     img.save(os.path.join(FIG, "fig16_waterfall.png"))
     print("fig16_waterfall.png")

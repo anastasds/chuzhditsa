@@ -43,7 +43,7 @@ The idea is old. Knuth proposed in 1982 that a typeface could be a program whose
 
 There was also a practical reason to build rather than draw. The companion paper describes Chuzhditsa's function: a loanword register for pan-Slavic Cyrillic whose extension letters are derived by a featural grammar — one diacritic, one phonetic feature. A writing system whose \emph{letters} are rule-derived invites a typeface whose \emph{glyphs} are rule-derived; the two grammars mirror each other, and several orthographic rules (ligature fusion, mark anchoring) exist in the font as executable code rather than prose. The font is not an illustration of the spec. In the operational sense, it \emph{is} the spec.
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig1_stroke_model.png}
+\includegraphics[width=1.00\linewidth]{figures/fig1_stroke_model.png}
 \caption{The stroke model. Left: the declared skeleton of \cz{б} — two line strokes (endpoints marked) and one ring. Right: the same declaration evaluated at $w=90$, $w=150$, and $12°$ slant. Nothing between the panels was drawn.}\label{fig:stroke}
 \end{figure}
 
@@ -62,7 +62,7 @@ The entire artwork of a letter is a line of Python. Here is \cz{б}, in full:
 
 \noindent Everything else the reader sees in Figure~\ref{fig:stroke} — the weight, the crisp corner where stem meets arm, the open counter in the Bold, the slope of the Italic — is the engine's doing, not the declaration's. The primitive vocabulary is deliberately small — line, arc, ring, dot — because every primitive is a maintenance contract. A ring is not ``a circle the designer drew'' but a promise that bowls will respond as a class to any future correction: when Bold needed open counters, one clamp (stroke may not exceed $0.85r$) repaired every bowl in the family at once; when the big rounds needed optical narrowing, one factor did the same. This is the practical content of the parametric claim, and it is worth stating against the romance of the drawn glyph: in a 26-letter extension set serving thirty-plus orthographies, corrections that do not generalize do not get made. Bigelow and Holmes reported the same economics from the first large Unicode face: coherence across thousands of glyphs is the product of harmonization — ``basic weights and alignments\ldots regularized and tuned to work together'' — because glyph-by-glyph invention does not fit inside a designer's working life (Bigelow \& Holmes 1993).
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig6_italic.png}
+\includegraphics[width=1.00\linewidth]{figures/fig6_italic.png}
 \caption{Two ways to make an italic \cz{О}. Left: shearing the finished outline modulates the ring's own thickness. Right: shearing the centerline and sweeping an unsheared disc preserves constant perpendicular weight — the pen's behavior, recovered arithmetically.}\label{fig:italic}
 \end{figure}
 
@@ -82,7 +82,7 @@ The first complete build of Chuzhditsa was, in the frank words of its commission
 \subsection{Terminals: the marker-pen effect}
 The naive stroke sweep caps every terminal with a semicircle — the mark of a felt-tip, not a punch. The remedy is the butt cap, perpendicular to the stroke; and for straight diagonals meeting the baseline or cap line, a further convention from the drawing office: the terminal is cut \emph{horizontally}, so that \cz{Л А Д} stand on flat feet rather than teetering on angled ones (Figure~\ref{fig:terminals}). Curves keep perpendicular terminals (\cz{с є э}) — a horizontal cut mid-arc would be a wound, not a foot. The discrimination is done by the engine, not the designer: a terminal is cut flat when its stroke is straight, longer than a threshold, and steeper than $\sim$19° — three predicates that encode, crudely but adequately, the difference between a stem and a serifless flourish.
 \begin{figure}[ht]\centering
-\includegraphics[width=0.9\linewidth]{figures/fig2_terminals.png}
+\includegraphics[width=1.00\linewidth]{figures/fig2_terminals.png}
 \caption{Three terminal policies on \cz{Л}. Round caps read as marker pen; perpendicular butt caps stand the letter on angled feet; the horizontal cut plants it. The apex keeps its miter throughout — a point may pierce the cap line; a letter should not balance on one.}\label{fig:terminals}
 \end{figure}
 
@@ -92,7 +92,7 @@ Strokes that merely overlap produce lumps where a corner should be. The engine t
 
 The join arithmetic deserves to be written down, because it is where every stroke-model implementation we know of has stumbled at least once. At an interior vertex the two segments' offset lines are intersected; on the \emph{convex} side the intersection (the miter) is accepted up to a limit of three stroke-widths, past which the corner is beveled — Futura-sharp apexes below the limit, honest flats beyond it. On the \emph{concave} side the intersection must be accepted \emph{unconditionally}: it always exists and always lies near the corner, and the tempting shortcut of beveling both sides folds the outline over itself (Figure~\ref{fig:anatomy}). The fold is the treacherous kind of wrong: nonzero-winding rasterizers cancel it silently, and only an even-odd consumer — a naive SVG export, a diagnostic renderer — exposes the white slit that was there all along.
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig11_join_anatomy.png}
+\includegraphics[width=1.00\linewidth]{figures/fig11_join_anatomy.png}
 \caption{Join arithmetic. Left: centerline with both offset sides; the outer intersection is the miter, the inner one is mandatory. Center: bevel wrongly applied to the concave side folds the outline — under even-odd filling, \cz{М} opens white seams. Right: the exact concave intersection.}\label{fig:anatomy}
 \end{figure}
 
@@ -106,14 +106,14 @@ The join arithmetic deserves to be written down, because it is where every strok
 Outlines here are dense polygons rather than Béziers, which is harmless — at 96--128 samples a ring is optically indistinguishable from a true circle — until it isn't: early builds sampled arcs at 8° and the facets were visible at display sizes. Sampling is now proportional to radius. The general moral is the one Bigelow and Holmes drew from the first large Unicode face: at character-set scale, quality lives in systematic policy — harmonized weights and alignments across whole scripts — not in heroic per-glyph exceptions (Bigelow \& Holmes 1993).
 
 \subsection{Color: bold is not thick regular}
-A Bold whose advances do not widen is a Regular that gained weight and kept its trousers: with stroke 150 in slots spaced for stroke 90, bold \cz{о}s overlapped outright. The Bold therefore widens every advance by the weight delta and re-centers each glyph; counters are protected by clamping stroke weight against curvature (a ring of radius $r$ carries at most $0.85r$ of stroke), which is the programmatic form of the punchcutter's counter-first discipline (Smeijers 1996). The clamp earns its keep at the small end of the curvature range: a Bold breve is an arc of radius 130 units asked to carry a 150-unit stroke — more ink than circle — and without the clamp it ships as a blob, as do the bowls of \cz{ѕ} and \cz{в} (Figure~\ref{fig:clamp}). The stroke narrows to what the curve can hold; nobody notices, which is the intended outcome.
+A Bold whose advances do not widen is a Regular that gained weight and kept its trousers: with stroke 150 in slots spaced for stroke 90, adjacent bold \cz{о} \cz{о} overlapped outright. The Bold therefore widens every advance by the weight delta and re-centers each glyph; counters are protected by clamping stroke weight against curvature (a ring of radius $r$ carries at most $0.85r$ of stroke), which is the programmatic form of the punchcutter's counter-first discipline (Smeijers 1996). The clamp earns its keep at the small end of the curvature range: a Bold breve is an arc of radius 130 units asked to carry a 150-unit stroke — more ink than circle — and without the clamp it ships as a blob, as do the bowls of \cz{ѕ} and \cz{в} (Figure~\ref{fig:clamp}). The stroke narrows to what the curve can hold; nobody notices, which is the intended outcome.
 \begin{figure}[ht]\centering
-\includegraphics[width=0.72\linewidth]{figures/fig14_clamp.png}
+\includegraphics[width=0.60\linewidth]{figures/fig14_clamp.png}
 \caption{Curvature-clamped weight. Above: Bold's full 150-unit stroke applied to the breve of \cz{ў} and the bowls of \cz{ѕ в} clogs them shut. Below: stroke clamped to $0.85r$ — the counters breathe, the weight reads unchanged.}\label{fig:clamp}
 \end{figure}
  The result can be stated as a rule of thumb the authors have not seen printed: \emph{in a parametric monoline, weight is a property of the page color, but advance width is a property of the counter} (Figure~\ref{fig:bold}).
 \begin{figure}[ht]\centering
-\includegraphics[width=0.85\linewidth]{figures/fig5_bold_color.png}
+\includegraphics[width=0.93\linewidth]{figures/fig5_bold_color.png}
 \caption{The same word, Bold strokes. Above: on Regular advances, the letters weld. Below: advances widened by the weight delta and glyphs re-centered — the counters, inner and outer, survive the weight.}\label{fig:bold}
 \end{figure}
 
@@ -155,7 +155,7 @@ curve sampling & $\min(128, \max(48, r))$ pts & arc sampling & one point per 2.5
 \label{tab:params}
 \end{table}
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig4_optical.png}
+\includegraphics[width=1.00\linewidth]{figures/fig4_optical.png}
 \caption{The optical canon, one variable at a time, on ruled cap and base lines. Flush versus overshot rounds; apex at the cap line versus pierced through it; crossbar at the geometric versus optical center; a true circle versus the shipped 96.5\% width.}\label{fig:optical}
 \end{figure}
  What the parametric build changes is not the eye's authority but the cost of obeying it: a correction, once found, is a line of arithmetic applied uniformly to every present and future glyph — including the twenty-six extension letters that are this face's reason to exist.
@@ -164,12 +164,12 @@ curve sampling & $\min(128, \max(48, r))$ pts & arc sampling & one point per 2.5
 
 Tracy's dictum that the fitting of letters is ``fundamental to the success of a type design'' (Tracy 1986: 71) survives translation into a parametric setting with interest: in this project, roughly half of the perceived quality gains came from decisions about white. The face carries a coarse spacing system of the classical kind — straight-sided letters hold larger sidebearings, round and open forms sit tighter, with the rounds' overshoot supplying part of their fitting — and a deliberately shallow class-kerning layer: flag-topped letters (\cz{г т ғ}) against open diagonals (\cz{а л д}), diagonals against \cz{у}-forms, letters into low punctuation. Kerning was kept shallow on principle: deep pair lists are where parametric discipline goes to die, since every pair is a hand-set exception to the system. Where a class rule could not fix a combination, we treated the collision as evidence about the \emph{glyphs} — usually a sidebearing wrong on one side — and repaired the letter, not the pair. Figure~\ref{fig:fitting} shows the mechanics: advance boxes with their shaded sidebearings — straights carrying about 115 units of air, rounds only 14 plus their overshoot, open diagonals in between — and the one kern class a reader will most often exercise, flag-topped letters over open diagonals. The single largest fitting decision has already been described: Bold's advances widen with its weight, which is a spacing rule wearing a weight rule's clothing. Figures and punctuation live inside the same system and the same vocabulary — the zero is a ring, the guillemets are chained diagonals, the question mark is an arc with a dot (Figure~\ref{fig:digits}).
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig15_fitting.png}
+\includegraphics[width=0.88\linewidth]{figures/fig15_fitting.png}
 \caption{Fitting. Left: advance boxes and sidebearings for a straight, a round, and a diagonal letter — the classical hierarchy of white. Right: \cz{ГА} at raw advances and under the $-$55 class kern.}\label{fig:fitting}
 \end{figure}
 
 \begin{figure}[ht]\centering
-\includegraphics[width=0.85\linewidth]{figures/fig17_digits.png}
+\includegraphics[width=0.97\linewidth]{figures/fig17_digits.png}
 \caption{Figures and punctuation from the same four primitives. Tabular-ish digits, guillemets, dashes, the interpunct that doubles as the specimen's separator.}\label{fig:digits}
 \end{figure}
 
@@ -177,7 +177,7 @@ Tracy's dictum that the fitting of letters is ``fundamental to the success of a 
 The two-case architecture is likewise a spacing story as much as a shape story (Figure~\ref{fig:cases}). Lowercase is derived from the capital skeletons at $x$-height $500/700$, with descenders retained at full depth and marks re-seated; four letters — \cz{а б р ф} — refuse derivation and carry custom constructions, because their lowercase identities (bowl-and-stem, ascender, descender) are lexical facts of Cyrillic, not scalings. The 0.72 horizontal factor was chosen so that derived lowercase keeps the capitals' stroke weight without reading condensed: scale a skeleton, never a stroke.
 
 \begin{figure}[ht]\centering
-\includegraphics[width=0.95\linewidth]{figures/fig10_cases.png}
+\includegraphics[width=1.00\linewidth]{figures/fig10_cases.png}
 \caption{Case pairs. \cz{а б р ф} are constructed, not scaled — bowl-and-stem, ascender, descender — while the remaining lowercase derives from the capital skeletons with descenders kept at full depth.}\label{fig:cases}
 \end{figure}
 
@@ -187,24 +187,24 @@ Three properties make Chuzhditsa's binaries the operative specification of the w
 
 A quieter class of engineering hides in the character map. Unicode normalization composes е+grave into the precomposed ѐ (U+0450) and и+grave into ѝ (U+045D); a font that lacks those codepoints watches browsers silently substitute a fallback face for exactly those letters, defeating the register that is the whole point. The cmap therefore covers the NFC closure of every sequence the orthography can produce, and the palochka ligatures accept the caseless Ӏ (U+04C0) beside lowercase letters, because that is how Caucasian orthographies actually type it.
 \begin{figure}[ht]\centering
-\includegraphics[width=0.8\linewidth]{figures/fig12_lookup_order.png}
+\includegraphics[width=0.61\linewidth]{figures/fig12_lookup_order.png}
 \caption{Lookup order as orthographic law. Above: soft-sign fusion first — л+ь fuse, stranding the big yus; the spelling лѭ cannot be typed. Below: the shipped order — yus fusion first.}\label{fig:order}
 \end{figure}
 
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig13_fusions.png}
+\includegraphics[width=1.00\linewidth]{figures/fig13_fusions.png}
 \caption{The GSUB fusion inventory: нь and ль into their Vuk-style fused forms; soft sign plus nasal into the medieval iotated yuses. Sequence in, silhouette out; the components' separate identities do not survive, by design.}\label{fig:fusions}
 \end{figure}
  Second, \emph{mark law}: every combining mark carries computed GPOS anchors — the macron of \cz{а̄} attaches 251 units lower than that of \cz{А̄}; the retroflex hook of \cz{т̢} lands on the stem, not the visual center — so that the spec's statement ``the hook attaches to the working stem'' is not a description of intent but a checkable property of the artifact (Figure~\ref{fig:anchors}).
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig8_anchors.png}
+\includegraphics[width=1.00\linewidth]{figures/fig8_anchors.png}
 \caption{One mark, many computed homes. The macron seats at cap height on \cz{А}, at $x$-height on \cz{а}, above the baked-in dots of \cz{ӧ}; the retroflex hook finds the stem of \cz{т} in either case. No anchor was placed by hand.}\label{fig:anchors}
 \end{figure}
  Third, \emph{verification culture}: the build is proofed by shaping with HarfBuzz and rendering through FreeType, the same code paths as deployment, after the even-odd episode of §4.2 taught us that a proof renderer can lie in both directions.
 
 One design decision deserves its failure story told straight. The ejective digraphs (\cz{тӀ кӀ цӀ}) were first fused with a full-height palochka, on the reasonable ground that the palochka \emph{is} full-height. The result read as \cz{п}. The shipping form raises the palochka to the upper half — echoing the apostrophe of scholarly romanization — and the standalone letter keeps its full height. The lesson generalizes: in ligature design, the components' identities matter less than the fusion's silhouette, because the reader receives only the silhouette (Figure~\ref{fig:liga}).
 \begin{figure}[ht]\centering
-\includegraphics[width=0.88\linewidth]{figures/fig7_ligature.png}
+\includegraphics[width=1.00\linewidth]{figures/fig7_ligature.png}
 \caption{The ejective ligature's failure and repair. Left: \cz{тӀ} fused with a full-height palochka. Center: \cz{п}. The resemblance is disqualifying. Right: the shipped fusion — the palochka rises to the upper half, echoing the apostrophe of scholarly romanization.}\label{fig:liga}
 \end{figure}
 
@@ -225,7 +225,7 @@ The face is monoline by conviction but also by scope: the engine has no contrast
 
 A typeface for a designed writing system was built as the writing system was designed: by rules, argued in the open, verified by machines, corrected by the eye. The construction vindicates a modest form of Knuth's programme — parameters within one design language, never across all of them — and confirms an old suspicion of the drawing office: that most of what reads as beauty in geometric type is a ledger of small, principled lies to Euclid, and that the ledger, at last, can be source code. The face itself closes the argument (Figure~\ref{fig:specimen}).
 \begin{figure}[ht]\centering
-\includegraphics[width=\linewidth]{figures/fig9_specimen.png}
+\includegraphics[width=0.99\linewidth]{figures/fig9_specimen.png}
 \caption{Chuzhditsa v2.3: the Slavic base, the designed extension inventory, and the four styles — every glyph, joint, terminal, and correction in this specimen is the output of the six hundred lines this paper described.}\label{fig:specimen}
 \end{figure}
 
