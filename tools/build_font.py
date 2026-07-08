@@ -142,7 +142,10 @@ G = {
 # -- ligatures ----------------------------------------------------------------
 # fused palatals (Serbian precedent: n/l + soft sign share the stem)
 "nsoft": dict(adv=850, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350),(R,665,160,165)]),
-"lsoft": dict(adv=940, strokes=[(L,70,0,330,700),(L,330,700,590,0),(L,590,0,590,340),(R,755,160,165)]),
+# the soft sign's stem IS the lower segment of the leg: diagonal to (520,340),
+# vertical to the baseline, ring tangent to the vertical -- the diagonal
+# lives entirely above the bowl and can never cross its counter
+"lsoft": dict(adv=910, strokes=[(L,70,0,330,700),(L,330,700,520,340),(L,520,340,520,0),(R,688,163,168)]),
 # iotated yuses (Old Cyrillic revivals, U+0468/046C): stem + connector + yus
 "iotsyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,366,350,116),(L,510,700,300,190,116),(L,510,700,720,190,116),(L,300,190,720,190,116),(L,395,190,395,0,116),(L,625,190,625,0,116)]),
 "iotbyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,405,350,116),(L,510,700,300,0,116),(L,510,700,720,0,116),(L,376.5,255,643.5,255,96),(L,510,255,510,0,96)]),
