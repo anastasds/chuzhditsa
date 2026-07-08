@@ -8,7 +8,7 @@ Say you speak Bulgarian, or Serbian, or Ukrainian, and you want to write the wor
 *weekend*. Your alphabet has no letter for the English *w*, so you write у or в and hope.
 Your neighbor picks the other one. A newspaper picks a third spelling, a subtitler a
 fourth. The word *Thatcher* loses its *th*; *Washington* has circulated in two competing
-spellings for a century (Уошингтон / Вашингтон). Every Cyrillic-writing language handles
+spellings for a century (Вашингтон / Уошингтън). Every Cyrillic-writing language handles
 foreign words this way: improvised, inconsistent, and lossy.
 
 Japanese solved this problem centuries ago, and solved it twice over. Foreign words are

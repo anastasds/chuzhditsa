@@ -38,7 +38,7 @@ G = {
 "seven": dict(adv=600, strokes=[(L,120,700,540,700),(L,540,700,260,0)]),
 "eight": dict(adv=660, strokes=[(R,330,515,160),(R,330,175,190)]),
 "nine": dict(adv=660, strokes=[(R,330,475,195),(A,205,270,330,-80,5)]),
-"egrave": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,350,430,350),(L,390,790,270,930)]),
+"egrave": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368),(L,390,790,270,930)]),
 "igrave": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,390,790,270,930)]),
 "middot": dict(adv=300, strokes=[(D,150,300,0)]),
 "dotcircle": dict(adv=660, strokes=[(D,330+180,350,28),(D,330-180,350,28),(D,330,350+180,28),(D,330,350-180,28),(D,330+127,350+127,28),(D,330-127,350+127,28),(D,330+127,350-127,28),(D,330-127,350-127,28)]),
@@ -46,20 +46,20 @@ G = {
 "hyphen": dict(adv=420, strokes=[(L,70,300,350,300)]),
 "endash": dict(adv=520, strokes=[(L,50,300,470,300)]),
 "quoteright": dict(adv=210, strokes=[(L,130,780,80,600)]),
-"a": dict(adv=660, strokes=[(L,70,0,330,700),(L,330,700,590,0),(L,190,230,470,230)]),
+"a": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0),(L,190,230,470,230)]),
 "b": dict(adv=660, strokes=[(R,340,190,180),(L,160,190,160,700),(L,160,700,480,700)]),
 "v": dict(adv=660, strokes=[(L,160,0,160,700),(R,320,515,155),(R,330,175,170)]),
 "g": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700)]),
-"d": dict(adv=660, strokes=[(L,330,700,150,140),(L,330,700,510,140),(L,70,140,590,140),(L,110,140,110,-150),(L,550,140,550,-150)]),
-"e": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,350,430,350)]),
+"d": dict(adv=660, strokes=[(L,330,715,150,140),(L,330,715,510,140),(L,70,140,590,140),(L,110,140,110,-150),(L,550,140,550,-150)]),
+"e": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]),
 "zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,390),(L,590,700,330,390),(L,70,0,330,310),(L,590,0,330,310)]),
 "z": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110)]),
 "i": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700)]),
 "ibr": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(A,330,930,130,205,335)]),
 "k": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350)]),
-"l": dict(adv=660, strokes=[(L,70,0,330,700),(L,330,700,590,0)]),
+"l": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0)]),
 "m": dict(adv=660, strokes=[(L,90,0,90,700),(L,90,700,330,270),(L,330,270,570,700),(L,570,0,570,700)]),
-"n": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350)]),
+"n": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,368,500,368)]),
 "o": dict(adv=800, strokes=[(R,400,350,355)]),
 "p": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,700,500,700)]),
 "r": dict(adv=640, strokes=[(L,160,0,160,700),(R,340,510,180)]),
@@ -80,14 +80,14 @@ G = {
 # -- extensions --------------------------------------------------------------
 "ubr": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180),(A,330,930,130,205,335)]),
 "dz": dict(adv=640, strokes=[(A,340,505,175,40,270),(A,330,190,175,85,-140)]),
-"bigyus": dict(adv=660, strokes=[(L,330,700,140,0),(L,330,700,520,0),(L,205,255,455,255),(L,330,255,330,0)]),
-"smallyus": dict(adv=660, strokes=[(L,330,700,140,190),(L,330,700,520,190),(L,140,190,520,190),(L,215,190,215,0),(L,445,190,445,0)]),
+"bigyus": dict(adv=660, strokes=[(L,330,715,140,0),(L,330,715,520,0),(L,205,255,455,255),(L,330,255,330,0)]),
+"smallyus": dict(adv=660, strokes=[(L,330,715,140,190),(L,330,715,520,190),(L,140,190,520,190),(L,215,190,215,0),(L,445,190,445,0)]),
 "dzh": dict(adv=660, strokes=[(L,150,700,150,60),(L,510,700,510,60),(L,150,60,510,60),(L,330,60,330,-160)]),
 "shha": dict(adv=640, strokes=[(L,150,0,150,700),(A,315,300,165,180,0),(L,480,0,480,300)]),
-"adia": dict(adv=660, strokes=[(L,70,0,330,700),(L,330,700,590,0),(L,190,230,470,230)]+DOTS),
+"adia": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0),(L,190,230,470,230)]+DOTS),
 "odia": dict(adv=800, strokes=[(R,400,350,355),(D,295,880,0),(D,505,880,0)]),
 "udia": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180)]+DOTS),
-"nghk": dict(adv=680, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350),(L,500,0,500,-150),(L,500,-150,590,-150)]),
+"nghk": dict(adv=680, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,368,500,368),(L,500,0,500,-150),(L,500,-150,590,-150)]),
 "khk": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350),(L,500,0,500,-150),(L,500,-150,590,-150)]),
 "gbar": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700),(L,50,420,310,420)]),
 "hhk": dict(adv=700, strokes=[(L,90,0,570,700),(L,90,700,570,0),(L,570,0,570,-150),(L,570,-150,660,-150)]),
@@ -99,7 +99,7 @@ G = {
 # -- pan-Slavic superset ------------------------------------------------------
 # е went angular so that Ukrainian round є keeps the historic wide-e form
 "ye": dict(adv=760, strokes=[(A,395,350,345,55,305),(L,320,350,655,350)]),
-"yo": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,350,430,350)]+DOTS),
+"yo": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]+DOTS),
 "ee": dict(adv=790, strokes=[(A,360,350,345,-130,130),(L,205,350,525,350)]),
 "iukr": dict(adv=380, strokes=[(L,190,0,190,700)]),
 "yi": dict(adv=380, strokes=[(L,190,0,190,700),(D,105,860,0),(D,275,860,0)]),
@@ -346,13 +346,17 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
         elif kind == A:
             # tight arcs (breve, small bowls) can't carry the full Bold weight
             weff = min(w, max(44, int(st[3]*0.85)))
-            open_paths.append((arc_pts(st[1],st[2],st[3],st[4],st[5]), weff))
+            pts = arc_pts(st[1],st[2],st[3],st[4],st[5])
+            if st[3] >= 290:  # match the big-round compression of о
+                pts = [(st[1]+(x-st[1])*0.965, y) for x, y in pts]
+            open_paths.append((pts, weff))
         elif kind == R:
             cx, cy = sh((st[1], st[2]))
             r = st[3]
+            sqz = 0.965 if r >= 200 else 1.0  # optical: big rounds compress slightly
             wr = min(w, max(44, int(r*0.85)))  # keep counters open in Bold
-            cs.append(ccw(circle_pts(cx,cy,r+wr/2)))
-            cs.append(ccw(circle_pts(cx,cy,max(10,r-wr/2)))[::-1])
+            cs.append(ccw([(cx+(x-cx)*sqz, y) for x, y in circle_pts(cx,cy,r+wr/2)]))
+            cs.append(ccw([(cx+(x-cx)*sqz, y) for x, y in circle_pts(cx,cy,max(10,r-wr/2))])[::-1])
         elif kind == D:
             cx, cy = sh((st[1], st[2]))
             cs.append(ccw(circle_pts(cx,cy,st[3] or dotr)))
@@ -471,7 +475,7 @@ def build(style, w, italic, fmt):
     fb.setupHorizontalMetrics(metrics)
     fb.setupHorizontalHeader(ascent=1050, descent=-350)
     fb.setupNameTable({"familyName": family, "styleName": sub, "psName": ps,
-                       "fullName": f"{family} {sub}", "version": "Version 2.2",
+                       "fullName": f"{family} {sub}", "version": "Version 2.3",
                        "copyright": "Chuzhditsa - a Glagolitic-inspired pan-Slavic loanword face",
                        "licenseDescription": "This Font Software is licensed under the SIL Open Font License, Version 1.1.",
                        "licenseInfoURL": "https://openfontlicense.org"})
