@@ -30,7 +30,7 @@ G = {
 "emdash": dict(adv=720, strokes=[(L,40,300,680,300)]),
 "zero": dict(adv=680, strokes=[(R,340,350,355,0.78)]),
 "one": dict(adv=460, strokes=[(L,280,0,280,700),(L,280,700,150,560)]),
-"two": dict(adv=640, strokes=[(A,330,522,185,160,-15),(L,508.7,474.1,140,0),(L,140,0,540,0)]),
+"two": dict(adv=640, strokes=[(A,330,522,185,160,-39.45),(L,472.8,404.4,140,0),(L,140,0,540,0)]),
 # the lower bowl runs THROUGH the circles' intersection (388.7,355.2) and a
 # little past; the upper bowl ends exactly there, its cap buried inside the
 # lower band (and the lower's tip inside the upper band). One continuous
@@ -38,7 +38,7 @@ G = {
 "three": dict(adv=640, strokes=[(A,282,530,175,128,-70.15),(A,282,185,190,88,-110)]),
 "four": dict(adv=660, strokes=[(L,440,0,440,700),(L,440,700,140,190),(L,140,190,580,190)]),
 # the vertical runs down to the exact point where the bowl circle crosses x=185
-"five": dict(adv=640, strokes=[(L,457,700,142,700),(L,142,700,142,385.2),(A,287,217,222,130.75,-115)]),
+"five": dict(adv=640, strokes=[(L,457,700,142,700),(L,142,700,142,385.2),(A,287,217,222,145,-115)]),
 # spur circle internally tangent to the bowl at its 170-degree point: the
 # spur continues the bowl's left side upward in one unbroken curve
 "six": dict(adv=660, strokes=[(R,330,190,195),(A,748.1,123.5,600,168,108)]),
