@@ -3,6 +3,7 @@
 \usepackage[a4paper,margin=2.7cm]{geometry}
 \usepackage{fontspec}
 \usepackage{booktabs}
+\usepackage{graphicx}
 \usepackage[hidelinks]{hyperref}
 
 \setmainfont{Times New Roman}
@@ -33,13 +34,27 @@
 
 Every typeface is a theory of writing frozen at some level of abstraction. A drawn font freezes finished shapes; a hinted font freezes shapes plus advice to the rasterizer; Chuzhditsa freezes something earlier in the pipeline — the \emph{gesture}: each glyph is stored as centerline strokes annotated with a construction (ring, arc, chained line), and everything visible about the letter (weight, slant, terminal form, joint behavior, optical compensation) is computed at build time by about six hundred lines of Python.
 
+Type has migrated through abstraction levels before, and each migration changed what a ``design'' is. The punchcutter's design was steel, one size at a time, and the trade's late self-description runs to seven hundred pages of machines (Legros \& Grant 1916); Benton's pantograph made the drawing the design and the sizes derivatives; Ikarus made the digital outline the design and the drawing a preliminary (Karow 1994); OpenType made the behavior — substitution, positioning — part of the design; variable fonts made the interpolation space itself the design. Chuzhditsa takes the next step back along the pipeline and makes the \emph{construction} the design (Figure~\ref{fig:stroke}).
+
 The idea is old. Knuth proposed in 1982 that a typeface could be a program whose parameters — weight, slant, contrast — generate a family from one description (Knuth 1982, 1986). Hofstadter's celebrated reply argued that the space of all `A's is not parameterizable: letterforms are an open category, and no finite knob-set spans them (Hofstadter 1982). Practice largely sided with Hofstadter; even sympathetic practitioners found that designing \emph{with} METAFONT demanded a designer who could think in equations, and few could (Southall 1985). But the argument was about the wrong quantifier. Knuth's dream fails for \emph{all} letterforms and succeeds for \emph{one design language at a time}: within a single monoline geometric grammar, weight and slant genuinely are parameters, and the Bold and Italic of Chuzhditsa are not drawings but evaluations. This is also, we note, the position the industry itself eventually reached by another road — variable fonts interpolate within one design space and claim nothing beyond it.
 
 There was also a practical reason to build rather than draw. The companion paper describes Chuzhditsa's function: a loanword register for pan-Slavic Cyrillic whose extension letters are derived by a featural grammar — one diacritic, one phonetic feature. A writing system whose \emph{letters} are rule-derived invites a typeface whose \emph{glyphs} are rule-derived; the two grammars mirror each other, and several orthographic rules (ligature fusion, mark anchoring) exist in the font as executable code rather than prose. The font is not an illustration of the spec. In the operational sense, it \emph{is} the spec.
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig1_stroke_model.png}
+\caption{The stroke model. Left: the declared skeleton of \cz{б} — two line strokes (endpoints marked) and one ring. Right: the same declaration evaluated at $w=90$, $w=150$, and $12°$ slant. Nothing between the panels was drawn.}\label{fig:stroke}
+\end{figure}
+
 
 \section{The stroke model}
 
-Noordzij's theory holds that the letter is the trace of a stroke: a frontline moved along a path, with the distribution of weight around the path defining the style (Noordzij 2005). Chuzhditsa is that theory made executable in its simplest case. Every glyph is declared as centerline primitives — straight segments, circular arcs, full rings, dots — in a 1000-unit em, capitals 700 high, lowercase 500. The expansion engine sweeps a disc of diameter $w$ along each path: $w=90$ units yields Regular, $w=150$ Bold. The italic applies a 12° shear \emph{to the centerlines before expansion}, not to the finished outlines; a sheared outline modulates its own thickness (the singular values of a 12° shear are about 0.90 and 1.11, a visible $\pm$10\% wobble around a ring), whereas a sheared centerline swept by an unsheared disc keeps constant perpendicular weight — which is exactly what a broad-pen italic does, and why the pen tradition (Johnston 1906) is the right mental model even for a face with no pen contrast at all.
+Noordzij's theory holds that the letter is the trace of a stroke: a frontline moved along a path, with the distribution of weight around the path defining the style (Noordzij 2005). Chuzhditsa is that theory made executable in its simplest case. Every glyph is declared as centerline primitives — straight segments, circular arcs, full rings, dots — in a 1000-unit em, capitals 700 high, lowercase 500. The expansion engine sweeps a disc of diameter $w$ along each path: $w=90$ units yields Regular, $w=150$ Bold. The italic applies a 12° shear \emph{to the centerlines before expansion}, not to the finished outlines; a sheared outline modulates its own thickness (the singular values of a 12° shear are about 0.90 and 1.11, a visible $\pm$10\% wobble around a ring), whereas a sheared centerline swept by an unsheared disc keeps constant perpendicular weight — which is exactly what a broad-pen italic does, and why the pen tradition (Johnston 1906) is the right mental model even for a face with no pen contrast at all (Figure~\ref{fig:italic}).
+
+The primitive vocabulary is deliberately small — line, arc, ring, dot — because every primitive is a maintenance contract. A ring is not ``a circle the designer drew'' but a promise that bowls will respond as a class to any future correction: when Bold needed open counters, one clamp (stroke may not exceed $0.85r$) repaired every bowl in the family at once; when the big rounds needed optical narrowing, one factor did the same. This is the practical content of the parametric claim, and it is worth stating against the romance of the drawn glyph: in a 26-letter extension set serving thirty-plus orthographies, corrections that do not generalize do not get made. Bigelow and Holmes reported the same economics from the first large Unicode face: at character-set scale, policy beats retouching (Bigelow \& Holmes 1993).
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig6_italic.png}
+\caption{Two ways to make an italic \cz{О}. Left: shearing the finished outline modulates the ring's own thickness. Right: shearing the centerline and sweeping an unsheared disc preserves constant perpendicular weight — the pen's behavior, recovered arithmetically.}\label{fig:italic}
+\end{figure}
+
 
 Monoline is the least-ink case of Noordzij's model and it is easy to mistake for the easy case. It is the opposite. Contrast hides sins: where a modulated face can thin a stroke through a crowded joint, a monoline must resolve every collision honestly, in geometry. Most of what follows is the record of those resolutions.
 
@@ -47,21 +62,38 @@ Monoline is the least-ink case of Noordzij's model and it is easy to mistake for
 
 A loanword register must be recognizably \emph{other} at reading distance while remaining effortlessly legible to any Cyrillic reader — the katakana condition. The letterforms therefore keep utterly conventional Cyrillic skeletons (Zhukov's account of what makes Cyrillic Cyrillic — the correlations among а м т below, the vertical rhythm of и н п — was treated as a constraint list; Zhukov 1996), while the \emph{style} carries the register. Its sources are deliberately archaic: the full-circle bowls of round Glagolitic, the first Slavic script, whose loops survive in our \cz{б в р ъ ь ы ю}; and a unicameral memory — the caps and lowercase share one skeleton grammar, as pre-Petrine Cyrillic did before the civil type reform imported Latin two-case architecture. For a Bulgarian-born project there is a further conversation to honor: Bulgarian typography has long maintained its own letterform norm distinct from the Russian model (the tradition whose modern theory Vasil Yonchev shaped), and a face that revives ѫ and ѩ is, in that discourse, taking a side — heritage forms for heritage letters (Йончев \& Йончева 1982).
 
+Working at the scale of the whole Slavic superset also disciplines individual letters in ways single-language design never would. The pilot's most charming glyph — a wide, round е, the historic ``broad e'' — turned out to be sitting on Ukrainian's chair: the shape \emph{is} є (U+0404), a distinct letter with its own phonemic identity. Pan-Slavic coverage forced е to an angular form so that the е/є contrast survives, a correction invisible to a Bulgarian reader and load-bearing for a Ukrainian one. The general rule we draw: in a multi-orthography script, the letterform space is commons, and a design that grazes it for one language will silently fence off a neighbor's letter. Design against the superset first.
+
 \section{What separates drawn-looking from designed: four failures and their remedies}
 
 The first complete build of Chuzhditsa was, in the frank words of its commissioning review, ``hand-written by a child.'' The diagnosis decomposed into four specific engineering failures, each with a specific remedy; we document them because the literature is rich in descriptions of good type and poor in descriptions of the exact distance between good and bad.
 
 \subsection{Terminals: the marker-pen effect}
-The naive stroke sweep caps every terminal with a semicircle — the mark of a felt-tip, not a punch. The remedy is the butt cap, perpendicular to the stroke; and for straight diagonals meeting the baseline or cap line, a further convention from the drawing office: the terminal is cut \emph{horizontally}, so that \cz{Л А Д} stand on flat feet rather than teetering on angled ones. Curves keep perpendicular terminals (\cz{с є э}) — a horizontal cut mid-arc would be a wound, not a foot.
+The naive stroke sweep caps every terminal with a semicircle — the mark of a felt-tip, not a punch. The remedy is the butt cap, perpendicular to the stroke; and for straight diagonals meeting the baseline or cap line, a further convention from the drawing office: the terminal is cut \emph{horizontally}, so that \cz{Л А Д} stand on flat feet rather than teetering on angled ones (Figure~\ref{fig:terminals}). Curves keep perpendicular terminals (\cz{с є э}) — a horizontal cut mid-arc would be a wound, not a foot. The discrimination is done by the engine, not the designer: a terminal is cut flat when its stroke is straight, longer than a threshold, and steeper than $\sim$19° — three predicates that encode, crudely but adequately, the difference between a stem and a serifless flourish.
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig2_terminals.png}
+\caption{Three terminal policies on \cz{Л}. Round caps read as marker pen; perpendicular butt caps stand the letter on angled feet; the horizontal cut plants it. The apex keeps its miter throughout — a point may pierce the cap line; a letter should not balance on one.}\label{fig:terminals}
+\end{figure}
+
 
 \subsection{Joints: the punchcutter's corner}
-Strokes that merely overlap produce lumps where a corner should be. The engine therefore \emph{chains}: strokes sharing an endpoint (where exactly two meet) are merged into one path and their meeting rendered as a mitered corner — sharp on the convex side, exactly intersected on the concave side. This is the move that turned \cz{И Л М} from taped-together sticks into letters; it is also where a subtle lesson about rasterizers was learned. A bevel on the \emph{concave} side of a joint folds the outline over itself; every nonzero-winding rasterizer (FreeType, CoreText, every browser) renders the fold invisibly, but even-odd consumers render it as a white slit. The failure was invisible in the shipping renderer and glaring in a diagnostic one — the type-engineering equivalent of a bug that only reproduces under the debugger, and a reminder that Smeijers's dictum about counters (the white is the design; Smeijers 1996) extends to the white you create by accident.
+Strokes that merely overlap produce lumps where a corner should be. The engine therefore \emph{chains}: strokes sharing an endpoint (where exactly two meet) are merged into one path and their meeting rendered as a mitered corner — sharp on the convex side, exactly intersected on the concave side. This is the move that turned \cz{И Л М} from taped-together sticks into letters; it is also where a subtle lesson about rasterizers was learned. A bevel on the \emph{concave} side of a joint folds the outline over itself; every nonzero-winding rasterizer (FreeType, CoreText, every browser) renders the fold invisibly, but even-odd consumers render it as a white slit. The failure was invisible in the shipping renderer and glaring in a diagnostic one — the type-engineering equivalent of a bug that only reproduces under the debugger, and a reminder that Smeijers's dictum about counters (the white is the design; Smeijers 1996) extends to the white you create by accident (Figure~\ref{fig:joints}).
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig3_joints.png}
+\caption{\cz{М} before and after path chaining. Left: four independent strokes, their meetings papered over with discs. Right: one chained path; apex and valley are mitered intersections. The letter stops being an assembly and becomes a drawing.}\label{fig:joints}
+\end{figure}
+
 
 \subsection{Curves: the facet tax}
 Outlines here are dense polygons rather than Béziers, which is harmless — at 96--128 samples a ring is optically indistinguishable from a true circle — until it isn't: early builds sampled arcs at 8° and the facets were visible at display sizes. Sampling is now proportional to radius. The general moral is Bigelow and Holmes's from the first large Unicode face: at scale, only systematic policies survive; hand-tuning per glyph does not (Bigelow \& Holmes 1993).
 
 \subsection{Color: bold is not thick regular}
-A Bold whose advances do not widen is a Regular that gained weight and kept its trousers: with stroke 150 in slots spaced for stroke 90, bold \cz{о}s overlapped outright. The Bold therefore widens every advance by the weight delta and re-centers each glyph; counters are protected by clamping stroke weight against curvature (a ring of radius $r$ carries at most $0.85r$ of stroke), which is the programmatic form of the punchcutter's counter-first discipline (Smeijers 1996). The result can be stated as a rule of thumb the authors have not seen printed: \emph{in a parametric monoline, weight is a property of the page color, but advance width is a property of the counter}.
+A Bold whose advances do not widen is a Regular that gained weight and kept its trousers: with stroke 150 in slots spaced for stroke 90, bold \cz{о}s overlapped outright. The Bold therefore widens every advance by the weight delta and re-centers each glyph; counters are protected by clamping stroke weight against curvature (a ring of radius $r$ carries at most $0.85r$ of stroke), which is the programmatic form of the punchcutter's counter-first discipline (Smeijers 1996). The result can be stated as a rule of thumb the authors have not seen printed: \emph{in a parametric monoline, weight is a property of the page color, but advance width is a property of the counter} (Figure~\ref{fig:bold}).
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig5_bold_color.png}
+\caption{The same word, Bold strokes. Above: on Regular advances, the letters weld. Below: advances widened by the weight delta and glyphs re-centered — the counters, inner and outer, survive the weight.}\label{fig:bold}
+\end{figure}
+
 
 \section{The optical canon, computed}
 
@@ -74,13 +106,41 @@ Type design's oldest open secret is that geometry lies to the eye, and that ever
 \item \textbf{The circle that is not.} A mathematically perfect circle beside rectangular letters reads wide; all full-height rounds (\cz{О С Є Э} and kin) are compressed 3.5\% horizontally. This correction is invisible, which is the point: as Bringhurst has it, typography exists to honor content, and its finest work is unnoticeable (Bringhurst 2004).
 \end{itemize}
 
-None of these numbers is sacred; all were set by proofing, the way they have always been set. What the parametric build changes is not the eye's authority but the cost of obeying it: a correction, once found, is a line of arithmetic applied uniformly to every present and future glyph — including the twenty-six extension letters that are this face's reason to exist.
+Figure~\ref{fig:optical} shows all four corrections against ruled lines; each pair differs by one number in the source.
+
+None of these numbers is sacred; all were set by proofing, the way they have always been set — enlarged, squinted at, revised. What deserves emphasis is how \emph{small} the winning corrections are. The apex overshoot is 2.5\% of the cap height; the round compression is 3.5\% of a width; the bar rise is under 3\%. At reading sizes not one of them is consciously visible, and together they are the entire difference between the first proof and the last. The eye audits at a precision it does not report. This is also why empirical legibility work (Tinker 1963) so rarely resolves such differences: its instruments measure reading, and these corrections operate below reading, in the layer where a face merely feels certain or feels slightly wrong.
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig4_optical.png}
+\caption{The optical canon, one variable at a time, on ruled cap and base lines. Flush versus overshot rounds; apex at the cap line versus pierced through it; crossbar at the geometric versus optical center; a true circle versus the shipped 96.5\% width.}\label{fig:optical}
+\end{figure}
+ What the parametric build changes is not the eye's authority but the cost of obeying it: a correction, once found, is a line of arithmetic applied uniformly to every present and future glyph — including the twenty-six extension letters that are this face's reason to exist.
+
+\section{Fitting: space as material}
+
+Tracy's dictum that fitting is half of type design (Tracy 1986) survives translation into a parametric setting with its proportions intact: roughly half of the perceived quality gains in this project came from decisions about white. The face carries a coarse spacing system of the classical kind — straight-sided letters hold larger sidebearings, round and open forms sit tighter, with the rounds' overshoot supplying part of their fitting — and a deliberately shallow class-kerning layer: flag-topped letters (\cz{г т ғ}) against open diagonals (\cz{а л д}), diagonals against \cz{у}-forms, letters into low punctuation. Kerning was kept shallow on principle: deep pair lists are where parametric discipline goes to die, since every pair is a hand-set exception to the system. Where a class rule could not fix a combination, we treated the collision as evidence about the \emph{glyphs} — usually a sidebearing wrong on one side — and repaired the letter, not the pair. The single largest fitting decision has already been described: Bold's advances widen with its weight, which is a spacing rule wearing a weight rule's clothing.
+
+The two-case architecture is likewise a spacing story as much as a shape story (Figure~\ref{fig:cases}). Lowercase is derived from the capital skeletons at $x$-height $500/700$, with descenders retained at full depth and marks re-seated; four letters — \cz{а б р ф} — refuse derivation and carry custom constructions, because their lowercase identities (bowl-and-stem, ascender, descender) are lexical facts of Cyrillic, not scalings. The 0.72 horizontal factor was chosen so that derived lowercase keeps the capitals' stroke weight without reading condensed: scale a skeleton, never a stroke.
+
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig10_cases.png}
+\caption{Case pairs. \cz{а б р ф} are constructed, not scaled — bowl-and-stem, ascender, descender — while the remaining lowercase derives from the capital skeletons with descenders kept at full depth.}\label{fig:cases}
+\end{figure}
 
 \section{The font as normative document}
 
-Three properties make Chuzhditsa's binaries the operative specification of the writing system they serve. First, \emph{ligature law}: the orthography's fusions (нь and ль into their Vuk-style fused forms; ь+ѧ into the medieval \cz{ѩ}; the ejective digraphs' palochka rising to half height) are GSUB rules compiled into the font, with lookup order fixed so that yus fusion outranks soft-sign fusion — an ordering bug here once silently disabled a documented spelling, and was caught by shaping tests, not by eye. Second, \emph{mark law}: every combining mark carries computed GPOS anchors — the macron of \cz{а̄} attaches 251 units lower than that of \cz{А̄}; the retroflex hook of \cz{т̢} lands on the stem, not the visual center — so that the spec's statement ``the hook attaches to the working stem'' is not a description of intent but a checkable property of the artifact. Third, \emph{verification culture}: the build is proofed by shaping with HarfBuzz and rendering through FreeType, the same code paths as deployment, after the even-odd episode of §4.2 taught us that a proof renderer can lie in both directions.
+Three properties make Chuzhditsa's binaries the operative specification of the writing system they serve. First, \emph{ligature law}: the orthography's fusions (нь and ль into their Vuk-style fused forms; ь+ѧ into the medieval \cz{ѩ}; the ejective digraphs' palochka rising to half height) are GSUB rules compiled into the font, with lookup order fixed so that yus fusion outranks soft-sign fusion — an ordering bug here once silently disabled a documented spelling, and was caught by shaping tests, not by eye. Second, \emph{mark law}: every combining mark carries computed GPOS anchors — the macron of \cz{а̄} attaches 251 units lower than that of \cz{А̄}; the retroflex hook of \cz{т̢} lands on the stem, not the visual center — so that the spec's statement ``the hook attaches to the working stem'' is not a description of intent but a checkable property of the artifact (Figure~\ref{fig:anchors}).
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig8_anchors.png}
+\caption{One mark, many computed homes. The macron seats at cap height on \cz{А}, at $x$-height on \cz{а}, above the baked-in dots of \cz{ӧ}; the retroflex hook finds the stem of \cz{т} in either case. No anchor was placed by hand.}\label{fig:anchors}
+\end{figure}
+ Third, \emph{verification culture}: the build is proofed by shaping with HarfBuzz and rendering through FreeType, the same code paths as deployment, after the even-odd episode of §4.2 taught us that a proof renderer can lie in both directions.
 
-One design decision deserves its failure story told straight. The ejective digraphs (\cz{тӀ кӀ цӀ}) were first fused with a full-height palochka, on the reasonable ground that the palochka \emph{is} full-height. The result read as \cz{п}. The shipping form raises the palochka to the upper half — echoing the apostrophe of scholarly romanization — and the standalone letter keeps its full height. The lesson generalizes: in ligature design, the components' identities matter less than the fusion's silhouette, because the reader receives only the silhouette.
+One design decision deserves its failure story told straight. The ejective digraphs (\cz{тӀ кӀ цӀ}) were first fused with a full-height palochka, on the reasonable ground that the palochka \emph{is} full-height. The result read as \cz{п}. The shipping form raises the palochka to the upper half — echoing the apostrophe of scholarly romanization — and the standalone letter keeps its full height. The lesson generalizes: in ligature design, the components' identities matter less than the fusion's silhouette, because the reader receives only the silhouette (Figure~\ref{fig:liga}).
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig7_ligature.png}
+\caption{The ejective ligature's failure and repair. Left: \cz{тӀ} fused with a full-height palochka. Center: \cz{п}. The resemblance is disqualifying. Right: the shipped fusion — the palochka rises to the upper half, echoing the apostrophe of scholarly romanization.}\label{fig:liga}
+\end{figure}
+
 
 \section{Limitations}
 
@@ -88,7 +148,12 @@ The face is monoline by conviction but also by scope: the engine has no contrast
 
 \section{Conclusion}
 
-A typeface for a designed writing system was built as the writing system was designed: by rules, argued in the open, verified by machines, corrected by the eye. The construction vindicates a modest form of Knuth's programme — parameters within one design language, never across all of them — and confirms an old suspicion of the drawing office: that most of what reads as beauty in geometric type is a ledger of small, principled lies to Euclid, and that the ledger, at last, can be source code.
+A typeface for a designed writing system was built as the writing system was designed: by rules, argued in the open, verified by machines, corrected by the eye. The construction vindicates a modest form of Knuth's programme — parameters within one design language, never across all of them — and confirms an old suspicion of the drawing office: that most of what reads as beauty in geometric type is a ledger of small, principled lies to Euclid, and that the ledger, at last, can be source code. The face itself closes the argument (Figure~\ref{fig:specimen}).
+\begin{figure}[ht]\centering
+\includegraphics[width=\linewidth]{figures/fig9_specimen.png}
+\caption{Chuzhditsa v2.3: the Slavic base, the designed extension inventory, and the four styles — every glyph, joint, terminal, and correction in this specimen is the output of the six hundred lines this paper described.}\label{fig:specimen}
+\end{figure}
+
 
 \begin{thebibliography}{99}
 \bibitem{bigelow} Bigelow, C. \& K.~Holmes. 1993. The design of a Unicode font. \emph{Electronic Publishing} 6(3). 289--305.
@@ -98,6 +163,8 @@ A typeface for a designed writing system was built as the writing system was des
 \bibitem{dwiggins} Dwiggins, W.~A. 1940. \emph{WAD to RR: A Letter about Designing Type}. Cambridge, MA: Harvard College Library.
 \bibitem{hofstadter} Hofstadter, D.~R. 1982. Metafont, metamathematics, and metaphysics: Comments on Donald Knuth's article ``The concept of a meta-font''. \emph{Visible Language} 16(4). 309--338.
 \bibitem{johnston} Johnston, E. 1906. \emph{Writing \& Illuminating, \& Lettering}. London: John Hogg.
+\bibitem{karow} Karow, P. 1994. \emph{Font Technology: Methods and Tools}. Berlin: Springer.
+\bibitem{legros} Legros, L.~A. \& J.~C.~Grant. 1916. \emph{Typographical Printing-Surfaces: The Technology and Mechanism of Their Production}. London: Longmans, Green.
 \bibitem{knuth82} Knuth, D.~E. 1982. The concept of a meta-font. \emph{Visible Language} 16(1). 3--27.
 \bibitem{knuth86} Knuth, D.~E. 1986. \emph{The METAFONTbook}. Reading, MA: Addison-Wesley.
 \bibitem{noordzij} Noordzij, G. 2005. \emph{The Stroke: Theory of Writing}. London: Hyphen Press.
