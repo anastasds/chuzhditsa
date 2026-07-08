@@ -16,7 +16,7 @@ GRAZE_LO, GRAZE_HI = 25.0, 100.0
 
 # reviewed and intentional: Д's bottom bar extends 40 units past its legs
 # into feet (29 after lowercase scaling)
-WAIVED_MISS = {"d", "lc.d"}
+WAIVED_MISS = {"d", "lc.d", "je", "lc.je"}  # d: bar feet; je: hook junction is engine-pinned
 
 
 def stroke_geometry(st):
