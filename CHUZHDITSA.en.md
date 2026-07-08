@@ -1,0 +1,397 @@
+# Chuzhditsa · Чуждица
+
+**Language versions:** [български](CHUZHDITSA.md) · English · [українська](CHUZHDITSA.uk.md)
+
+**Extended Bulgarian Cyrillic for foreign words** — the functional equivalent of Japanese katakana: a systematic, deterministic layer for writing any of the world's major languages phonetically, plus a typeface whose look alone marks "this is a foreign word."
+
+> The correspondences below use real Unicode codepoints — the text is copyable and searchable. To see them in the Chuzhditsa typeface, open [specimen.html](specimen.html) or install the fonts from [fonts/](fonts/).
+
+## Architecture: three layers
+
+1. **Base** — the 30 Bulgarian letters, unchanged in value.
+2. **Extensions** — letters for sounds outside Bulgarian phonology, derived by a featural grammar (one modification = one phonetic feature).
+3. **Prosody** — optional marks for stress, tone and length that stack onto any vowel.
+
+Marking a word as foreign is done **by the typeface itself**: just as katakana differs from hiragana in shape rather than inventory, foreign text is set in Chuzhditsa — monoline, with round Glagolitic bowls — and is recognizable from across the room.
+
+## The Glagolitic inheritance
+
+Glagolitic (863 AD, Constantine-Cyril) was the first Slavic alphabet — loops, circles and triangles designed from scratch. Cyrillic (Preslav, ~893) replaced it, keeping Glagolitic-derived forms only for the sounds Greek lacked. Chuzhditsa reverses the gesture: **the oldest shapes mark the newest words.**
+
+What exactly the typeface takes from Glagolitic:
+
+- **Round bowls** — б, в, р, ъ, ь, ы, ю, я carry full circles instead of angular cups; round Glagolitic, not ustav.
+- **Two heights** — capitals stand at 700 units, lowercase at 500 (x-height), with ascenders (б, ф) and descenders (р, у, ф, the hooks); а, б, р and ф have their own lowercase forms, the rest derive systematically from the capitals.
+- **The revived letters** — ѫ, ѧ (the yuses, nasal vowels in the orthography until 1945 and in speech until the 10th century) and ѕ (dzelo, /dz/) descend in a straight line from Glagolitic Ⱘ, Ⱔ, Ⰷ.
+- **The register function** — Glagolitic survived for centuries as "the other script" for special use (liturgy in Croatia into the 19th century); here the special use is foreignness.
+
+## Design integrity: the featural grammar
+
+Every diacritic move means exactly one feature, and applies wherever that feature appears:
+
+| Mark | Operation | Derived letters |
+|---|---|---|
+| ◌̆ breve | vowel → glide | и→й /j/ · у→**ў** /w/ |
+| ◌̢ hook below | place shifted off the native grid | к→**қ** /q/ · х→**ҳ** /ħ/ · н→**ң** /ŋ/ · с→**ҫ** /θ/ · з→**ҙ** /ð/ · т→**т̢** /ʈ/ · д→**д̢** /ɖ/ · р→**р̢** /ɽ/ |
+| ◌̵ crossbar | fricative release (lenition) | г→**ғ** /ɣ/ |
+| ◌̈ two dots | front rounded vowel | а→**ӓ** /æ/ · о→**ӧ** /ø œ/ · у→**ӱ** /y ʏ/ |
+| ◌̨ yus tail | nasalization | о→**ѫ** /ɔ̃ õ/ · е→**ѧ** /ɛ̃/ · **а̨** /ɑ̃ ɐ̃/ · **ӧ̨** /œ̃/ |
+| ◌ʰ ◌ʱ raised һ | aspiration / breathy voice | пʰ тʰ кʰ чʰ · бʱ дʱ гʱ џʱ |
+| ◌̄ macron (provlachka) | long vowel | **ӣ ӯ** (precomposed, from Tajik) · а̄ е̄ о̄ ӧ̄ ӱ̄ |
+| Ӏ palochka | glottal action | тӀ кӀ цӀ ejectives · bare Ӏ = /ʕ/ |
+| ь | palatalization | нь /ɲ/ · ль /ʎ/ · хь /ç/ · сь /ɕ/ |
+
+The hook ◌̢ generalizes a precedent the Bulgarian alphabet already contains: **щ is ш with a hook**. The precomposed letters қ ң ҳ ҫ ҙ exist in Unicode (Kazakh, Bashkir, Tajik); for т̢ д̢ р̢ the same hook is written as combining U+0322.
+
+### Pair symmetry
+
+Every new letter takes its place in a voiceless/voiced pair aligned with the native system:
+
+| voiceless | voiced | | voiceless | voiced |
+|---|---|---|---|---|
+| т /t/ | д /d/ | | **ҫ** /θ/ | **ҙ** /ð/ |
+| ц /ts/ | **ѕ** /dz/ | | ч /tʃ/ | **џ** /dʒ/ |
+| х /x/ | **ғ** /ɣ/ | | **ҳ** /ħ/ | **Ӏ** /ʕ/ |
+
+That is why fita (ѳ) was dropped in the second version: it had no voiced partner and derived from no rule. Its legacy lives on in the hook — ҫ does fita's job, but systematically. By the same logic ә gave way to **ӓ**: /æ/ is a fronted а, and the two dots say so; ӓ–ӧ–ӱ is a series, ә was an orphan.
+
+### The three H's — and the fourth
+
+The brief "the three H's must be well designed" is met with a gradient: the further back and the weaker the friction, the lighter the letter.
+
+| letter | IPA | place | form |
+|---|---|---|---|
+| **х** | /x χ/ | velar-uvular | two full crossing strokes — the densest friction |
+| **ҳ** | /ħ/ | pharyngeal | х pulled deeper: the same strokes + a hook |
+| **һ** | /h ɦ/ | glottal | one open arc — the glyph is literally the most open |
+| **◌ʰ** | /ʰ/ | a feature, not a segment | һ shrunk to a superscript |
+
+Aspiration is a laryngeal feature, not a consonant — so it is written as a feature: a miniature raised һ (Unicode ◌ʰ U+02B0), exactly as the IPA does. The breathy voice of Hindi/Bengali (бʱ дʱ гʱ) takes ◌ʱ (U+02B1). Hindi ठीक /ʈʰiːk/ → **т̢ʰӣк** demonstrates the composition: retroflex hook + aspiration + length — three features, three marks, zero new letters.
+
+### Ligatures
+
+Cyrillic was born to ligate — ю is a historic ligature of і+о, Serbian љ and њ are fused л/н+ь, and Old Bulgarian had the iotated yuses. Chuzhditsa continues the tradition with three families, all live GSUB rules in the font:
+
+| sequence | ligature | sound | example |
+|---|---|---|---|
+| нь | fused њ-form | /ɲ/ | ниньо, ньокки — fuse automatically |
+| ль | fused љ-form | /ʎ/ | фамилья, паелья |
+| ьѧ / йѧ | **ѩ** (iotated small yus, U+0469) | /jɛ̃/ | Fr. bien → бѩ; Pol. pięć → пѩчь |
+| ьѫ / йѫ | **ѭ** (iotated big yus, U+046D) | /jɔ̃/ | Fr. lion /ljɔ̃/ → льѫ → лѭ |
+| тӀ кӀ пӀ цӀ чӀ | fused form with raised palochka | ejectives | Amh. ጥሩ tʼɨru → тӀыру; Geo. წყალი → цӀқали |
+
+The design decisions inside:
+
+- **The fusion rule**: only sequences that denote a **single phoneme** and have a Slavic precedent (љ/њ) or an Old Cyrillic ancestor (ѩ/ѭ) get a ligature. The mechanical soft pairs сь/хь stay separate — there ь is visible machinery, not a letter.
+- **The palochka rises** in the fused forms to the upper half — echoing the apostrophe of scholarly romanization (tʼ kʼ) — otherwise тӀ fused with a full-height palochka reads as п. Standalone Ӏ (= /ʕ/) keeps its full height.
+- ѩ and ѭ are both encoded letters (directly typeable) and automatic fusions: type ьѧ and the font gives you ѩ.
+- The Serbian codepoints љ њ џ are accepted directly — Serbian Cyrillic sets without change.
+
+### The Indic stress test: the full series
+
+Hindi-Urdu and Bengali are the system's toughest customer — a four-way contrast on every stop (voiceless/voiced × plain/aspirated) at two places (dental/retroflex). Everything composes from existing features:
+
+| devanagari | IPA | chuzhditsa | | devanagari | IPA | chuzhditsa |
+|---|---|---|---|---|---|---|
+| त | /t̪/ | т | | ट | /ʈ/ | т̢ |
+| थ | /t̪ʰ/ | тʰ | | ठ | /ʈʰ/ | т̢ʰ |
+| द | /d̪/ | д | | ड | /ɖ/ | д̢ |
+| ध | /d̪ʱ/ | дʱ | | ढ | /ɖʱ/ | д̢ʱ |
+| न | /n/ | н | | ण | /ɳ/ | н̢ |
+| — | — | — | | ड़ | /ɽ/ | р̢ |
+| — | — | — | | ढ़ | /ɽʱ/ | р̢ʱ |
+| स | /s/ | с | | ष | /ʂ/ | ш |
+
+The same grid covers к/кʰ/г/гʱ, ч/чʰ/џ/џʱ and п/пʰ/б/бʱ. Eight retroflex values, zero new letters: the hook ◌̢ (U+0322) plus the feature marks do all of it, and the typeface anchors them with GPOS precisely under the letter's working stem.
+
+## The full phoneme audit
+
+### Consonants (IPA → chuzhditsa)
+
+| class | correspondences |
+|---|---|
+| plosives | p→п · b→б · t→т · d→д · ʈ→т̢ · ɖ→д̢ · k→к · ɡ→г · q ɢ→қ · ʔ→' (or dropped) |
+| aspiration | pʰ tʰ kʰ tʃʰ→пʰ тʰ кʰ чʰ · bʱ dʱ ɡʱ→бʱ дʱ гʱ |
+| nasals | m→м · n→н · ɳ→н̢ · ɲ→нь · ŋ→ң |
+| fricatives | f ɸ→ф · v β→в · θ→ҫ · ð→ҙ · s→с · z→з · ʃ ʂ→ш · ʒ ʐ→ж · ɕ→сь · ç→хь · x χ→х · ɣ→ғ · ħ→ҳ · ʕ→Ӏ · h ɦ→һ |
+| affricates | ts→ц · dz→ѕ · tʃ tʂ tɕ→ч · dʒ dʐ dʑ→џ |
+| approximants | w→ў · j→й · l ɫ→л · ʎ→ль · r ɾ ɹ ʀ ʁ→р · ɽ→р̢ |
+| glottalized | tʼ kʼ tsʼ→тӀ кӀ цӀ · implosives ɓ ɗ→б д (merged) |
+
+### Vowels
+
+| IPA | letter | | IPA | letter |
+|---|---|---|---|---|
+| i | и | | u | у |
+| ɪ | и | | ʊ | у |
+| e ɛ | е | | o ɔ | о |
+| æ | **ӓ** | | ə ʌ ɜ | **ъ** |
+| a ɑ | а | | ɨ ɯ | **ы** |
+| y ʏ | **ӱ** | | ø œ | **ӧ** |
+
+Length: ◌̄ on any vowel. Nasality: ◌̨ (precomposed: ѫ ѧ). Diphthongs are compositional (ай, ей, ой, ау, оу…).
+
+### Documented mergers
+
+Determinism is bought with declared loss: all rhotics → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; implosives → б д; Korean tense = doubled letters; ʔ drops outside Arabic contexts. Anyone who wants lossless phonetics should use the IPA — chuzhditsa is an orthography, not a transcription lab.
+
+## Examples: 20 languages
+
+### English
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| weekend | /ˈwiːkɛnd/ | **ўӣкенд** | ў /w/, ӣ long /iː/ |
+| thanks | /θæŋks/ | **ҫӓңкс** | ҫ /θ/, ӓ /æ/, ң /ŋ/ — three new letters |
+| this | /ðɪs/ | **ҙис** | ҙ /ð/ |
+| thriller | /ˈθrɪlə/ | **ҫрилър** | ҫ + ъ for /ə/ |
+| birthday | /ˈbɜːθdeɪ/ | **бърҫдей** | ъ /ɜː/, ҫ /θ/ |
+| world | /wɜːld/ | **ўърлд** | ў + ър |
+| squirrel | /ˈskwɪrəl/ | **скўиръл** | ў in a cluster |
+| Harry | /ˈhæri/ | **Һӓри** | һ /h/, ӓ /æ/ |
+| ring | /rɪŋ/ | **риң** | ң — no fake г |
+| cat · cut · cart | /kæt/ /kʌt/ /kɑːt/ | **кӓт · кът · карт** | minimal triple preserved |
+
+### Mandarin
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| 北京 Běijīng | /pèɪ.tɕíŋ/ | **Бе̌йџиң** | tone 3 ◌̌, џ /tɕ/, ң |
+| 茶 chá | /ʈʂʰǎ/ | **чʰа́** | aspiration ʰ + tone 2 |
+| 谢谢 xièxie | /ɕjê.ɕje/ | **сьѐсье** | ɕ → сь |
+| 人 rén | /ʐə̌n/ | **жъ́н** | ʐ → ж, ъ /ə/ |
+| 上海 Shànghǎi | /ʂâŋ.xàɪ/ | **Ша̀ңха̌й** | ʂ → ш, х /x/ |
+| 猫 māo | /máʊ/ | **мао** | tone 1 = unmarked |
+| 气 qì | /tɕʰî/ | **чʰѝ** | aspirated affricate + tone 4 |
+
+### Hindi-Urdu
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| भारत Bhārat | /ˈbʱaːɾət̪/ | **Бʱа̄рът** | ʱ breathy voice, а̄ length, ъ /ə/ |
+| धन्यवाद dhanyavād | /d̪ʱənjəˈʋaːd̪/ | **дʱънйъва̄д** | дʱ, two schwas → ъ |
+| ठीक ṭhīk | /ʈʰiːk/ | **т̢ʰӣк** | retroflex ◌̢ + aspiration + length |
+| दिल्ली Dillī | /d̪ɪlliː/ | **Диллӣ** | dental д, no hook; geminate |
+| घर ghar | /ɡʱər/ | **гʱър** | гʱ breathy г |
+| झील jhīl | /dʒʱiːl/ | **џʱӣл** | џʱ — voiced affricate with breathiness |
+| चाय chāy | /tʃaːj/ | **ча̄й** | ч |
+| पानी pānī | /paːniː/ | **па̄нӣ** | double length |
+| लड़का laṛkā | /ləɽkaː/ | **лър̢ка̄** | р̢ /ɽ/ retroflex flap |
+| हवा havā | /ɦəˈʋaː/ | **һъва̄** | һ /ɦ/ (merges with /h/) |
+
+### Spanish
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| cerveza | /θeɾˈβeθa/ | **ҫервеҫа** | Castilian /θ/ → ҫ |
+| jamón | /xaˈmon/ | **хамон** | j = /x/ → native х |
+| agua | /ˈaɣwa/ | **ағўа** | ғ /ɣ/ + ў /w/ |
+| niño | /ˈniɲo/ | **ниньо** | ɲ → нь (native mechanism) |
+| Madrid | /maˈðɾið/ | **Мадриҙ** | final /ð/ → ҙ |
+| paella | /paˈeʎa/ | **паелья** | ʎ → ль |
+
+### French
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| bonjour | /bɔ̃ˈʒuʁ/ | **бѫжур** | ѫ /ɔ̃/ — the resurrected yus |
+| vin | /vɛ̃/ | **вѧ** | ѧ /ɛ̃/ |
+| blanc | /blɑ̃/ | **бла̨** | а̨ /ɑ̃/ — the yus tail, by rule |
+| croissant | /kʁwasɑ̃/ | **крўаса̨** | ў + а̨ |
+| deux | /dø/ | **дӧ** | ӧ /ø/ |
+| rue | /ʁy/ | **рӱ** | ӱ /y/ |
+| parfum | /paʁˈfœ̃/ | **парфӧ̨** | ӧ̨ /œ̃/ — umlaut + nasal, two marks |
+| bien | /bjɛ̃/ | **бѩ** | ѩ /jɛ̃/ — the iotated yus, a ligature |
+| grenouille | /ɡʁənuj/ | **грънуй** | schwa → ъ |
+
+### Arabic (MSA)
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| هلال hilāl | /hiˈlaːl/ | **һила̄л** | һ /h/ — light h |
+| محمد Muḥammad | /muˈħammad/ | **Муҳаммад** | ҳ /ħ/ — pharyngeal h |
+| خالد Khālid | /ˈxaːlid/ | **Ха̄лид** | х /x/ — the native х: all three H's in three names |
+| قطر Qaṭar | /ˈqɑtˤɑr/ | **Қатар** | қ /q/ uvular |
+| غزال ghazāl | /ɣaˈzaːl/ | **ғаза̄л** | ғ /ɣ/ |
+| عمر ʿUmar | /ˈʕumar/ | **Ӏумар** | Ӏ /ʕ/ ayn |
+| شكرا shukran | /ˈʃukran/ | **шукран** | native letters only |
+
+### Bengali
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| ঢাকা Ḍhākā | /ɖʱaka/ | **Д̢ʱака** | retroflex + breathy voice at once |
+| ঠাকুর Ṭhākur | /ʈʰakur/ | **Т̢ʰакур** | Tagore, spelled as he sounds |
+| কলকাতা Kolkātā | /kolkat̪a/ | **Колката** | no new letters |
+| বড় bôṛo | /bɔɽo/ | **бор̢о** | р̢ /ɽ/ |
+| মিষ্টি mishṭi | /miʃʈi/ | **мишт̢и** | ш + т̢ in a cluster |
+| ভাই bhāi | /bʱai/ | **бʱай** | бʱ |
+| মাছ māchh | /mat͡ɕʰ/ | **мачʰ** | final aspiration |
+| ধন্যবাদ dhonnobād | /d̪ʱɔnnobad̪/ | **дʱонноба̄д** | дʱ + geminate |
+
+### Portuguese
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| São Paulo | /sɐ̃w̃ ˈpawlu/ | **Са̨у Паулу** | а̨ nasal + у semivowel |
+| pão | /pɐ̃w̃/ | **па̨у** | nasal diphthong |
+| coração | /koɾaˈsɐ̃w̃/ | **кораса̨у** | -ção → -са̨у, systematically |
+| obrigado | /obɾiˈɡadu/ | **обригаду** | no new letters |
+| manhã | /mɐˈɲɐ̃/ | **маня̨** | нь + nasal via я |
+
+### Russian
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| мышь | /mɨʂ/ | **мыш** | ы comes back home; no silent ь |
+| Хрущёв | /xrʊˈɕːɵf/ | **Хрушчов** | Rus. щ /ɕː/ ≠ Bul. щ /ʃt/ |
+| бабушка | /ˈbabuʂkə/ | **бабушкъ** | the final schwa, honestly, as ъ |
+| ёлка | /ˈjɵlkə/ | **йолкъ** | ё → йо |
+| Пётр | /pʲɵtr/ | **Пьотр** | palatalization with ь |
+
+### Japanese
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| 東京 Tōkyō | /toːkʲoː/ | **То̄кьо̄** | double length ◌̄ |
+| 大阪 Ōsaka | /oːsaka/ | **О̄сака** | initial long vowel |
+| 可愛い kawaii | /kaɰaiː/ | **каўаӣ** | ў + ӣ |
+| 富士 Fuji | /ɸɯʑi/ | **Фуџи** | ɸ → ф, ʑ → џ (merged) |
+| ラーメン rāmen | /ɾaːmeɴ/ | **ра̄мен** | chōonpu → the length bar |
+| 寿司 sushi | /sɯɕi/ | **суши** | ɯ → у (merged) |
+
+### German
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| München | /ˈmʏnçən/ | **Мӱнхьен** | ӱ /ʏ/ + хь /ç/ ich-Laut |
+| Goethe | /ˈɡøːtə/ | **Гӧ̄те** | long ӧ̄ /øː/ |
+| Zürich | /ˈtsyːʁɪç/ | **Цӱ̄рихь** | ц + ӱ̄ |
+| Straße | /ˈʃtʁaːsə/ | **штра̄се** | шт cluster — native to Bulgarian |
+| Bach | /bax/ | **Бах** | ach-Laut = native х |
+| schön | /ʃøːn/ | **шӧ̄н** | ӧ̄ |
+
+### Korean
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| 서울 Seoul | /sʌ.ul/ | **Съул** | ㅓ /ʌ/ → ъ |
+| 김치 kimchi | /kimtɕʰi/ | **кимчʰи** | aspirated чʰ |
+| 한글 hangul | /hanɡɯl/ | **һангыл** | һ + ы /ɯ/ |
+| 태권도 taekwondo | /tʰɛk͈wʌndo/ | **тʰеккўъндо** | тʰ aspiration; tense к͈ = кк |
+| 부산 Busan | /pusan/ | **Пусан** | lax п |
+
+### Vietnamese
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| phở | /fəː˧˩˧/ | **фъ̌** | ъ /əː/ + tone ◌̌ (length drops under tone) |
+| Việt Nam | /vjət̚ naːm/ | **Вьет На̄м** | ье |
+| Hà Nội | /haː nôj/ | **Һа̀ Но̀й** | һ + tones |
+| nước | /nɨək/ | **ны́ък** | ы /ɨ/ + rising tone |
+| bánh mì | /ɓajŋ mì/ | **ба́нь мѝ** | implosive ɓ → б (merged) |
+
+### Turkish
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| Atatürk | /aˈtatyɾc/ | **Ататӱрк** | ӱ /y/ |
+| ırmak | /ɯɾˈmak/ | **ырмак** | ı /ɯ/ → ы |
+| göl | /ɟøl/ | **гӧл** | ӧ /ø/ |
+| dağ | /daː/ | **да̄** | ğ = pure length → ◌̄ |
+| teşekkür | /teʃekˈcyɾ/ | **тешеккӱр** | geminate + ӱ |
+| İstanbul | /isˈtanbuɫ/ | **Истанбул** | ɫ → л (merged) |
+
+### Italian
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| pizza | /ˈpittsa/ | **пицца** | the geminate is written double |
+| zero | /ˈdzɛːro/ | **ѕеро** | ѕ /dz/ — dzelo back on the job |
+| gnocchi | /ˈɲɔkki/ | **ньокки** | нь + кк |
+| famiglia | /faˈmiʎʎa/ | **фамилья** | ль |
+| spaghetti | /spaˈɡetti/ | **спагетти** | тт |
+
+### Persian
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| تهران Tehrān | /tʰehˈɾɒːn/ | **Теһра̄н** | һ between vowels |
+| قم Qom | /ɢom/ | **Қом** | қ /ɢ/ |
+| خدا khodā | /xoˈdɒː/ | **хода̄** | х /x/ |
+| شیراز Shirāz | /ʃiːˈɾɒːz/ | **Шӣра̄з** | ӣ + а̄ |
+| دوغ dugh | /duːɣ/ | **дӯғ** | ӯ + final ғ |
+
+### Swahili
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| dhahabu | /ðahaˈbu/ | **ҙаһабу** | ҙ + һ (Arabic loans in Swahili) |
+| thelathini | /θelaˈθini/ | **ҫелаҫини** | double ҫ |
+| ng'ombe | /ŋombe/ | **ңомбе** | initial ң — impossible today |
+| ghali | /ɣali/ | **ғали** | ғ |
+| Kenya | /keɲa/ | **Кенья** | нь |
+
+### Greek
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| Θεσσαλονίκη | /θesaloˈnici/ | **Ҫесалоники** | θ → ҫ |
+| δεν | /ðen/ | **ҙен** | δ → ҙ |
+| γάλα | /ˈɣala/ | **ғала** | γ → ғ |
+| ευχαριστώ | /efxariˈsto/ | **ефхаристо** | χ = native х |
+| χάος | /ˈxaos/ | **хаос** | Greek becomes fully writable |
+
+### Polish
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| Wrocław | /ˈvrɔt͡swaf/ | **Вроцўаф** | ł /w/ → ў |
+| mąka | /ˈmɔ̃ka/ | **мѫка** | ą is the old nasal: the yus meets its own descendant |
+| pięć | /pʲɛ̃ɲt͡ɕ/ | **пѩчь** | ѩ — the font fuses ьѧ by itself |
+| szczęście | /ˈʂt͡ʂɛ̃ɕt͡ɕɛ/ | **шчѧшьче** | the famous cluster, tamed |
+| Kraków | /ˈkrakuf/ | **Кракуф** | final devoicing, honestly |
+
+### Indonesian
+
+| word | IPA | chuzhditsa | what it shows |
+|---|---|---|---|
+| orang | /ˈoraŋ/ | **ораң** | ң |
+| bahasa | /baˈhasa/ | **баһаса** | һ |
+| terima kasih | /təˈrima ˈkasih/ | **търима касиһ** | schwa → ъ, final һ |
+| nyanyi | /ɲaɲi/ | **няньи** | нь |
+| ngomong | /ŋɔmɔŋ/ | **ңомоң** | ң in three positions |
+
+## Tone and stress: merits and shortcomings
+
+**Stress.** A grave accent on the stressed vowel (ба̀бушкъ, Ҫесалонѝки) — the Bulgarian dictionary tradition, unchanged. Optional in running text, as it is in Bulgarian itself.
+
+**Tone (Mandarin).** Tone 1 = unmarked (high level by default), tone 2 = ◌́, tone 3 = ◌̌, tone 4 = ◌̀ — pinyin minus the macron. The macron was ceded to length, and the collision is resolved precisely by the unmarked first tone: ма̄ would mean "long a"; mā is written with a plain vowel, мао.
+
+Merits:
+
+- **Layering** — tone is a diacritic, not a letter: it drops out of running text (as katakana drops Japanese pitch accent) and returns in dictionary/teaching contexts without touching the letter backbone.
+- **Familiarity** — the four marks match pinyin for tones 2–4; nobody has to learn a new convention.
+- **Composition** — tone stacks onto an already-modified vowel: ны́ък (Viet. nước) carries ы + acute with no new machinery.
+
+Shortcomings, honestly:
+
+- **Homoglyphy with stress.** Ма̀ is "fourth tone" in a Mandarin context and "stressed syllable" in a Greek one. Resolved only by knowing the source language — katakana has the same property (ロマ doesn't say whether it's Roma or Romá). Acceptable, but it is a context dependency.
+- **Stacking.** Vietnamese phở wants quality (ъ), length (◌̄) and tone (◌̌) at once: фъ̄̌ is legal but ugly. The running-text rule: under conflict, length drops first → фъ̌.
+- **A ceiling of four.** Vietnamese (6 tones incl. glottalized) and Cantonese (6+) don't fit: the hỏi/ngã tones merge into ◌̌, nặng into ◌̀ plus a final '. Declared loss.
+- **Tone sandhi** goes unwritten — you spell the lexical tone, as in pinyin.
+
+The verdict: prosody is a **dictionary layer, not an orthographic one**. That is exactly what katakana does — and nobody has died from the missing pitch accent on コンピューター.
+
+## Known compromises
+
+- **The hook ◌̢ is polysemous by direction**: uvular on к, pharyngeal on х, velar on н, interdental on с/з, retroflex on т/д/р. One mark, one meaning ("off the native grid"), many landing places. No language contrasts two of these values on the same base letter, so there is no practical ambiguity — but the purist has been warned.
+- **Diacritics have two positioning paths**: GPOS anchors (browsers, CoreText, HarfBuzz) give exact per-letter placement; primitive renderers without GPOS fall back to a built-in offset calibrated for capitals — acceptable but cruder.
+- **ɕ has two homes**: сь under contrast (Mandarin, Polish), ш by tradition (суши). The one place where usage beat the system.
+- **Click consonants** (Zulu, Xhosa) are out of scope for v1 — by agreement.
+
+## Files
+
+- `fonts/Chuzhditsa-{Regular,Bold,Italic,BoldItalic}.{ttf,otf}` — 8 files, built programmatically by `tools/build_font.py` (fontTools; monoline strokes → outlines; two heights; GPOS mark-to-base anchors for all combining marks, verified with HarfBuzz; class-based kerning of Г/Т against А/Л/Д and around У).
+- `specimen.html` — this document with embedded fonts; open it in a browser.
+- `tools/proof.py` — visual glyph proofs.
