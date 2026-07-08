@@ -196,8 +196,9 @@ def fig5():
         ox = 120
         for gname in word:
             g = bf.G["lc."+gname]
-            draw_contours(d, bf.glyph_contours(g, 150, 66, 0, pad//2), ox, oy, sc5)
-            ox += (g["adv"] + pad) * sc5
+            gpad = pad + (pad*32)//60 if ("lc."+gname) in bf.DIAG_FLARE and pad else pad
+            draw_contours(d, bf.glyph_contours(g, 150, 66, 0, gpad//2), ox, oy, sc5)
+            ox += (g["adv"] + gpad) * sc5
     save(img, "fig5_bold_color.png")
 
 def fig6():

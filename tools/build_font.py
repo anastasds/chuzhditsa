@@ -664,6 +664,11 @@ def draw(pen, contours):
             pen.lineTo(p)
         pen.closePath()
 
+# letters whose diagonals reach the baseline with flat-cut feet
+# (lc.a is excluded: its custom lowercase is a bowl, not a diagonal)
+DIAG_FLARE = {"a", "l", "h", "zh", "adia", "bigyus",
+              "lc.l", "lc.h", "lc.zh", "lc.adia", "lc.bigyus"}
+
 def build(style, w, italic, fmt):
     slant = math.tan(math.radians(12)) if italic else 0.0
     dotr = 50 if w <= 100 else 66
@@ -674,11 +679,16 @@ def build(style, w, italic, fmt):
     metrics, shapes, boxes = {}, {}, {}
     pad = w - 90  # Bold strokes are wider; advances widen to preserve sidebearings
     for name, gdef in G.items():
-        dx = pad // 2 if gdef["adv"] else 0
+        # diagonal-footed letters flare at the baseline (the horizontal
+        # terminal cut widens with weight faster than the stroke): the flat
+        # weight delta under-compensates them and Bold АЛ welded at the feet.
+        # Their advances widen by the flare's growth too
+        gpad = pad + (pad * 32) // 60 if name in DIAG_FLARE and pad else pad
+        dx = gpad // 2 if gdef["adv"] else 0
         plain = glyph_contours(gdef, w, dotr, 0.0, dx)
         boxes[name] = bbox(plain) if plain else (0,0,0,0)
         contours = glyph_contours(gdef, w, dotr, slant, dx) if slant else plain
-        adv = gdef["adv"] + (pad if gdef["adv"] else 0)
+        adv = gdef["adv"] + (gpad if gdef["adv"] else 0)
         xs = [x for c in contours for (x,y) in c]
         metrics[name] = (adv, int(min(xs)) if xs else 0)
         if fmt == "ttf":

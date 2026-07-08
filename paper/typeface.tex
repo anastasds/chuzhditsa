@@ -115,7 +115,7 @@ The join arithmetic deserves to be written down, because it is where every strok
 Outlines here are dense polygons rather than Béziers, which is harmless — at 96--128 samples a ring is optically indistinguishable from a true circle — until it isn't: early builds sampled arcs at 8° and the facets were visible at display sizes. Sampling is now proportional to radius. The general moral is the one Bigelow and Holmes drew from the first large Unicode face: at character-set scale, quality lives in systematic policy — harmonized weights and alignments across whole scripts — not in heroic per-glyph exceptions (Bigelow \& Holmes 1993).
 
 \subsection{Color: bold is not thick regular}
-A Bold whose advances do not widen is a Regular that gained weight and kept its trousers: with stroke 150 in slots spaced for stroke 90, adjacent bold \cz{о} \cz{о} overlapped outright. The Bold therefore widens every advance by the weight delta and re-centers each glyph; counters are protected by clamping stroke weight against curvature — a closed bowl of radius $r$ carries at most $0.85r$ of stroke, an open arc at most $r$ (an open arc always keeps half its radius of daylight, so it can afford the extra weight) — which is the programmatic form of the punchcutter's counter-first discipline (Smeijers 1996). The clamp earns its keep at the small end of the curvature range: a Bold breve is an arc of radius 130 units asked to carry a 150-unit stroke — more ink than circle — and without the clamp it ships as a blob, as do the bowls of \cz{ѕ} and \cz{в} (Figure~\ref{fig:clamp}). The stroke narrows to what the curve can hold; nobody notices, which is the intended outcome.
+A Bold whose advances do not widen is a Regular that gained weight and kept its trousers: with stroke 150 in slots spaced for stroke 90, every pair loses sixty units of air, and the fitting collapses \emph{unevenly} — first where air was scarcest, so bold \cz{о} welds into a following \cz{л} outright while straight-sided pairs merely tighten. The Bold therefore widens every advance by the weight delta — diagonal-footed letters (\cz{а л х ж}) by a little more, because their flat-cut feet flare faster than the stroke grows — and re-centers each glyph; counters are protected by clamping stroke weight against curvature — a closed bowl of radius $r$ carries at most $0.85r$ of stroke, an open arc at most $r$ (an open arc always keeps half its radius of daylight, so it can afford the extra weight) — which is the programmatic form of the punchcutter's counter-first discipline (Smeijers 1996). The clamp earns its keep at the small end of the curvature range: a Bold breve is an arc of radius 130 units asked to carry a 150-unit stroke — more ink than circle — and without the clamp it ships as a blob, as do the bowls of \cz{ѕ} and \cz{в} (Figure~\ref{fig:clamp}). The stroke narrows to what the curve can hold; nobody notices, which is the intended outcome.
 \begin{figure}[ht]\centering
 \includegraphics[width=0.60\linewidth]{figures/fig14_clamp.png}
 \caption{Curvature-clamped weight. Above: Bold's full 150-unit stroke applied to the breve of \cz{ў} and the bowls of \cz{ѕ в} clogs them shut. Below: stroke clamped to the local radius budget ($0.85r$ for closed bowls, $r$ for open arcs) — the counters breathe, the weight reads unchanged.}\label{fig:clamp}
@@ -123,7 +123,7 @@ A Bold whose advances do not widen is a Regular that gained weight and kept its 
  The result can be stated as a rule of thumb the authors have not seen printed: \emph{in a parametric monoline, weight is a property of the page color, but advance width is a property of the counter} (Figure~\ref{fig:bold}).
 \begin{figure}[ht]\centering
 \includegraphics[width=0.93\linewidth]{figures/fig5_bold_color.png}
-\caption{The same word, Bold strokes. Above: on Regular advances, the letters weld. Below: advances widened by the weight delta and glyphs re-centered — the counters, inner and outer, survive the weight.}\label{fig:bold}
+\caption{The same word, Bold strokes. Above: on Regular advances the fitting collapses unevenly — \cz{о} welds into \cz{л} and \cz{л}--\cz{е} closes to ten units of air, while pairs that had air to spare merely tighten. Below: advances widened by the weight delta (diagonal-footed letters by slightly more, for the flare of their feet) and glyphs re-centered — the fitting, and the counters, survive the weight.}\label{fig:bold}
 \end{figure}
 
 
@@ -155,7 +155,7 @@ stroke: Regular / Bold & 90 / 150 & optical bar rise & +18 \\
 italic slant & 12° (centerline) & round compression & 96.5\% (radius $\geq$ 200) \\
 dot radius: Reg / Bold & 50 / 66 & weight clamp & ring $0.85r$; open arc $r$ \\
 lowercase scale (x, y) & 0.72, 0.714 & miter limit & 3.0 stroke-widths \\
-Bold advance widening & +60 & terminal cut & straight, long, $>$19° steep \\
+Bold advance widening & +60 (diag.\ feet +92) & terminal cut & straight, long, $>$19° steep \\
 kern classes & $-$15 \ldots $-$70 & mark anchors & bbox top $+$40; bottom floor $-$60 \\
 curve sampling & $\min(128, \max(48, r))$ pts & arc sampling & one point per 2.5° \\
 \bottomrule
