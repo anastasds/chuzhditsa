@@ -20,9 +20,26 @@ DOTS = [(D, 225, 860, 0), (D, 435, 860, 0)]
 G = {
 ".notdef": dict(adv=660, strokes=[(L,80,0,80,700),(L,80,700,580,700),(L,580,700,580,0),(L,580,0,80,0)]),
 "space": dict(adv=400, strokes=[]),
-"period": dict(adv=260, strokes=[(D,110,50,0)]),
-"comma": dict(adv=260, strokes=[(D,120,60,0),(L,120,10,60,-130)]),
-"colon": dict(adv=260, strokes=[(D,110,50,0),(D,110,470,0)]),
+"period": dict(adv=260, strokes=[(D,130,50,0)]),
+"comma": dict(adv=260, strokes=[(D,135,60,0),(L,135,10,75,-130)]),
+"colon": dict(adv=260, strokes=[(D,130,50,0),(D,130,470,0)]),
+"exclam": dict(adv=380, strokes=[(L,190,700,190,240),(D,190,55,0)]),
+"question": dict(adv=560, strokes=[(A,290,520,165,150,-60),(L,372,377,290,250),(D,290,55,0)]),
+"guillemetleft": dict(adv=620, strokes=[(L,290,470,150,330),(L,150,330,290,190),(L,510,470,370,330),(L,370,330,510,190)]),
+"guillemetright": dict(adv=620, strokes=[(L,110,470,250,330),(L,250,330,110,190),(L,330,470,470,330),(L,470,330,330,190)]),
+"emdash": dict(adv=720, strokes=[(L,40,300,680,300)]),
+"zero": dict(adv=680, strokes=[(R,340,350,300)]),
+"one": dict(adv=460, strokes=[(L,280,0,280,700),(L,280,700,150,560)]),
+"two": dict(adv=640, strokes=[(A,330,505,185,160,-15),(L,508,455,140,0),(L,140,0,540,0)]),
+"three": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110)]),
+"four": dict(adv=660, strokes=[(L,440,0,440,700),(L,440,700,140,190),(L,140,190,580,190)]),
+"five": dict(adv=640, strokes=[(L,500,700,185,700),(L,185,700,185,430),(A,330,240,200,115,-115)]),
+"six": dict(adv=660, strokes=[(R,330,225,195),(A,455,430,330,100,175)]),
+"seven": dict(adv=600, strokes=[(L,120,700,540,700),(L,540,700,260,0)]),
+"eight": dict(adv=660, strokes=[(R,330,515,160),(R,330,175,190)]),
+"nine": dict(adv=660, strokes=[(R,330,475,195),(A,205,270,330,-80,5)]),
+"egrave": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,350,430,350),(L,390,790,270,930)]),
+"igrave": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,390,790,270,930)]),
 "middot": dict(adv=300, strokes=[(D,150,300,0)]),
 "dotcircle": dict(adv=660, strokes=[(D,330+180,350,28),(D,330-180,350,28),(D,330,350+180,28),(D,330,350-180,28),(D,330+127,350+127,28),(D,330-127,350+127,28),(D,330+127,350-127,28),(D,330-127,350-127,28)]),
 "arrow": dict(adv=660, strokes=[(L,70,300,560,300),(L,440,400,560,300),(L,440,200,560,300)]),
@@ -35,7 +52,7 @@ G = {
 "g": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700)]),
 "d": dict(adv=660, strokes=[(L,330,700,150,140),(L,330,700,510,140),(L,70,140,590,140),(L,110,140,110,-150),(L,550,140,550,-150)]),
 "e": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,350,430,350)]),
-"zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,360),(L,590,700,330,360),(L,70,0,330,340),(L,590,0,330,340)]),
+"zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,390),(L,590,700,330,390),(L,70,0,330,310),(L,590,0,330,310)]),
 "z": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110)]),
 "i": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700)]),
 "ibr": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(A,330,930,130,205,335)]),
@@ -43,10 +60,10 @@ G = {
 "l": dict(adv=660, strokes=[(L,70,0,330,700),(L,330,700,590,0)]),
 "m": dict(adv=660, strokes=[(L,90,0,90,700),(L,90,700,330,270),(L,330,270,570,700),(L,570,0,570,700)]),
 "n": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350)]),
-"o": dict(adv=660, strokes=[(R,330,350,290)]),
+"o": dict(adv=800, strokes=[(R,400,350,355)]),
 "p": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,700,500,700)]),
 "r": dict(adv=640, strokes=[(L,160,0,160,700),(R,340,510,180)]),
-"s": dict(adv=640, strokes=[(A,340,350,285,50,310)]),
+"s": dict(adv=720, strokes=[(A,400,350,350,50,310)]),
 "t": dict(adv=660, strokes=[(L,70,700,590,700),(L,330,0,330,700)]),
 "u": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180)]),
 "f": dict(adv=660, strokes=[(L,330,-120,330,800),(R,330,350,240)]),
@@ -68,7 +85,7 @@ G = {
 "dzh": dict(adv=660, strokes=[(L,150,700,150,60),(L,510,700,510,60),(L,150,60,510,60),(L,330,60,330,-160)]),
 "shha": dict(adv=640, strokes=[(L,150,0,150,700),(A,315,300,165,180,0),(L,480,0,480,300)]),
 "adia": dict(adv=660, strokes=[(L,70,0,330,700),(L,330,700,590,0),(L,190,230,470,230)]+DOTS),
-"odia": dict(adv=660, strokes=[(R,330,350,290)]+DOTS),
+"odia": dict(adv=800, strokes=[(R,400,350,355),(D,295,880,0),(D,505,880,0)]),
 "udia": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180)]+DOTS),
 "nghk": dict(adv=680, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350),(L,500,0,500,-150),(L,500,-150,590,-150)]),
 "khk": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350),(L,500,0,500,-150),(L,500,-150,590,-150)]),
@@ -76,16 +93,16 @@ G = {
 "hhk": dict(adv=700, strokes=[(L,90,0,570,700),(L,90,700,570,0),(L,570,0,570,-150),(L,570,-150,660,-150)]),
 "zhk": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110),(L,330,5,330,-150),(L,330,-150,420,-150)]),
 "shk": dict(adv=640, strokes=[(A,340,350,285,50,310),(L,340,65,340,-150),(L,340,-150,430,-150)]),
-"palochka": dict(adv=560, strokes=[(L,280,0,280,700),(L,190,700,370,700),(L,190,0,370,0)]),
+"palochka": dict(adv=460, strokes=[(L,230,0,230,700),(L,140,700,320,700),(L,140,0,320,0)]),
 "imac": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,170,890,490,890)]),
 "umac": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180),(L,170,890,490,890)]),
 # -- pan-Slavic superset ------------------------------------------------------
 # е went angular so that Ukrainian round є keeps the historic wide-e form
-"ye": dict(adv=660, strokes=[(A,340,350,280,55,305),(L,260,350,570,350)]),
+"ye": dict(adv=760, strokes=[(A,395,350,345,55,305),(L,320,350,655,350)]),
 "yo": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,350,430,350)]+DOTS),
-"ee": dict(adv=640, strokes=[(A,320,350,285,-130,130),(L,170,350,460,350)]),
-"iukr": dict(adv=560, strokes=[(L,280,0,280,700)]),
-"yi": dict(adv=560, strokes=[(L,280,0,280,700),(D,195,860,0),(D,365,860,0)]),
+"ee": dict(adv=790, strokes=[(A,360,350,345,-130,130),(L,205,350,525,350)]),
+"iukr": dict(adv=380, strokes=[(L,190,0,190,700)]),
+"yi": dict(adv=380, strokes=[(L,190,0,190,700),(D,105,860,0),(D,275,860,0)]),
 "geup": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700),(L,540,700,540,830)]),
 "dje": dict(adv=620, strokes=[(L,60,700,460,700),(L,260,340,260,700),(A,370,340,110,180,0),(L,480,-80,480,340),(L,480,-80,390,-150)]),
 "tshe": dict(adv=580, strokes=[(L,180,0,180,700),(L,40,580,340,580),(A,300,330,120,180,0),(L,420,0,420,330)]),
@@ -93,7 +110,7 @@ G = {
 "kje": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350),(L,300,790,400,900)]),
 "je": dict(adv=580, strokes=[(L,400,120,400,700),(A,285,120,115,0,-150)]),
 # -- combining marks (zero advance, drawn back over previous glyph) ----------
-"fita": dict(adv=660, strokes=[(R,330,350,290),(L,140,350,520,350)]),
+"fita": dict(adv=800, strokes=[(R,400,350,355),(L,185,350,615,350)]),
 "gravecmb": dict(adv=0, strokes=[(L,-270,820,-400,970)]),
 "brevecmb": dict(adv=0, strokes=[(A,-330,930,130,205,335)]),
 "barcmb": dict(adv=0, strokes=[(L,-450,370,-215,370)]),
@@ -160,8 +177,8 @@ LC_CUSTOM = {
 "chpal": dict(adv=545, strokes=[(L,108,500,108,310),(L,108,310,346,310),(L,346,0,346,500),(L,455,270,455,500)]),
 "ppal": dict(adv=560, strokes=[(L,115,0,115,500),(L,360,0,360,500),(L,115,500,360,500),(L,470,270,470,500)]),
 # lowercase і ї ј carry dots / descender curls the caps lack
-"iukr": dict(adv=480, strokes=[(L,240,0,240,500),(D,240,650,0)]),
-"yi": dict(adv=480, strokes=[(L,240,0,240,500),(D,158,650,0),(D,322,650,0)]),
+"iukr": dict(adv=330, strokes=[(L,165,0,165,500),(D,165,650,0)]),
+"yi": dict(adv=330, strokes=[(L,165,0,165,500),(D,82,650,0),(D,248,650,0)]),
 "je": dict(adv=440, strokes=[(L,300,-30,300,500),(A,200,-30,100,0,-150),(D,300,650,0)]),
 }
 
@@ -195,8 +212,12 @@ CMAP_PAIRS = (
  pair(0x0456,0x0406,"iukr")+pair(0x0457,0x0407,"yi")+pair(0x0491,0x0490,"geup")+
  pair(0x0452,0x0402,"dje")+pair(0x045B,0x040B,"tshe")+pair(0x0453,0x0403,"gje")+
  pair(0x045C,0x040C,"kje")+pair(0x0458,0x0408,"je")+
+ pair(0x0450,0x0400,"egrave")+pair(0x045D,0x040D,"igrave")+
  [(0x0020,"space"),(0x00A0,"space"),(0x002E,"period"),(0x002C,"comma"),
-  (0x003A,"colon"),(0x00B7,"middot"),(0x002D,"hyphen"),(0x2010,"hyphen"),(0x2013,"endash"),
+  (0x003A,"colon"),(0x00B7,"middot"),(0x002D,"hyphen"),(0x2010,"hyphen"),(0x2013,"endash"),(0x2014,"emdash"),
+  (0x0021,"exclam"),(0x003F,"question"),(0x00AB,"guillemetleft"),(0x00BB,"guillemetright"),
+  (0x0030,"zero"),(0x0031,"one"),(0x0032,"two"),(0x0033,"three"),(0x0034,"four"),
+  (0x0035,"five"),(0x0036,"six"),(0x0037,"seven"),(0x0038,"eight"),(0x0039,"nine"),
   (0x0027,"quoteright"),(0x2019,"quoteright"),(0x25CC,"dotcircle"),(0x2192,"arrow"),
   (0x0300,"gravecmb"),(0x0301,"acutecmb"),(0x0304,"macroncmb"),
   (0x030C,"caroncmb"),(0x0308,"diacmb"),(0x0328,"ogonekcmb"),(0x0322,"retrocmb"),
@@ -238,25 +259,30 @@ def polyline_contours(pts, w):
         out.append(ccw(circle_pts(x, y, hw, 14)))
     return out
 
-def stroke_contours(st, w, dotr):
+def stroke_contours(st, w, dotr, slant, dx):
+    """Shear is applied to stroke CENTERLINES (not finished outlines) so the
+    italic keeps constant perpendicular weight; dx shifts bold sidebearings."""
+    def sh(x, y):
+        return (x + y*slant + dx, y)
     kind = st[0]
     if kind == L:
-        return polyline_contours([(st[1],st[2]),(st[3],st[4])], w)
+        return polyline_contours([sh(st[1],st[2]), sh(st[3],st[4])], w)
     if kind == A:
-        return polyline_contours(arc_pts(st[1],st[2],st[3],st[4],st[5]), w)
+        return polyline_contours([sh(x,y) for x,y in arc_pts(st[1],st[2],st[3],st[4],st[5])], w)
     if kind == R:
-        cx, cy, r = st[1], st[2], st[3]
-        return [ccw(circle_pts(cx,cy,r+w/2)), ccw(circle_pts(cx,cy,max(10,r-w/2)))[::-1]]
+        cx, cy = sh(st[1], st[2])
+        r = st[3]
+        wr = min(w, max(44, int(r*0.85)))  # keep counters open in Bold
+        return [ccw(circle_pts(cx,cy,r+wr/2)), ccw(circle_pts(cx,cy,max(10,r-wr/2)))[::-1]]
     if kind == D:
-        return [ccw(circle_pts(st[1],st[2],st[3] or dotr,20))]
+        cx, cy = sh(st[1], st[2])
+        return [ccw(circle_pts(cx,cy,st[3] or dotr,20))]
     raise ValueError(kind)
 
-def glyph_contours(gdef, w, dotr, slant):
+def glyph_contours(gdef, w, dotr, slant, dx=0):
     cs = []
     for st in gdef["strokes"]:
-        cs.extend(stroke_contours(st, w, dotr))
-    if slant:
-        cs = [[(x + y*slant, y) for (x,y) in c] for c in cs]
+        cs.extend(stroke_contours(st, w, dotr, slant, dx))
     return cs
 
 def bbox(contours):
@@ -282,29 +308,45 @@ def make_fea(boxes, slant):
     for b in BASES:
         x0,y0,x1,y1 = boxes[b]
         tx, ty = sh((x0+x1)/2, y1 + 40)
-        bx, by = sh(BOT_X.get(b, (x0+x1)/2), min(0, y0) - 10)
+        # clamp so bottom hooks don't stack below existing descenders
+        bx, by = sh(BOT_X.get(b, (x0+x1)/2), max(min(0, y0), -60) - 10)
         lines.append(f"  pos base {b} <anchor {tx} {ty}> mark @TOP <anchor {bx} {by}> mark @BOT;")
     lines.append("} mark;")
     lines.append("""
+@T_CAP = [g t gbar geup gje];
+@T_LC = [lc.g lc.t lc.gbar lc.geup lc.gje];
+@DIAG_CAP = [a l d adia bigyus];
+@DIAG_LC = [lc.a lc.l lc.d lc.adia lc.bigyus];
+@U_CAP = [u ubr udia umac];
+@U_LC = [lc.u lc.ubr lc.udia lc.umac];
+@ROUND_CAP = [o odia s ye ee fita];
+@ROUND_LC = [lc.o lc.odia lc.s lc.ye lc.ee lc.fita];
 feature kern {
-  pos [g t gbar lc.g lc.t lc.gbar] [a l d adia bigyus l.dummy] -55;
-  pos [a l d adia lc.l lc.d] [u ubr udia umac lc.u lc.ubr lc.udia lc.umac] -40;
-  pos [u ubr udia umac lc.u lc.ubr lc.udia lc.umac] [a l d adia lc.a lc.l lc.d lc.adia] -40;
+  pos @T_CAP @DIAG_CAP -55;   pos @T_LC @DIAG_LC -45;
+  pos @T_CAP @ROUND_CAP -60;  pos @T_LC @ROUND_LC -50;
+  pos @DIAG_CAP @U_CAP -40;   pos @DIAG_LC @U_LC -35;
+  pos @U_CAP @DIAG_CAP -40;   pos @U_LC @DIAG_LC -35;
+  pos [t g u lc.t lc.g lc.u] [period comma] -70;
 } kern;
-""".replace(" l.dummy", " lc.l lc.d lc.adia lc.bigyus"))
-    ligs = [("n","ermal","nsoft"),("l","ermal","lsoft"),
-            ("ermal","smallyus","iotsyus"),("ibr","smallyus","iotsyus"),
-            ("ermal","bigyus","iotbyus"),("ibr","bigyus","iotbyus"),
+""")
+    yus = [("ermal","smallyus","iotsyus"),("ibr","smallyus","iotsyus"),
+           ("ermal","bigyus","iotbyus"),("ibr","bigyus","iotbyus")]
+    soft = [("n","ermal","nsoft"),("l","ermal","lsoft"),
             ("t","palochka","tpal"),("k","palochka","kpal"),
             ("ts","palochka","tspal"),("ch","palochka","chpal"),
             ("p","palochka","ppal")]
-    lines.append("feature liga {")
-    for a, b, out in ligs:
-        lines.append(f"  sub {a} {b} by {out};")
-        lines.append(f"  sub lc.{a} lc.{b} by lc.{out};")
+    # ordered lookups: yus fusion must win before н/л consume the soft sign
+    lines.append("feature liga {\n  lookup IOTYUS {")
+    for a, b, out in yus:
+        lines.append(f"    sub {a} {b} by {out};")
+        lines.append(f"    sub lc.{a} lc.{b} by lc.{out};")
+    lines.append("  } IOTYUS;\n  lookup SOFTFUSE {")
+    for a, b, out in soft:
+        lines.append(f"    sub {a} {b} by {out};")
+        lines.append(f"    sub lc.{a} lc.{b} by lc.{out};")
         if b == "palochka":  # convention: palochka is written caseless as U+04C0
-            lines.append(f"  sub lc.{a} {b} by lc.{out};")
-    lines.append("} liga;")
+            lines.append(f"    sub lc.{a} {b} by lc.{out};")
+    lines.append("  } SOFTFUSE;\n} liga;")
     return "\n".join(lines)
 
 # ------------------------------------------------------------------- builder
@@ -323,12 +365,13 @@ def build(style, w, italic, fmt):
     fb.setupGlyphOrder(order)
     fb.setupCharacterMap({cp: n for cp, n in CMAP.items()})
     metrics, shapes, boxes = {}, {}, {}
+    pad = w - 90  # Bold strokes are wider; advances widen to preserve sidebearings
     for name, gdef in G.items():
-        plain = glyph_contours(gdef, w, dotr, 0.0)
+        dx = pad // 2 if gdef["adv"] else 0
+        plain = glyph_contours(gdef, w, dotr, 0.0, dx)
         boxes[name] = bbox(plain) if plain else (0,0,0,0)
-        contours = ([[(x + y*slant, y) for (x,y) in c] for c in plain]
-                    if slant else plain)
-        adv = gdef["adv"]
+        contours = glyph_contours(gdef, w, dotr, slant, dx) if slant else plain
+        adv = gdef["adv"] + (pad if gdef["adv"] else 0)
         xs = [x for c in contours for (x,y) in c]
         metrics[name] = (adv, int(min(xs)) if xs else 0)
         if fmt == "ttf":
@@ -347,14 +390,16 @@ def build(style, w, italic, fmt):
         fb.setupCFF(ps, {"FullName": f"{family} {sub}", "FamilyName": family,
                          "ItalicAngle": -12 if italic else 0}, shapes, {})
     fb.setupHorizontalMetrics(metrics)
-    fb.setupHorizontalHeader(ascent=1000, descent=-260)
+    fb.setupHorizontalHeader(ascent=1050, descent=-350)
     fb.setupNameTable({"familyName": family, "styleName": sub, "psName": ps,
-                       "fullName": f"{family} {sub}", "version": "Version 2.0",
-                       "copyright": "Chuzhditsa v2 - a Glagolitic-inspired loanword face for Bulgarian"})
+                       "fullName": f"{family} {sub}", "version": "Version 2.1",
+                       "copyright": "Chuzhditsa - a Glagolitic-inspired pan-Slavic loanword face",
+                       "licenseDescription": "This Font Software is licensed under the SIL Open Font License, Version 1.1.",
+                       "licenseInfoURL": "https://openfontlicense.org"})
     bold = w > 100
-    fsSel = (0x01 if italic else 0) | (0x20 if bold else 0) | (0x40 if not (bold or italic) else 0)
-    fb.setupOS2(sTypoAscender=800, sTypoDescender=-260, sTypoLineGap=200,
-                usWinAscent=1050, usWinDescent=300, fsSelection=fsSel,
+    fsSel = (0x01 if italic else 0) | (0x20 if bold else 0) | (0x40 if not (bold or italic) else 0) | 0x80
+    fb.setupOS2(sTypoAscender=1050, sTypoDescender=-350, sTypoLineGap=0,
+                usWinAscent=1100, usWinDescent=450, fsSelection=fsSel,
                 usWeightClass=700 if bold else 400, sxHeight=500, sCapHeight=700)
     fb.setupPost(italicAngle=-12.0 if italic else 0.0)
     fb.font["head"].macStyle = (0x01 if bold else 0) | (0x02 if italic else 0)

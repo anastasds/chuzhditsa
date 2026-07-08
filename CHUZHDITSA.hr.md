@@ -1,8 +1,8 @@
 # Чуждица · Chuzhditsa (hrvatski)
 
-**Jezične verzije:** puna specifikacija — [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · kratki vodiči: [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · hrvatski · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [shqip](CHUZHDITSA.sq.md)
+**Jezične verzije:** puna specifikacija — [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · kratki vodiči: [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · hrvatski · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md)
 
-**Chuzhditsa** (bug. чуждица, „tuđica") je funkcionalni ekvivalent japanske katakane za ćirilicu: sustavan, deterministički sloj za fonetski zapis stranih riječi, plus pismo čiji oblik sam po sebi označava „ovo je posuđenica". Tri sloja: **osnova** (vlastita abeceda svakog jezika), **proširenja** (slova za strane glasove, izvedena obilježnom gramatikom: jedan znak = jedno fonetsko obilježje) i **prozodija** (neobavezni znakovi naglaska, tona i duljine).
+**Chuzhditsa** (bug. чуждица, „tuđica") je funkcionalni ekvivalent japanske katakane za ćirilicu: sustavan, deterministički sloj za fonetski zapis stranih riječi, plus pismo čiji oblik sam po sebi označava „ovo je riječ-gost". Tri sloja: **osnova** (vlastita abeceda svakog jezika), **proširenja** (slova za strane glasove, izvedena obilježnom gramatikom: jedan znak = jedno fonetsko obilježje) i **prozodija** (neobavezni znakovi naglaska, tona i duljine).
 
 ## Hrvatska ima poseban ulog: glagoljica
 

@@ -13,16 +13,16 @@ LANGS = [
  ("weekend","/ˈwiːkɛnd/","ўӣкенд",("ў /w/, ӣ дълго /iː/","ў /w/, ӣ long /iː/","ў /w/, ӣ довге /iː/")),
  ("thanks","/θæŋks/","ҫӓңкс",("ҫ /θ/, ӓ /æ/, ң /ŋ/ — три нови букви","ҫ /θ/, ӓ /æ/, ң /ŋ/ — three new letters","ҫ /θ/, ӓ /æ/, ң /ŋ/ — три нові літери")),
  ("this","/ðɪs/","ҙис",("ҙ /ð/","ҙ /ð/","ҙ /ð/")),
- ("thriller","/ˈθrɪlə/","ҫрилър",("ҫ + ъ за /ə/","ҫ + ъ for /ə/","ҫ + ъ для /ə/")),
- ("birthday","/ˈbɜːθdeɪ/","бърҫдей",("ъ /ɜː/, ҫ /θ/","ъ /ɜː/, ҫ /θ/","ъ /ɜː/, ҫ /θ/")),
- ("world","/wɜːld/","ўърлд",("ў + ър","ў + ър","ў + ър")),
+ ("thriller","/ˈθrɪlɚ/","ҫрилър",("ҫ + ъ за /ə/","ҫ + ъ for /ə/","ҫ + ъ для /ə/")),
+ ("birthday","/ˈbɝθdeɪ/","бърҫдей",("ъ /ɜː/, ҫ /θ/","ъ /ɜː/, ҫ /θ/","ъ /ɜː/, ҫ /θ/")),
+ ("world","/wɝld/","ўърлд",("ў + ър","ў + ър","ў + ър")),
  ("squirrel","/ˈskwɪrəl/","скўиръл",("ў в клъстер","ў in a cluster","ў у кластері")),
  ("Harry","/ˈhæri/","Һӓри",("һ /h/, ӓ /æ/","һ /h/, ӓ /æ/","һ /h/, ӓ /æ/")),
  ("ring","/rɪŋ/","риң",("ң — без фалшиво г","ң — no fake г","ң — без фальшивого г")),
- ("cat · cut · cart","/kæt/ /kʌt/ /kɑːt/","кӓт · кът · карт",("минимална тройка запазена","minimal triple preserved","мінімальну трійку збережено")),
+ ("cat · cut · cart","/kæt/ /kʌt/ /kɑɹt/","кӓт · кът · карт",("минимална тройка запазена","minimal triple preserved","мінімальну трійку збережено")),
 ]),
 (("Мандарин · Mandarin","Mandarin","Мандаринська · Mandarin"), [
- ("北京 Běijīng","/pèɪ.tɕíŋ/","Бе̌йџиң",("тон 3 ◌̌, џ /tɕ/, ң","tone 3 ◌̌, џ /tɕ/, ң","тон 3 ◌̌, џ /tɕ/, ң")),
+ ("北京 Běijīng","/pèɪ.tɕíŋ/","Пе̌йчиң",("неаспирираните b/j са беззвучни → п/ч; тон 3 ◌̌, ң","unaspirated b/j are voiceless → п/ч; tone 3 ◌̌, ң","непридихові b/j глухі → п/ч; тон 3 ◌̌, ң")),
  ("茶 chá","/ʈʂʰǎ/","чʰа́",("аспирация ʰ + тон 2","aspiration ʰ + tone 2","придих ʰ + тон 2")),
  ("谢谢 xièxie","/ɕjê.ɕje/","сьѐсье",("ɕ → сь","ɕ → сь","ɕ → сь")),
  ("人 rén","/ʐə̌n/","жъ́н",("ʐ → ж, ъ /ə/","ʐ → ж, ъ /ə/","ʐ → ж, ъ /ə/")),
@@ -90,8 +90,8 @@ LANGS = [
 (("Руски · Russian","Russian","Російська · Russian"), [
  ("мышь","/mɨʂ/","мыш",("ы се връща у дома; без немия ь","ы comes back home; no silent ь","ы повертається додому; без німого ь")),
  ("Хрущёв","/xrʊˈɕːɵf/","Хрушчов",("рус. щ /ɕː/ ≠ бълг. щ /ʃt/","Rus. щ /ɕː/ ≠ Bul. щ /ʃt/","рос. щ /ɕː/ ≠ болг. щ /ʃt/")),
- ("бабушка","/ˈbabuʂkə/","бабушкъ",("финалната шва честно като ъ","the final schwa, honestly, as ъ","кінцева шва чесно як ъ")),
- ("ёлка","/ˈjɵlkə/","йолкъ",("ё → йо","ё → йо","ё → йо")),
+ ("бабушка","/ˈbabuʂkə/","бабушка",("фонемно, не фонетично: редукцията не се записва","phonemic, not phonetic: reduction goes unwritten","фонемно, не фонетично: редукція не записується")),
+ ("ёлка","/ˈjɵlkə/","йолка",("ё → йо","ё → йо","ё → йо")),
  ("Пётр","/pʲɵtr/","Пьотр",("палатализация с ь","palatalization with ь","палаталізація через ь")),
 ]),
 (("Японски · Japanese","Japanese","Японська · Japanese"), [
@@ -134,7 +134,7 @@ LANGS = [
 ]),
 (("Италиански · Italian","Italian","Італійська · Italian"), [
  ("pizza","/ˈpittsa/","пицца",("геминатът се пише двойно","the geminate is written double","гемінат пишеться подвоєно")),
- ("zero","/ˈdzɛːro/","ѕеро",("ѕ /dz/ — ѕело отново на работа","ѕ /dz/ — dzelo back on the job","ѕ /dz/ — дзело знову на роботі")),
+ ("zero","/ˈdzɛːro/","ѕеро",("ѕ /dz/ — жива в македонския, назаем тук","ѕ /dz/ — alive in Macedonian, borrowed here","ѕ /dz/ — жива в македонській, позичена тут")),
  ("gnocchi","/ˈɲɔkki/","ньокки",("нь + кк","нь + кк","нь + кк")),
  ("famiglia","/faˈmiʎʎa/","фамилья",("ль","ль","ль")),
  ("spaghetti","/spaˈɡetti/","спагетти",("тт","тт","тт")),
@@ -151,7 +151,7 @@ LANGS = [
  ("thelathini","/θelaˈθini/","ҫелаҫини",("двойно ҫ","double ҫ","подвійне ҫ")),
  ("ng'ombe","/ŋombe/","ңомбе",("начално ң — невъзможно днес","initial ң — impossible today","початкове ң — неможливе нині")),
  ("ghali","/ɣali/","ғали",("ғ","ғ","ғ")),
- ("Kenya","/keɲa/","Кенья",("нь","нь","нь")),
+ ("Kenya","/keɲa/","Кеня",("/ɲa/ = ня, роден механизъм","/ɲa/ = ня, the native mechanism","/ɲa/ = ня, рідний механізм")),
 ]),
 (("Гръцки · Greek","Greek","Грецька · Greek"), [
  ("Θεσσαλονίκη","/θesaloˈnici/","Ҫесалоники",("θ → ҫ","θ → ҫ","θ → ҫ")),
@@ -163,8 +163,8 @@ LANGS = [
 (("Полски · Polish","Polish","Польська · Polish"), [
  ("Wrocław","/ˈvrɔt͡swaf/","Вроцўаф",("ł /w/ → ў","ł /w/ → ў","ł /w/ → ў")),
  ("mąka","/ˈmɔ̃ka/","мѫка",("ą е старата носовка: юсът среща потомъка си","ą is the old nasal: the yus meets its own descendant","ą — давній носовий: юс зустрічає власного нащадка")),
- ("pięć","/pʲɛ̃ɲt͡ɕ/","пѩчь",("ѩ — шрифтът сам слива ьѧ","ѩ — the font fuses ьѧ by itself","ѩ — шрифт сам зливає ьѧ")),
- ("szczęście","/ˈʂt͡ʂɛ̃ɕt͡ɕɛ/","шчѧшьче",("прочутото струпване, укротено","the famous cluster, tamed","славнозвісне скупчення, приборкане")),
+ ("pięć","/pʲɛ̃t͡ɕ/","пѩч",("ѩ — шрифтът сам слива ьѧ","ѩ — the font fuses ьѧ by itself","ѩ — шрифт сам зливає ьѧ")),
+ ("szczęście","/ˈʂt͡ʂɛ̃ɕt͡ɕɛ/","шчѧсьче",("прочутото струпване, укротено","the famous cluster, tamed","славнозвісне скупчення, приборкане")),
  ("Kraków","/ˈkrakuf/","Кракуф",("финално обеззвучаване, честно","final devoicing, honestly","кінцеве оглушення, чесно")),
 ]),
 (("Индонезийски · Indonesian","Indonesian","Індонезійська · Indonesian"), [
@@ -177,9 +177,9 @@ LANGS = [
 ]
 
 LINKS = {
- "bg": "**Езикови версии:** български · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md)\n",
- "en": "**Language versions:** [български](CHUZHDITSA.md) · English · [українська](CHUZHDITSA.uk.md)\n",
- "uk": "**Мовні версії:** [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · українська\n",
+ "bg": "**Езикови версии:** български · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md)\n**Кратки водачи:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Статия:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)\n",
+ "en": "**Language versions:** [български](CHUZHDITSA.md) · English · [українська](CHUZHDITSA.uk.md)\n**Short guides:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Paper:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)\n",
+ "uk": "**Мовні версії:** [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · українська\n**Короткі путівники:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Стаття:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)\n",
 }
 
 TABLE_HDR = {
@@ -202,18 +202,22 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 2. **Разширения** — букви за звукове извън българската фонология, изведени по featural граматика (една модификация = един фонетичен признак).
 3. **Просодия** — незадължителни знаци за ударение, тон и дължина, наслагващи се върху всяка гласна.
 
-Маркирането на чуждата дума става **чрез самия шрифт**: както катакана се различава от хирагана по формата, не по инвентара, така чужд текст се набира в Chuzhditsa — монолинеен, с кръгли глаголически дъна̀ — и се разпознава от три метра.
+Маркирането на чуждата дума става **чрез самия шрифт**: както катакана се различава от хирагана по формата, не по инвентара, така чужд текст се набира в Chuzhditsa — монолинеен, с кръгли глаголически дъна̀ — и се разпознава от три метра. Две граници са част от дизайна: регистърът бележи етап от живота на думата, не петно върху нея (усвоената заемка завършва в обикновената азбука, точно както テンプラ стана 天ぷら), и бележи **думи, никога говорещи**.
+
+### За името
+
+В пуристичния български чуждица не е неутралната дума за заемка (това е заемка); тя назовава чужда дума, без която езикът уж би бил по-добре. Името е избрано срещу тази употреба: където пуризмът връчва на чуждицата заповед за изгонване, тази система ѝ връчва добре ушит костюм и място на масата.
 
 ## Глаголическото наследство
 
-Глаголицата (863 г., Константин-Кирил) е първата славянска азбука — панделки, кръгове и триъгълници, проектирани от нулата. Кирилицата (Преслав, ~893 г.) я замества, като запазва глаголически форми само за звуковете, които гръцкият няма. Chuzhditsa обръща жеста: **най-старите форми маркират най-новите думи.**
+Глаголицата (863 г., Константин-Кирил) е първата славянска азбука — панделки, кръгове и триъгълници без един-единствен пряк образец. Кирилицата (Преславска книжовна школа, ~893 г.) постепенно я измества, като моделира повечето букви по гръцкия унциал и черпи от глаголицата главно за звуковете, които гръцкият няма. Chuzhditsa обръща жеста: **най-старите форми маркират най-новите думи.**
 
 Какво точно взима шрифтът от глаголицата:
 
 - **Кръглите дъна** — б, в, р, ъ, ь, ы, ю, я носят пълни окръжности вместо ъглести чашки; обла глаголица, не устав.
 - **Две височини** — главните стоят на 700 единици, редовните на 500 (x-height), с възходящи (б, ф) и низходящи (р, у, ф, куките) части; а, б, р и ф имат собствени редовни форми, останалите се извеждат систематично от главните.
-- **Възкресените букви** — ѫ, ѧ (юсовете, носовки до 1945 г. в правописа и до X в. в изговора) и ѕ (ѕело, /dz/) идват по права линия от глаголическите Ⱘ, Ⱔ, Ⰷ.
-- **Регистровата функция** — глаголицата е оцеляла векове като „другото писмо“ за специална употреба (литургия в Хърватия до XIX в.); тук „специалната употреба“ е чуждото.
+- **Възкресените букви** — ѫ, ѧ (юсовете, старобългарските носовки: ѫ стои в правописа до 1945 г., ѧ — до XIX в., а в изговора живеят до XI–XIII в.) и ѕ (ѕело, /dz/ — жива буква на македонския книжовен език, взета назаем, не възкресена) наследяват звуковете и местата на глаголическите Ⱘ, Ⱔ, Ⰷ; самите кирилски форми са преработки (ѕ по модела на гръцката стигма).
+- **Регистровата функция** — глаголицата е оцеляла векове като „другото писмо“ за специална употреба (литургия в Хърватия до началото на XX в.: последният глаголически мисал е печатан 1905 г. и е в употреба до 1927 г.); тук „специалната употреба“ е чуждото.
 
 ## Дизайнов интегритет: featural граматика
 
@@ -228,7 +232,7 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 | ◌̨ юсова опашка | назализация | о→**ѫ** /ɔ̃ õ/ · е→**ѧ** /ɛ̃/ · **а̨** /ɑ̃ ɐ̃/ · **ӧ̨** /œ̃/ |
 | ◌ʰ ◌ʱ вдигнато һ | аспирация / мърморен глас | пʰ тʰ кʰ чʰ · бʱ дʱ гʱ џʱ |
 | ◌̄ провлачка | дълга гласна | **ӣ ӯ** (готови, от таджикски) · а̄ е̄ о̄ ӧ̄ ӱ̄ |
-| Ӏ палочка | глотално действие | тӀ кӀ цӀ ejectives · само Ӏ = /ʕ/ |
+| Ӏ палочка | ларингално-фарингално действие | тӀ кӀ цӀ ejectives · само Ӏ = /ʕ/ |
 | ь | палатализация | нь /ɲ/ · ль /ʎ/ · хь /ç/ · сь /ɕ/ |
 
 Куката ◌̢ е обобщение на прецедент, който българската азбука вече съдържа: **щ е ш с кука**. Готовите букви қ ң ҳ ҫ ҙ съществуват в Unicode (казахски, башкирски, таджикски); при т̢ д̢ р̢ същата кука се пише като комбиниращ знак U+0322.
@@ -242,6 +246,8 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 | т /t/ | д /d/ | | **ҫ** /θ/ | **ҙ** /ð/ |
 | ц /ts/ | **ѕ** /dz/ | | ч /tʃ/ | **џ** /dʒ/ |
 | х /x/ | **ғ** /ɣ/ | | **ҳ** /ħ/ | **Ӏ** /ʕ/ |
+
+Двойките са фонемни, не деривационни: ғ е ленирано г, не „озвучено х“, а Ӏ е палочката, не „озвучено ҳ“ — таблицата записва звуковата симетрия, граматиката — строежа на глифа. Тук се крие и едно обявено сливане: қ пише и /q/, и звучния му партньор /ɢ/ (перс. Қом).
 
 Затова фита (ѳ) отпадна от втората версия: тя нямаше звучен партньор и не се извеждаше по никое правило. Наследството ѝ остава в куката — ҫ върши работата на ѳ, но системно. По същата логика ә отстъпи на **ӓ**: /æ/ е предна а, и двете точки го казват; ӓ–ӧ–ӱ е серия, ә беше сирак.
 
@@ -260,13 +266,13 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 
 ### Лигатури
 
-Кирилицата е родена да лигатурира — ю е историческа лигатура на і+о, сръбските љ и њ са срастнали л/н+ь, а старобългарският е имал йотуваните юсове. Чуждица продължава традицията с три семейства, всичките живи GSUB правила в шрифта:
+Кирилицата е родена да лигатурира — ю е историческа лигатура на і+оу (у-то по-късно отпада), сръбските љ и њ са срастнати от л/н+ь от Вук Караджич през 1818 г. (след диграфите на Мъркаль), а старобългарският е имал йотуваните юсове. Чуждица продължава традицията с три семейства, всичките живи GSUB правила в шрифта:
 
 | последователност | лигатура | звук | пример |
 |---|---|---|---|
 | нь | срастнала њ-форма | /ɲ/ | ниньо, ньокки — сливат се автоматично |
 | ль | срастнала љ-форма | /ʎ/ | фамилья, паелья |
-| ьѧ / йѧ | **ѩ** (йотуван малък юс, U+0469) | /jɛ̃/ | фр. bien → бѩ; пол. pięć → пѩчь |
+| ьѧ / йѧ | **ѩ** (йотуван малък юс, U+0469) | /jɛ̃/ | фр. bien → бѩ; пол. pięć → пѩч |
 | ьѫ / йѫ | **ѭ** (йотуван голям юс, U+046D) | /jɔ̃/ | фр. lion /ljɔ̃/ → льѫ → лѭ |
 | тӀ кӀ пӀ цӀ чӀ | срастнала форма с вдигната палочка | ejectives | амх. ጥሩ tʼɨru → тӀыру; груз. წყალი → цӀқали |
 
@@ -323,7 +329,11 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 
 ### Документирани сливания
 
-Детерминизмът се купува с обявена загуба: всички ротици → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; имплозивните → б д; корейските напрегнати = двойни букви; ʔ се изпуска извън арабски контекст. Който иска фонетика без загуба, използва IPA — чуждица е правопис, не транскрипционна лаборатория.
+Детерминизмът се купува с обявена загуба: всички ротици → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; имплозивните → б д; q/ɢ → қ; корейските напрегнати = двойни букви; ʔ се изпуска извън арабски контекст. Английският вход е спрямо ротичен акцент (General American). Позиционни правила: /w/ е ў в начало на сричка и у като офглайд (Са̨у); /ɲ/ пред гласна използва родния механизъм н+я/ю/ьо (Кеня), другаде нь; краесловната ненаударена шва пази гласната буква на източника (Гӧ̄те, бабушка), а ъ пише /ə ʌ ɜ/ навсякъде другаде; руското щ /ɕː/ → шч; палаталните преградни /c ɟ/ се пишат от основата на самия източник (словашко ť → ть, албанско q → кь) — обявено, правописно осведомено изключение. Който иска фонетика без загуба, използва IPA — чуждица е правопис, не транскрипционна лаборатория.
+
+### Кодиране и обработка
+
+Каноничното кодиране е **NFC**. Където Unicode има готова буква, тя е канонична (қ ң ҳ ҫ ҙ ғ ӣ ӯ ӓ ӧ ӱ ѐ ѝ); комбиниращи знаци се използват само без готова форма (т̢ д̢ р̢, а̨, тоновете). Последователностите нь, ль, ьѧ, ьѫ са каноничният запис — готовите њ љ ѩ ѭ се приемат на входа и се изобразяват еднакво. Апострофът е само U+2019; палочката — само U+04C0. Две предупреждения: NFKC разрушава аспирационните знаци (ʰ става латинско h) — никога не прилагайте NFKC; а regex \w цепи думите при комбиниращите знаци — токенизирайте с [\p{L}\p{M}'']+. Пълното съответствие фонема→графема е публикувано машинночетимо в [data/chuzhditsa.json](data/chuzhditsa.json).
 
 ## Примери: 20 езика
 """
@@ -341,18 +351,22 @@ HEAD["en"] = """# Chuzhditsa · Чуждица
 2. **Extensions** — letters for sounds outside Bulgarian phonology, derived by a featural grammar (one modification = one phonetic feature).
 3. **Prosody** — optional marks for stress, tone and length that stack onto any vowel.
 
-Marking a word as foreign is done **by the typeface itself**: just as katakana differs from hiragana in shape rather than inventory, foreign text is set in Chuzhditsa — monoline, with round Glagolitic bowls — and is recognizable from across the room.
+Marking a word as foreign is done **by the typeface itself**: just as katakana differs from hiragana in shape rather than inventory, foreign text is set in Chuzhditsa — monoline, with round Glagolitic bowls — and is recognizable from across the room. Two boundaries are part of the design: the register marks a stage in a word's life, not a stain on it (a loan that naturalizes graduates to the plain alphabet, exactly as テンプラ became 天ぷら), and it marks **words, never speakers**.
+
+### On the name
+
+In prescriptive Bulgarian, чуждица is not the neutral word for a loanword (that is заемка); it names a foreign word the language would supposedly be better off without. The name is chosen against that usage: where purism hands the чуждица an expulsion order, this system hands it a well-made costume and a seat. The same irony applies to the calques туђица/tuđica in the South Slavic guides — the reader should hear the wink, not a policy.
 
 ## The Glagolitic inheritance
 
-Glagolitic (863 AD, Constantine-Cyril) was the first Slavic alphabet — loops, circles and triangles designed from scratch. Cyrillic (Preslav, ~893) replaced it, keeping Glagolitic-derived forms only for the sounds Greek lacked. Chuzhditsa reverses the gesture: **the oldest shapes mark the newest words.**
+Glagolitic (863 AD, Constantine-Cyril) was the first Slavic alphabet — loops, circles and triangles with no single direct model. Cyrillic (Preslav Literary School, c. 893) gradually displaced it, modelling most letters on Greek uncial and drawing on Glagolitic mainly for the sounds Greek lacked. Chuzhditsa reverses the gesture: **the oldest shapes mark the newest words.**
 
 What exactly the typeface takes from Glagolitic:
 
 - **Round bowls** — б, в, р, ъ, ь, ы, ю, я carry full circles instead of angular cups; round Glagolitic, not ustav.
 - **Two heights** — capitals stand at 700 units, lowercase at 500 (x-height), with ascenders (б, ф) and descenders (р, у, ф, the hooks); а, б, р and ф have their own lowercase forms, the rest derive systematically from the capitals.
-- **The revived letters** — ѫ, ѧ (the yuses, nasal vowels in the orthography until 1945 and in speech until the 10th century) and ѕ (dzelo, /dz/) descend in a straight line from Glagolitic Ⱘ, Ⱔ, Ⰷ.
-- **The register function** — Glagolitic survived for centuries as "the other script" for special use (liturgy in Croatia into the 19th century); here the special use is foreignness.
+- **The revived letters** — ѫ, ѧ (the yuses, Old Bulgarian's nasal vowels: ѫ stood in the orthography until 1945, ѧ until the 19th century, and both were alive in speech into the 11th–13th centuries) and ѕ (dzelo, /dz/ — a living letter of standard Macedonian, borrowed rather than revived) inherit the sounds and alphabet slots of Glagolitic Ⱘ, Ⱔ, Ⰷ; the Cyrillic shapes themselves are reworkings (ѕ on the model of Greek stigma).
+- **The register function** — Glagolitic survived for centuries as "the other script" for special use (liturgy in Croatia into the early 20th century: the last Glagolitic missal was printed in 1905 and used until 1927); here the special use is foreignness.
 
 ## Design integrity: the featural grammar
 
@@ -367,7 +381,7 @@ Every diacritic move means exactly one feature, and applies wherever that featur
 | ◌̨ yus tail | nasalization | о→**ѫ** /ɔ̃ õ/ · е→**ѧ** /ɛ̃/ · **а̨** /ɑ̃ ɐ̃/ · **ӧ̨** /œ̃/ |
 | ◌ʰ ◌ʱ raised һ | aspiration / breathy voice | пʰ тʰ кʰ чʰ · бʱ дʱ гʱ џʱ |
 | ◌̄ macron (provlachka) | long vowel | **ӣ ӯ** (precomposed, from Tajik) · а̄ е̄ о̄ ӧ̄ ӱ̄ |
-| Ӏ palochka | glottal action | тӀ кӀ цӀ ejectives · bare Ӏ = /ʕ/ |
+| Ӏ palochka | laryngeal–pharyngeal action | тӀ кӀ цӀ ejectives · bare Ӏ = /ʕ/ |
 | ь | palatalization | нь /ɲ/ · ль /ʎ/ · хь /ç/ · сь /ɕ/ |
 
 The hook ◌̢ generalizes a precedent the Bulgarian alphabet already contains: **щ is ш with a hook**. The precomposed letters қ ң ҳ ҫ ҙ exist in Unicode (Kazakh, Bashkir, Tajik); for т̢ д̢ р̢ the same hook is written as combining U+0322.
@@ -381,6 +395,8 @@ Every new letter takes its place in a voiceless/voiced pair aligned with the nat
 | т /t/ | д /d/ | | **ҫ** /θ/ | **ҙ** /ð/ |
 | ц /ts/ | **ѕ** /dz/ | | ч /tʃ/ | **џ** /dʒ/ |
 | х /x/ | **ғ** /ɣ/ | | **ҳ** /ħ/ | **Ӏ** /ʕ/ |
+
+The pairs are phonemic, not derivational: ғ is lenited г rather than "voiced х", and Ӏ is the palochka rather than "voiced ҳ" — the table records sound symmetry; the grammar records how each glyph is built. One declared merger hides here too: қ writes both /q/ and its voiced partner /ɢ/ (Persian Қом).
 
 That is why fita (ѳ) was dropped in the second version: it had no voiced partner and derived from no rule. Its legacy lives on in the hook — ҫ does fita's job, but systematically. By the same logic ә gave way to **ӓ**: /æ/ is a fronted а, and the two dots say so; ӓ–ӧ–ӱ is a series, ә was an orphan.
 
@@ -399,13 +415,13 @@ Aspiration is a laryngeal feature, not a consonant — so it is written as a fea
 
 ### Ligatures
 
-Cyrillic was born to ligate — ю is a historic ligature of і+о, Serbian љ and њ are fused л/н+ь, and Old Bulgarian had the iotated yuses. Chuzhditsa continues the tradition with three families, all live GSUB rules in the font:
+Cyrillic was born to ligate — ю is a historic ligature of і+оу (the у was later dropped), Serbian љ and њ were fused from л/н+ь by Vuk Karadžić in 1818 (after Mrkalj's digraphs), and Old Bulgarian had the iotated yuses. Chuzhditsa continues the tradition with three families, all live GSUB rules in the font:
 
 | sequence | ligature | sound | example |
 |---|---|---|---|
 | нь | fused њ-form | /ɲ/ | ниньо, ньокки — fuse automatically |
 | ль | fused љ-form | /ʎ/ | фамилья, паелья |
-| ьѧ / йѧ | **ѩ** (iotated small yus, U+0469) | /jɛ̃/ | Fr. bien → бѩ; Pol. pięć → пѩчь |
+| ьѧ / йѧ | **ѩ** (iotated small yus, U+0469) | /jɛ̃/ | Fr. bien → бѩ; Pol. pięć → пѩч |
 | ьѫ / йѫ | **ѭ** (iotated big yus, U+046D) | /jɔ̃/ | Fr. lion /ljɔ̃/ → льѫ → лѭ |
 | тӀ кӀ пӀ цӀ чӀ | fused form with raised palochka | ejectives | Amh. ጥሩ tʼɨru → тӀыру; Geo. წყალი → цӀқали |
 
@@ -462,7 +478,11 @@ Length: ◌̄ on any vowel. Nasality: ◌̨ (precomposed: ѫ ѧ). Diphthongs are
 
 ### Documented mergers
 
-Determinism is bought with declared loss: all rhotics → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; implosives → б д; Korean tense = doubled letters; ʔ drops outside Arabic contexts. Anyone who wants lossless phonetics should use the IPA — chuzhditsa is an orthography, not a transcription lab.
+Determinism is bought with declared loss: all rhotics → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; implosives → б д; q/ɢ → қ; Korean tense = doubled letters; ʔ drops outside Arabic contexts. English input is referenced to a rhotic accent (General American). Positional rules: /w/ is ў in onsets, у as an offglide (Са̨у); prevocalic /ɲ/ uses the native mechanism н+я/ю/ьо (Кеня), нь elsewhere; word-final unstressed /ə/ keeps the source's vowel letter (Гӧ̄те, бабушка) while ъ writes /ə ʌ ɜ/ everywhere else; Russian щ /ɕː/ → шч; palatal stops /c ɟ/ are written from the source system's own base letter (Slovak ť → ть, Albanian q → кь) — a declared, spelling-informed exception. Anyone who wants lossless phonetics should use the IPA — chuzhditsa is an orthography, not a transcription lab.
+
+### Encoding and pipelines
+
+Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is canonical (қ ң ҳ ҫ ҙ ғ ӣ ӯ ӓ ӧ ӱ ѐ ѝ); combining marks are used only where no precomposition exists (т̢ д̢ р̢, а̨, the tone marks). Ligature sequences нь, ль, ьѧ, ьѫ are the canonical storage form — the precomposed њ љ ѩ ѭ are accepted on input and render identically. The glottal-stop apostrophe is U+2019 only; the palochka is U+04C0 only (never Latin I). Two warnings for pipelines: NFKC folding destroys the aspiration letters (U+02B0 ʰ compatibility-decomposes to Latin h, turning тʰ into mixed-script тh) — never NFKC-fold chuzhditsa text; and regex \w splits words at combining marks — tokenize with [\p{L}\p{M}'']+ instead. The full phoneme→grapheme mapping is published machine-readably in [data/chuzhditsa.json](data/chuzhditsa.json).
 
 ## Examples: 20 languages
 """
@@ -480,18 +500,22 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 2. **Розширення** — літери для звуків поза болгарською фонологією, виведені за ознаковою (featural) граматикою (одна модифікація = одна фонетична ознака).
 3. **Просодія** — необов'язкові знаки наголосу, тону й довготи, що нашаровуються на будь-який голосний.
 
-Позначення чужого слова відбувається **самим шрифтом**: як катакана відрізняється від хірагани формою, а не інвентарем, так чужий текст набирається шрифтом Chuzhditsa — монолінійним, із круглими глаголичними чашами — і впізнається здалеку.
+Позначення чужого слова відбувається **самим шрифтом**: як катакана відрізняється від хірагани формою, а не інвентарем, так чужий текст набирається шрифтом Chuzhditsa — монолінійним, із круглими глаголичними чашами — і впізнається здалеку. Дві межі є частиною дизайну: регістр позначає етап у житті слова, а не пляму на ньому (засвоєне запозичення переходить до звичайної абетки, точно як テンプラ стало 天ぷら), і позначає **слова, ніколи мовців**.
+
+### Про назву
+
+У пуристичній болгарській чуждица — не нейтральне слово для запозичення (це заемка); воно називає чуже слово, без якого мові нібито було б краще. Назву обрано проти цього вжитку: де пуризм вручає чуждиці наказ про вигнання, ця система вручає їй добре пошитий костюм і місце за столом.
 
 ## Глаголична спадщина
 
-Глаголиця (863 р., Костянтин-Кирило) — перша слов'янська абетка: петлі, кола й трикутники, спроєктовані з нуля. Кирилиця (Преслав, ~893 р.) замінила її, зберігши глаголичні форми лише для звуків, яких бракувало грецькій. Chuzhditsa обертає жест: **найдавніші форми позначають найновіші слова.**
+Глаголиця (863 р., Костянтин-Кирило) — перша слов'янська абетка: петлі, кола й трикутники без єдиного прямого взірця. Кирилиця (Преславська книжна школа, ~893 р.) поступово витіснила її, моделюючи більшість літер за грецьким унціалом і беручи з глаголиці головно звуки, яких грецькій бракувало. Chuzhditsa обертає жест: **найдавніші форми позначають найновіші слова.**
 
 Що саме шрифт бере з глаголиці:
 
 - **Круглі чаші** — б, в, р, ъ, ь, ы, ю, я несуть повні кола замість кутастих чашок; кругла глаголиця, не устав.
 - **Дві висоти** — великі літери стоять на 700 одиниць, малі на 500 (x-height), з верхніми (б, ф) та нижніми (р, у, ф, гачки) виносними елементами; а, б, р і ф мають власні малі форми, решта виводиться систематично з великих.
-- **Воскрешені літери** — ѫ, ѧ (юси, носові голосні у правописі до 1945 р., а у вимові до X ст.) та ѕ (дзело, /dz/) походять по прямій лінії від глаголичних Ⱘ, Ⱔ, Ⰷ.
-- **Регістрова функція** — глаголиця століттями жила як «інше письмо» для особливого вжитку (літургія в Хорватії до XIX ст.); тут особливий вжиток — чужість.
+- **Воскрешені літери** — ѫ, ѧ (юси, староболгарські носові: ѫ стояв у правописі до 1945 р., ѧ — до XIX ст., а у вимові обидва жили до XI–XIII ст.) та ѕ (дзело, /dz/ — жива літера македонської літературної мови, позичена, а не воскрешена) успадковують звуки й місця глаголичних Ⱘ, Ⱔ, Ⰷ; самі кириличні форми — переробки (ѕ за взірцем грецької стигми).
+- **Регістрова функція** — глаголиця століттями жила як «інше письмо» для особливого вжитку (літургія в Хорватії до початку XX ст.: останній глаголичний місал надруковано 1905 р., у вжитку до 1927 р.); тут особливий вжиток — чужість.
 
 ## Цілісність дизайну: ознакова граматика
 
@@ -506,7 +530,7 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 | ◌̨ юсовий хвостик | назалізація | о→**ѫ** /ɔ̃ õ/ · е→**ѧ** /ɛ̃/ · **а̨** /ɑ̃ ɐ̃/ · **ӧ̨** /œ̃/ |
 | ◌ʰ ◌ʱ підняте һ | придих / придихова дзвінкість | пʰ тʰ кʰ чʰ · бʱ дʱ гʱ џʱ |
 | ◌̄ макрон (провлачка) | довгий голосний | **ӣ ӯ** (готові, з таджицької) · а̄ е̄ о̄ ӧ̄ ӱ̄ |
-| Ӏ палочка | гортанна дія | тӀ кӀ цӀ абруптиви · сама Ӏ = /ʕ/ |
+| Ӏ палочка | гортанно-глоткова дія | тӀ кӀ цӀ абруптиви · сама Ӏ = /ʕ/ |
 | ь | палаталізація | нь /ɲ/ · ль /ʎ/ · хь /ç/ · сь /ɕ/ |
 
 Гачок ◌̢ узагальнює прецедент, який болгарська абетка вже містить: **щ — це ш з гачком**. Готові літери қ ң ҳ ҫ ҙ існують в Unicode (казахська, башкирська, таджицька); для т̢ д̢ р̢ той самий гачок пишеться комбінованим знаком U+0322.
@@ -520,6 +544,8 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 | т /t/ | д /d/ | | **ҫ** /θ/ | **ҙ** /ð/ |
 | ц /ts/ | **ѕ** /dz/ | | ч /tʃ/ | **џ** /dʒ/ |
 | х /x/ | **ғ** /ɣ/ | | **ҳ** /ħ/ | **Ӏ** /ʕ/ |
+
+Пари фонемні, не деривативні: ғ — це леноване г, а не «дзвінке х», а Ӏ — палочка, а не «дзвінке ҳ» — таблиця фіксує звукову симетрію, граматика — будову гліфа. Тут ховається й одне оголошене злиття: қ пише і /q/, і його дзвінкого партнера /ɢ/ (перс. Қом).
 
 Саме тому фіта (ѳ) випала в другій версії: вона не мала дзвінкого партнера й не виводилася за жодним правилом. Її спадок живе в гачку — ҫ робить роботу фіти, але системно. За тією ж логікою ә поступилася **ӓ**: /æ/ — це передня а, і дві крапки це кажуть; ӓ–ӧ–ӱ — серія, ә була сиротою.
 
@@ -538,13 +564,13 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 
 ### Лігатури
 
-Кирилиця народжена лігатурувати — ю є історичною лігатурою і+о, сербські љ і њ — зрощені л/н+ь, а староболгарська мала йотовані юси. Chuzhditsa продовжує традицію трьома родинами, всі — живі правила GSUB у шрифті:
+Кирилиця народжена лігатурувати — ю є історичною лігатурою і+оу (у згодом відпало), сербські љ і њ зростив із л/н+ь Вук Караджич 1818 року (після диграфів Мркаля), а староболгарська мала йотовані юси. Chuzhditsa продовжує традицію трьома родинами, всі — живі правила GSUB у шрифті:
 
 | послідовність | лігатура | звук | приклад |
 |---|---|---|---|
 | нь | зрощена њ-форма | /ɲ/ | ниньо, ньокки — зливаються автоматично |
 | ль | зрощена љ-форма | /ʎ/ | фамилья, паелья |
-| ьѧ / йѧ | **ѩ** (йотований малий юс, U+0469) | /jɛ̃/ | фр. bien → бѩ; пол. pięć → пѩчь |
+| ьѧ / йѧ | **ѩ** (йотований малий юс, U+0469) | /jɛ̃/ | фр. bien → бѩ; пол. pięć → пѩч |
 | ьѫ / йѫ | **ѭ** (йотований великий юс, U+046D) | /jɔ̃/ | фр. lion /ljɔ̃/ → льѫ → лѭ |
 | тӀ кӀ пӀ цӀ чӀ | зрощена форма з піднятою палочкою | абруптиви | амх. ጥሩ tʼɨru → тӀыру; груз. წყალი → цӀқали |
 
@@ -601,7 +627,11 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 
 ### Задокументовані злиття
 
-Детермінізм купується оголошеною втратою: всі ротичні → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; імплозивні → б д; корейські напружені = подвоєні літери; ʔ випадає поза арабським контекстом. Кому потрібна фонетика без втрат — є IPA; чуждица — це правопис, а не транскрипційна лабораторія.
+Детермінізм купується оголошеною втратою: всі ротичні → р; ʂ/ʃ → ш; ɸ/f → ф; ɦ/h → һ; імплозивні → б д; q/ɢ → қ; корейські напружені = подвоєні літери; ʔ випадає поза арабським контекстом. Англійський вхід — за ротичним акцентом (General American). Позиційні правила: /w/ — ў на початку складу, у як офглайд (Са̨у); /ɲ/ перед голосним — рідний механізм н+я/ю/ьо (Кеня), деінде нь; кінцева ненаголошена шва зберігає голосну літеру джерела (Гӧ̄те, бабушка), а ъ пише /ə ʌ ɜ/ всюди інде; російське щ /ɕː/ → шч; палатальні проривні /c ɟ/ пишуться від основи самого джерела (словацьке ť → ть, албанське q → кь) — оголошений, правописно поінформований виняток. Кому потрібна фонетика без втрат — є IPA; чуждица — це правопис, а не транскрипційна лабораторія.
+
+### Кодування та конвеєри
+
+Канонічне кодування — **NFC**. Де Unicode має готову літеру, вона канонічна (қ ң ҳ ҫ ҙ ғ ӣ ӯ ӓ ӧ ӱ ѐ ѝ); комбіновані знаки — лише там, де готової форми немає (т̢ д̢ р̢, а̨, тони). Послідовності нь, ль, ьѧ, ьѫ — канонічний запис; готові њ љ ѩ ѭ приймаються на вході й зображаються однаково. Апостроф — лише U+2019; палочка — лише U+04C0. Два застереження: NFKC руйнує знаки придиху (ʰ стає латинським h) — ніколи не застосовуйте NFKC; а regex \w рве слова на комбінованих знаках — токенізуйте через [\p{L}\p{M}'']+. Повна відповідність фонема→графема опублікована машиночитано в [data/chuzhditsa.json](data/chuzhditsa.json).
 
 ## Приклади: 20 мов
 """
@@ -634,7 +664,12 @@ TONES["bg"] = """
 - **Куката ◌̢ е полисемна по посока**: увуларно на к, фарингално на х, веларно на н, междузъбно на с/з, ретрофлексно на т/д/р. Един знак, едно значение („встрани от родната мрежа“), много места на кацане. Нито един език не противопоставя две от тези стойности върху една и съща основа, така че двусмислие в практиката няма — но пуристът е предупреден.
 - **Диакритиките имат два пътя на позициониране**: GPOS котви (браузъри, CoreText, HarfBuzz) дават точното място по буква; примитивни рендери без GPOS падат до вградено изместване, калибрирано за главна буква — приемливо, но по-грубо.
 - **ɕ има две къщи**: сь при контраст (мандарин, полски), ш по традиция (суши). Единственото място, където узусът победи системата.
-- **Щракащите съгласни** (зулу, кхоса) са извън обхвата на v1 — по договорка.
+- **Регистърът бележи думи, никога говорещи.** Да набереш цитираната реч на човек на чуждица, защото човекът е чужденец — катакана-тропът за акцента — е единствената употреба, която тази спецификация изрично отхвърля.
+- **Щракащите съгласни** (зулу, кхоса) са извън обхвата на текущата версия — по договорка.
+
+## За кого е това
+
+Един регистър живее чрез институции, не чрез шрифтове. Реалистичният път, по ред: (1) речници и енциклопедии — полета за произношение, където IPA плаши читателя; (2) езиково обучение — кирилски мост към английската, арабската или мандаринската фонология; (3) субтитри, музеи и новинарска практика — имена, които стандартната транскрипция осакатява; (4) шрифтовата и конланг общността, които осиновяват първи. Това не е петиция за реформа на никой действащ правопис.
 
 ## Файлове
 
@@ -670,7 +705,12 @@ The verdict: prosody is a **dictionary layer, not an orthographic one**. That is
 - **The hook ◌̢ is polysemous by direction**: uvular on к, pharyngeal on х, velar on н, interdental on с/з, retroflex on т/д/р. One mark, one meaning ("off the native grid"), many landing places. No language contrasts two of these values on the same base letter, so there is no practical ambiguity — but the purist has been warned.
 - **Diacritics have two positioning paths**: GPOS anchors (browsers, CoreText, HarfBuzz) give exact per-letter placement; primitive renderers without GPOS fall back to a built-in offset calibrated for capitals — acceptable but cruder.
 - **ɕ has two homes**: сь under contrast (Mandarin, Polish), ш by tradition (суши). The one place where usage beat the system.
-- **Click consonants** (Zulu, Xhosa) are out of scope for v1 — by agreement.
+- **The register marks words, never speakers.** Setting a person's quoted speech in Chuzhditsa because the speaker is foreign — the katakana-accent trope — is the one use this specification explicitly rejects.
+- **Click consonants** (Zulu, Xhosa) are out of scope in the current version — by agreement.
+
+## Who is this for
+
+A register lives by institutions, not fonts. The realistic path, in order: (1) dictionaries and encyclopedias — pronunciation fields where the IPA scares general readers; (2) language pedagogy — a Cyrillic-native bridge into English, Arabic or Mandarin phonology; (3) subtitling, museums and news practice — names that standard transcription mangles; (4) the type and conlang communities, who adopt first and legitimize slowly. This is not a petition to reform any standard orthography.
 
 ## Files
 
@@ -706,7 +746,12 @@ TONES["uk"] = """
 - **Гачок ◌̢ полісемічний за напрямом**: увулярний на к, глотковий на х, велярний на н, міжзубний на с/з, ретрофлексний на т/д/р. Один знак, одне значення («поза рідною сіткою»), багато місць приземлення. Жодна мова не протиставляє двох із цих значень на одній основі, тож практичної двозначності немає — але пуриста попереджено.
 - **Діакритики мають два шляхи позиціювання**: якорі GPOS (браузери, CoreText, HarfBuzz) дають точне політерне розміщення; примітивні рендерери без GPOS відкочуються до вбудованого зсуву, каліброваного під великі літери — прийнятно, але грубше.
 - **ɕ має два доми**: сь за контрасту (мандаринська, польська), ш за традицією (суши). Єдине місце, де узус переміг систему.
-- **Клацальні приголосні** (зулу, коса) — поза межами v1, за домовленістю.
+- **Регістр позначає слова, ніколи мовців.** Набрати цитовану мову людини чуждицею, бо людина чужинець — катакана-троп для акценту — єдиний вжиток, який ця специфікація прямо відкидає.
+- **Клацальні приголосні** (зулу, коса) — поза межами поточної версії, за домовленістю.
+
+## Для кого це
+
+Регістр живе інституціями, не шрифтами. Реалістичний шлях, за порядком: (1) словники й енциклопедії — поля вимови, де IPA лякає читача; (2) мовна педагогіка — кириличний міст до англійської, арабської чи мандаринської фонології; (3) субтитри, музеї та новинна практика — імена, які стандартна транскрипція калічить; (4) шрифтова та конланг-спільнота, що всиновлюють першими. Це не петиція про реформу жодного чинного правопису.
 
 ## Файли
 
@@ -728,8 +773,9 @@ def md_examples(code, idx):
 def write_md(code, idx, filename):
     path = os.path.join(ROOT, filename)
     head = HEAD[code].replace("{links}", LINKS[code])
+    banner = "<!-- Generated by tools/gen_docs.py - edit that script, not this file. -->\n\n"
     with open(path, "w", encoding="utf-8") as f:
-        f.write(head + md_examples(code, idx) + TONES[code].replace("{{", "{").replace("}}", "}"))
+        f.write(banner + head + md_examples(code, idx) + TONES[code].replace("{{", "{").replace("}}", "}"))
     return path
 
 def b64(name):
@@ -742,41 +788,47 @@ def write_html():
                                    ("Italic",400,"italic"),("BoldItalic",700,"italic")]:
         faces.append(f"@font-face{{font-family:Chuzhditsa;font-weight:{weight};"
                      f"font-style:{italic};src:url(data:font/ttf;base64,{b64('Chuzhditsa-'+style+'.ttf')}) format('truetype');}}")
-    rows_html = []
-    for titles, rows in LANGS:
+    rows_html, toc = [], []
+    for n_i, (titles, rows) in enumerate(LANGS):
         cells = "".join(
-            f"<tr><td class='o'>{o}</td><td class='i'>{i}</td><td class='c'>{c}</td><td class='n'>{n[BG]}</td></tr>"
+            f"<tr><td class='c'>{c}</td><td class='o'>{o}</td><td class='i'>{i}</td><td class='n'>{n[BG]} · {n[EN]}</td></tr>"
             for o, i, c, n in rows)
-        rows_html.append(f"<h2>{titles[BG]}</h2><table><tr><th>дума</th><th>IPA</th><th>чуждица</th><th>какво показва</th></tr>{cells}</table>")
-    html = f"""<!doctype html><html lang="bg"><head><meta charset="utf-8">
+        toc.append(f"<a href='#lang{n_i}'>{titles[EN]}</a>")
+        rows_html.append(f"<h2 id='lang{n_i}'>{titles[BG]}</h2><div class='tw'><table><tr><th>чуждица · chuzhditsa</th><th>дума · word</th><th>IPA</th><th>какво показва · what it shows</th></tr>{cells}</table></div>")
+    toc_html = "<nav class='toc'>" + " ".join(toc) + "</nav>" 
+    html = f"""<!doctype html><!-- Generated by tools/gen_docs.py --><html lang="bg"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Чуждица — specimen</title>
 <style>
 {''.join(faces)}
 :root{{color-scheme:light dark;}}
 body{{font-family:-apple-system,system-ui,sans-serif;max-width:880px;margin:2rem auto;padding:0 1.25rem;line-height:1.6;}}
-.chu,.c{{font-family:Chuzhditsa,serif;}}
-h1.chu{{font-size:64px;font-weight:400;margin:.2em 0;}}
-.styles span{{font-size:30px;margin-right:24px;font-family:Chuzhditsa;}}
+.chu,.c{{font-family:Chuzhditsa,sans-serif;}}
+h1.chu{{font-size:clamp(72px,13vw,150px);font-weight:400;margin:.15em 0;line-height:1.05;}}
+.heroglyphs{{font-family:Chuzhditsa;font-size:clamp(36px,7vw,84px);margin:.1em 0 .4em;}}
+.styles span{{font-size:44px;margin-right:24px;font-family:Chuzhditsa;}}
+.toc{{position:sticky;top:0;background:Canvas;padding:.5rem 0;display:flex;flex-wrap:wrap;gap:.25rem .9rem;font-size:13px;z-index:1;}}
+.tw{{overflow-x:auto;}}
 table{{border-collapse:collapse;width:100%;margin:.5rem 0 1.5rem;}}
 td,th{{border-bottom:1px solid #8884;padding:6px 10px;text-align:left;vertical-align:top;}}
 th{{font-size:12px;opacity:.6;font-weight:600;}}
-.c{{font-size:24px;white-space:nowrap;}}
-.i{{opacity:.65;font-size:14px;white-space:nowrap;}}
+.c{{font-size:28px;white-space:nowrap;}}
+.i{{opacity:.65;font-size:14px;}}
 .o{{font-size:15px;}}
 .n{{font-size:13px;opacity:.7;}}
 .sent{{font-family:Chuzhditsa;font-size:30px;line-height:1.7;}}
 p.note{{font-size:14px;opacity:.7;}}
 </style></head><body>
 <h1 class="chu">чуждица</h1>
-<p class="note">Разширена българска кирилица за чужди думи, набрана в собствения ѝ шрифт. Пълното обяснение е в <b>CHUZHDITSA.md</b> (also in <b>English</b>, <b>укр.</b>).</p>
+<p class="heroglyphs">Ўў Џџ Ҫҫ Ѫѫ Ѩѩ Һһ Ӓӓ</p>
+<p class="note">Разширена кирилица за чужди думи, набрана в собствения ѝ шрифт · Extended Cyrillic for foreign words, set in its own typeface. Спецификация: <a href="CHUZHDITSA.md">български</a> · <a href="CHUZHDITSA.en.md">English</a> · <a href="CHUZHDITSA.uk.md">українська</a>.</p>
 <p class="styles"><span style="font-weight:400">регулар</span><span style="font-weight:700">болд</span><span style="font-style:italic">италик</span><span style="font-weight:700;font-style:italic">болд италик</span></p>
 <p class="sent">Прекарахме ўӣкенда в Мӱнхен с Һӓри: ўиски, џаз и един ҫрилър.</p>
-<p class="sent">Бе̌йџиң · Муҳаммад · Т̢ʰакур · бѫжур · Вроцўаф · То̄кьо̄ · Съул</p>
+<p class="sent">Пе̌йчиң · Муҳаммад · Т̢ʰакур · бѫжур · Вроцўаф · То̄кьо̄ · Съул</p>
 <p class="sent">АаБбВвГгДдЕеЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЬьЫыЮюЯя</p>
 <p class="sent">Ўў Џџ Ҫҫ Ҙҙ Ңң Ққ Ғғ Ҳҳ Һһ Ӓӓ Ӧӧ Ӱӱ Ѫѫ Ѧѧ Ѕѕ Ӏӏ Ѩѩ Ѭѭ</p>
-<p class="sent">лигатури: ниньо · фамилья · пьѧчь → пѩчь · бѩ · тӀыру · цӀқали</p>
-{''.join(rows_html)}
+<p class="sent">лигатури: ниньо · фамилья · пьѧч → пѩч · бѩ · тӀыру · цӀқӀали</p>
+{toc_html}\n{''.join(rows_html)}
 <p class="note">Chuzhditsa v2 · изградена програмно · две височини · GPOS котви · GSUB лигатури · глаголически кръгли дъна</p>
 </body></html>"""
     path = os.path.join(ROOT, "specimen.html")

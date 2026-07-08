@@ -1,6 +1,6 @@
 # Чуждица · Chuzhditsa (po slovensky)
 
-**Jazykové verzie:** úplná špecifikácia — [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · krátke sprievodcov: slovensky · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [shqip](CHUZHDITSA.sq.md)
+**Jazykové verzie:** úplná špecifikácia — [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · krátke sprievodcov: slovensky · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md)
 
 **Chuzhditsa** (bulh. чуждица, „cudzie slovo") je funkčný ekvivalent japonskej katakany pre cyriliku: systematická, deterministická vrstva na fonetický zápis cudzích slov, plus písmo, ktorého tvar sám signalizuje „toto je prevzaté slovo". Tri vrstvy: **základ** (vlastná abeceda každého jazyka), **rozšírenia** (písmená pre cudzie hlásky, odvodené príznakovou gramatikou: jedna značka = jeden fonetický príznak) a **prozódia** (voliteľné znaky prízvuku, tónu a dĺžky).
 
@@ -21,9 +21,9 @@
 Slovenčina je jeden z jazykov, ktorým chuzhditsa slúži aj na **domáci** materiál, nielen na prevzaté slová:
 
 - **ä je ӓ.** Slovenské ä /æ/ má v systéme vlastné písmeno — päť → **пӓть**. Bulharčina si ho požičala pre angličtinu; slovenčina ho má doma.
-- **h je һ.** Slovenské h je znelé /ɦ/ — presne hláska, pre ktorú systém má һ (a ch je х): hodina → **һодина**, chlieb → **хлиеб**.
+- **h je һ.** Slovenské h je znelé /ɦ/ — presne hláska, pre ktorú systém má һ (a ch je х): hodina → **һодьина**, chlieb → **хлиеп** (koncové spoluhlásky sa píšu tak, ako znejú).
 - **Dlhé slabičné ĺ ŕ dostávajú makrón**: vŕba /vr̩ːba/ → **вр̄ба**, stĺp → **стл̄п**. Dĺžka je príznak ◌̄, nech sedí na čomkoľvek.
-- **Mäkčeň = ь.** Systémová palatalizácia je slovenskému oku známa: ď ť ň ľ → дь ть нь ль; нь a ль sa v písme automaticky zlievajú do zrastených tvarov (ligatúry њ/љ).
+- **Mäkčeň = ь.** Systémová palatalizácia je slovenskému oku známa: ď ť ň ľ → дь ть нь ль; нь a ль sa v písme automaticky zlievajú do zrastených tvarov (ligatúry њ/љ). Palatálne /c ɟ/ sa píšu od základu vlastného systému jazyka — slovenské ť od т (mäkčeň na dentále), albánske q od к — deklarovaná výnimka informovaná pravopisom.
 - **dž → џ** jedným písmenom: džem → **џем**; **ô** /u̯o/ → ўо: kôň → **кўонь**.
 
 | slovensky | IPA | chuzhditsa |

@@ -1,6 +1,6 @@
 # Чуждица · Chuzhditsa (slovensko)
 
-**Jezikovne različice:** polna specifikacija — [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · kratki vodniki: [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · slovensko · [bosanski](CHUZHDITSA.bs.md) · [shqip](CHUZHDITSA.sq.md)
+**Jezikovne različice:** polna specifikacija — [български](CHUZHDITSA.md) · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · kratki vodniki: [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · slovensko · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md)
 
 **Chuzhditsa** (bolg. чуждица, „tujka") je funkcionalni ekvivalent japonske katakane za cirilico: sistematična, deterministična plast za fonetični zapis tujih besed, plus pisava, katere oblika sama sporoča „to je prevzeta beseda". Tri plasti: **osnova** (lastna abeceda vsakega jezika), **razširitve** (črke za tuje glasove, izpeljane z obeležno slovnico: en znak = ena fonetična lastnost) in **prozodija** (neobvezni znaki za naglas, ton in dolžino).
 
