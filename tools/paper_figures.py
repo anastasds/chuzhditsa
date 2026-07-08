@@ -434,3 +434,29 @@ def fig17():
 
 if __name__ == "__main__":
     pass
+
+def fig18():
+    from PIL import Image as I, ImageDraw as D, ImageFont as F, ImageOps
+    pairs = "еє  зҙ  сҫ  кқ  хҳһ  ийў  ѫю  ѧя"
+    lbl = F.truetype("/System/Library/Fonts/Helvetica.ttc", 24)
+    rows = []
+    for px, mag in ((48, 1), (18, 3), (12, 4)):
+        f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "Chuzhditsa-Regular.ttf"), px)
+        canvas_row = I.new("L", (int(px*30), int(px*2.2)), 255)
+        D.Draw(canvas_row).text((2, 2), pairs, font=f, fill=0)
+        bbox = ImageOps.invert(canvas_row).getbbox()
+        canvas_row = canvas_row.crop(bbox)
+        canvas_row = canvas_row.resize((canvas_row.width*mag, canvas_row.height*mag), I.NEAREST)
+        rows.append((px, mag, canvas_row))
+    W = max(r.width for _, _, r in rows) + 190
+    H = sum(r.height for _, _, r in rows) + 40*len(rows) + 30
+    img = I.new("RGB", (W, H), "white")
+    d = D.Draw(img)
+    y = 20
+    for px, mag, r in rows:
+        img.paste(r.convert("RGB"), (170, y))
+        tag = f"{px} px" + (f"  (x{mag})" if mag > 1 else "")
+        d.text((16, y + r.height//2 - 14), tag, font=lbl, fill=(90,90,90))
+        y += r.height + 40
+    img.save(os.path.join(FIG, "fig18_confusables.png"))
+    print("fig18_confusables.png")
