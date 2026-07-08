@@ -21,6 +21,14 @@ def canvas(w, h):
 
 def save(img, name):
     img = img.resize((img.width//S, img.height//S), Image.LANCZOS)
+    from PIL import ImageChops
+    bg = Image.new("RGB", img.size, "white")
+    bbox = ImageChops.difference(img, bg).getbbox()
+    if bbox:
+        pad = 22
+        bbox = (max(0, bbox[0]-pad), max(0, bbox[1]-pad),
+                min(img.width, bbox[2]+pad), min(img.height, bbox[3]+pad))
+        img = img.crop(bbox)
     img.save(os.path.join(FIG, name))
     print(name)
 
@@ -180,28 +188,49 @@ def fig4():
     save(img, "fig4_optical.png")
 
 def fig5():
-    img, d = canvas(1460, 680)
+    img, d = canvas(1460, 720)
     word = ["p","o","l","e","n","o"]
+    sc5 = 0.32
     for row,(pad,name) in enumerate([(0,"Bold strokes on Regular advances"),(60,"Bold advances widened by the weight delta")]):
-        ox, oy = 120, 320 + row*290
-        label(d, 120, oy-312 if row == 0 else oy-262, name)
+        oy = 300 + row*330
+        label(d, 120, oy-255, name)
+        ox = 120
         for gname in word:
             g = bf.G["lc."+gname]
-            draw_contours(d, bf.glyph_contours(g, 150, 66, 0, pad//2), ox, oy, SC)
-            ox += (g["adv"] + pad) * SC
+            draw_contours(d, bf.glyph_contours(g, 150, 66, 0, pad//2), ox, oy, sc5)
+            ox += (g["adv"] + pad) * sc5
     save(img, "fig5_bold_color.png")
 
 def fig6():
-    img, d = canvas(1460, 500)
+    img, d = canvas(1460, 560)
     o = bf.G["o"]
     slant = math.tan(math.radians(12))
     upright = bf.glyph_contours(o, 90, 50, 0)
     sheared_after = [[(x+y*slant, y) for x,y in c] for c in upright]
-    for i,(cs,name) in enumerate([(sheared_after, "outline sheared: weight wobbles ±10%"),
-                                  (bf.glyph_contours(o, 90, 50, slant), "centerline sheared: constant weight")]):
-        ox = 200 + i*620
-        draw_contours(d, cs, ox, 400, SC)
-        label(d, ox, 430, name)
+    sheared_center = bf.glyph_contours(o, 90, 50, slant)
+    ox, oy, sc = 120, 460, 0.56
+    for cs, color, wd in ((sheared_after, (200,60,60), 3), (sheared_center, "black", 2)):
+        for c in cs:
+            pts = [((ox+x*sc)*S, (oy-y*sc)*S) for x, y in c]
+            d.line(pts + [pts[0]], fill=color, width=wd*S)
+    label(d, 100, 490, "overlaid outlines: red = outline sheared, black = centerline sheared")
+    px, py, pw, ph = 780, 420, 560, 300
+    d.rectangle([px*S, (py-ph)*S, (px+pw)*S, py*S], outline=(150,150,150), width=S)
+    k = slant
+    def thickness(theta):
+        c_, s_ = math.cos(theta), math.sin(theta)
+        return 90/math.hypot(c_, s_ - k*c_)
+    for t, color in ((None, "black"), (thickness, (200,60,60))):
+        pts = []
+        for i in range(181):
+            th = i/180*2*math.pi
+            val = 90 if t is None else t(th)
+            X = px + pw*i/180
+            Y = py - ph*(val-70)/40
+            pts.append((X*S, Y*S))
+        d.line(pts, fill=color, width=2*S)
+    label(d, px, py+14, "stroke thickness around the ring, 0-360°")
+    label(d, px-60, py-ph*(90-70)/40-14, "90")
     save(img, "fig6_italic.png")
 
 def fig7():
@@ -244,3 +273,163 @@ def fig10():
 if __name__ == "__main__":
     for f in (fig1, fig2, fig3, fig4, fig5, fig6, fig7, fig8, fig9, fig10):
         f()
+
+# ---------------- second batch: exhaustive-coverage figures ------------------
+
+def offset_fold(pts, hw):
+    """The buggy join: bevel on BOTH sides, folding the outline on concave corners."""
+    normals = []
+    for (x1,y1),(x2,y2) in zip(pts, pts[1:]):
+        dd = math.hypot(x2-x1, y2-y1) or 1
+        normals.append(((y1-y2)/dd*hw, (x2-x1)/dd*hw))
+    def side(sign):
+        out = [(pts[0][0]+sign*normals[0][0], pts[0][1]+sign*normals[0][1])]
+        for i in range(1, len(pts)-1):
+            na, nb = normals[i-1], normals[i]
+            out.append((pts[i][0]+sign*na[0], pts[i][1]+sign*na[1]))
+            out.append((pts[i][0]+sign*nb[0], pts[i][1]+sign*nb[1]))
+        out.append((pts[-1][0]+sign*normals[-1][0], pts[-1][1]+sign*normals[-1][1]))
+        return out
+    return [side(1) + side(-1)[::-1]]
+
+def fig11():
+    img, d = canvas(1460, 560)
+    # (a) join anatomy diagram
+    ox, oy, sc = 60, 430, 0.5
+    p = [(80,0),(330,700),(580,0)]
+    for sign,color in ((1,(120,120,220)),(-1,(220,120,120))):
+        pts = offset_perp(p, 60)[0]
+        n = len(p)
+        left = pts[:len(pts)//2+2]
+        d.line([((ox+x*sc)*S,(oy-y*sc)*S) for x,y in bf.chain_paths([p])[0]], fill="black", width=2*S)
+    # centerline + offsets drawn simply
+    def line(a, b, color, wd=2, dash=False):
+        d.line([((ox+a[0]*sc)*S,(oy-a[1]*sc)*S),((ox+b[0]*sc)*S,(oy-b[1]*sc)*S)], fill=color, width=wd*S)
+    line((80,0),(330,700),"black",3); line((330,700),(580,0),"black",3)
+    hw = 90
+    for sign,color in ((1,(70,70,200)),(-1,(200,70,70))):
+        s1 = offset_perp([(80,0),(330,700),(580,0)], hw)[0]
+        half = s1[:3] if sign>0 else s1[3:][::-1]
+        for a,b in zip(half, half[1:]):
+            line(a,b,color,2)
+        apex = half[1]
+        r = 8*S
+        cxp, cyp = (ox+apex[0]*sc)*S, (oy-apex[1]*sc)*S
+        d.ellipse([cxp-r,cyp-r,cxp+r,cyp+r], outline=color, width=S)
+    label(d, 60, 460, "offset sides; miter point outside, exact intersection inside")
+    # (b) folded outline under even-odd
+    m = [(90,0),(90,700),(330,270),(570,700),(570,0)]
+    folded = offset_fold(m, 45)
+    pts = [((760+x*0.42)*S,(430-y*0.42)*S) for x,y in folded[0]]
+    d.polygon(pts, fill="black")
+    label(d, 730, 460, "concave bevel: the fold")
+    # (c) correct
+    draw_contours(d, bf.glyph_contours(bf.G["m"], 90, 50, 0), 1130, 430, 0.42)
+    label(d, 1120, 460, "exact intersection")
+    save(img, "fig11_join_anatomy.png")
+
+def fig12():
+    img, d = canvas(1460, 700)
+    # wrong lookup order: soft-fusion consumes ь first -> љ + ѫ
+    ox = 140
+    for g in ("lc.lsoft", "lc.bigyus"):
+        draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, 250, 0.34)
+        ox += bf.G[g]["adv"]*0.34
+    label(d, 140, 285, "soft-sign fusion first:  љ + ѫ  — the documented spelling is unreachable")
+    ox = 140
+    for g in ("lc.l", "lc.iotbyus"):
+        draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, 610, 0.34)
+        ox += bf.G[g]["adv"]*0.34
+    label(d, 140, 645, "yus fusion ordered first:  л + ѭ  — as the orthography specifies")
+    save(img, "fig12_lookup_order.png")
+
+def fig13():
+    img, d = canvas(1460, 620)
+    pairs = [(("lc.n","lc.ermal"), "lc.nsoft"), (("lc.l","lc.ermal"), "lc.lsoft"),
+             (("lc.ermal","lc.smallyus"), "lc.iotsyus"), (("lc.ermal","lc.bigyus"), "lc.iotbyus")]
+    for i, (parts, fused) in enumerate(pairs):
+        ox = 90 + (i % 2)*700
+        oy = 230 + (i // 2)*290
+        for g in parts:
+            draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, oy, 0.26)
+            ox += bf.G[g]["adv"]*0.26 + 12
+        draw_contours(d, bf.glyph_contours(bf.G["arrow"], 90, 50, 0), ox, oy-60, 0.26)
+        ox += bf.G["arrow"]["adv"]*0.26 + 12
+        draw_contours(d, bf.glyph_contours(bf.G[fused], 90, 50, 0), ox, oy, 0.26)
+    label(d, 90, 555, "the GSUB fusion inventory: нь, ль, ьѧ, ьѫ — sequence in, silhouette out")
+    save(img, "fig13_fusions.png")
+
+def unclamped_contours(gdef, w):
+    cs = []
+    for st in gdef["strokes"]:
+        k = st[0]
+        if k == "L":
+            cs.extend(bf.offset_polyline([(st[1],st[2]),(st[3],st[4])], w/2))
+        elif k == "A":
+            cs.extend(bf.offset_polyline(bf.arc_pts(st[1],st[2],st[3],st[4],st[5]), w/2))
+        elif k == "R":
+            cs.append(bf.ccw(bf.circle_pts(st[1],st[2],st[3]+w/2)))
+            cs.append(bf.ccw(bf.circle_pts(st[1],st[2],max(10,st[3]-w/2)))[::-1])
+        elif k == "D":
+            cs.append(bf.ccw(bf.circle_pts(st[1],st[2],st[3] or 66)))
+    return cs
+
+def fig14():
+    img, d = canvas(1460, 700)
+    glyphs = ["lc.ubr", "lc.dz", "lc.v"]
+    for row, (fn, name) in enumerate([(unclamped_contours, "Bold stroke uncapped: small arcs and bowls clog"),
+                                      (lambda g,w: bf.glyph_contours(g, w, 66, 0), "stroke clamped to 0.85 of local radius")]):
+        ox, oy = 140, 250 + row*330
+        label(d, 140, oy+92, name)
+        for gname in glyphs:
+            g = bf.G[gname]
+            draw_contours(d, fn(g, 150), ox, oy, 0.4)
+            ox += (g["adv"]+60)*0.4 + 40
+    save(img, "fig14_clamp.png")
+
+def fig15():
+    img, d = canvas(1460, 900)
+    ox, oy, sc = 110, 330, 0.4
+    for gname in ("n", "o", "a"):
+        g = bf.G[gname]
+        cs = bf.glyph_contours(g, 90, 50, 0)
+        xs = [x for c in cs for x,_ in c]
+        lsb, rsb = min(xs), g["adv"]-max(xs)
+        d.rectangle([(ox)*S,(oy-700*sc-20)*S,(ox+g["adv"]*sc)*S,(oy+20)*S], outline=(150,150,150), width=S)
+        d.rectangle([(ox)*S,(oy-700*sc-20)*S,(ox+lsb*sc)*S,(oy+20)*S], fill=(235,235,245))
+        d.rectangle([(ox+(g["adv"]-rsb)*sc)*S,(oy-700*sc-20)*S,(ox+g["adv"]*sc)*S,(oy+20)*S], fill=(235,235,245))
+        draw_contours(d, cs, ox, oy, sc)
+        label(d, ox, oy+34, f"{int(lsb)} | {int(rsb)}")
+        ox += g["adv"]*sc + 90
+    label(d, 110, 420, "advance boxes and sidebearings: straights carry more air than rounds")
+    oy2 = 800
+    ox = 110
+    for g in ("g","a"):
+        draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, oy2, sc)
+        ox += bf.G[g]["adv"]*sc
+    label(d, 110, oy2+34, "unkerned")
+    hb_render(d, "Regular", "ГА", 700*S, oy2*S, 280*S)
+    label(d, 700, oy2+34, "class kern −55")
+    save(img, "fig15_fitting.png")
+
+def fig16():
+    from PIL import Image as I, ImageDraw as D, ImageFont as F
+    img = I.new("RGB", (1460, 560), "white")
+    d = D.Draw(img)
+    y = 40
+    for size in (64, 44, 32, 24, 18, 13):
+        f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "Chuzhditsa-Regular.ttf"), size)
+        d.text((50, y), f"{size}  Прекарахме ўӣкенда в Мӱнхен с Һӓри: ўиски, џаз и един ҫрилър.", font=f, fill="black")
+        y += size + 24
+    img.save(os.path.join(FIG, "fig16_waterfall.png"))
+    print("fig16_waterfall.png")
+
+def fig17():
+    img, d = canvas(1460, 420)
+    hb_render(d, "Regular", "0123456789", 60*S, 180*S, 110*S)
+    hb_render(d, "Regular", "«чуждица» — тире · !?", 60*S, 330*S, 110*S)
+    label(d, 60, 360, "figures and punctuation, same vocabulary: rings, lines, dots")
+    save(img, "fig17_digits.png")
+
+if __name__ == "__main__":
+    pass

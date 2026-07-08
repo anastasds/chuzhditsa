@@ -299,6 +299,47 @@ def offset_polyline(pts, hw, miter_limit=3.0):
 
     return [ccw(side(1) + side(-1)[::-1])]
 
+def offset_closed(pts, hw, miter_limit=3.0):
+    """Stroke a CLOSED centerline loop: mitered outer ring + inner hole.
+    Without this, a circuit of chained strokes (the triangle of ѧ) collapses
+    into a filled shape with a seam where the two butt caps meet."""
+    n = len(pts)
+    normals = []
+    for i in range(n):
+        x1, y1 = pts[i]; x2, y2 = pts[(i+1) % n]
+        d = math.hypot(x2-x1, y2-y1) or 1.0
+        normals.append(((y1-y2)/d*hw, (x2-x1)/d*hw))
+
+    def line_isect(p, d1, q, d2):
+        det = d1[0]*d2[1] - d1[1]*d2[0]
+        if abs(det) < 1e-9:
+            return None
+        t = ((q[0]-p[0])*d2[1] - (q[1]-p[1])*d2[0]) / det
+        return (p[0] + d1[0]*t, p[1] + d1[1]*t)
+
+    def ring(sign):
+        out = []
+        for i in range(n):
+            na, nb = normals[i-1], normals[i]
+            pa, pb, pc = pts[i-1], pts[i], pts[(i+1) % n]
+            d1 = (pb[0]-pa[0], pb[1]-pa[1])
+            d2 = (pc[0]-pb[0], pc[1]-pb[1])
+            p1 = (pa[0]+sign*na[0], pa[1]+sign*na[1])
+            p2 = (pb[0]+sign*nb[0], pb[1]+sign*nb[1])
+            hit = line_isect(p1, d1, p2, d2)
+            concave = (d1[0]*d2[1] - d1[1]*d2[0]) * sign > 0
+            if hit and (concave or math.hypot(hit[0]-pb[0], hit[1]-pb[1]) <= miter_limit*hw):
+                out.append(hit)
+            else:
+                out.append((pb[0]+sign*na[0], pb[1]+sign*na[1]))
+                out.append((pb[0]+sign*nb[0], pb[1]+sign*nb[1]))
+        return out
+
+    r1, r2 = ring(1), ring(-1)
+    if abs(area(r1)) < abs(area(r2)):  # outer ring is the larger one
+        r1, r2 = r2, r1
+    return [ccw(r1), ccw(r2)[::-1]]
+
 def chain_paths(paths, tol=1):
     """Merge open centerline paths that meet end-to-end at points shared by
     exactly two strokes, so apexes (Л, И, М, ...) become mitered corners."""
@@ -365,7 +406,19 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
     for weff in sorted({we for _, we in open_paths}):
         group = [p for p, we in open_paths if we == weff]
         for path in chain_paths(group):
-            cs.extend(offset_polyline([sh(p) for p in path], weff/2))
+            closed = (len(path) >= 4 and
+                      round(path[0][0]) == round(path[-1][0]) and
+                      round(path[0][1]) == round(path[-1][1]))
+            if closed:
+                loop = path[:-1]
+                a = abs(area(loop))
+                per = sum(math.hypot(loop[(i+1) % len(loop)][0]-loop[i][0],
+                                     loop[(i+1) % len(loop)][1]-loop[i][1]) for i in range(len(loop)))
+                inradius = 2*a/per if per else weff
+                wc = min(weff, max(44, int(0.85 * inradius)))  # keep loop counters open
+                cs.extend(offset_closed([sh(p) for p in loop], wc/2))
+            else:
+                cs.extend(offset_polyline([sh(p) for p in path], weff/2))
     return cs
 
 def bbox(contours):
