@@ -87,8 +87,7 @@ def perp_contours(gdef, w):
     return cs
 
 def bf_chain(paths):
-    grouped = bf.chain_paths([p for p, _ in paths])
-    return [(g, paths[0][1]) for g in grouped]
+    return bf.chain_paths(paths)
 
 def offset_perp(pts, hw):
     normals = []
@@ -147,7 +146,7 @@ def fig2():
     rule(d, 380, 40, 1420, (200,200,200))
     rule(d, 380-700*SC, 40, 1420, (200,200,200))
     panels = [(legacy_contours(ldef, 90), "v1: round caps"),
-              (offset_perp(bf.chain_paths([[(70,0),(330,718)],[(330,718),(590,0)]])[0], 45), "butt caps, angled feet"),
+              (offset_perp(bf.chain_paths([([(70,0),(330,718)],90),([(330,718),(590,0)],90)])[0][0], 45), "butt caps, angled feet"),
               (bf.glyph_contours(ldef, 90, 50, 0), "horizontal terminal cut")]
     for i,(cs,name) in enumerate(panels):
         ox = 120 + i*450
@@ -301,7 +300,7 @@ def fig11():
         pts = offset_perp(p, 60)[0]
         n = len(p)
         left = pts[:len(pts)//2+2]
-        d.line([((ox+x*sc)*S,(oy-y*sc)*S) for x,y in bf.chain_paths([p])[0]], fill="black", width=2*S)
+        d.line([((ox+x*sc)*S,(oy-y*sc)*S) for x,y in bf.chain_paths([(p,90)])[0][0]], fill="black", width=2*S)
     # centerline + offsets drawn simply
     def line(a, b, color, wd=2, dash=False):
         d.line([((ox+a[0]*sc)*S,(oy-a[1]*sc)*S),((ox+b[0]*sc)*S,(oy-b[1]*sc)*S)], fill=color, width=wd*S)
@@ -379,7 +378,7 @@ def fig14():
     img, d = canvas(1460, 1240)
     glyphs = ["lc.ubr", "lc.dz", "lc.v"]
     for row, (fn, name) in enumerate([(unclamped_contours, "Bold stroke uncapped: small arcs and bowls clog"),
-                                      (lambda g,w: bf.glyph_contours(g, w, 66, 0), "stroke clamped to 0.85 of local radius")]):
+                                      (lambda g,w: bf.glyph_contours(g, w, 66, 0), "stroke clamped to the local radius budget")]):
         ox, oy = 160, 470 + row*580
         label(d, 160, oy+96, name)
         for gname in glyphs:
@@ -460,3 +459,7 @@ def fig18():
         y += r.height + 40
     img.save(os.path.join(FIG, "fig18_confusables.png"))
     print("fig18_confusables.png")
+
+if __name__ == "__main__":
+    for f in (fig11, fig12, fig13, fig14, fig15, fig16, fig17, fig18):
+        f()

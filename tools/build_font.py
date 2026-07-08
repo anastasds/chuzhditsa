@@ -30,14 +30,21 @@ G = {
 "emdash": dict(adv=720, strokes=[(L,40,300,680,300)]),
 "zero": dict(adv=680, strokes=[(R,340,350,300)]),
 "one": dict(adv=460, strokes=[(L,280,0,280,700),(L,280,700,150,560)]),
-"two": dict(adv=640, strokes=[(A,330,505,185,160,-15),(L,508,455,140,0),(L,140,0,540,0)]),
-"three": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110)]),
+"two": dict(adv=640, strokes=[(A,330,505,185,160,-15),(L,508.7,457.12,140,0),(L,140,0,540,0)]),
+# the lower bowl runs THROUGH the circles' intersection (388.7,355.2) and a
+# little past; the upper bowl ends exactly there, its cap buried inside the
+# lower band (and the lower's tip inside the upper band). One continuous
+# silhouette, a naturally pointed beak: no wedge, no miter needle
+"three": dict(adv=640, strokes=[(A,330,520,175,110,-70.39),(A,330,185,180,87,-110)]),
 "four": dict(adv=660, strokes=[(L,440,0,440,700),(L,440,700,140,190),(L,140,190,580,190)]),
-"five": dict(adv=640, strokes=[(L,500,700,185,700),(L,185,700,185,430),(A,330,240,200,115,-115)]),
-"six": dict(adv=660, strokes=[(R,330,225,195),(A,455,430,330,100,175)]),
+# the vertical runs down to the exact point where the bowl circle crosses x=185
+"five": dict(adv=640, strokes=[(L,500,700,185,700),(L,185,700,185,377.7),(A,330,240,200,136.49,-115)]),
+# spur circle internally tangent to the bowl at its 170-degree point: the
+# spur continues the bowl's left side upward in one unbroken curve
+"six": dict(adv=660, strokes=[(R,330,225,195),(A,728.7,154.7,600,170,115)]),
 "seven": dict(adv=600, strokes=[(L,120,700,540,700),(L,540,700,260,0)]),
 "eight": dict(adv=660, strokes=[(R,330,515,160),(R,330,175,190)]),
-"nine": dict(adv=660, strokes=[(R,330,475,195),(A,205,270,330,-80,5)]),
+"nine": dict(adv=660, strokes=[(R,330,475,195),(A,-68.8,545.3,600,-10,-65)]),
 "egrave": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368),(L,390,790,270,930)]),
 "igrave": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,390,790,270,930)]),
 "middot": dict(adv=300, strokes=[(D,150,300,0)]),
@@ -52,11 +59,14 @@ G = {
 "g": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700)]),
 "d": dict(adv=660, strokes=[(L,330,715,150,140),(L,330,715,510,140),(L,70,140,590,140),(L,110,140,110,-150),(L,550,140,550,-150)]),
 "e": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]),
-"zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,390),(L,590,700,330,390),(L,70,0,330,310),(L,590,0,330,310)]),
-"z": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110)]),
+# Ж: diagonals capped so the five-stroke crossing keeps its counters in Bold
+"zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,390,126),(L,590,700,330,390,126),(L,70,0,330,310,126),(L,590,0,330,310,126)]),
+"z": dict(adv=640, strokes=[(A,330,520,175,110,-70.39),(A,330,185,180,87,-110)]),
 "i": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700)]),
 "ibr": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(A,330,930,130,205,335)]),
-"k": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350)]),
+# both arms end at one shared point buried in the stem band -> they chain
+# into a single mitered > and the junction is covered by the stem
+"k": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,168,360),(L,500,0,168,360)]),
 "l": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0)]),
 "m": dict(adv=660, strokes=[(L,90,0,90,700),(L,90,700,330,270),(L,330,270,570,700),(L,570,0,570,700)]),
 "n": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,368,500,368)]),
@@ -65,7 +75,9 @@ G = {
 "r": dict(adv=640, strokes=[(L,160,0,160,700),(R,340,510,180)]),
 "s": dict(adv=720, strokes=[(A,400,350,350,50,310)]),
 "t": dict(adv=660, strokes=[(L,70,700,590,700),(L,330,0,330,700)]),
-"u": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180)]),
+# the arm ends exactly on the long stem's centerline (their intersection),
+# so its butt cap is fully buried -- stopping short leaves a wedge notch
+"u": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180)]),
 "f": dict(adv=660, strokes=[(L,330,-120,330,800),(R,330,350,240)]),
 "h": dict(adv=660, strokes=[(L,90,0,570,700),(L,90,700,570,0)]),
 "ts": dict(adv=680, strokes=[(L,150,700,150,60),(L,150,60,540,60),(L,540,700,540,60),(L,540,60,540,-150),(L,540,-150,630,-150)]),
@@ -78,36 +90,40 @@ G = {
 "yu": dict(adv=720, strokes=[(L,130,0,130,700),(L,130,350,270,350),(R,455,350,185)]),
 "ya": dict(adv=660, strokes=[(L,500,0,500,700),(R,325,515,175),(L,430,360,160,0)]),
 # -- extensions --------------------------------------------------------------
-"ubr": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180),(A,330,930,130,205,335)]),
-"dz": dict(adv=640, strokes=[(A,340,505,175,40,270),(A,330,190,175,85,-140)]),
-"bigyus": dict(adv=660, strokes=[(L,330,715,140,0),(L,330,715,520,0),(L,205,255,455,255),(L,330,255,330,0)]),
-"smallyus": dict(adv=660, strokes=[(L,330,715,140,190),(L,330,715,520,190),(L,140,190,520,190),(L,215,190,215,0),(L,445,190,445,0)]),
+"ubr": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(A,330,930,130,205,335)]),
+# S spine: two tangent circles (r1+r2 spans cap height exactly), junction at
+# (335,370) shared by both arcs -> they chain into one smooth stroke
+"dz": dict(adv=640, strokes=[(A,335,535,165,40,270),(A,335,185,185,90,-140)]),
+# yuses: legs spread for daylight, internals weight-capped (the counter
+# between leg, bar and inner stem drowns at full Bold weight)
+"bigyus": dict(adv=660, strokes=[(L,330,715,120,0,116),(L,330,715,540,0,116),(L,195,255,465,255,96),(L,330,255,330,0,96)]),
+"smallyus": dict(adv=660, strokes=[(L,330,715,120,190,116),(L,330,715,540,190,116),(L,120,190,540,190,116),(L,200,190,200,0),(L,460,190,460,0)]),
 "dzh": dict(adv=660, strokes=[(L,150,700,150,60),(L,510,700,510,60),(L,150,60,510,60),(L,330,60,330,-160)]),
 "shha": dict(adv=640, strokes=[(L,150,0,150,700),(A,315,300,165,180,0),(L,480,0,480,300)]),
 "adia": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0),(L,190,230,470,230)]+DOTS),
 "odia": dict(adv=800, strokes=[(R,400,350,355),(D,295,880,0),(D,505,880,0)]),
-"udia": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180)]+DOTS),
+"udia": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180)]+DOTS),
 "nghk": dict(adv=680, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,368,500,368),(L,500,0,500,-150),(L,500,-150,590,-150)]),
-"khk": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350),(L,500,0,500,-150),(L,500,-150,590,-150)]),
+"khk": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,700,168,360),(L,500,0,168,360),(L,500,0,500,-150),(L,500,-150,590,-150)]),
 "gbar": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700),(L,50,420,310,420)]),
 "hhk": dict(adv=700, strokes=[(L,90,0,570,700),(L,90,700,570,0),(L,570,0,570,-150),(L,570,-150,660,-150)]),
-"zhk": dict(adv=640, strokes=[(A,330,520,175,110,-70),(A,330,185,180,70,-110),(L,330,5,330,-150),(L,330,-150,420,-150)]),
+"zhk": dict(adv=640, strokes=[(A,330,520,175,110,-70.39),(A,330,185,180,87,-110),(L,330,5,330,-150),(L,330,-150,420,-150)]),
 "shk": dict(adv=640, strokes=[(A,340,350,285,50,310),(L,340,65,340,-150),(L,340,-150,430,-150)]),
 "palochka": dict(adv=460, strokes=[(L,230,0,230,700),(L,140,700,320,700),(L,140,0,320,0)]),
 "imac": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,170,890,490,890)]),
-"umac": dict(adv=660, strokes=[(L,100,700,335,315),(L,560,700,190,-180),(L,170,890,490,890)]),
+"umac": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(L,170,890,490,890)]),
 # -- pan-Slavic superset ------------------------------------------------------
 # е went angular so that Ukrainian round є keeps the historic wide-e form
-"ye": dict(adv=760, strokes=[(A,395,350,345,55,305),(L,320,350,655,350)]),
+"ye": dict(adv=760, strokes=[(A,395,350,345,55,305),(L,62,350,640,350)]),
 "yo": dict(adv=620, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]+DOTS),
-"ee": dict(adv=790, strokes=[(A,360,350,345,-130,130),(L,205,350,525,350)]),
+"ee": dict(adv=790, strokes=[(A,360,350,345,-130,130),(L,205,350,693,350)]),
 "iukr": dict(adv=380, strokes=[(L,190,0,190,700)]),
 "yi": dict(adv=380, strokes=[(L,190,0,190,700),(D,105,860,0),(D,275,860,0)]),
 "geup": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700),(L,540,700,540,830)]),
 "dje": dict(adv=620, strokes=[(L,60,700,460,700),(L,260,340,260,700),(A,370,340,110,180,0),(L,480,-80,480,340),(L,480,-80,390,-150)]),
 "tshe": dict(adv=580, strokes=[(L,180,0,180,700),(L,40,580,340,580),(A,300,330,120,180,0),(L,420,0,420,330)]),
 "gje": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700),(L,390,790,490,900)]),
-"kje": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350),(L,300,790,400,900)]),
+"kje": dict(adv=640, strokes=[(L,160,0,160,700),(L,500,700,168,360),(L,500,0,168,360),(L,300,790,400,900)]),
 "je": dict(adv=580, strokes=[(L,400,120,400,700),(A,285,120,115,0,-150)]),
 # -- combining marks (zero advance, drawn back over previous glyph) ----------
 "fita": dict(adv=800, strokes=[(R,400,350,355),(L,185,350,615,350)]),
@@ -128,12 +144,12 @@ G = {
 "nsoft": dict(adv=850, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350),(R,645,165,145)]),
 "lsoft": dict(adv=940, strokes=[(L,70,0,330,700),(L,330,700,590,0),(L,590,0,590,340),(R,735,165,145)]),
 # iotated yuses (Old Cyrillic revivals, U+0468/046C): stem + connector + yus
-"iotsyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,385,350),(L,510,700,320,190),(L,510,700,700,190),(L,320,190,700,190),(L,395,190,395,0),(L,625,190,625,0)]),
-"iotbyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,415,350),(L,510,700,320,0),(L,510,700,700,0),(L,385,255,635,255),(L,510,255,510,0)]),
+"iotsyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,415,350),(L,510,700,300,190,116),(L,510,700,720,190,116),(L,300,190,720,190,116),(L,395,190,395,0),(L,625,190,625,0)]),
+"iotbyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,415,350),(L,510,700,300,0,116),(L,510,700,720,0,116),(L,376.5,255,643.5,255,96),(L,510,255,510,0,96)]),
 # ejective fusions: in the ligature the palochka rises to the upper half
 # (like the apostrophe of t' k'), keeping the fusion distinct from п
 "tpal": dict(adv=790, strokes=[(L,70,700,590,700),(L,330,0,330,700),(L,700,360,700,700)]),
-"kpal": dict(adv=740, strokes=[(L,160,0,160,700),(L,500,700,170,370),(L,500,0,170,350),(L,650,360,650,700)]),
+"kpal": dict(adv=740, strokes=[(L,160,0,160,700),(L,500,700,168,360),(L,500,0,168,360),(L,650,360,650,700)]),
 "tspal": dict(adv=760, strokes=[(L,150,700,150,60),(L,150,60,540,60),(L,540,700,540,60),(L,540,60,540,-150),(L,540,-150,630,-150),(L,660,360,660,700)]),
 "chpal": dict(adv=720, strokes=[(L,150,700,150,430),(L,150,430,480,430),(L,480,0,480,700),(L,630,360,630,700)]),
 "ppal": dict(adv=740, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,700,500,700),(L,650,360,650,700)]),
@@ -156,7 +172,7 @@ def lc_glyph(gdef):
         k = st[0]
         if k == L:
             (x1,y1),(x2,y2) = lc_pt(st[1],st[2]), lc_pt(st[3],st[4])
-            strokes.append((L,x1,y1,x2,y2))
+            strokes.append((L,x1,y1,x2,y2) + ((round(st[5]*SX),) if len(st) > 5 else ()))
         elif k == A:
             cx, cy = lc_pt(st[1], st[2])
             strokes.append((A,cx,cy,round(st[3]*SX),st[4],st[5]))
@@ -172,7 +188,7 @@ LC_CUSTOM = {
 "f": dict(adv=560, strokes=[(L,280,-180,280,680),(R,280,250,215)]),
 # lc ejective fusions: explicit forms with raised half-palochka and clear gap
 "tpal": dict(adv=600, strokes=[(L,50,500,425,500),(L,238,0,238,500),(L,510,270,510,500)]),
-"kpal": dict(adv=560, strokes=[(L,115,0,115,500),(L,360,500,122,264),(L,360,0,122,252),(L,470,270,470,500)]),
+"kpal": dict(adv=560, strokes=[(L,115,0,115,500),(L,360,500,121,258),(L,360,0,121,258),(L,470,270,470,500)]),
 "tspal": dict(adv=590, strokes=[(L,108,500,108,43),(L,108,43,389,43),(L,389,500,389,43),(L,389,43,389,-150),(L,389,-150,454,-150),(L,500,270,500,500)]),
 "chpal": dict(adv=545, strokes=[(L,108,500,108,310),(L,108,310,346,310),(L,346,0,346,500),(L,455,270,455,500)]),
 "ppal": dict(adv=560, strokes=[(L,115,0,115,500),(L,360,0,360,500),(L,115,500,360,500),(L,470,270,470,500)]),
@@ -286,12 +302,16 @@ def offset_polyline(pts, hw, miter_limit=3.0):
             p1 = (pts[i-1][0]+sign*na[0], pts[i-1][1]+sign*na[1])
             p2 = (pts[i][0]+sign*nb[0], pts[i][1]+sign*nb[1])
             hit = line_isect(p1, d1, p2, d2)
-            # concave side: the intersection is the correct join, no limit
-            # (a bevel here would fold the outline over itself)
+            # concave side: the intersection is the correct join and gets a
+            # generous limit (a bevel here would fold the outline over
+            # itself) -- but NOT an infinite one: at a hairpin (the hook of
+            # Ђ reversing off its stem) the offsets run near-parallel and
+            # the "intersection" races off to infinity
             concave = (d1[0]*d2[1] - d1[1]*d2[0]) * sign > 0
-            if hit and (concave or math.hypot(hit[0]-pts[i][0], hit[1]-pts[i][1]) <= miter_limit*hw):
+            limit = 6.0 if concave else miter_limit
+            if hit and math.hypot(hit[0]-pts[i][0], hit[1]-pts[i][1]) <= limit*hw:
                 out.append(hit)
-            else:  # bevel (convex corner past the miter limit)
+            else:  # bevel
                 out.append((pts[i][0]+sign*na[0], pts[i][1]+sign*na[1]))
                 out.append((pts[i][0]+sign*nb[0], pts[i][1]+sign*nb[1]))
         out.append(cap_pt(pts[-1], pts[-2], sign*normals[-1][0], sign*normals[-1][1]))
@@ -328,7 +348,8 @@ def offset_closed(pts, hw, miter_limit=3.0):
             p2 = (pb[0]+sign*nb[0], pb[1]+sign*nb[1])
             hit = line_isect(p1, d1, p2, d2)
             concave = (d1[0]*d2[1] - d1[1]*d2[0]) * sign > 0
-            if hit and (concave or math.hypot(hit[0]-pb[0], hit[1]-pb[1]) <= miter_limit*hw):
+            limit = 6.0 if concave else miter_limit
+            if hit and math.hypot(hit[0]-pb[0], hit[1]-pb[1]) <= limit*hw:
                 out.append(hit)
             else:
                 out.append((pb[0]+sign*na[0], pb[1]+sign*na[1]))
@@ -340,38 +361,52 @@ def offset_closed(pts, hw, miter_limit=3.0):
         r1, r2 = r2, r1
     return [ccw(r1), ccw(r2)[::-1]]
 
-def chain_paths(paths, tol=1):
+def chain_paths(items, tol=4.0, wtol=0.15):
     """Merge open centerline paths that meet end-to-end at points shared by
-    exactly two strokes, so apexes (Л, И, М, ...) become mitered corners."""
-    def key(p):
-        return (round(p[0]/tol), round(p[1]/tol))
-    degree = {}
-    for path in paths:
-        for p in (path[0], path[-1]):
-            degree[key(p)] = degree.get(key(p), 0) + 1
-    paths = [list(p) for p in paths]
+    exactly two strokes, so apexes (Л, И, М, ...) become mitered corners.
+
+    items: list of (path, weight). Endpoints closer than `tol` count as the
+    same node and are snapped to their midpoint — rounding in the lowercase
+    derivation and float endpoints of arcs must not leave hairline notches.
+    Paths of different clamped weights merge when the weights are within
+    `wtol` (merged path takes the lighter weight, protecting the tight
+    counter that caused the clamp); a hook clamped far below its stems
+    (Bold ј, ђ) stays a separate stroke — its butt cap buries in the stem.
+    Returns list of (path, weight)."""
+    def close(p, q):
+        return math.hypot(p[0]-q[0], p[1]-q[1]) <= tol
+    # node degree over all endpoints (cluster by proximity)
+    endpoints = [p for path, _ in items for p in (path[0], path[-1])]
+    def degree(p):
+        return sum(1 for q in endpoints if close(p, q))
+    items = [(list(p), w) for p, w in items]
     merged = True
     while merged:
         merged = False
-        for i in range(len(paths)):
+        for i in range(len(items)):
             if merged: break
-            for j in range(i+1, len(paths)):
-                a, b = paths[i], paths[j]
+            for j in range(i+1, len(items)):
+                (a, wa), (b, wb) = items[i], items[j]
+                if abs(wa-wb) > wtol*max(wa, wb):
+                    continue
                 joins = None
-                if key(a[-1]) == key(b[0]) and degree.get(key(a[-1])) == 2:
-                    joins = a + b[1:]
-                elif key(a[-1]) == key(b[-1]) and degree.get(key(a[-1])) == 2:
-                    joins = a + b[-2::-1]
-                elif key(a[0]) == key(b[-1]) and degree.get(key(a[0])) == 2:
-                    joins = b + a[1:]
-                elif key(a[0]) == key(b[0]) and degree.get(key(a[0])) == 2:
-                    joins = b[::-1] + a[1:]
+                if close(a[-1], b[0]) and degree(a[-1]) == 2:
+                    joins = a[:-1] + [mid(a[-1], b[0])] + b[1:]
+                elif close(a[-1], b[-1]) and degree(a[-1]) == 2:
+                    joins = a[:-1] + [mid(a[-1], b[-1])] + b[-2::-1]
+                elif close(a[0], b[-1]) and degree(a[0]) == 2:
+                    joins = b[:-1] + [mid(b[-1], a[0])] + a[1:]
+                elif close(a[0], b[0]) and degree(a[0]) == 2:
+                    joins = b[::-1][:-1] + [mid(b[0], a[0])] + a[1:]
                 if joins:
-                    paths[i] = joins
-                    del paths[j]
+                    items[i] = (joins, min(wa, wb))
+                    del items[j]
                     merged = True
                     break
-    return paths
+    return items
+
+def mid(p, q):
+    return ((p[0]+q[0])/2, (p[1]+q[1])/2)
 
 def glyph_contours(gdef, w, dotr, slant, dx=0):
     """Centerline model -> outlines. Shear applies to centerlines so the
@@ -383,12 +418,22 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
     for st in gdef["strokes"]:
         kind = st[0]
         if kind == L:
-            open_paths.append(([(st[1],st[2]), (st[3],st[4])], w))
+            # optional 6th element: absolute weight cap. The straight-stroke
+            # analogue of the arc clamp -- the internals of the yuses cannot
+            # carry full Bold weight without swallowing their counters
+            weff = min(w, st[5]) if len(st) > 5 else w
+            open_paths.append(([(st[1],st[2]), (st[3],st[4])], weff))
         elif kind == A:
-            # tight arcs (breve, small bowls) can't carry the full Bold weight
-            weff = min(w, max(44, int(st[3]*0.85)))
+            # tight arcs (breve, small hooks) can't carry the full Bold
+            # weight. An OPEN arc keeps a half-radius of daylight at weight
+            # r, so it clamps at 1.0r; closed counters (rings, loops below)
+            # stay at the stricter 0.85
+            weff = min(w, max(44, int(st[3])))
             pts = arc_pts(st[1],st[2],st[3],st[4],st[5])
-            if st[3] >= 290:  # match the big-round compression of о
+            if st[3] >= 290 and abs(st[5]-st[4]) >= 120:
+                # big-round compression of о — bowls only; a large-radius
+                # construction arc (the spur of 6/9) must keep its geometry
+                # or it detaches from the ring it is tangent to
                 pts = [(st[1]+(x-st[1])*0.965, y) for x, y in pts]
             open_paths.append((pts, weff))
         elif kind == R:
@@ -403,22 +448,19 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
             cs.append(ccw(circle_pts(cx,cy,st[3] or dotr)))
         else:
             raise ValueError(kind)
-    for weff in sorted({we for _, we in open_paths}):
-        group = [p for p, we in open_paths if we == weff]
-        for path in chain_paths(group):
-            closed = (len(path) >= 4 and
-                      round(path[0][0]) == round(path[-1][0]) and
-                      round(path[0][1]) == round(path[-1][1]))
-            if closed:
-                loop = path[:-1]
-                a = abs(area(loop))
-                per = sum(math.hypot(loop[(i+1) % len(loop)][0]-loop[i][0],
-                                     loop[(i+1) % len(loop)][1]-loop[i][1]) for i in range(len(loop)))
-                inradius = 2*a/per if per else weff
-                wc = min(weff, max(44, int(0.85 * inradius)))  # keep loop counters open
-                cs.extend(offset_closed([sh(p) for p in loop], wc/2))
-            else:
-                cs.extend(offset_polyline([sh(p) for p in path], weff/2))
+    for path, weff in chain_paths(open_paths):
+        closed = (len(path) >= 4 and
+                  math.hypot(path[0][0]-path[-1][0], path[0][1]-path[-1][1]) <= 4.0)
+        if closed:
+            loop = path[:-1]
+            a = abs(area(loop))
+            per = sum(math.hypot(loop[(i+1) % len(loop)][0]-loop[i][0],
+                                 loop[(i+1) % len(loop)][1]-loop[i][1]) for i in range(len(loop)))
+            inradius = 2*a/per if per else weff
+            wc = min(weff, max(44, int(0.85 * inradius)))  # keep loop counters open
+            cs.extend(offset_closed([sh(p) for p in loop], wc/2))
+        else:
+            cs.extend(offset_polyline([sh(p) for p in path], weff/2))
     return cs
 
 def bbox(contours):
@@ -528,7 +570,7 @@ def build(style, w, italic, fmt):
     fb.setupHorizontalMetrics(metrics)
     fb.setupHorizontalHeader(ascent=1050, descent=-350)
     fb.setupNameTable({"familyName": family, "styleName": sub, "psName": ps,
-                       "fullName": f"{family} {sub}", "version": "Version 2.3",
+                       "fullName": f"{family} {sub}", "version": "Version 2.4",
                        "copyright": "Chuzhditsa - a Glagolitic-inspired pan-Slavic loanword face",
                        "licenseDescription": "This Font Software is licensed under the SIL Open Font License, Version 1.1.",
                        "licenseInfoURL": "https://openfontlicense.org"})
