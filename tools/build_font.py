@@ -188,6 +188,11 @@ def lc_glyph(gdef):
 
 LC_CUSTOM = {
 "a": dict(adv=640, strokes=[(R,300,243,248),(L,535,10,535,490)]),
+# lc dz needs its own construction: the anisotropic case scaling (x 0.72,
+# y 5/7) cannot preserve circle tangency, and the 2-unit seam it leaves
+# kinks the spine. Tangency re-imposed exactly: 386-119 = 267 = 131+136,
+# with the junction invariant under the engine's baseline pinning
+"dz": dict(adv=461, strokes=[(A,241,386,119,40,270),(A,241,131,136,90,-140)]),
 "b": dict(adv=620, strokes=[(R,320,245,250),(L,95,250,95,700),(L,95,700,400,700)]),
 "r": dict(adv=670, strokes=[(L,150,-200,150,500),(R,385,245,250)]),
 "f": dict(adv=560, strokes=[(L,280,-180,280,680),(R,280,245,250)]),
