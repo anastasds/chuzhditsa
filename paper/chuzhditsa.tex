@@ -38,7 +38,7 @@
 
 Every literate community borrows words faster than its orthography can naturalize them. Japanese is unusual in having institutionalized the problem: katakana is a full parallel syllabary whose use \emph{is} the marking of foreignness, and whose adaptation conventions (\phon{naɪt}~$\rightarrow$~\src{ナイト}) are deterministic enough that two writers converge on one spelling. The Cyrillic-writing world has no analogous device. Loanwords enter Bulgarian, Russian, Serbian or Ukrainian through ad hoc transcription: sound-based and spelling-based renderings compete (\cz{ланч}~$\sim$~\cz{лънч} for \emph{lunch}), phonemes without Cyrillic letters collapse unpredictably (\ph{θ}~$\rightarrow$~т or с; \ph{w}~$\rightarrow$~в or у), and nothing in the written form signals that a word is a guest rather than a native.
 
-This paper describes Chuzhditsa, a designed orthographic register that supplies the missing device for Cyrillic, piloted on Bulgarian and then generalized to the Slavic superset. The system makes three claims of general interest to writing-system design. First, that a loanword register can be \emph{featural} in Sampson's (1985) sense: rather than inventing letters ad libitum, a small set of diacritic operations — each meaning exactly one phonetic feature — derives the entire extension inventory, echoing the compositional logic of Hangul. Second, that such a register can be assembled almost entirely from attested material: dead letters of the target orthography's own history and living letters of related orthographies, with invention reserved for genuine residue. Third, that the register-marking function that Japanese distributes over a second character inventory can instead be carried by a second \emph{typeface register} — realized here as an OpenType family whose substitution (GSUB) and positioning (GPOS) rules are the orthography's fusion and attachment rules, executable rather than merely described.
+This paper describes Chuzhditsa, a designed orthographic register that supplies the missing device for Cyrillic, piloted on Bulgarian and then generalized to the Slavic superset. The system makes three claims of general interest to writing-system design. First, that a loanword register can be \emph{featural} in Sampson's (1985) sense: rather than inventing letters ad libitum, a small set of diacritic operations — each meaning exactly one phonetic feature — derives the entire extension inventory, echoing the compositional logic of Hangul (Sampson 1985; Kim-Renaud 1997). Second, that such a register can be assembled almost entirely from attested material: dead letters of the target orthography's own history and living letters of related orthographies, with invention reserved for genuine residue. Third, that the register-marking function that Japanese distributes over a second character inventory can instead be carried by a second \emph{typeface register} — realized here as an OpenType family whose substitution (GSUB) and positioning (GPOS) rules are the orthography's fusion and attachment rules, executable rather than merely described.
 
 \section{Background}
 
@@ -142,6 +142,18 @@ Albanian & \emph{Shqipëria} & \phon{ʃcipəˈɾia} & \cz{Шкьипъри́а} 
 \label{tab:examples}
 \end{table}
 
+\section{Adoption: lessons from planned and organic systems}
+
+A designed register lives or dies socially, not technically; the sociolinguistics of script choice behaves like the sociolinguistics of language choice (Fishman 1977; Unseth 2005). Four historical cases bound the space Chuzhditsa enters, and they are worth reading as an engineer reads failure reports.
+
+\textbf{The planned failures.} Volap\"uk collapsed within a decade, less on linguistic defects than on its inventor's proprietary control of the standard (Garv\'ia 2015). Esperanto — maximally learnable, energetically organized — plateaued as a voluntary subculture: it extended nobody's existing practice and attached to no prior community, so adopting it meant \emph{joining a new identity} rather than exercising an old one (Forster 1982; Garv\'ia 2015). The Deseret alphabet is the sharpest lesson, because it controls for institutional power: commissioned by Brigham Young, taught in Utah schools, backed by church funds, it was abandoned within roughly two decades — sponsorship without a felt need or an identity payoff bought nothing (Alder, Goodfellow \& Watt 1984). Learnability and patronage, the two levers a designer can pull, decided none of these cases.
+
+\textbf{The designed success.} Hangul is the one engineered script that won, and its path is instructive precisely because the design was not what won. Completed in 1443 and promulgated in 1446 (Ledyard 1998), it was opposed at once by the literati — the collective Ch'oe Malli memorial of 1444 — and spent four and a half centuries outside prestige writing, surviving in low-stakes registers: women's correspondence, vernacular fiction, private devotion (Lee \& Ramsey 2011). What revalued it was not its featural elegance but nineteenth-century nationalism, culminating in the 1894 Kabo edict that made the national script the base of official documents (King 1998). The mandate arrived 448 years after the design; the niche did the surviving.
+
+\textbf{The organic success.} Katakana never asked anyone to change anything. It began as monks' abbreviated annotation glosses on Chinese texts in the early Heian period, drifted into a division of labor with hiragana over a millennium, and was codified only in 1900 by the implementing regulations of the Elementary School Order — with the loanword-register specialization consolidating later still (Seeley 1991; Twine 1991). Codification ratified practice; it did not create it.
+
+The pattern reduces to four conditions, against which Chuzhditsa can be scored honestly. (i) \emph{Additive, not substitutive}: the winners changed no existing spelling; Chuzhditsa alters nothing in any native orthography by construction. (ii) \emph{Identity attachment}: Hangul survived on Korean-ness, not on design merit; Chuzhditsa's revivals — the yuses, the Glagolitic letterforms — are the analogous move available to a designed system, heritage rather than invention. (iii) \emph{A survivable low-stakes niche before any mandate}: Hangul had the vernacular genres, katakana the annotation margin; the dictionary pronunciation field, the language classroom, and the subtitle are proposed here as exactly that — the system's vernacular centuries, compressed. (iv) \emph{Codification last}: every mandate that worked ratified existing practice, which is why this specification petitions no orthographic authority. One condition cannot be engineered around: on the planned/organic axis Chuzhditsa sits with Esperanto and Deseret, not with katakana. Assembly from attested material is a mitigation — every letter arrives with a history already attached — but it is not an exemption, and the Deseret case fixes an upper bound on what design quality plus sponsorship can buy without a community that recognizes itself in the script.
+
 \section{Limitations}
 
 The retraction hook is polysemous by direction — uvular on \cz{к}, pharyngeal on \cz{х}, interdental on \cz{с з}, retroflex on \cz{т д р}. No attested language contrasts two of its values on one base letter, so the ambiguity is theoretical, but it is a real weakening of the one-mark-one-meaning claim. \ph{ɕ} keeps two spellings (\cz{сь} under contrast, \cz{ш} by entrenchment) — the one point where usage beat system. Six-tone prosodies fold lossily into four marks. Click phonology is future work, as is a mark-to-mark (\texttt{mkmk}) positioning pass for the rare double-stacked vowel.
@@ -151,6 +163,7 @@ The retraction hook is polysemous by direction — uvular on \cz{к}, pharyngeal
 Chuzhditsa demonstrates that the katakana function — deterministic adaptation plus visible register — can be retrofitted onto an alphabet without inventing a parallel inventory: a featural grammar over attested Cyrillic material covers twenty phonologies, one historical script supplies the register aesthetics, and the whole specification compiles to a font whose OpenType rules \emph{are} the orthography. The generalization from Bulgarian to the Slavic superset cost one letterform (е) and no grammar changes, which we take as evidence that the featural layer, not the letter list, is the right unit of design.
 
 \begin{thebibliography}{99}
+\bibitem{alder} Alder, D.~D., P.~J.~Goodfellow \& R.~G.~Watt. 1984. Creating a new alphabet for Zion: The origin of the Deseret alphabet. \emph{Utah Historical Quarterly} 52(3). 275--286.
 \bibitem{buncic} Bun\v{c}i\'c, D., S.~L.~Lippert \& A.~Rabus (eds.). 2016. \emph{Biscriptality: A Sociolinguistic Typology}. Heidelberg: Universit\"atsverlag Winter.
 \bibitem{cahill} Cahill, M. \& K.~Rice (eds.). 2014. \emph{Developing Orthographies for Unwritten Languages}. Dallas, TX: SIL International.
 \bibitem{comrie} Comrie, B. \& G.~G.~Corbett (eds.). 1993. \emph{The Slavonic Languages}. London: Routledge.
@@ -158,16 +171,26 @@ Chuzhditsa demonstrates that the katakana function — deterministic adaptation 
 \bibitem{coulmas} Coulmas, F. 2003. \emph{Writing Systems: An Introduction to their Linguistic Analysis}. Cambridge: CUP.
 \bibitem{cubberley} Cubberley, P. 1996. The Slavic alphabets. In P.~Daniels \& W.~Bright (eds.), \emph{The World's Writing Systems}, 346--355. New York: OUP.
 \bibitem{danchev} Данчев, А. 1982. \emph{Българска транскрипция на английски имена}. 2.~изд. София: Народна просвета.
+\bibitem{danielsX} Fishman, J.~A. (ed.). 1977. \emph{Advances in the Creation and Revision of Writing Systems}. The Hague: Mouton.
+\bibitem{forster} Forster, P.~G. 1982. \emph{The Esperanto Movement}. The Hague: Mouton.
+\bibitem{garvia} Garv\'ia, R. 2015. \emph{Esperanto and Its Rivals: The Struggle for an International Language}. Philadelphia: University of Pennsylvania Press.
 \bibitem{daniels} Daniels, P. \& W.~Bright (eds.). 1996. \emph{The World's Writing Systems}. New York: OUP.
 \bibitem{irwin} Irwin, M. 2011. \emph{Loanwords in Japanese}. Amsterdam/Philadelphia: John Benjamins.
+\bibitem{kimrenaud} Kim-Renaud, Y.-K. (ed.). 1997. \emph{The Korean Alphabet: Its History and Structure}. Honolulu: University of Hawai`i Press.
+\bibitem{king98} King, R. 1998. Nationalism and language reform in Korea: The questione della lingua in precolonial Korea. In H.~I.~Pai \& T.~R.~Tangherlini (eds.), \emph{Nationalism and the Construction of Korean Identity}, 33--72. Berkeley: Institute of East Asian Studies.
+\bibitem{ledyard} Ledyard, G.~K. 1998. \emph{The Korean Language Reform of 1446}. Seoul: Sin'gu Munhwasa.
+\bibitem{leeramsey} Lee, K.-M. \& S.~R.~Ramsey. 2011. \emph{A History of the Korean Language}. Cambridge: CUP.
 \bibitem{kang} Kang, Y. 2011. Loanword phonology. In M.~van Oostendorp, C.~J.~Ewen, E.~Hume \& K.~Rice (eds.), \emph{The Blackwell Companion to Phonology}, vol.~4, 2258--2282. Malden, MA: Wiley-Blackwell.
 \bibitem{peperkamp} Peperkamp, S. \& E.~Dupoux. 2003. Reinterpreting loanword adaptations: The role of perception. \emph{Proceedings of the 15th International Congress of Phonetic Sciences}, 367--370.
 \bibitem{robertson} Robertson, W.~C. 2020. \emph{Scripting Japan: Orthography, Variation, and the Creation of Meaning in Written Japanese}. London: Routledge.
 \bibitem{sampson} Sampson, G. 1985. \emph{Writing Systems: A Linguistic Introduction}. Stanford: Stanford University Press.
 \bibitem{sebba} Sebba, M. 2007. \emph{Spelling and Society: The Culture and Politics of Orthography around the World}. Cambridge: CUP.
 \bibitem{schenker} Schenker, A.~M. 1995. \emph{The Dawn of Slavic: An Introduction to Slavic Philology}. New Haven: Yale University Press.
+\bibitem{seeley} Seeley, C. 1991. \emph{A History of Writing in Japan}. Leiden: Brill.
 \bibitem{sproat} Sproat, R. 2000. \emph{A Computational Theory of Writing Systems}. Cambridge: CUP.
 \bibitem{stanlaw} Stanlaw, J. 2004. \emph{Japanese English: Language and Culture Contact}. Hong Kong: Hong Kong University Press.
+\bibitem{twine} Twine, N. 1991. \emph{Language and the Modern State: The Reform of Written Japanese}. London: Routledge.
+\bibitem{unseth} Unseth, P. 2005. Sociolinguistic parallels between choosing scripts and languages. \emph{Written Language \& Literacy} 8(1). 19--42.
 \bibitem{unicode} The Unicode Consortium. 2024. \emph{The Unicode Standard}, Version 16.0.0. South San Francisco, CA: The Unicode Consortium.
 \end{thebibliography}
 

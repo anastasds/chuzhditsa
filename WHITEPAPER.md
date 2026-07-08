@@ -101,10 +101,18 @@ and a seat at the table.
 - **A machine-readable sound-to-letter table** (`data/chuzhditsa.json`) for building tools
 - **An academic manuscript** (`paper/chuzhditsa.pdf`), typeset in the typeface it describes
 
-Where could it realistically live? In dictionary pronunciation fields, where the IPA
-alphabet scares general readers; in language classrooms, as a Cyrillic-native bridge into
-English or Arabic or Mandarin sounds; in subtitles, museums, and newsrooms, for names that
-standard transcription mangles. It is not a petition to reform anyone's orthography — it's
-an extra register, sitting beside your alphabet, for the words that arrive from abroad.
+Where could it realistically live? History gives clear instructions. Esperanto was easy to
+learn and went nowhere: adopting it meant joining a new identity instead of exercising an
+old one. Utah's Deseret alphabet had a church behind it and died anyway. The two winners
+took the opposite path: Hangul, designed in the 1440s, survived four and a half *centuries*
+in humble places — women's letters, popular fiction — before Korean nationalism raised it
+to official status; and katakana never asked anyone to change anything at all, growing from
+monks' margin notes into a standard over a thousand years. The lesson: change nothing that
+exists, attach to an identity people already have, and live in a small niche until the
+practice is real. So: dictionary pronunciation fields, where the IPA scares general
+readers; language classrooms, as a Cyrillic-native bridge into English or Arabic or
+Mandarin sounds; subtitles, museums, and newsrooms, for names standard transcription
+mangles. It is not a petition to reform anyone's orthography — it's an extra register,
+sitting beside your alphabet, for the words that arrive from abroad.
 
 Думи от чужбина, писани на чуждица — *words from abroad, written in chuzhditsa.*
