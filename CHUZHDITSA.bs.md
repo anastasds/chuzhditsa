@@ -29,6 +29,35 @@ Gajevi dvoslovi preslikavaju se jedan-na-jedan (dž→џ, lj→љ, nj→њ, đ�
 | weekend | /ˈwiːkɛnd/ | vikend | **ўӣкенд** |
 | whisky | /ˈwɪski/ | viski | **ўиски** |
 
+## Cijeli prošireni skup
+
+| slovo | vrijednost | porijeklo |
+|---|---|---|
+| **Ўў** | /w/ | bjeloruski |
+| **Џџ** | /d͡ʒ/ | srpski |
+| **Ҫҫ** | /θ/ | baškirski |
+| **Ҙҙ** | /ð/ | baškirski |
+| **Ққ** | /q ɢ/ | kazaški |
+| **Ңң** | /ŋ/ | kazaški |
+| **Ҳҳ** | /ħ/ | tadžički |
+| **Ғғ** | /ɣ/ | kazaški |
+| **Һһ** | /h ɦ/ | tatarski |
+| **Ѕѕ** | /d͡z/ | makedonski (živo) |
+| **Ӏ** | /ʕ/; тӀ кӀ цӀ | Kavkaz |
+| **т̢ д̢ н̢ р̢** | /ʈ ɖ ɳ ɽ/ | izvedeno pravilom |
+| **◌ʰ ◌ʱ** | aspir. | izvedeno pravilom |
+| **Ӓӓ** | /æ/ | marijski |
+| **Ӧӧ** | /ø œ/ | altajski |
+| **Ӱӱ** | /y ʏ/ | altajski |
+| **Ыы** | /ɨ ɯ/ | ruski |
+| **Ѫѫ** | /ɔ̃ õ/ | oživljeno (staroslav.) |
+| **Ѧѧ** | /ɛ̃/ | oživljeno (staroslav.) |
+| **Ѩѩ** | /jɛ̃/ | oživljeno (staroslav.) |
+| **Ѭѭ** | /jɔ̃/ | oživljeno (staroslav.) |
+| **а̨ ӧ̨** | /ɑ̃ œ̃/ | izvedeno pravilom |
+| **Ӣӣ Ӯӯ** | /iː uː/ | tadžički |
+| **◌̄ ◌́ ◌̀ ◌̌** | дълж./тон | izvedeno pravilom |
+
 ## Datoteke
 
 Fontovi `fonts/Chuzhditsa-*.{ttf,otf}` (četiri reza; GSUB ligature i GPOS sidra za dijakritike), ogledni list `specimen.html`, puna specifikacija s auditom dvadeset jezika u [CHUZHDITSA.en.md](CHUZHDITSA.en.md).

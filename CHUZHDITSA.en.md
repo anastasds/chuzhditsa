@@ -50,6 +50,39 @@ Every diacritic move means exactly one feature, and applies wherever that featur
 
 The hook ◌̢ generalizes a precedent the Bulgarian alphabet already contains: **щ is ш with a hook**. The precomposed letters қ ң ҳ ҫ ҙ exist in Unicode (Kazakh, Bashkir, Tajik); for т̢ д̢ р̢ the same hook is written as combining U+0322.
 
+## The complete character set
+
+Everything the system adds to any Slavic Cyrillic alphabet — every letter with its codepoints, value, and origin:
+
+| letter | Unicode | value | construction | origin |
+|---|---|---|---|---|
+| **Ўў** | U+040E/045E | /w/ | у + breve | import: Belarusian |
+| **Џџ** | U+040F/045F | /d͡ʒ/ | own shape | import: Serbian |
+| **Ҫҫ** | U+04AA/04AB | /θ/ | с + hook | import: Bashkir |
+| **Ҙҙ** | U+0498/0499 | /ð/ | з + hook | import: Bashkir |
+| **Ққ** | U+049A/049B | /q ɢ/ | к + hook | import: Kazakh |
+| **Ңң** | U+04A2/04A3 | /ŋ/ | н + hook | import: Kazakh |
+| **Ҳҳ** | U+04B2/04B3 | /ħ/ | х + hook | import: Tajik |
+| **Ғғ** | U+0492/0493 | /ɣ/ | г + crossbar | import: Kazakh |
+| **Һһ** | U+04BA/04BB | /h ɦ/ | own shape | import: Tatar |
+| **Ѕѕ** | U+0405/0455 | /d͡z/ | own shape | alive in Macedonian (dzelo) |
+| **Ӏ** | U+04C0 | /ʕ/; тӀ кӀ цӀ | palochka | import: Caucasus |
+| **т̢ д̢ н̢ р̢** | база + U+0322 | /ʈ ɖ ɳ ɽ/ | base + hook | derived by rule |
+| **◌ʰ** | U+02B0 | aspiration | raised miniature һ | derived |
+| **◌ʱ** | U+02B1 | breathy voice | raised hooked һ | derived |
+| **Ӓӓ** | U+04D2/04D3 | /æ/ | а + double dot | import: Mari |
+| **Ӧӧ** | U+04E6/04E7 | /ø œ/ | о + double dot | import: Altai |
+| **Ӱӱ** | U+04F0/04F1 | /y ʏ/ | у + double dot | import: Altai |
+| **Ыы** | U+042B/044B | /ɨ ɯ/ | own shape | import: Russian; also Old Bulgarian |
+| **Ѫѫ** | U+046A/046B | /ɔ̃ õ/ | nasal о | revival: in use until 1945 |
+| **Ѧѧ** | U+0466/0467 | /ɛ̃/ | nasal е | revival: Old Bulgarian |
+| **Ѩѩ** | U+0468/0469 | /jɛ̃/ | ligature ь + ѧ | revival: Old Bulgarian |
+| **Ѭѭ** | U+046C/046D | /jɔ̃/ | ligature ь + ѫ | revival: Old Bulgarian |
+| **а̨ ӧ̨** | гласна + U+0328 | /ɑ̃ œ̃/ | vowel + yus tail | derived by rule |
+| **Ӣӣ Ӯӯ** | U+04E2/E3, 04EE/EF | /iː uː/ | vowel + macron | import: Tajik |
+| **◌̄** | U+0304 | length | the length bar | derived |
+| **◌́ ◌̀ ◌̌** | U+0301/0300/030C | tone, stress | dictionary layer | derived |
+
 ### Pair symmetry
 
 Every new letter takes its place in a voiceless/voiced pair aligned with the native system:

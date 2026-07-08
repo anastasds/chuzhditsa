@@ -34,6 +34,35 @@ Vini re çiftet: ç/xh → ч/џ dhe th/dh → ҫ/ҙ janë çifte pa zë/me zë 
 | dhomë | /ˈðomə/ | **ҙо́мъ** |
 | yll | /yɫ/ | **ӱл** |
 
+## I gjithë grupi i zgjeruar
+
+| shkronja | vlera | origjina |
+|---|---|---|
+| **Ўў** | /w/ | bjellorusishtja |
+| **Џџ** | /d͡ʒ/ | serbishtja |
+| **Ҫҫ** | /θ/ | bashkirishtja |
+| **Ҙҙ** | /ð/ | bashkirishtja |
+| **Ққ** | /q ɢ/ | kazakishtja |
+| **Ңң** | /ŋ/ | kazakishtja |
+| **Ҳҳ** | /ħ/ | taxhikishtja |
+| **Ғғ** | /ɣ/ | kazakishtja |
+| **Һһ** | /h ɦ/ | tatarishtja |
+| **Ѕѕ** | /d͡z/ | maqedonishtja (e gjallë) |
+| **Ӏ** | /ʕ/; тӀ кӀ цӀ | Kaukazi |
+| **т̢ д̢ н̢ р̢** | /ʈ ɖ ɳ ɽ/ | e nxjerrë me rregull |
+| **◌ʰ ◌ʱ** | aspir. | e nxjerrë me rregull |
+| **Ӓӓ** | /æ/ | marishtja |
+| **Ӧӧ** | /ø œ/ | altaishtja |
+| **Ӱӱ** | /y ʏ/ | altaishtja |
+| **Ыы** | /ɨ ɯ/ | rusishtja |
+| **Ѫѫ** | /ɔ̃ õ/ | e ringjallur (sllav. e vjetër) |
+| **Ѧѧ** | /ɛ̃/ | e ringjallur (sllav. e vjetër) |
+| **Ѩѩ** | /jɛ̃/ | e ringjallur (sllav. e vjetër) |
+| **Ѭѭ** | /jɔ̃/ | e ringjallur (sllav. e vjetër) |
+| **а̨ ӧ̨** | /ɑ̃ œ̃/ | e nxjerrë me rregull |
+| **Ӣӣ Ӯӯ** | /iː uː/ | taxhikishtja |
+| **◌̄ ◌́ ◌̀ ◌̌** | дълж./тон | e nxjerrë me rregull |
+
 ## Skedarët
 
 Shkrimet `fonts/Chuzhditsa-*.{ttf,otf}` (katër stile; ligaturat GSUB dhe spirancat GPOS për diakritikët janë pjesë e fontit), fleta demonstruese `specimen.html`, specifikimi i plotë me auditin e njëzet gjuhëve në [CHUZHDITSA.en.md](CHUZHDITSA.en.md).

@@ -35,6 +35,35 @@ Slovenčina je jeden z jazykov, ktorým chuzhditsa slúži aj na **domáci** mat
 | dážď | /daːʃc/ | **да̄шть** |
 | whisky (prevzaté) | /ˈwɪski/ | **ўиски** |
 
+## Celá rozšírená sada
+
+| písmeno | hodnota | pôvod |
+|---|---|---|
+| **Ўў** | /w/ | bieloruština |
+| **Џџ** | /d͡ʒ/ | srbčina |
+| **Ҫҫ** | /θ/ | baškirčina |
+| **Ҙҙ** | /ð/ | baškirčina |
+| **Ққ** | /q ɢ/ | kazaština |
+| **Ңң** | /ŋ/ | kazaština |
+| **Ҳҳ** | /ħ/ | tadžičtina |
+| **Ғғ** | /ɣ/ | kazaština |
+| **Һһ** | /h ɦ/ | tatárčina |
+| **Ѕѕ** | /d͡z/ | macedónčina (živé) |
+| **Ӏ** | /ʕ/; тӀ кӀ цӀ | Kaukaz |
+| **т̢ д̢ н̢ р̢** | /ʈ ɖ ɳ ɽ/ | odvodené pravidlom |
+| **◌ʰ ◌ʱ** | aspir. | odvodené pravidlom |
+| **Ӓӓ** | /æ/ | marijčina |
+| **Ӧӧ** | /ø œ/ | altajčina |
+| **Ӱӱ** | /y ʏ/ | altajčina |
+| **Ыы** | /ɨ ɯ/ | ruština |
+| **Ѫѫ** | /ɔ̃ õ/ | oživené (staroslov.) |
+| **Ѧѧ** | /ɛ̃/ | oživené (staroslov.) |
+| **Ѩѩ** | /jɛ̃/ | oživené (staroslov.) |
+| **Ѭѭ** | /jɔ̃/ | oživené (staroslov.) |
+| **а̨ ӧ̨** | /ɑ̃ œ̃/ | odvodené pravidlom |
+| **Ӣӣ Ӯӯ** | /iː uː/ | tadžičtina |
+| **◌̄ ◌́ ◌̀ ◌̌** | дълж./тон | odvodené pravidlom |
+
 ## Súbory
 
 Písma `fonts/Chuzhditsa-*.{ttf,otf}` (štyri rezy; GSUB ligatúry a GPOS kotvy diakritiky sú súčasťou fontu), ukážka `specimen.html`, úplná špecifikácia s auditom dvadsiatich jazykov v [CHUZHDITSA.en.md](CHUZHDITSA.en.md).

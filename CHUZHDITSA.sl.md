@@ -24,6 +24,35 @@ Slovenščina je odličen primer jezika, ki razširitveno plast potrebuje za **d
 | vikend (prevzeto) | /ˈwiːkɛnd/ | **ўӣкенд** |
 | Göteborg (prevzeto) | /jœteˈbɔrj/ | **Јӧтебо́рј** |
 
+## Celoten razširjeni nabor
+
+| črka | vrednost | izvor |
+|---|---|---|
+| **Ўў** | /w/ | beloruščina |
+| **Џџ** | /d͡ʒ/ | srbščina |
+| **Ҫҫ** | /θ/ | baškirščina |
+| **Ҙҙ** | /ð/ | baškirščina |
+| **Ққ** | /q ɢ/ | kazaščina |
+| **Ңң** | /ŋ/ | kazaščina |
+| **Ҳҳ** | /ħ/ | tadžiščina |
+| **Ғғ** | /ɣ/ | kazaščina |
+| **Һһ** | /h ɦ/ | tatarščina |
+| **Ѕѕ** | /d͡z/ | makedonščina (živo) |
+| **Ӏ** | /ʕ/; тӀ кӀ цӀ | Kavkaz |
+| **т̢ д̢ н̢ р̢** | /ʈ ɖ ɳ ɽ/ | izpeljano s pravilom |
+| **◌ʰ ◌ʱ** | aspir. | izpeljano s pravilom |
+| **Ӓӓ** | /æ/ | marijščina |
+| **Ӧӧ** | /ø œ/ | altajščina |
+| **Ӱӱ** | /y ʏ/ | altajščina |
+| **Ыы** | /ɨ ɯ/ | ruščina |
+| **Ѫѫ** | /ɔ̃ õ/ | oživljeno (starocerkv.) |
+| **Ѧѧ** | /ɛ̃/ | oživljeno (starocerkv.) |
+| **Ѩѩ** | /jɛ̃/ | oživljeno (starocerkv.) |
+| **Ѭѭ** | /jɔ̃/ | oživljeno (starocerkv.) |
+| **а̨ ӧ̨** | /ɑ̃ œ̃/ | izpeljano s pravilom |
+| **Ӣӣ Ӯӯ** | /iː uː/ | tadžiščina |
+| **◌̄ ◌́ ◌̀ ◌̌** | дълж./тон | izpeljano s pravilom |
+
 ## Datoteke
 
 Pisave `fonts/Chuzhditsa-*.{ttf,otf}` (štirje rezi; GSUB ligature in GPOS sidra za diakritike so del pisave), vzorčnik `specimen.html`, polna specifikacija z auditom dvajsetih jezikov v [CHUZHDITSA.en.md](CHUZHDITSA.en.md).

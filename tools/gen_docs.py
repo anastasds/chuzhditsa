@@ -176,6 +176,56 @@ LANGS = [
 ]),
 ]
 
+
+# The designed character set: (letters, codepoints, IPA, construction bg|en|uk, origin bg|en|uk)
+INVENTORY = [
+ ("Ўў","U+040E/045E","/w/","у + кратка|у + breve|у + бревіс","внос: беларуски|import: Belarusian|імпорт: білоруська"),
+ ("Џџ","U+040F/045F","/d͡ʒ/","собствена форма|own shape|власна форма","внос: сръбски|import: Serbian|імпорт: сербська"),
+ ("Ҫҫ","U+04AA/04AB","/θ/","с + кука|с + hook|с + гачок","внос: башкирски|import: Bashkir|імпорт: башкирська"),
+ ("Ҙҙ","U+0498/0499","/ð/","з + кука|з + hook|з + гачок","внос: башкирски|import: Bashkir|імпорт: башкирська"),
+ ("Ққ","U+049A/049B","/q ɢ/","к + кука|к + hook|к + гачок","внос: казахски|import: Kazakh|імпорт: казахська"),
+ ("Ңң","U+04A2/04A3","/ŋ/","н + кука|н + hook|н + гачок","внос: казахски|import: Kazakh|імпорт: казахська"),
+ ("Ҳҳ","U+04B2/04B3","/ħ/","х + кука|х + hook|х + гачок","внос: таджикски|import: Tajik|імпорт: таджицька"),
+ ("Ғғ","U+0492/0493","/ɣ/","г + черта|г + crossbar|г + риска","внос: казахски|import: Kazakh|імпорт: казахська"),
+ ("Һһ","U+04BA/04BB","/h ɦ/","собствена форма|own shape|власна форма","внос: татарски|import: Tatar|імпорт: татарська"),
+ ("Ѕѕ","U+0405/0455","/d͡z/","собствена форма|own shape|власна форма","жива в македонския (ѕело)|alive in Macedonian (dzelo)|жива в македонській (дзело)"),
+ ("Ӏ","U+04C0","/ʕ/; тӀ кӀ цӀ","палочка|palochka|палочка","внос: Кавказ|import: Caucasus|імпорт: Кавказ"),
+ ("т̢ д̢ н̢ р̢","база + U+0322","/ʈ ɖ ɳ ɽ/","основа + кука|base + hook|основа + гачок","изведени по правило|derived by rule|виведені за правилом"),
+ ("◌ʰ","U+02B0","аспирация|aspiration|придих","смалено вдигнато һ|raised miniature һ|зменшене підняте һ","изведен|derived|виведений"),
+ ("◌ʱ","U+02B1","мърморен глас|breathy voice|придихова дзвінкість","смалено һ с извивка|raised hooked һ|зменшене һ із гачком","изведен|derived|виведений"),
+ ("Ӓӓ","U+04D2/04D3","/æ/","а + две точки|а + double dot|а + дві крапки","внос: марийски|import: Mari|імпорт: марійська"),
+ ("Ӧӧ","U+04E6/04E7","/ø œ/","о + две точки|о + double dot|о + дві крапки","внос: алтайски|import: Altai|імпорт: алтайська"),
+ ("Ӱӱ","U+04F0/04F1","/y ʏ/","у + две точки|у + double dot|у + дві крапки","внос: алтайски|import: Altai|імпорт: алтайська"),
+ ("Ыы","U+042B/044B","/ɨ ɯ/","собствена форма|own shape|власна форма","внос: руски; и старобълг.|import: Russian; also Old Bulgarian|імпорт: російська; і староболг."),
+ ("Ѫѫ","U+046A/046B","/ɔ̃ õ/","носово о|nasal о|носове о","възкресена: до 1945 г.|revival: in use until 1945|воскрешена: до 1945 р."),
+ ("Ѧѧ","U+0466/0467","/ɛ̃/","носово е|nasal е|носове е","възкресена: старобълг.|revival: Old Bulgarian|воскрешена: староболг."),
+ ("Ѩѩ","U+0468/0469","/jɛ̃/","лигатура ь + ѧ|ligature ь + ѧ|лігатура ь + ѧ","възкресена: старобълг.|revival: Old Bulgarian|воскрешена: староболг."),
+ ("Ѭѭ","U+046C/046D","/jɔ̃/","лигатура ь + ѫ|ligature ь + ѫ|лігатура ь + ѫ","възкресена: старобълг.|revival: Old Bulgarian|воскрешена: староболг."),
+ ("а̨ ӧ̨","гласна + U+0328","/ɑ̃ œ̃/","гласна + юсова опашка|vowel + yus tail|голосна + юсовий хвостик","изведени по правило|derived by rule|виведені за правилом"),
+ ("Ӣӣ Ӯӯ","U+04E2/E3, 04EE/EF","/iː uː/","гласна + макрон|vowel + macron|голосна + макрон","внос: таджикски|import: Tajik|імпорт: таджицька"),
+ ("◌̄","U+0304","дължина|length|довгота","провлачка|the length bar|провлачка","изведен|derived|виведений"),
+ ("◌́ ◌̀ ◌̌","U+0301/0300/030C","тон, ударение|tone, stress|тон, наголос","речников слой|dictionary layer|словниковий шар","изведени|derived|виведені"),
+]
+
+INV_TITLE = {"bg": "## Пълният знаков състав", "en": "## The complete character set", "uk": "## Повний набір знаків"}
+INV_INTRO = {
+ "bg": "Всичко, което системата добавя към която и да е славянска кирилица — всяка буква с кодовите си точки, стойността си и произхода си:",
+ "en": "Everything the system adds to any Slavic Cyrillic alphabet — every letter with its codepoints, value, and origin:",
+ "uk": "Усе, що система додає до будь-якої слов'янської кирилиці — кожна літера з кодовими точками, значенням і походженням:",
+}
+INV_HDR = {
+ "bg": "| буква | Unicode | стойност | строеж | произход |",
+ "en": "| letter | Unicode | value | construction | origin |",
+ "uk": "| літера | Unicode | значення | будова | походження |",
+}
+
+def inv_table(code, idx):
+    out = [INV_TITLE[code], "", INV_INTRO[code], "", INV_HDR[code], "|---|---|---|---|---|"]
+    for letters, cps, ipa, con, org in INVENTORY:
+        ipa_l = ipa.split("|")[idx] if "|" in ipa else ipa
+        out.append(f"| **{letters}** | {cps} | {ipa_l} | {con.split('|')[idx]} | {org.split('|')[idx]} |")
+    return "\n".join(out) + "\n"
+
 LINKS = {
  "bg": "**Езикови версии:** български · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md)\n**Кратки водачи:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Статия:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)\n",
  "en": "**Language versions:** [български](CHUZHDITSA.md) · English · [українська](CHUZHDITSA.uk.md)\n**Short guides:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Paper:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)\n",
@@ -237,6 +287,7 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 
 Куката ◌̢ е обобщение на прецедент, който българската азбука вече съдържа: **щ е ш с кука**. Готовите букви қ ң ҳ ҫ ҙ съществуват в Unicode (казахски, башкирски, таджикски); при т̢ д̢ р̢ същата кука се пише като комбиниращ знак U+0322.
 
+{inventory}
 ### Симетрия на двойките
 
 Всяка нова буква застава в беззвучно/звучна двойка, подравнена с родната система:
@@ -386,6 +437,7 @@ Every diacritic move means exactly one feature, and applies wherever that featur
 
 The hook ◌̢ generalizes a precedent the Bulgarian alphabet already contains: **щ is ш with a hook**. The precomposed letters қ ң ҳ ҫ ҙ exist in Unicode (Kazakh, Bashkir, Tajik); for т̢ д̢ р̢ the same hook is written as combining U+0322.
 
+{inventory}
 ### Pair symmetry
 
 Every new letter takes its place in a voiceless/voiced pair aligned with the native system:
@@ -535,6 +587,7 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 
 Гачок ◌̢ узагальнює прецедент, який болгарська абетка вже містить: **щ — це ш з гачком**. Готові літери қ ң ҳ ҫ ҙ існують в Unicode (казахська, башкирська, таджицька); для т̢ д̢ р̢ той самий гачок пишеться комбінованим знаком U+0322.
 
+{inventory}
 ### Симетрія пар
 
 Кожна нова літера стає в пару глуха/дзвінка, вирівняну з рідною системою:
@@ -772,7 +825,7 @@ def md_examples(code, idx):
 
 def write_md(code, idx, filename):
     path = os.path.join(ROOT, filename)
-    head = HEAD[code].replace("{links}", LINKS[code])
+    head = HEAD[code].replace("{links}", LINKS[code]).replace("{inventory}", inv_table(code, idx))
     banner = "<!-- Generated by tools/gen_docs.py - edit that script, not this file. -->\n\n"
     with open(path, "w", encoding="utf-8") as f:
         f.write(banner + head + md_examples(code, idx) + TONES[code].replace("{{", "{").replace("}}", "}"))
