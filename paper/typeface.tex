@@ -23,7 +23,7 @@
 \newcommand{\ph}[1]{{\ipafont/#1/}}
 
 \title{\textbf{The letter as a program:\\ constructing the Chuzhditsa typeface}}
-\author{Author name withheld for review\thanks{Companion paper to \emph{Chuzhditsa: a featural loanword register for Cyrillic}; the build toolchain discussed here is roughly seven hundred lines of Python and is distributed with the fonts. Every object-language example in this manuscript is set in the typeface under discussion.}}
+\author{Author name withheld for review\thanks{Companion paper to \emph{Chuzhditsa: a featural citation register for Cyrillic}; the build toolchain discussed here is roughly seven hundred lines of Python and is distributed with the fonts. Every object-language example in this manuscript is set in the typeface under discussion.}}
 \date{}
 
 \begin{document}
@@ -45,7 +45,7 @@ The contemporary landscape should be acknowledged before the historical one is m
 
 Five terms do load-bearing work in what follows and are worth fixing now. The \emph{orthography} is the mapping from phonological input to character sequences; the \emph{register} is the functional category being marked (foreign-word citation); the \emph{typeface} is the design language; the \emph{font binary} is the executable artifact — glyphs, cmap, GSUB/GPOS, anchors; and the \emph{text encoding} is the Unicode character sequence, which preserves the orthography's letters in plain text but preserves the register only where font control survives.
 
-There was also a practical reason to build rather than draw. The companion paper describes Chuzhditsa's function: a loanword register for pan-Slavic Cyrillic whose extension letters are derived by a small set of recurrent diacritic operations, some featurally atomic and some relational to the base letter. A writing system whose \emph{letters} are rule-derived invites a typeface whose \emph{glyphs} are rule-derived; the two grammars mirror each other, and several orthographic rules (ligature fusion, mark anchoring) exist in the font as executable code rather than prose. The font is not an illustration of the spec; it functions as its \emph{executable reference implementation} — the artifact against which claims about fusion, attachment, and coverage can be tested mechanically (\S\ref{sec:normative}).
+There was also a practical reason to build rather than draw. The companion paper describes Chuzhditsa's function: a \emph{phonological citation register} for pan-Slavic Cyrillic — a system for writing foreign words, names, and pedagogical examples so a Cyrillic reader can recover the source pronunciation, with loanword marking as a secondary use — whose extension letters are derived by a small set of recurrent diacritic operations, some featurally atomic and some relational to the base letter. A writing system whose \emph{letters} are rule-derived invites a typeface whose \emph{glyphs} are rule-derived; the two grammars mirror each other, and several orthographic rules (ligature fusion, mark anchoring) exist in the font as executable code rather than prose. The font is not an illustration of the spec; it functions as its \emph{executable reference implementation} — the artifact against which claims about fusion, attachment, and coverage can be tested mechanically (\S\ref{sec:normative}). The construction method is evaluated on its own terms throughout: nothing below depends on the reader's verdict on the register's adoption prospects. Given a designed orthographic register — this one or another — the question this paper answers is what it takes to make it typographically real.
 \begin{figure}[ht]\centering
 \includegraphics[width=1.00\linewidth]{figures/fig1_stroke_model.png}
 \caption{The stroke model. Left: the declared skeleton of \cz{б} — two line strokes (endpoints marked) and one ring. Right: the same declaration evaluated at $w=90$, $w=150$, and $12°$ slant. Nothing between the panels was drawn.}\label{fig:stroke}
@@ -76,7 +76,7 @@ Monoline is the least-ink case of Noordzij's model and it is easy to mistake for
 \section{Why it looks the way it looks: Cyrillic, Glagolitic, and a register face}
 
 \subsection{Cyrillic skeleton constraints}
-A loanword register must be recognizably \emph{other} at reading distance while remaining effortlessly legible to any Cyrillic reader — the katakana condition. The letterforms therefore keep utterly conventional Cyrillic skeletons (Zhukov's account of what makes Cyrillic Cyrillic — the correlated treatment of \cz{А Л Д М}, of \cz{Б В Р Ч Ъ Ы Ь Я}, of \cz{Ж} with \cz{К} and \cz{Я}, and the dominance of verticals and straight-line construction in the lower case — was treated as a constraint list; Zhukov 1996), while the \emph{style} carries the register.
+The visual register must be recognizably \emph{other} at reading distance while remaining effortlessly legible to any Cyrillic reader — the katakana condition. The letterforms therefore keep utterly conventional Cyrillic skeletons (Zhukov's account of what makes Cyrillic Cyrillic — the correlated treatment of \cz{А Л Д М}, of \cz{Б В Р Ч Ъ Ы Ь Я}, of \cz{Ж} with \cz{К} and \cz{Я}, and the dominance of verticals and straight-line construction in the lower case — was treated as a constraint list; Zhukov 1996), while the \emph{style} carries the register.
 
 \subsection{Glagolitic register styling}
 The style's sources are deliberately archaic: the full-circle bowls of round Glagolitic, the first Slavic script, whose loops survive in our \cz{б в р ъ ь ы ю}; and a unicameral \emph{memory}: the family is fully two-case in function (\S\ref{sec:fitting}), but capitals and lowercase share one skeleton grammar and one construction vocabulary, echoing pre-Petrine Cyrillic before the civil type reform imported Latin two-case architecture — a stylistic inheritance, not a functional restriction. For a Bulgarian-born project there is a further conversation to honor: Bulgarian typography has long maintained its own letterform norm distinct from the Russian model (the tradition whose modern theory Vasil Yonchev shaped), and a face that revives ѫ and ѩ is, in that discourse, taking a side — heritage forms for heritage letters (Йончев \& Йончева 1982).
@@ -260,7 +260,7 @@ px & breve \cz{ў} & macron \cz{ӣ} & umlaut \cz{ӓ} & \cz{с}/\cz{ҫ} & \cz{з}
 \end{figure}
 \begin{figure}[ht]\centering
 \includegraphics[width=\linewidth]{figures/fig16_waterfall.png}
-\caption{Waterfall, FreeType rendering, 64 down to 13 pixels. The marks — breve, macron, umlaut, hooks — are the stress test: a loanword register that loses its diacritics at caption sizes has lost its phonology.}\label{fig:waterfall}
+\caption{Waterfall, FreeType rendering, 64 down to 13 pixels. The marks — breve, macron, umlaut, hooks — are the stress test: a citation register that loses its diacritics at caption sizes has lost its phonology.}\label{fig:waterfall}
 \end{figure}
 
 \section{Limitations}

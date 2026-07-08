@@ -1,0 +1,1724 @@
+{
+ "meta": {
+  "title": "Chuzhditsa twenty-language audit",
+  "description": "Full example set of the coverage audit: for each language, the declared reference variety, the extension letters and marks each rendering exercises, and the declared mergers and losses. Classification follows the paper's Method: exact / conventional merger / declared loss; mergers and losses are declared per language, and every rendering not engaging a declared merger or loss is exact.",
+  "classification": [
+   "exact",
+   "conventional merger",
+   "declared loss"
+  ],
+  "languages": 20,
+  "examples": 125,
+  "encoding": "NFC"
+ },
+ "languages": [
+  {
+   "language": "English",
+   "name_bg": "Английски · English",
+   "name_uk": "Англійська · English",
+   "reference_variety": "General American",
+   "mergers": "rhotic → р",
+   "losses": "—",
+   "extensions_exercised": [
+    "ў",
+    "ӣ",
+    "ҫ",
+    "ӓ",
+    "ң",
+    "ҙ",
+    "ъ",
+    "һ"
+   ],
+   "examples": [
+    {
+     "word": "weekend",
+     "ipa": "/ˈwiːkɛnd/",
+     "chuzhditsa": "ўӣкенд",
+     "extensions": [
+      "ў",
+      "ӣ"
+     ],
+     "note_bg": "ў /w/, ӣ дълго /iː/",
+     "note_en": "ў /w/, ӣ long /iː/",
+     "note_uk": "ў /w/, ӣ довге /iː/"
+    },
+    {
+     "word": "thanks",
+     "ipa": "/θæŋks/",
+     "chuzhditsa": "ҫӓңкс",
+     "extensions": [
+      "ҫ",
+      "ӓ",
+      "ң"
+     ],
+     "note_bg": "ҫ /θ/, ӓ /æ/, ң /ŋ/ — три нови букви",
+     "note_en": "ҫ /θ/, ӓ /æ/, ң /ŋ/ — three new letters",
+     "note_uk": "ҫ /θ/, ӓ /æ/, ң /ŋ/ — три нові літери"
+    },
+    {
+     "word": "this",
+     "ipa": "/ðɪs/",
+     "chuzhditsa": "ҙис",
+     "extensions": [
+      "ҙ"
+     ],
+     "note_bg": "ҙ /ð/",
+     "note_en": "ҙ /ð/",
+     "note_uk": "ҙ /ð/"
+    },
+    {
+     "word": "thriller",
+     "ipa": "/ˈθrɪlɚ/",
+     "chuzhditsa": "ҫрилър",
+     "extensions": [
+      "ҫ",
+      "ъ"
+     ],
+     "note_bg": "ҫ + ъ за /ə/",
+     "note_en": "ҫ + ъ for /ə/",
+     "note_uk": "ҫ + ъ для /ə/"
+    },
+    {
+     "word": "birthday",
+     "ipa": "/ˈbɝθdeɪ/",
+     "chuzhditsa": "бърҫдей",
+     "extensions": [
+      "ъ",
+      "ҫ"
+     ],
+     "note_bg": "ъ /ɜː/, ҫ /θ/",
+     "note_en": "ъ /ɜː/, ҫ /θ/",
+     "note_uk": "ъ /ɜː/, ҫ /θ/"
+    },
+    {
+     "word": "world",
+     "ipa": "/wɝld/",
+     "chuzhditsa": "ўърлд",
+     "extensions": [
+      "ў",
+      "ъ"
+     ],
+     "note_bg": "ў + ър",
+     "note_en": "ў + ър",
+     "note_uk": "ў + ър"
+    },
+    {
+     "word": "squirrel",
+     "ipa": "/ˈskwɪrəl/",
+     "chuzhditsa": "скўиръл",
+     "extensions": [
+      "ў",
+      "ъ"
+     ],
+     "note_bg": "ў в клъстер",
+     "note_en": "ў in a cluster",
+     "note_uk": "ў у кластері"
+    },
+    {
+     "word": "Harry",
+     "ipa": "/ˈhæri/",
+     "chuzhditsa": "Һӓри",
+     "extensions": [
+      "һ",
+      "ӓ"
+     ],
+     "note_bg": "һ /h/, ӓ /æ/",
+     "note_en": "һ /h/, ӓ /æ/",
+     "note_uk": "һ /h/, ӓ /æ/"
+    },
+    {
+     "word": "ring",
+     "ipa": "/rɪŋ/",
+     "chuzhditsa": "риң",
+     "extensions": [
+      "ң"
+     ],
+     "note_bg": "ң — без фалшиво г",
+     "note_en": "ң — no fake г",
+     "note_uk": "ң — без фальшивого г"
+    },
+    {
+     "word": "cat · cut · cart",
+     "ipa": "/kæt/ /kʌt/ /kɑɹt/",
+     "chuzhditsa": "кӓт · кът · карт",
+     "extensions": [
+      "ӓ",
+      "ъ"
+     ],
+     "note_bg": "минимална тройка запазена",
+     "note_en": "minimal triple preserved",
+     "note_uk": "мінімальну трійку збережено"
+    }
+   ]
+  },
+  {
+   "language": "Mandarin",
+   "name_bg": "Мандарин · Mandarin",
+   "name_uk": "Мандаринська · Mandarin",
+   "reference_variety": "Standard (Beijing)",
+   "mergers": "tʂ tɕ → ч; ʐ → ж",
+   "losses": "tone sandhi",
+   "extensions_exercised": [
+    "◌̌",
+    "ң",
+    "ʰ",
+    "◌́",
+    "ъ",
+    "◌̀"
+   ],
+   "examples": [
+    {
+     "word": "北京 Běijīng",
+     "ipa": "/pèɪ.tɕíŋ/",
+     "chuzhditsa": "Пе̌йчиң",
+     "extensions": [
+      "◌̌",
+      "ң"
+     ],
+     "note_bg": "неаспирираните b/j са беззвучни → п/ч; тон 3 ◌̌, ң",
+     "note_en": "unaspirated b/j are voiceless → п/ч; tone 3 ◌̌, ң",
+     "note_uk": "непридихові b/j глухі → п/ч; тон 3 ◌̌, ң"
+    },
+    {
+     "word": "茶 chá",
+     "ipa": "/ʈʂʰǎ/",
+     "chuzhditsa": "чʰа́",
+     "extensions": [
+      "ʰ",
+      "◌́"
+     ],
+     "note_bg": "аспирация ʰ + тон 2",
+     "note_en": "aspiration ʰ + tone 2",
+     "note_uk": "придих ʰ + тон 2"
+    },
+    {
+     "word": "谢谢 xièxie",
+     "ipa": "/ɕjê.ɕje/",
+     "chuzhditsa": "сьѐсье",
+     "extensions": [],
+     "note_bg": "ɕ → сь",
+     "note_en": "ɕ → сь",
+     "note_uk": "ɕ → сь"
+    },
+    {
+     "word": "人 rén",
+     "ipa": "/ʐə̌n/",
+     "chuzhditsa": "жъ́н",
+     "extensions": [
+      "ъ",
+      "◌́"
+     ],
+     "note_bg": "ʐ → ж, ъ /ə/",
+     "note_en": "ʐ → ж, ъ /ə/",
+     "note_uk": "ʐ → ж, ъ /ə/"
+    },
+    {
+     "word": "上海 Shànghǎi",
+     "ipa": "/ʂâŋ.xàɪ/",
+     "chuzhditsa": "Ша̀ңха̌й",
+     "extensions": [
+      "◌̀",
+      "ң",
+      "◌̌"
+     ],
+     "note_bg": "ʂ → ш, х /x/",
+     "note_en": "ʂ → ш, х /x/",
+     "note_uk": "ʂ → ш, х /x/"
+    },
+    {
+     "word": "猫 māo",
+     "ipa": "/máʊ/",
+     "chuzhditsa": "мао",
+     "extensions": [],
+     "note_bg": "тон 1 = немаркиран",
+     "note_en": "tone 1 = unmarked",
+     "note_uk": "тон 1 = непозначений"
+    },
+    {
+     "word": "气 qì",
+     "ipa": "/tɕʰî/",
+     "chuzhditsa": "чʰѝ",
+     "extensions": [
+      "ʰ"
+     ],
+     "note_bg": "аспирирана африката + тон 4",
+     "note_en": "aspirated affricate + tone 4",
+     "note_uk": "придихова африката + тон 4"
+    }
+   ]
+  },
+  {
+   "language": "Hindi-Urdu",
+   "name_bg": "Хинди-урду · Hindi-Urdu",
+   "name_uk": "Гінді-урду · Hindi-Urdu",
+   "reference_variety": "Delhi",
+   "mergers": "ɦ → һ",
+   "losses": "—",
+   "extensions_exercised": [
+    "ʱ",
+    "◌̄",
+    "ъ",
+    "◌̢",
+    "ʰ",
+    "ӣ",
+    "џ",
+    "һ"
+   ],
+   "examples": [
+    {
+     "word": "भारत Bhārat",
+     "ipa": "/ˈbʱaːɾət̪/",
+     "chuzhditsa": "Бʱа̄рът",
+     "extensions": [
+      "ʱ",
+      "◌̄",
+      "ъ"
+     ],
+     "note_bg": "ʱ мърморен глас, а̄ дължина, ъ /ə/",
+     "note_en": "ʱ breathy voice, а̄ length, ъ /ə/",
+     "note_uk": "ʱ придихова дзвінкість, а̄ довгота, ъ /ə/"
+    },
+    {
+     "word": "धन्यवाद dhanyavād",
+     "ipa": "/d̪ʱənjəˈʋaːd̪/",
+     "chuzhditsa": "дʱънйъва̄д",
+     "extensions": [
+      "ʱ",
+      "ъ",
+      "◌̄"
+     ],
+     "note_bg": "дʱ, две шва → ъ",
+     "note_en": "дʱ, two schwas → ъ",
+     "note_uk": "дʱ, дві шва → ъ"
+    },
+    {
+     "word": "ठीक ṭhīk",
+     "ipa": "/ʈʰiːk/",
+     "chuzhditsa": "т̢ʰӣк",
+     "extensions": [
+      "◌̢",
+      "ʰ",
+      "ӣ"
+     ],
+     "note_bg": "ретрофлекс ◌̢ + аспирация + дължина",
+     "note_en": "retroflex ◌̢ + aspiration + length",
+     "note_uk": "ретрофлекс ◌̢ + придих + довгота"
+    },
+    {
+     "word": "दिल्ली Dillī",
+     "ipa": "/d̪ɪlliː/",
+     "chuzhditsa": "Диллӣ",
+     "extensions": [
+      "ӣ"
+     ],
+     "note_bg": "зъбно д без кука; геминат",
+     "note_en": "dental д, no hook; geminate",
+     "note_uk": "зубне д без гачка; гемінат"
+    },
+    {
+     "word": "घर ghar",
+     "ipa": "/ɡʱər/",
+     "chuzhditsa": "гʱър",
+     "extensions": [
+      "ʱ",
+      "ъ"
+     ],
+     "note_bg": "гʱ мърморено г",
+     "note_en": "гʱ breathy г",
+     "note_uk": "гʱ придихове г"
+    },
+    {
+     "word": "झील jhīl",
+     "ipa": "/dʒʱiːl/",
+     "chuzhditsa": "џʱӣл",
+     "extensions": [
+      "џ",
+      "ʱ",
+      "ӣ"
+     ],
+     "note_bg": "џʱ — звучна африката с мърморене",
+     "note_en": "џʱ — voiced affricate with breathiness",
+     "note_uk": "џʱ — дзвінка африката з придихом"
+    },
+    {
+     "word": "चाय chāy",
+     "ipa": "/tʃaːj/",
+     "chuzhditsa": "ча̄й",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "ч",
+     "note_en": "ч",
+     "note_uk": "ч"
+    },
+    {
+     "word": "पानी pānī",
+     "ipa": "/paːniː/",
+     "chuzhditsa": "па̄нӣ",
+     "extensions": [
+      "◌̄",
+      "ӣ"
+     ],
+     "note_bg": "двойна дължина",
+     "note_en": "double length",
+     "note_uk": "подвійна довгота"
+    },
+    {
+     "word": "लड़का laṛkā",
+     "ipa": "/ləɽkaː/",
+     "chuzhditsa": "лър̢ка̄",
+     "extensions": [
+      "ъ",
+      "◌̢",
+      "◌̄"
+     ],
+     "note_bg": "р̢ /ɽ/ ретрофлексен флап",
+     "note_en": "р̢ /ɽ/ retroflex flap",
+     "note_uk": "р̢ /ɽ/ ретрофлексний флеп"
+    },
+    {
+     "word": "हवा havā",
+     "ipa": "/ɦəˈʋaː/",
+     "chuzhditsa": "һъва̄",
+     "extensions": [
+      "һ",
+      "ъ",
+      "◌̄"
+     ],
+     "note_bg": "һ /ɦ/ (слива се с /h/)",
+     "note_en": "һ /ɦ/ (merges with /h/)",
+     "note_uk": "һ /ɦ/ (зливається з /h/)"
+    }
+   ]
+  },
+  {
+   "language": "Spanish",
+   "name_bg": "Испански · Spanish",
+   "name_uk": "Іспанська · Spanish",
+   "reference_variety": "Castilian",
+   "mergers": "β → в; rhotics → р",
+   "losses": "—",
+   "extensions_exercised": [
+    "ҫ",
+    "ғ",
+    "ў",
+    "ҙ"
+   ],
+   "examples": [
+    {
+     "word": "cerveza",
+     "ipa": "/θeɾˈβeθa/",
+     "chuzhditsa": "ҫервеҫа",
+     "extensions": [
+      "ҫ"
+     ],
+     "note_bg": "кастилско /θ/ → ҫ",
+     "note_en": "Castilian /θ/ → ҫ",
+     "note_uk": "кастильське /θ/ → ҫ"
+    },
+    {
+     "word": "jamón",
+     "ipa": "/xaˈmon/",
+     "chuzhditsa": "хамон",
+     "extensions": [],
+     "note_bg": "j = /x/ → родно х",
+     "note_en": "j = /x/ → native х",
+     "note_uk": "j = /x/ → рідне х"
+    },
+    {
+     "word": "agua",
+     "ipa": "/ˈaɣwa/",
+     "chuzhditsa": "ағўа",
+     "extensions": [
+      "ғ",
+      "ў"
+     ],
+     "note_bg": "ғ /ɣ/ + ў /w/",
+     "note_en": "ғ /ɣ/ + ў /w/",
+     "note_uk": "ғ /ɣ/ + ў /w/"
+    },
+    {
+     "word": "niño",
+     "ipa": "/ˈniɲo/",
+     "chuzhditsa": "ниньо",
+     "extensions": [],
+     "note_bg": "ɲ → нь (роден механизъм)",
+     "note_en": "ɲ → нь (native mechanism)",
+     "note_uk": "ɲ → нь (рідний механізм)"
+    },
+    {
+     "word": "Madrid",
+     "ipa": "/maˈðɾið/",
+     "chuzhditsa": "Мадриҙ",
+     "extensions": [
+      "ҙ"
+     ],
+     "note_bg": "крайно /ð/ → ҙ",
+     "note_en": "final /ð/ → ҙ",
+     "note_uk": "кінцеве /ð/ → ҙ"
+    },
+    {
+     "word": "paella",
+     "ipa": "/paˈeʎa/",
+     "chuzhditsa": "паелья",
+     "extensions": [],
+     "note_bg": "ʎ → ль",
+     "note_en": "ʎ → ль",
+     "note_uk": "ʎ → ль"
+    }
+   ]
+  },
+  {
+   "language": "French",
+   "name_bg": "Френски · French",
+   "name_uk": "Французька · French",
+   "reference_variety": "Parisian",
+   "mergers": "ʁ → р",
+   "losses": "—",
+   "extensions_exercised": [
+    "ѫ",
+    "ѧ",
+    "◌̨",
+    "ў",
+    "ӧ",
+    "ӱ",
+    "ѩ",
+    "ъ"
+   ],
+   "examples": [
+    {
+     "word": "bonjour",
+     "ipa": "/bɔ̃ˈʒuʁ/",
+     "chuzhditsa": "бѫжур",
+     "extensions": [
+      "ѫ"
+     ],
+     "note_bg": "ѫ /ɔ̃/ — възкресеният юс",
+     "note_en": "ѫ /ɔ̃/ — the resurrected yus",
+     "note_uk": "ѫ /ɔ̃/ — воскрешений юс"
+    },
+    {
+     "word": "vin",
+     "ipa": "/vɛ̃/",
+     "chuzhditsa": "вѧ",
+     "extensions": [
+      "ѧ"
+     ],
+     "note_bg": "ѧ /ɛ̃/",
+     "note_en": "ѧ /ɛ̃/",
+     "note_uk": "ѧ /ɛ̃/"
+    },
+    {
+     "word": "blanc",
+     "ipa": "/blɑ̃/",
+     "chuzhditsa": "бла̨",
+     "extensions": [
+      "◌̨"
+     ],
+     "note_bg": "а̨ /ɑ̃/ — юсова опашка по правило",
+     "note_en": "а̨ /ɑ̃/ — the yus tail, by rule",
+     "note_uk": "а̨ /ɑ̃/ — юсовий хвостик за правилом"
+    },
+    {
+     "word": "croissant",
+     "ipa": "/kʁwasɑ̃/",
+     "chuzhditsa": "крўаса̨",
+     "extensions": [
+      "ў",
+      "◌̨"
+     ],
+     "note_bg": "ў + а̨",
+     "note_en": "ў + а̨",
+     "note_uk": "ў + а̨"
+    },
+    {
+     "word": "deux",
+     "ipa": "/dø/",
+     "chuzhditsa": "дӧ",
+     "extensions": [
+      "ӧ"
+     ],
+     "note_bg": "ӧ /ø/",
+     "note_en": "ӧ /ø/",
+     "note_uk": "ӧ /ø/"
+    },
+    {
+     "word": "rue",
+     "ipa": "/ʁy/",
+     "chuzhditsa": "рӱ",
+     "extensions": [
+      "ӱ"
+     ],
+     "note_bg": "ӱ /y/",
+     "note_en": "ӱ /y/",
+     "note_uk": "ӱ /y/"
+    },
+    {
+     "word": "parfum",
+     "ipa": "/paʁˈfœ̃/",
+     "chuzhditsa": "парфӧ̨",
+     "extensions": [
+      "ӧ",
+      "◌̨"
+     ],
+     "note_bg": "ӧ̨ /œ̃/ — преглас + носовка, два знака",
+     "note_en": "ӧ̨ /œ̃/ — umlaut + nasal, two marks",
+     "note_uk": "ӧ̨ /œ̃/ — умлаут + носовий, два знаки"
+    },
+    {
+     "word": "bien",
+     "ipa": "/bjɛ̃/",
+     "chuzhditsa": "бѩ",
+     "extensions": [
+      "ѩ"
+     ],
+     "note_bg": "ѩ /jɛ̃/ — йотуваният юс, лигатура",
+     "note_en": "ѩ /jɛ̃/ — the iotated yus, a ligature",
+     "note_uk": "ѩ /jɛ̃/ — йотований юс, лігатура"
+    },
+    {
+     "word": "grenouille",
+     "ipa": "/ɡʁənuj/",
+     "chuzhditsa": "грънуй",
+     "extensions": [
+      "ъ"
+     ],
+     "note_bg": "шва → ъ",
+     "note_en": "schwa → ъ",
+     "note_uk": "шва → ъ"
+    }
+   ]
+  },
+  {
+   "language": "Arabic (MSA)",
+   "name_bg": "Арабски · Arabic (MSA)",
+   "name_uk": "Арабська · Arabic (MSA)",
+   "reference_variety": "Modern Standard Arabic",
+   "mergers": "χ → х",
+   "losses": "—",
+   "extensions_exercised": [
+    "һ",
+    "◌̄",
+    "ҳ",
+    "қ",
+    "ғ",
+    "ӏ"
+   ],
+   "examples": [
+    {
+     "word": "هلال hilāl",
+     "ipa": "/hiˈlaːl/",
+     "chuzhditsa": "һила̄л",
+     "extensions": [
+      "һ",
+      "◌̄"
+     ],
+     "note_bg": "һ /h/ — леко h",
+     "note_en": "һ /h/ — light h",
+     "note_uk": "һ /h/ — легке h"
+    },
+    {
+     "word": "محمد Muḥammad",
+     "ipa": "/muˈħammad/",
+     "chuzhditsa": "Муҳаммад",
+     "extensions": [
+      "ҳ"
+     ],
+     "note_bg": "ҳ /ħ/ — фарингално h",
+     "note_en": "ҳ /ħ/ — pharyngeal h",
+     "note_uk": "ҳ /ħ/ — глоткове h"
+    },
+    {
+     "word": "خالد Khālid",
+     "ipa": "/ˈxaːlid/",
+     "chuzhditsa": "Ха̄лид",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "х /x/ — родното х: трите H в три имена",
+     "note_en": "х /x/ — the native х: all three H's in three names",
+     "note_uk": "х /x/ — рідне х: три H у трьох іменах"
+    },
+    {
+     "word": "قطر Qaṭar",
+     "ipa": "/ˈqɑtˤɑr/",
+     "chuzhditsa": "Қатар",
+     "extensions": [
+      "қ"
+     ],
+     "note_bg": "қ /q/ увуларно",
+     "note_en": "қ /q/ uvular",
+     "note_uk": "қ /q/ увулярне"
+    },
+    {
+     "word": "غزال ghazāl",
+     "ipa": "/ɣaˈzaːl/",
+     "chuzhditsa": "ғаза̄л",
+     "extensions": [
+      "ғ",
+      "◌̄"
+     ],
+     "note_bg": "ғ /ɣ/",
+     "note_en": "ғ /ɣ/",
+     "note_uk": "ғ /ɣ/"
+    },
+    {
+     "word": "عمر ʿUmar",
+     "ipa": "/ˈʕumar/",
+     "chuzhditsa": "Ӏумар",
+     "extensions": [
+      "ӏ"
+     ],
+     "note_bg": "Ӏ /ʕ/ айн",
+     "note_en": "Ӏ /ʕ/ ayn",
+     "note_uk": "Ӏ /ʕ/ айн"
+    },
+    {
+     "word": "شكرا shukran",
+     "ipa": "/ˈʃukran/",
+     "chuzhditsa": "шукран",
+     "extensions": [],
+     "note_bg": "само родни букви",
+     "note_en": "native letters only",
+     "note_uk": "лише рідні літери"
+    }
+   ]
+  },
+  {
+   "language": "Bengali",
+   "name_bg": "Бенгалски · Bengali",
+   "name_uk": "Бенгальська · Bengali",
+   "reference_variety": "Standard (Kolkata)",
+   "mergers": "—",
+   "losses": "—",
+   "extensions_exercised": [
+    "◌̢",
+    "ʱ",
+    "ʰ",
+    "◌̄"
+   ],
+   "examples": [
+    {
+     "word": "ঢাকা Ḍhākā",
+     "ipa": "/ɖʱaka/",
+     "chuzhditsa": "Д̢ʱака",
+     "extensions": [
+      "◌̢",
+      "ʱ"
+     ],
+     "note_bg": "ретрофлекс + мърморен глас едновременно",
+     "note_en": "retroflex + breathy voice at once",
+     "note_uk": "ретрофлекс + придихова дзвінкість водночас"
+    },
+    {
+     "word": "ঠাকুর Ṭhākur",
+     "ipa": "/ʈʰakur/",
+     "chuzhditsa": "Т̢ʰакур",
+     "extensions": [
+      "◌̢",
+      "ʰ"
+     ],
+     "note_bg": "Тагор, изписан както звучи",
+     "note_en": "Tagore, spelled as he sounds",
+     "note_uk": "Тагор, записаний так, як звучить"
+    },
+    {
+     "word": "কলকাতা Kolkātā",
+     "ipa": "/kolkat̪a/",
+     "chuzhditsa": "Колката",
+     "extensions": [],
+     "note_bg": "без нови букви",
+     "note_en": "no new letters",
+     "note_uk": "без нових літер"
+    },
+    {
+     "word": "বড় bôṛo",
+     "ipa": "/bɔɽo/",
+     "chuzhditsa": "бор̢о",
+     "extensions": [
+      "◌̢"
+     ],
+     "note_bg": "р̢ /ɽ/",
+     "note_en": "р̢ /ɽ/",
+     "note_uk": "р̢ /ɽ/"
+    },
+    {
+     "word": "মিষ্টি mishṭi",
+     "ipa": "/miʃʈi/",
+     "chuzhditsa": "мишт̢и",
+     "extensions": [
+      "◌̢"
+     ],
+     "note_bg": "ш + т̢ в клъстер",
+     "note_en": "ш + т̢ in a cluster",
+     "note_uk": "ш + т̢ у кластері"
+    },
+    {
+     "word": "ভাই bhāi",
+     "ipa": "/bʱai/",
+     "chuzhditsa": "бʱай",
+     "extensions": [
+      "ʱ"
+     ],
+     "note_bg": "бʱ",
+     "note_en": "бʱ",
+     "note_uk": "бʱ"
+    },
+    {
+     "word": "মাছ māchh",
+     "ipa": "/mat͡ɕʰ/",
+     "chuzhditsa": "мачʰ",
+     "extensions": [
+      "ʰ"
+     ],
+     "note_bg": "крайна аспирация",
+     "note_en": "final aspiration",
+     "note_uk": "кінцевий придих"
+    },
+    {
+     "word": "ধন্যবাদ dhonnobād",
+     "ipa": "/d̪ʱɔnnobad̪/",
+     "chuzhditsa": "дʱонноба̄д",
+     "extensions": [
+      "ʱ",
+      "◌̄"
+     ],
+     "note_bg": "дʱ + геминат",
+     "note_en": "дʱ + geminate",
+     "note_uk": "дʱ + гемінат"
+    }
+   ]
+  },
+  {
+   "language": "Portuguese",
+   "name_bg": "Португалски · Portuguese",
+   "name_uk": "Португальська · Portuguese",
+   "reference_variety": "Brazilian",
+   "mergers": "ʁ → р",
+   "losses": "—",
+   "extensions_exercised": [
+    "◌̨"
+   ],
+   "examples": [
+    {
+     "word": "São Paulo",
+     "ipa": "/sɐ̃w̃ ˈpawlu/",
+     "chuzhditsa": "Са̨у Паулу",
+     "extensions": [
+      "◌̨"
+     ],
+     "note_bg": "а̨ носовка + у полугласна",
+     "note_en": "а̨ nasal + у semivowel",
+     "note_uk": "а̨ носовий + у напівголосний"
+    },
+    {
+     "word": "pão",
+     "ipa": "/pɐ̃w̃/",
+     "chuzhditsa": "па̨у",
+     "extensions": [
+      "◌̨"
+     ],
+     "note_bg": "носов дифтонг",
+     "note_en": "nasal diphthong",
+     "note_uk": "носовий дифтонг"
+    },
+    {
+     "word": "coração",
+     "ipa": "/koɾaˈsɐ̃w̃/",
+     "chuzhditsa": "кораса̨у",
+     "extensions": [
+      "◌̨"
+     ],
+     "note_bg": "-ção → -са̨у систематично",
+     "note_en": "-ção → -са̨у, systematically",
+     "note_uk": "-ção → -са̨у систематично"
+    },
+    {
+     "word": "obrigado",
+     "ipa": "/obɾiˈɡadu/",
+     "chuzhditsa": "обригаду",
+     "extensions": [],
+     "note_bg": "без нови букви",
+     "note_en": "no new letters",
+     "note_uk": "без нових літер"
+    },
+    {
+     "word": "manhã",
+     "ipa": "/mɐˈɲɐ̃/",
+     "chuzhditsa": "маня̨",
+     "extensions": [
+      "◌̨"
+     ],
+     "note_bg": "нь + носовка през я",
+     "note_en": "нь + nasal via я",
+     "note_uk": "нь + носовий через я"
+    }
+   ]
+  },
+  {
+   "language": "Russian",
+   "name_bg": "Руски · Russian",
+   "name_uk": "Російська · Russian",
+   "reference_variety": "Standard",
+   "mergers": "ɕː → шч",
+   "losses": "reduction (phonemic input)",
+   "extensions_exercised": [
+    "ы"
+   ],
+   "examples": [
+    {
+     "word": "мышь",
+     "ipa": "/mɨʂ/",
+     "chuzhditsa": "мыш",
+     "extensions": [
+      "ы"
+     ],
+     "note_bg": "ы се връща у дома; без немия ь",
+     "note_en": "ы comes back home; no silent ь",
+     "note_uk": "ы повертається додому; без німого ь"
+    },
+    {
+     "word": "Хрущёв",
+     "ipa": "/xrʊˈɕːɵf/",
+     "chuzhditsa": "Хрушчов",
+     "extensions": [],
+     "note_bg": "рус. щ /ɕː/ ≠ бълг. щ /ʃt/",
+     "note_en": "Rus. щ /ɕː/ ≠ Bul. щ /ʃt/",
+     "note_uk": "рос. щ /ɕː/ ≠ болг. щ /ʃt/"
+    },
+    {
+     "word": "бабушка",
+     "ipa": "/ˈbabuʂkə/",
+     "chuzhditsa": "бабушка",
+     "extensions": [],
+     "note_bg": "фонемно, не фонетично: редукцията не се записва",
+     "note_en": "phonemic, not phonetic: reduction goes unwritten",
+     "note_uk": "фонемно, не фонетично: редукція не записується"
+    },
+    {
+     "word": "ёлка",
+     "ipa": "/ˈjɵlkə/",
+     "chuzhditsa": "йолка",
+     "extensions": [],
+     "note_bg": "ё → йо",
+     "note_en": "ё → йо",
+     "note_uk": "ё → йо"
+    },
+    {
+     "word": "Пётр",
+     "ipa": "/pʲɵtr/",
+     "chuzhditsa": "Пьотр",
+     "extensions": [],
+     "note_bg": "палатализация с ь",
+     "note_en": "palatalization with ь",
+     "note_uk": "палаталізація через ь"
+    }
+   ]
+  },
+  {
+   "language": "Japanese",
+   "name_bg": "Японски · Japanese",
+   "name_uk": "Японська · Japanese",
+   "reference_variety": "Tokyo",
+   "mergers": "ɸ → ф; ɯ → у",
+   "losses": "pitch accent",
+   "extensions_exercised": [
+    "◌̄",
+    "ў",
+    "ӣ",
+    "џ"
+   ],
+   "examples": [
+    {
+     "word": "東京 Tōkyō",
+     "ipa": "/toːkʲoː/",
+     "chuzhditsa": "То̄кьо̄",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "двойна дължина ◌̄",
+     "note_en": "double length ◌̄",
+     "note_uk": "подвійна довгота ◌̄"
+    },
+    {
+     "word": "大阪 Ōsaka",
+     "ipa": "/oːsaka/",
+     "chuzhditsa": "О̄сака",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "начална дълга гласна",
+     "note_en": "initial long vowel",
+     "note_uk": "початковий довгий голосний"
+    },
+    {
+     "word": "可愛い kawaii",
+     "ipa": "/kaɰaiː/",
+     "chuzhditsa": "каўаӣ",
+     "extensions": [
+      "ў",
+      "ӣ"
+     ],
+     "note_bg": "ў + ӣ",
+     "note_en": "ў + ӣ",
+     "note_uk": "ў + ӣ"
+    },
+    {
+     "word": "富士 Fuji",
+     "ipa": "/ɸɯʑi/",
+     "chuzhditsa": "Фуџи",
+     "extensions": [
+      "џ"
+     ],
+     "note_bg": "ɸ → ф, ʑ → џ (слети)",
+     "note_en": "ɸ → ф, ʑ → џ (merged)",
+     "note_uk": "ɸ → ф, ʑ → џ (злиті)"
+    },
+    {
+     "word": "ラーメン rāmen",
+     "ipa": "/ɾaːmeɴ/",
+     "chuzhditsa": "ра̄мен",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "чōонпу → провлачка",
+     "note_en": "chōonpu → the length bar",
+     "note_uk": "чоонпу → провлачка"
+    },
+    {
+     "word": "寿司 sushi",
+     "ipa": "/sɯɕi/",
+     "chuzhditsa": "суши",
+     "extensions": [],
+     "note_bg": "ɯ → у (слети)",
+     "note_en": "ɯ → у (merged)",
+     "note_uk": "ɯ → у (злиті)"
+    }
+   ]
+  },
+  {
+   "language": "German",
+   "name_bg": "Немски · German",
+   "name_uk": "Німецька · German",
+   "reference_variety": "Standard",
+   "mergers": "—",
+   "losses": "—",
+   "extensions_exercised": [
+    "ӱ",
+    "ӧ",
+    "◌̄"
+   ],
+   "examples": [
+    {
+     "word": "München",
+     "ipa": "/ˈmʏnçən/",
+     "chuzhditsa": "Мӱнхьен",
+     "extensions": [
+      "ӱ"
+     ],
+     "note_bg": "ӱ /ʏ/ + хь /ç/ ich-Laut",
+     "note_en": "ӱ /ʏ/ + хь /ç/ ich-Laut",
+     "note_uk": "ӱ /ʏ/ + хь /ç/ ich-Laut"
+    },
+    {
+     "word": "Goethe",
+     "ipa": "/ˈɡøːtə/",
+     "chuzhditsa": "Гӧ̄те",
+     "extensions": [
+      "ӧ",
+      "◌̄"
+     ],
+     "note_bg": "дълго ӧ̄ /øː/",
+     "note_en": "long ӧ̄ /øː/",
+     "note_uk": "довге ӧ̄ /øː/"
+    },
+    {
+     "word": "Zürich",
+     "ipa": "/ˈtsyːʁɪç/",
+     "chuzhditsa": "Цӱ̄рихь",
+     "extensions": [
+      "ӱ",
+      "◌̄"
+     ],
+     "note_bg": "ц + ӱ̄",
+     "note_en": "ц + ӱ̄",
+     "note_uk": "ц + ӱ̄"
+    },
+    {
+     "word": "Straße",
+     "ipa": "/ˈʃtʁaːsə/",
+     "chuzhditsa": "штра̄се",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "шт клъстер, роден за българския",
+     "note_en": "шт cluster — native to Bulgarian",
+     "note_uk": "кластер шт — рідний для болгарської"
+    },
+    {
+     "word": "Bach",
+     "ipa": "/bax/",
+     "chuzhditsa": "Бах",
+     "extensions": [],
+     "note_bg": "ach-Laut = родно х",
+     "note_en": "ach-Laut = native х",
+     "note_uk": "ach-Laut = рідне х"
+    },
+    {
+     "word": "schön",
+     "ipa": "/ʃøːn/",
+     "chuzhditsa": "шӧ̄н",
+     "extensions": [
+      "ӧ",
+      "◌̄"
+     ],
+     "note_bg": "ӧ̄",
+     "note_en": "ӧ̄",
+     "note_uk": "ӧ̄"
+    }
+   ]
+  },
+  {
+   "language": "Korean",
+   "name_bg": "Корейски · Korean",
+   "name_uk": "Корейська · Korean",
+   "reference_variety": "Seoul",
+   "mergers": "tense = geminate",
+   "losses": "—",
+   "extensions_exercised": [
+    "ъ",
+    "ʰ",
+    "һ",
+    "ы",
+    "ў"
+   ],
+   "examples": [
+    {
+     "word": "서울 Seoul",
+     "ipa": "/sʌ.ul/",
+     "chuzhditsa": "Съул",
+     "extensions": [
+      "ъ"
+     ],
+     "note_bg": "ㅓ /ʌ/ → ъ",
+     "note_en": "ㅓ /ʌ/ → ъ",
+     "note_uk": "ㅓ /ʌ/ → ъ"
+    },
+    {
+     "word": "김치 kimchi",
+     "ipa": "/kimtɕʰi/",
+     "chuzhditsa": "кимчʰи",
+     "extensions": [
+      "ʰ"
+     ],
+     "note_bg": "аспирирано чʰ",
+     "note_en": "aspirated чʰ",
+     "note_uk": "придихове чʰ"
+    },
+    {
+     "word": "한글 hangul",
+     "ipa": "/hanɡɯl/",
+     "chuzhditsa": "һангыл",
+     "extensions": [
+      "һ",
+      "ы"
+     ],
+     "note_bg": "һ + ы /ɯ/",
+     "note_en": "һ + ы /ɯ/",
+     "note_uk": "һ + ы /ɯ/"
+    },
+    {
+     "word": "태권도 taekwondo",
+     "ipa": "/tʰɛk͈wʌndo/",
+     "chuzhditsa": "тʰеккўъндо",
+     "extensions": [
+      "ʰ",
+      "ў",
+      "ъ"
+     ],
+     "note_bg": "тʰ аспирация; напрегнато к͈ = кк",
+     "note_en": "тʰ aspiration; tense к͈ = кк",
+     "note_uk": "тʰ придих; напружене к͈ = кк"
+    },
+    {
+     "word": "부산 Busan",
+     "ipa": "/pusan/",
+     "chuzhditsa": "Пусан",
+     "extensions": [],
+     "note_bg": "ненапрегнато п",
+     "note_en": "lax п",
+     "note_uk": "ненапружене п"
+    }
+   ]
+  },
+  {
+   "language": "Vietnamese",
+   "name_bg": "Виетнамски · Vietnamese",
+   "name_uk": "В'єтнамська · Vietnamese",
+   "reference_variety": "Hanoi",
+   "mergers": "ɓ ɗ → б д",
+   "losses": "6 tones → 4 marks",
+   "extensions_exercised": [
+    "ъ",
+    "◌̌",
+    "◌̄",
+    "һ",
+    "◌̀",
+    "ы",
+    "◌́"
+   ],
+   "examples": [
+    {
+     "word": "phở",
+     "ipa": "/fəː˧˩˧/",
+     "chuzhditsa": "фъ̌",
+     "extensions": [
+      "ъ",
+      "◌̌"
+     ],
+     "note_bg": "ъ /əː/ + тон ◌̌ (дължината отпада под тон)",
+     "note_en": "ъ /əː/ + tone ◌̌ (length drops under tone)",
+     "note_uk": "ъ /əː/ + тон ◌̌ (довгота випадає під тоном)"
+    },
+    {
+     "word": "Việt Nam",
+     "ipa": "/vjət̚ naːm/",
+     "chuzhditsa": "Вьет На̄м",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "ье",
+     "note_en": "ье",
+     "note_uk": "ье"
+    },
+    {
+     "word": "Hà Nội",
+     "ipa": "/haː nôj/",
+     "chuzhditsa": "Һа̀ Но̀й",
+     "extensions": [
+      "һ",
+      "◌̀"
+     ],
+     "note_bg": "һ + тонове",
+     "note_en": "һ + tones",
+     "note_uk": "һ + тони"
+    },
+    {
+     "word": "nước",
+     "ipa": "/nɨək/",
+     "chuzhditsa": "ны́ък",
+     "extensions": [
+      "ы",
+      "◌́",
+      "ъ"
+     ],
+     "note_bg": "ы /ɨ/ + покачващ тон",
+     "note_en": "ы /ɨ/ + rising tone",
+     "note_uk": "ы /ɨ/ + висхідний тон"
+    },
+    {
+     "word": "bánh mì",
+     "ipa": "/ɓajŋ mì/",
+     "chuzhditsa": "ба́нь мѝ",
+     "extensions": [
+      "◌́"
+     ],
+     "note_bg": "имплозивно ɓ → б (слети)",
+     "note_en": "implosive ɓ → б (merged)",
+     "note_uk": "імплозивне ɓ → б (злиті)"
+    }
+   ]
+  },
+  {
+   "language": "Turkish",
+   "name_bg": "Турски · Turkish",
+   "name_uk": "Турецька · Turkish",
+   "reference_variety": "Istanbul",
+   "mergers": "ɫ → л",
+   "losses": "—",
+   "extensions_exercised": [
+    "ӱ",
+    "ы",
+    "ӧ",
+    "◌̄"
+   ],
+   "examples": [
+    {
+     "word": "Atatürk",
+     "ipa": "/aˈtatyɾc/",
+     "chuzhditsa": "Ататӱрк",
+     "extensions": [
+      "ӱ"
+     ],
+     "note_bg": "ӱ /y/",
+     "note_en": "ӱ /y/",
+     "note_uk": "ӱ /y/"
+    },
+    {
+     "word": "ırmak",
+     "ipa": "/ɯɾˈmak/",
+     "chuzhditsa": "ырмак",
+     "extensions": [
+      "ы"
+     ],
+     "note_bg": "ı /ɯ/ → ы",
+     "note_en": "ı /ɯ/ → ы",
+     "note_uk": "ı /ɯ/ → ы"
+    },
+    {
+     "word": "göl",
+     "ipa": "/ɟøl/",
+     "chuzhditsa": "гӧл",
+     "extensions": [
+      "ӧ"
+     ],
+     "note_bg": "ӧ /ø/",
+     "note_en": "ӧ /ø/",
+     "note_uk": "ӧ /ø/"
+    },
+    {
+     "word": "dağ",
+     "ipa": "/daː/",
+     "chuzhditsa": "да̄",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "ğ = чиста дължина → ◌̄",
+     "note_en": "ğ = pure length → ◌̄",
+     "note_uk": "ğ = чиста довгота → ◌̄"
+    },
+    {
+     "word": "teşekkür",
+     "ipa": "/teʃekˈcyɾ/",
+     "chuzhditsa": "тешеккӱр",
+     "extensions": [
+      "ӱ"
+     ],
+     "note_bg": "геминат + ӱ",
+     "note_en": "geminate + ӱ",
+     "note_uk": "гемінат + ӱ"
+    },
+    {
+     "word": "İstanbul",
+     "ipa": "/isˈtanbuɫ/",
+     "chuzhditsa": "Истанбул",
+     "extensions": [],
+     "note_bg": "ɫ → л (слети)",
+     "note_en": "ɫ → л (merged)",
+     "note_uk": "ɫ → л (злиті)"
+    }
+   ]
+  },
+  {
+   "language": "Italian",
+   "name_bg": "Италиански · Italian",
+   "name_uk": "Італійська · Italian",
+   "reference_variety": "Standard",
+   "mergers": "—",
+   "losses": "—",
+   "extensions_exercised": [
+    "ѕ"
+   ],
+   "examples": [
+    {
+     "word": "pizza",
+     "ipa": "/ˈpittsa/",
+     "chuzhditsa": "пицца",
+     "extensions": [],
+     "note_bg": "геминатът се пише двойно",
+     "note_en": "the geminate is written double",
+     "note_uk": "гемінат пишеться подвоєно"
+    },
+    {
+     "word": "zero",
+     "ipa": "/ˈdzɛːro/",
+     "chuzhditsa": "ѕеро",
+     "extensions": [
+      "ѕ"
+     ],
+     "note_bg": "ѕ /dz/ — жива в македонския, назаем тук",
+     "note_en": "ѕ /dz/ — alive in Macedonian, borrowed here",
+     "note_uk": "ѕ /dz/ — жива в македонській, позичена тут"
+    },
+    {
+     "word": "gnocchi",
+     "ipa": "/ˈɲɔkki/",
+     "chuzhditsa": "ньокки",
+     "extensions": [],
+     "note_bg": "нь + кк",
+     "note_en": "нь + кк",
+     "note_uk": "нь + кк"
+    },
+    {
+     "word": "famiglia",
+     "ipa": "/faˈmiʎʎa/",
+     "chuzhditsa": "фамилья",
+     "extensions": [],
+     "note_bg": "ль",
+     "note_en": "ль",
+     "note_uk": "ль"
+    },
+    {
+     "word": "spaghetti",
+     "ipa": "/spaˈɡetti/",
+     "chuzhditsa": "спагетти",
+     "extensions": [],
+     "note_bg": "тт",
+     "note_en": "тт",
+     "note_uk": "тт"
+    }
+   ]
+  },
+  {
+   "language": "Persian",
+   "name_bg": "Персийски · Persian",
+   "name_uk": "Перська · Persian",
+   "reference_variety": "Tehran",
+   "mergers": "ɢ → қ",
+   "losses": "—",
+   "extensions_exercised": [
+    "һ",
+    "◌̄",
+    "қ",
+    "ӣ",
+    "ӯ",
+    "ғ"
+   ],
+   "examples": [
+    {
+     "word": "تهران Tehrān",
+     "ipa": "/tʰehˈɾɒːn/",
+     "chuzhditsa": "Теһра̄н",
+     "extensions": [
+      "һ",
+      "◌̄"
+     ],
+     "note_bg": "һ между гласни",
+     "note_en": "һ between vowels",
+     "note_uk": "һ між голосними"
+    },
+    {
+     "word": "قم Qom",
+     "ipa": "/ɢom/",
+     "chuzhditsa": "Қом",
+     "extensions": [
+      "қ"
+     ],
+     "note_bg": "қ /ɢ/",
+     "note_en": "қ /ɢ/",
+     "note_uk": "қ /ɢ/"
+    },
+    {
+     "word": "خدا khodā",
+     "ipa": "/xoˈdɒː/",
+     "chuzhditsa": "хода̄",
+     "extensions": [
+      "◌̄"
+     ],
+     "note_bg": "х /x/",
+     "note_en": "х /x/",
+     "note_uk": "х /x/"
+    },
+    {
+     "word": "شیراز Shirāz",
+     "ipa": "/ʃiːˈɾɒːz/",
+     "chuzhditsa": "Шӣра̄з",
+     "extensions": [
+      "ӣ",
+      "◌̄"
+     ],
+     "note_bg": "ӣ + а̄",
+     "note_en": "ӣ + а̄",
+     "note_uk": "ӣ + а̄"
+    },
+    {
+     "word": "دوغ dugh",
+     "ipa": "/duːɣ/",
+     "chuzhditsa": "дӯғ",
+     "extensions": [
+      "ӯ",
+      "ғ"
+     ],
+     "note_bg": "ӯ + крайно ғ",
+     "note_en": "ӯ + final ғ",
+     "note_uk": "ӯ + кінцеве ғ"
+    }
+   ]
+  },
+  {
+   "language": "Swahili",
+   "name_bg": "Суахили · Swahili",
+   "name_uk": "Суахілі · Swahili",
+   "reference_variety": "Standard",
+   "mergers": "implosives → б д",
+   "losses": "—",
+   "extensions_exercised": [
+    "ҙ",
+    "һ",
+    "ҫ",
+    "ң",
+    "ғ"
+   ],
+   "examples": [
+    {
+     "word": "dhahabu",
+     "ipa": "/ðahaˈbu/",
+     "chuzhditsa": "ҙаһабу",
+     "extensions": [
+      "ҙ",
+      "һ"
+     ],
+     "note_bg": "ҙ + һ (арабски заемки в суахили)",
+     "note_en": "ҙ + һ (Arabic loans in Swahili)",
+     "note_uk": "ҙ + һ (арабські запозичення в суахілі)"
+    },
+    {
+     "word": "thelathini",
+     "ipa": "/θelaˈθini/",
+     "chuzhditsa": "ҫелаҫини",
+     "extensions": [
+      "ҫ"
+     ],
+     "note_bg": "двойно ҫ",
+     "note_en": "double ҫ",
+     "note_uk": "подвійне ҫ"
+    },
+    {
+     "word": "ng'ombe",
+     "ipa": "/ŋombe/",
+     "chuzhditsa": "ңомбе",
+     "extensions": [
+      "ң"
+     ],
+     "note_bg": "начално ң — невъзможно днес",
+     "note_en": "initial ң — impossible today",
+     "note_uk": "початкове ң — неможливе нині"
+    },
+    {
+     "word": "ghali",
+     "ipa": "/ɣali/",
+     "chuzhditsa": "ғали",
+     "extensions": [
+      "ғ"
+     ],
+     "note_bg": "ғ",
+     "note_en": "ғ",
+     "note_uk": "ғ"
+    },
+    {
+     "word": "Kenya",
+     "ipa": "/keɲa/",
+     "chuzhditsa": "Кеня",
+     "extensions": [],
+     "note_bg": "/ɲa/ = ня, роден механизъм",
+     "note_en": "/ɲa/ = ня, the native mechanism",
+     "note_uk": "/ɲa/ = ня, рідний механізм"
+    }
+   ]
+  },
+  {
+   "language": "Greek",
+   "name_bg": "Гръцки · Greek",
+   "name_uk": "Грецька · Greek",
+   "reference_variety": "Standard Modern",
+   "mergers": "—",
+   "losses": "—",
+   "extensions_exercised": [
+    "ҫ",
+    "ҙ",
+    "ғ"
+   ],
+   "examples": [
+    {
+     "word": "Θεσσαλονίκη",
+     "ipa": "/θesaloˈnici/",
+     "chuzhditsa": "Ҫесалоники",
+     "extensions": [
+      "ҫ"
+     ],
+     "note_bg": "θ → ҫ",
+     "note_en": "θ → ҫ",
+     "note_uk": "θ → ҫ"
+    },
+    {
+     "word": "δεν",
+     "ipa": "/ðen/",
+     "chuzhditsa": "ҙен",
+     "extensions": [
+      "ҙ"
+     ],
+     "note_bg": "δ → ҙ",
+     "note_en": "δ → ҙ",
+     "note_uk": "δ → ҙ"
+    },
+    {
+     "word": "γάλα",
+     "ipa": "/ˈɣala/",
+     "chuzhditsa": "ғала",
+     "extensions": [
+      "ғ"
+     ],
+     "note_bg": "γ → ғ",
+     "note_en": "γ → ғ",
+     "note_uk": "γ → ғ"
+    },
+    {
+     "word": "ευχαριστώ",
+     "ipa": "/efxariˈsto/",
+     "chuzhditsa": "ефхаристо",
+     "extensions": [],
+     "note_bg": "χ = родно х",
+     "note_en": "χ = native х",
+     "note_uk": "χ = рідне х"
+    },
+    {
+     "word": "χάος",
+     "ipa": "/ˈxaos/",
+     "chuzhditsa": "хаос",
+     "extensions": [],
+     "note_bg": "гръцкият става напълно писаем",
+     "note_en": "Greek becomes fully writable",
+     "note_uk": "грецька стає повністю записуваною"
+    }
+   ]
+  },
+  {
+   "language": "Polish",
+   "name_bg": "Полски · Polish",
+   "name_uk": "Польська · Polish",
+   "reference_variety": "Standard",
+   "mergers": "ɕ → сь; ʂ → ш",
+   "losses": "—",
+   "extensions_exercised": [
+    "ў",
+    "ѫ",
+    "ѩ",
+    "ѧ"
+   ],
+   "examples": [
+    {
+     "word": "Wrocław",
+     "ipa": "/ˈvrɔt͡swaf/",
+     "chuzhditsa": "Вроцўаф",
+     "extensions": [
+      "ў"
+     ],
+     "note_bg": "ł /w/ → ў",
+     "note_en": "ł /w/ → ў",
+     "note_uk": "ł /w/ → ў"
+    },
+    {
+     "word": "mąka",
+     "ipa": "/ˈmɔ̃ka/",
+     "chuzhditsa": "мѫка",
+     "extensions": [
+      "ѫ"
+     ],
+     "note_bg": "ą е старата носовка: юсът среща потомъка си",
+     "note_en": "ą is the old nasal: the yus meets its own descendant",
+     "note_uk": "ą — давній носовий: юс зустрічає власного нащадка"
+    },
+    {
+     "word": "pięć",
+     "ipa": "/pʲɛ̃t͡ɕ/",
+     "chuzhditsa": "пѩч",
+     "extensions": [
+      "ѩ"
+     ],
+     "note_bg": "ѩ — шрифтът сам слива ьѧ",
+     "note_en": "ѩ — the font fuses ьѧ by itself",
+     "note_uk": "ѩ — шрифт сам зливає ьѧ"
+    },
+    {
+     "word": "szczęście",
+     "ipa": "/ˈʂt͡ʂɛ̃ɕt͡ɕɛ/",
+     "chuzhditsa": "шчѧсьче",
+     "extensions": [
+      "ѧ"
+     ],
+     "note_bg": "прочутото струпване, укротено",
+     "note_en": "the famous cluster, tamed",
+     "note_uk": "славнозвісне скупчення, приборкане"
+    },
+    {
+     "word": "Kraków",
+     "ipa": "/ˈkrakuf/",
+     "chuzhditsa": "Кракуф",
+     "extensions": [],
+     "note_bg": "финално обеззвучаване, честно",
+     "note_en": "final devoicing, honestly",
+     "note_uk": "кінцеве оглушення, чесно"
+    }
+   ]
+  },
+  {
+   "language": "Indonesian",
+   "name_bg": "Индонезийски · Indonesian",
+   "name_uk": "Індонезійська · Indonesian",
+   "reference_variety": "Standard",
+   "mergers": "—",
+   "losses": "—",
+   "extensions_exercised": [
+    "ң",
+    "һ",
+    "ъ"
+   ],
+   "examples": [
+    {
+     "word": "orang",
+     "ipa": "/ˈoraŋ/",
+     "chuzhditsa": "ораң",
+     "extensions": [
+      "ң"
+     ],
+     "note_bg": "ң",
+     "note_en": "ң",
+     "note_uk": "ң"
+    },
+    {
+     "word": "bahasa",
+     "ipa": "/baˈhasa/",
+     "chuzhditsa": "баһаса",
+     "extensions": [
+      "һ"
+     ],
+     "note_bg": "һ",
+     "note_en": "һ",
+     "note_uk": "һ"
+    },
+    {
+     "word": "terima kasih",
+     "ipa": "/təˈrima ˈkasih/",
+     "chuzhditsa": "търима касиһ",
+     "extensions": [
+      "ъ",
+      "һ"
+     ],
+     "note_bg": "шва → ъ, крайно һ",
+     "note_en": "schwa → ъ, final һ",
+     "note_uk": "шва → ъ, кінцеве һ"
+    },
+    {
+     "word": "nyanyi",
+     "ipa": "/ɲaɲi/",
+     "chuzhditsa": "няньи",
+     "extensions": [],
+     "note_bg": "нь",
+     "note_en": "нь",
+     "note_uk": "нь"
+    },
+    {
+     "word": "ngomong",
+     "ipa": "/ŋɔmɔŋ/",
+     "chuzhditsa": "ңомоң",
+     "extensions": [
+      "ң"
+     ],
+     "note_bg": "ң в три позиции",
+     "note_en": "ң in three positions",
+     "note_uk": "ң у трьох позиціях"
+    }
+   ]
+  }
+ ]
+}
