@@ -234,11 +234,12 @@ BASES = [n for n in G if n not in MARKS and G[n]["strokes"]]
 BOT_X = {"t":330,"r":160,"n":500,"lc.t":238,"lc.r":150,"lc.n":360}
 
 # ------------------------------------------------------------ stroke -> outline
-def circle_pts(cx, cy, r, n=28):
+def circle_pts(cx, cy, r, n=None):
+    n = n or max(48, min(128, int(r)))
     return [(cx + r*math.cos(2*math.pi*i/n), cy + r*math.sin(2*math.pi*i/n)) for i in range(n)]
 
 def arc_pts(cx, cy, r, a0, a1):
-    n = max(6, int(abs(a1-a0)/8) + 1)
+    n = max(12, int(abs(a1-a0)/2.5) + 1)
     return [(cx + r*math.cos(math.radians(a0+(a1-a0)*i/n)),
              cy + r*math.sin(math.radians(a0+(a1-a0)*i/n))) for i in range(n+1)]
 
@@ -248,41 +249,119 @@ def area(pts):
 def ccw(pts):
     return pts if area(pts) > 0 else pts[::-1]
 
-def polyline_contours(pts, w):
-    out, hw = [], w/2
+def offset_polyline(pts, hw, miter_limit=3.0):
+    """Stroke a polyline as one clean outline: butt caps, mitered corners
+    (bevel past the miter limit). This is what makes terminals and apexes
+    crisp instead of marker-pen blobs."""
+    normals = []
     for (x1,y1),(x2,y2) in zip(pts, pts[1:]):
-        dx, dy = x2-x1, y2-y1
-        d = math.hypot(dx, dy) or 1.0
-        nx, ny = -dy/d*hw, dx/d*hw
-        out.append(ccw([(x1+nx,y1+ny),(x2+nx,y2+ny),(x2-nx,y2-ny),(x1-nx,y1-ny)]))
-    for (x,y) in pts:
-        out.append(ccw(circle_pts(x, y, hw, 14)))
-    return out
+        d = math.hypot(x2-x1, y2-y1) or 1.0
+        normals.append(((y1-y2)/d*hw, (x2-x1)/d*hw))
 
-def stroke_contours(st, w, dotr, slant, dx):
-    """Shear is applied to stroke CENTERLINES (not finished outlines) so the
-    italic keeps constant perpendicular weight; dx shifts bold sidebearings."""
-    def sh(x, y):
-        return (x + y*slant + dx, y)
-    kind = st[0]
-    if kind == L:
-        return polyline_contours([sh(st[1],st[2]), sh(st[3],st[4])], w)
-    if kind == A:
-        return polyline_contours([sh(x,y) for x,y in arc_pts(st[1],st[2],st[3],st[4],st[5])], w)
-    if kind == R:
-        cx, cy = sh(st[1], st[2])
-        r = st[3]
-        wr = min(w, max(44, int(r*0.85)))  # keep counters open in Bold
-        return [ccw(circle_pts(cx,cy,r+wr/2)), ccw(circle_pts(cx,cy,max(10,r-wr/2)))[::-1]]
-    if kind == D:
-        cx, cy = sh(st[1], st[2])
-        return [ccw(circle_pts(cx,cy,st[3] or dotr,20))]
-    raise ValueError(kind)
+    def line_isect(p, d1, q, d2):
+        det = d1[0]*d2[1] - d1[1]*d2[0]
+        if abs(det) < 1e-9:
+            return None
+        t = ((q[0]-p[0])*d2[1] - (q[1]-p[1])*d2[0]) / det
+        return (p[0] + d1[0]*t, p[1] + d1[1]*t)
+
+    def cap_pt(p_end, p_prev, nx, ny):
+        """Terminal point: straight diagonal strokes get a horizontal cut
+        (type-design convention: feet sit flat on the baseline), curves and
+        horizontals keep the perpendicular butt cap."""
+        ux, uy = p_end[0]-p_prev[0], p_end[1]-p_prev[1]
+        seg = math.hypot(ux, uy) or 1.0
+        ux, uy = ux/seg, uy/seg
+        if seg > 40 and abs(uy) > 0.35:
+            t = -ny/uy
+            return (p_end[0]+nx+ux*t, p_end[1])
+        return (p_end[0]+nx, p_end[1]+ny)
+
+    def side(sign):
+        out = [cap_pt(pts[0], pts[1], sign*normals[0][0], sign*normals[0][1])]
+        for i in range(1, len(pts)-1):
+            na, nb = normals[i-1], normals[i]
+            d1 = (pts[i][0]-pts[i-1][0], pts[i][1]-pts[i-1][1])
+            d2 = (pts[i+1][0]-pts[i][0], pts[i+1][1]-pts[i][1])
+            p1 = (pts[i-1][0]+sign*na[0], pts[i-1][1]+sign*na[1])
+            p2 = (pts[i][0]+sign*nb[0], pts[i][1]+sign*nb[1])
+            hit = line_isect(p1, d1, p2, d2)
+            # concave side: the intersection is the correct join, no limit
+            # (a bevel here would fold the outline over itself)
+            concave = (d1[0]*d2[1] - d1[1]*d2[0]) * sign > 0
+            if hit and (concave or math.hypot(hit[0]-pts[i][0], hit[1]-pts[i][1]) <= miter_limit*hw):
+                out.append(hit)
+            else:  # bevel (convex corner past the miter limit)
+                out.append((pts[i][0]+sign*na[0], pts[i][1]+sign*na[1]))
+                out.append((pts[i][0]+sign*nb[0], pts[i][1]+sign*nb[1]))
+        out.append(cap_pt(pts[-1], pts[-2], sign*normals[-1][0], sign*normals[-1][1]))
+        return out
+
+    return [ccw(side(1) + side(-1)[::-1])]
+
+def chain_paths(paths, tol=1):
+    """Merge open centerline paths that meet end-to-end at points shared by
+    exactly two strokes, so apexes (Л, И, М, ...) become mitered corners."""
+    def key(p):
+        return (round(p[0]/tol), round(p[1]/tol))
+    degree = {}
+    for path in paths:
+        for p in (path[0], path[-1]):
+            degree[key(p)] = degree.get(key(p), 0) + 1
+    paths = [list(p) for p in paths]
+    merged = True
+    while merged:
+        merged = False
+        for i in range(len(paths)):
+            if merged: break
+            for j in range(i+1, len(paths)):
+                a, b = paths[i], paths[j]
+                joins = None
+                if key(a[-1]) == key(b[0]) and degree.get(key(a[-1])) == 2:
+                    joins = a + b[1:]
+                elif key(a[-1]) == key(b[-1]) and degree.get(key(a[-1])) == 2:
+                    joins = a + b[-2::-1]
+                elif key(a[0]) == key(b[-1]) and degree.get(key(a[0])) == 2:
+                    joins = b + a[1:]
+                elif key(a[0]) == key(b[0]) and degree.get(key(a[0])) == 2:
+                    joins = b[::-1] + a[1:]
+                if joins:
+                    paths[i] = joins
+                    del paths[j]
+                    merged = True
+                    break
+    return paths
 
 def glyph_contours(gdef, w, dotr, slant, dx=0):
-    cs = []
+    """Centerline model -> outlines. Shear applies to centerlines so the
+    italic keeps constant perpendicular weight; dx shifts bold sidebearings."""
+    def sh(pt):
+        x, y = pt
+        return (x + y*slant + dx, y)
+    open_paths, cs = [], []
     for st in gdef["strokes"]:
-        cs.extend(stroke_contours(st, w, dotr, slant, dx))
+        kind = st[0]
+        if kind == L:
+            open_paths.append(([(st[1],st[2]), (st[3],st[4])], w))
+        elif kind == A:
+            # tight arcs (breve, small bowls) can't carry the full Bold weight
+            weff = min(w, max(44, int(st[3]*0.85)))
+            open_paths.append((arc_pts(st[1],st[2],st[3],st[4],st[5]), weff))
+        elif kind == R:
+            cx, cy = sh((st[1], st[2]))
+            r = st[3]
+            wr = min(w, max(44, int(r*0.85)))  # keep counters open in Bold
+            cs.append(ccw(circle_pts(cx,cy,r+wr/2)))
+            cs.append(ccw(circle_pts(cx,cy,max(10,r-wr/2)))[::-1])
+        elif kind == D:
+            cx, cy = sh((st[1], st[2]))
+            cs.append(ccw(circle_pts(cx,cy,st[3] or dotr)))
+        else:
+            raise ValueError(kind)
+    for weff in sorted({we for _, we in open_paths}):
+        group = [p for p, we in open_paths if we == weff]
+        for path in chain_paths(group):
+            cs.extend(offset_polyline([sh(p) for p in path], weff/2))
     return cs
 
 def bbox(contours):
@@ -392,7 +471,7 @@ def build(style, w, italic, fmt):
     fb.setupHorizontalMetrics(metrics)
     fb.setupHorizontalHeader(ascent=1050, descent=-350)
     fb.setupNameTable({"familyName": family, "styleName": sub, "psName": ps,
-                       "fullName": f"{family} {sub}", "version": "Version 2.1",
+                       "fullName": f"{family} {sub}", "version": "Version 2.2",
                        "copyright": "Chuzhditsa - a Glagolitic-inspired pan-Slavic loanword face",
                        "licenseDescription": "This Font Software is licensed under the SIL Open Font License, Version 1.1.",
                        "licenseInfoURL": "https://openfontlicense.org"})
