@@ -234,12 +234,22 @@ def fig6():
     save(img, "fig6_italic.png")
 
 def fig7():
-    img, d = canvas(1460, 500)
-    tpal_v1 = dict(adv=780, strokes=[("L",70,700,590,700),("L",330,0,330,700),("L",650,0,650,700)])
-    for i,(g,name) in enumerate([(tpal_v1,"тӀ fused, full palochka"),(bf.G["p"],"п"),(bf.G["tpal"],"тӀ shipped: raised palochka")]):
+    img, d = canvas(1460, 700)
+    # the rejected mock: bar runs INTO the full palochka -- it was a fusion
+    tpal_v1 = dict(adv=780, strokes=[("L",70,700,650,700),("L",330,0,330,700),("L",650,0,650,700)])
+    panels = [(tpal_v1,"\u0442\u04c0 fused, full palochka"),(bf.G["p"],"\u043f"),(bf.G["tpal"],"\u0442\u04c0 shipped: raised palochka")]
+    for i,(g,name) in enumerate(panels):
         ox = 130 + i*470
-        draw_contours(d, bf.glyph_contours(g, 90, 50, 0), ox, 380, SC)
-        label(d, ox, 410, name)
+        draw_contours(d, bf.glyph_contours(g, 90, 50, 0), ox, 340, SC)
+        label(d, ox, 370, name)
+    # the failure was a reading-size phenomenon: show it at reading size
+    label(d, 130, 480, "at reading size:")
+    ox = 380
+    for g, _ in panels:
+        for sc in (0.085, 0.06):
+            draw_contours(d, bf.glyph_contours(g, 90, 50, 0), ox, 560, sc)
+            ox += g["adv"] * sc + 26
+        ox += 90
     save(img, "fig7_ligature.png")
 
 def fig8():
