@@ -494,7 +494,7 @@ def chain_paths(items, tol=4.0, wtol=0.15):
 def mid(p, q):
     return ((p[0]+q[0])/2, (p[1]+q[1])/2)
 
-def glyph_contours(gdef, w, dotr, slant, dx=0):
+def glyph_contours(gdef, w, dotr, slant, dx=0, clamp=True):
     """Centerline model -> outlines. Shear applies to centerlines so the
     italic keeps constant perpendicular weight; dx shifts bold sidebearings."""
     def sh(pt):
@@ -529,7 +529,7 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
             # optional 6th element: absolute weight cap. The straight-stroke
             # analogue of the arc clamp -- the internals of the yuses cannot
             # carry full Bold weight without swallowing their counters
-            weff = min(w, st[5]) if len(st) > 5 else w
+            weff = min(w, st[5]) if clamp and len(st) > 5 else w
             (x1, y1), (x2, y2) = (st[1], st[2]), (st[3], st[4])
             if y1 == y2 and 0 <= y1 <= 60:
                 # a bottom bar is an INK floor: pin its underside to the
@@ -545,7 +545,7 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
             # weight. An OPEN arc keeps a half-radius of daylight at weight
             # r, so it clamps at 1.0r; closed counters (rings, loops below)
             # stay at the stricter 0.85
-            weff = min(w, max(44, int(st[3])))
+            weff = min(w, max(44, int(st[3]))) if clamp else w
             acx, acy, ar = st[1], st[2], st[3]
             if sweeps_bottom(st[4], st[5]) and acy - ar <= 60:
                 acy, ar = pin_bottom(acy, ar, weff)
@@ -560,7 +560,7 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
             rx, ry, r = st[1], st[2], st[3]
             xs = st[4] if len(st) > 4 else 1.0  # optional: oval (the digit 0)
             sqz = xs * (0.965 if r >= 200 else 1.0)  # big rounds compress slightly
-            wr = min(w, max(44, int(r*0.85)))  # keep counters open in Bold
+            wr = min(w, max(44, int(r*0.85))) if clamp else w  # keep counters open in Bold
             if ry - r <= 60:  # bowls on the baseline get their bottoms pinned
                 # the pin shrinks r by w/4, which would slide a declared
                 # stem tangency off the stem. The declaration stays PURE
@@ -597,7 +597,7 @@ def glyph_contours(gdef, w, dotr, slant, dx=0):
             per = sum(math.hypot(loop[(i+1) % len(loop)][0]-loop[i][0],
                                  loop[(i+1) % len(loop)][1]-loop[i][1]) for i in range(len(loop)))
             inradius = 2*a/per if per else weff
-            wc = min(weff, max(44, int(0.85 * inradius)))  # keep loop counters open
+            wc = min(weff, max(44, int(0.85 * inradius))) if clamp else weff  # keep loop counters open
             cs.extend(offset_closed([sh(p) for p in loop], wc/2))
         else:
             cs.extend(offset_polyline([sh(p) for p in path], weff/2))

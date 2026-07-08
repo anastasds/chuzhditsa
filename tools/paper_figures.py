@@ -360,25 +360,12 @@ def fig13():
     label(d, 90, 555, "the GSUB fusion inventory: нь, ль, ьѧ, ьѫ — sequence in, silhouette out")
     save(img, "fig13_fusions.png")
 
-def unclamped_contours(gdef, w):
-    cs = []
-    for st in gdef["strokes"]:
-        k = st[0]
-        if k == "L":
-            cs.extend(bf.offset_polyline([(st[1],st[2]),(st[3],st[4])], w/2))
-        elif k == "A":
-            cs.extend(bf.offset_polyline(bf.arc_pts(st[1],st[2],st[3],st[4],st[5]), w/2))
-        elif k == "R":
-            cs.append(bf.ccw(bf.circle_pts(st[1],st[2],st[3]+w/2)))
-            cs.append(bf.ccw(bf.circle_pts(st[1],st[2],max(10,st[3]-w/2)))[::-1])
-        elif k == "D":
-            cs.append(bf.ccw(bf.circle_pts(st[1],st[2],st[3] or 66)))
-    return cs
-
 def fig14():
     img, d = canvas(1460, 1240)
     glyphs = ["lc.ubr", "lc.dz", "lc.v"]
-    for row, (fn, name) in enumerate([(unclamped_contours, "Bold stroke uncapped: small arcs and bowls clog"),
+    # both rows run the IDENTICAL engine pipeline (pin, attachment shift,
+    # compression); the only variable is the weight clamp
+    for row, (fn, name) in enumerate([(lambda g,w: bf.glyph_contours(g, w, 66, 0, clamp=False), "Bold stroke uncapped: small arcs and bowls clog"),
                                       (lambda g,w: bf.glyph_contours(g, w, 66, 0), "stroke clamped to the local radius budget")]):
         ox, oy = 160, 470 + row*580
         label(d, 160, oy+96, name)
