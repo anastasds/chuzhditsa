@@ -1,0 +1,44 @@
+name: Chuzhditsa
+options:
+  bundleIdPrefix: com.anastasds
+  deploymentTarget:
+    iOS: "16.0"
+
+targets:
+  ChuzhditsaApp:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies:
+      - target: ChuzhditsaKeyboard
+        embed: true
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleDisplayName: Чуждица
+        UILaunchScreen: {}
+        ITSAppUsesNonExemptEncryption: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anastasds.chuzhditsa
+        TARGETED_DEVICE_FAMILY: "1,2"
+
+  ChuzhditsaKeyboard:
+    type: app-extension
+    platform: iOS
+    sources: [Keyboard]
+    info:
+      path: Keyboard/Info.plist
+      properties:
+        CFBundleDisplayName: Чуждица
+        NSExtension:
+          NSExtensionPointIdentifier: com.apple.keyboard-service
+          NSExtensionPrincipalClass: $(PRODUCT_MODULE_NAME).KeyboardViewController
+          NSExtensionAttributes:
+            IsASCIICapable: false
+            PrefersRightToLeft: false
+            PrimaryLanguage: bg
+            RequestsOpenAccess: false
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.anastasds.chuzhditsa.keyboard
