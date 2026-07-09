@@ -45,7 +45,7 @@ G = {
 "seven": dict(adv=650, strokes=[(L,120,700,540,700),(L,540,700,260,0)]),
 "eight": dict(adv=660, strokes=[(R,330,540,165),(R,330,183,188)]),
 "nine": dict(adv=660, strokes=[(R,330,510,195),(A,-283.7,663,800,-12,-51)]),
-"egrave": dict(adv=575, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368),(L,390,790,270,930)]),
+"egrave": dict(adv=600, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368),(L,390,790,270,930)]),
 "igrave": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,390,790,270,930)]),
 "middot": dict(adv=300, strokes=[(D,150,300,0)]),
 "dotcircle": dict(adv=660, strokes=[(D,330+180,350,28),(D,330-180,350,28),(D,330,350+180,28),(D,330,350-180,28),(D,330+127,350+127,28),(D,330-127,350+127,28),(D,330+127,350-127,28),(D,330-127,350-127,28)]),
@@ -54,11 +54,11 @@ G = {
 "endash": dict(adv=520, strokes=[(L,50,300,470,300)]),
 "quoteright": dict(adv=210, strokes=[(L,130,780,80,600)]),
 "a": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0),(L,190,230,470,230)]),
-"b": dict(adv=620, strokes=[(R,348,183,188),(L,160,183,160,700),(L,160,700,480,700)]),
-"v": dict(adv=605, strokes=[(L,160,0,160,700),(R,323,545,163),(R,338,173,178)]),
-"g": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700)]),
+"b": dict(adv=580, strokes=[(L,160,0,160,700),(L,160,700,480,700),(A,300,183,188,138,-138)]),
+"v": dict(adv=565, strokes=[(L,160,0,160,700),(A,277,545,163,136,-136),(A,292,173,178,138,-138)]),
+"g": dict(adv=600, strokes=[(L,160,0,160,700),(L,160,700,540,700)]),
 "d": dict(adv=660, strokes=[(L,330,715,150,140),(L,330,715,510,140),(L,70,140,590,140),(L,110,140,110,-150),(L,550,140,550,-150)]),
-"e": dict(adv=575, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]),
+"e": dict(adv=600, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]),
 # Ж: diagonals capped so the five-stroke crossing keeps its counters in Bold
 "zh": dict(adv=660, strokes=[(L,330,0,330,700),(L,70,700,330,390,126),(L,590,700,330,390,126),(L,70,0,330,310,126),(L,590,0,330,310,126)]),
 "z": dict(adv=640, strokes=[(A,282,530,175,128,-70.15),(A,282,185,190,88,-110)]),
@@ -72,25 +72,25 @@ G = {
 "n": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,368,500,368)]),
 "o": dict(adv=830, strokes=[(R,415,350,358)]),
 "p": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,700,500,700)]),
-"r": dict(adv=625, strokes=[(L,160,0,160,700),(R,340,528,180)]),
+"r": dict(adv=570, strokes=[(L,160,0,160,700),(A,289,528,180,136,-136)]),
 "s": dict(adv=720, strokes=[(A,400,350,355,50,310)]),
-"t": dict(adv=660, strokes=[(L,70,700,590,700),(L,330,0,330,700)]),
+"t": dict(adv=655, strokes=[(L,70,700,590,700),(L,330,0,330,700)]),
 # the arm ends exactly on the long stem's centerline (their intersection),
 # so its butt cap is fully buried -- stopping short leaves a wedge notch
-"u": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180)]),
+"u": dict(adv=640, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180)]),
 "f": dict(adv=660, strokes=[(L,330,-120,330,800),(R,330,350,240)]),
 "h": dict(adv=660, strokes=[(L,90,0,570,700),(L,90,700,570,0)]),
 "ts": dict(adv=680, strokes=[(L,150,700,150,60),(L,150,60,540,60),(L,540,700,540,60),(L,540,60,540,-150),(L,540,-150,630,-150)]),
 "ch": dict(adv=640, strokes=[(L,150,700,150,430),(L,150,430,480,430),(L,480,0,480,700)]),
 "sh": dict(adv=680, strokes=[(L,120,700,120,60),(L,340,700,340,60),(L,560,700,560,60),(L,120,60,560,60)]),
 "sht": dict(adv=700, strokes=[(L,120,700,120,60),(L,340,700,340,60),(L,560,700,560,60),(L,120,60,560,60),(L,560,60,560,-150),(L,560,-150,650,-150)]),
-"er": dict(adv=640, strokes=[(L,60,700,240,700),(L,240,700,240,0),(R,408,163,168)]),
-"ermal": dict(adv=600, strokes=[(L,190,0,190,700),(R,358,163,168)]),
-"yeru": dict(adv=760, strokes=[(L,130,0,130,700),(R,298,163,168),(L,620,0,620,700)]),
+"er": dict(adv=620, strokes=[(L,60,700,240,700),(L,240,700,240,0),(A,369,163,168,140,-140)]),
+"ermal": dict(adv=570, strokes=[(L,190,0,190,700),(A,319,163,168,140,-140)]),
+"yeru": dict(adv=760, strokes=[(L,130,0,130,700),(A,259,163,168,140,-140),(L,620,0,620,700)]),
 "yu": dict(adv=720, strokes=[(L,130,0,130,700),(L,130,350,270,350),(R,455,350,185)]),
-"ya": dict(adv=660, strokes=[(L,500,0,500,700),(R,325,533,175),(L,430,360,160,0)]),
+"ya": dict(adv=660, strokes=[(L,500,0,500,700),(A,374,533,175,44,316),(L,430,360,160,0)]),
 # -- extensions --------------------------------------------------------------
-"ubr": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(A,330,955,130,205,335)]),
+"ubr": dict(adv=640, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(A,330,955,130,205,335)]),
 # S spine: two tangent circles (r1+r2 spans cap height exactly), junction at
 # (335,370) shared by both arcs -> they chain into one smooth stroke
 "dz": dict(adv=640, strokes=[(A,335,540,165,40,270),(A,335,185,190,90,-140)]),
@@ -102,7 +102,7 @@ G = {
 "shha": dict(adv=640, strokes=[(L,150,0,150,700),(A,315,300,165,180,0),(L,480,0,480,300)]),
 "adia": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0),(L,190,230,470,230)]+DOTS),
 "odia": dict(adv=830, strokes=[(R,415,350,358),(D,310,880,0),(D,520,880,0)]),
-"udia": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180)]+DOTS),
+"udia": dict(adv=640, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180)]+DOTS),
 "nghk": dict(adv=680, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,368,500,368),(L,500,0,500,-150),(L,500,-150,590,-150)]),
 "khk": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,700,168,360),(L,500,0,168,360),(L,500,0,500,-150),(L,500,-150,590,-150)]),
 "gbar": dict(adv=620, strokes=[(L,160,0,160,700),(L,160,700,540,700),(L,50,420,310,420)]),
@@ -111,11 +111,11 @@ G = {
 "shk": dict(adv=720, strokes=[(A,400,350,355,50,310),(L,400,-5,400,-150),(L,400,-150,490,-150)]),
 "palochka": dict(adv=460, strokes=[(L,230,0,230,700),(L,140,700,320,700),(L,140,0,320,0)]),
 "imac": dict(adv=660, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,0,500,700),(L,170,890,490,890)]),
-"umac": dict(adv=660, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(L,170,890,490,890)]),
+"umac": dict(adv=640, strokes=[(L,100,700,372.4,253.7),(L,560,700,190,-180),(L,170,890,490,890)]),
 # -- pan-Slavic superset ------------------------------------------------------
 # е went angular so that Ukrainian round є keeps the historic wide-e form
 "ye": dict(adv=760, strokes=[(A,395,350,355,55,305),(L,70,350,640,350)]),
-"yo": dict(adv=575, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]+DOTS),
+"yo": dict(adv=600, strokes=[(L,500,700,160,700),(L,160,700,160,0),(L,160,0,500,0),(L,160,368,430,368)]+DOTS),
 "ee": dict(adv=790, strokes=[(A,360,350,355,-130,130),(L,205,350,675,350)]),
 "iukr": dict(adv=380, strokes=[(L,190,0,190,700)]),
 "yi": dict(adv=380, strokes=[(L,190,0,190,700),(D,105,860,0),(D,275,860,0)]),
@@ -141,11 +141,11 @@ G = {
 "aspv": dict(adv=340, strokes=[(L,85,420,85,840),(L,85,840,25,900),(A,190,610,105,180,0),(L,295,420,295,610)]),
 # -- ligatures ----------------------------------------------------------------
 # fused palatals (Serbian precedent: n/l + soft sign share the stem)
-"nsoft": dict(adv=850, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350),(R,665,160,165)]),
+"nsoft": dict(adv=880, strokes=[(L,160,0,160,700),(L,500,0,500,700),(L,160,350,500,350),(A,629,163,168,140,-140)]),
 # the soft sign's stem IS the lower segment of the leg: diagonal to (520,340),
 # vertical to the baseline, ring tangent to the vertical -- the diagonal
 # lives entirely above the bowl and can never cross its counter
-"lsoft": dict(adv=910, strokes=[(L,70,0,330,700),(L,330,700,520,340),(L,520,340,520,0),(R,688,163,168)]),
+"lsoft": dict(adv=900, strokes=[(L,70,0,330,700),(L,330,700,520,340),(L,520,340,520,0),(A,649,163,168,140,-140)]),
 # iotated yuses (Old Cyrillic revivals, U+0468/046C): stem + connector + yus
 "iotsyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,366,350,116),(L,510,700,300,190,116),(L,510,700,720,190,116),(L,300,190,720,190,116),(L,395,190,395,0,116),(L,625,190,625,0,116)]),
 "iotbyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,405,350,116),(L,510,700,300,0,116),(L,510,700,720,0,116),(L,376.5,255,643.5,255,96),(L,510,255,510,0,96)]),
@@ -640,15 +640,12 @@ def make_fea(boxes, slant):
 @ROUND_CAP = [o odia s ye ee fita];
 @ROUND_LC = [lc.o lc.odia lc.s lc.ye lc.ee lc.fita];
 feature kern {
-  pos @T_CAP @DIAG_CAP -55;   pos @T_LC @DIAG_LC -45;
-  pos @DIAG_CAP @T_CAP -55;   pos @DIAG_LC @T_LC -45;
-  pos @T_CAP @ROUND_CAP -60;  pos @T_LC @ROUND_LC -50;
-  pos @ROUND_CAP @T_CAP -35;  pos @ROUND_LC @T_LC -30;
-  pos @DIAG_CAP @U_CAP -40;   pos @DIAG_LC @U_LC -35;
-  pos @U_CAP @DIAG_CAP -40;   pos @U_LC @DIAG_LC -35;
-  pos @U_CAP @ROUND_CAP -25;  pos @U_LC @ROUND_LC -20;
-  pos @DIAG_CAP @ROUND_CAP -20; pos @DIAG_LC @ROUND_LC -15;
-  pos @ROUND_CAP @DIAG_CAP -20; pos @ROUND_LC @DIAG_LC -15;
+  pos @T_CAP @DIAG_CAP -75;   pos @T_LC @DIAG_LC -60;
+  pos @DIAG_CAP @T_CAP -75;   pos @DIAG_LC @T_LC -60;
+  pos @T_CAP @ROUND_CAP -15;  pos @T_LC @ROUND_LC -12;
+  pos @ROUND_CAP @T_CAP -15;  pos @ROUND_LC @T_LC -12;
+  pos @DIAG_CAP @U_CAP -60;   pos @DIAG_LC @U_LC -48;
+  pos @U_CAP @DIAG_CAP -60;   pos @U_LC @DIAG_LC -48;
   pos [t g u lc.t lc.g lc.u] [period comma] -70;
 } kern;
 """)

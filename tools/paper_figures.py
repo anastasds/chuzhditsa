@@ -133,6 +133,17 @@ def fig1():
             x0,y0 = (ox+(st[1]-st[3])*SC)*S,(oy-(st[2]+st[3])*SC)*S
             x1,y1 = (ox+(st[1]+st[3])*SC)*S,(oy-(st[2]-st[3])*SC)*S
             d.ellipse([x0,y0,x1,y1], outline="black", width=2*S)
+        elif st[0] == "A":
+            x0,y0 = (ox+(st[1]-st[3])*SC)*S,(oy-(st[2]+st[3])*SC)*S
+            x1,y1 = (ox+(st[1]+st[3])*SC)*S,(oy-(st[2]-st[3])*SC)*S
+            a0, a1 = st[4], st[5]
+            d.arc([x0,y0,x1,y1], -max(a0,a1), -min(a0,a1), fill="black", width=2*S)
+            import math as _m
+            for ang in (a0, a1):
+                px = (ox+(st[1]+st[3]*_m.cos(_m.radians(ang)))*SC)*S
+                py = (oy-(st[2]+st[3]*_m.sin(_m.radians(ang)))*SC)*S
+                r = 7*S
+                d.ellipse([px-r,py-r,px+r,py+r], fill=(220,60,60))
     label(d, 90, 400, "skeleton")
     for i,(w,slant,name) in enumerate([(90,0,"Regular  w=90"),(150,0,"Bold  w=150"),(90,math.tan(math.radians(12)),"Italic  12°")]):
         ox = 470 + i*340
@@ -407,7 +418,7 @@ def fig15():
         ox += bf.G[g]["adv"]*sc
     label(d, 110, oy2+34, "unkerned")
     hb_render(d, "Regular", "ГА", 700*S, oy2*S, 280*S)
-    label(d, 700, oy2+34, "class kern −55")
+    label(d, 700, oy2+34, "class kern −75")
     save(img, "fig15_fitting.png")
 
 def fig16():
