@@ -631,22 +631,75 @@ def make_fea(boxes, slant):
         lines.append(f"  pos base {b} <anchor {tx} {ty}> mark @TOP <anchor {bx} {by}> mark @BOT;")
     lines.append("} mark;")
     lines.append("""
-@T_CAP = [g t gbar geup gje];
-@T_LC = [lc.g lc.t lc.gbar lc.geup lc.gje];
-@DIAG_CAP = [a l d adia bigyus];
-@DIAG_LC = [lc.a lc.l lc.d lc.adia lc.bigyus];
-@U_CAP = [u ubr udia umac];
-@U_LC = [lc.u lc.ubr lc.udia lc.umac];
-@ROUND_CAP = [o odia s ye ee fita];
-@ROUND_LC = [lc.o lc.odia lc.s lc.ye lc.ee lc.fita];
+# kern: class matrix modeled on measured Golos/PT Sans/Montserrat systems.
+# LEFT classes are mutually disjoint and RIGHT classes are mutually disjoint
+# (a glyph in two left classes splits the lookup into subtables, and
+# first-match-wins silently disables every rule after the first)
+@T_CAP = [g t gbar geup gje dje tshe];
+@T_LC = [lc.g lc.t lc.gbar lc.geup lc.gje lc.dje lc.tshe];
+@U_CAP = [u ubr udia umac ch];
+@U_LC = [lc.u lc.ubr lc.udia lc.umac lc.ch];
+@DIAG_CAP = [a l adia bigyus smallyus];
+@DIAG_LC = [lc.a lc.l lc.adia lc.bigyus lc.smallyus];
+@ROUND_CAP = [o odia s ye ee fita shk];
+@ROUND_LC = [lc.o lc.odia lc.s lc.ye lc.ee lc.fita lc.shk];
+@ZH_CAP = [zh k h khk kje hhk ya];
+@ZH_LC = [lc.zh lc.k lc.h lc.khk lc.kje lc.hhk lc.ya];
+@FEET_CAP = [d ts sht dzh];
+@FEET_LC = [lc.d lc.ts lc.sht lc.dzh];
+@ER_CAP = [er ermal];
+@ER_LC = [lc.er lc.ermal];
+@STR_LC = [lc.i lc.ibr lc.n lc.p lc.m lc.sh lc.yeru lc.iukr lc.yi lc.v lc.z lc.e lc.yo lc.b lc.f lc.imac lc.igrave];
+@DASH = [hyphen endash emdash];
+# right-side targets (disjoint among themselves)
+@TBAR_R = [t er tpal];
+@TBARLC_R = [lc.t lc.er lc.tpal];
+@DIAGR_CAP = [a l adia bigyus smallyus d];
+@DIAGR_LC = [lc.a lc.l lc.adia lc.bigyus lc.smallyus lc.d];
+@UR_CAP = [u ubr udia umac ch];
+@UR_LC = [lc.u lc.ubr lc.udia lc.umac lc.ch];
+@ROUNDR_CAP = [o odia s ye ee fita shk];
+@ROUNDR_LC = [lc.o lc.odia lc.s lc.ye lc.ee lc.fita lc.shk];
+@STRR_LC = [lc.i lc.ibr lc.n lc.p lc.m lc.sh lc.yeru lc.iukr lc.yi lc.v lc.z lc.e lc.yo lc.zh lc.k lc.h lc.ts lc.sht lc.ermal lc.ya lc.yu];
+@PUNCT = [period comma];
 feature kern {
-  pos @T_CAP @DIAG_CAP -75;   pos @T_LC @DIAG_LC -60;
-  pos @DIAG_CAP @T_CAP -75;   pos @DIAG_LC @T_LC -60;
-  pos @T_CAP @ROUND_CAP -15;  pos @T_LC @ROUND_LC -12;
-  pos @ROUND_CAP @T_CAP -15;  pos @ROUND_LC @T_LC -12;
-  pos @DIAG_CAP @U_CAP -60;   pos @DIAG_LC @U_LC -48;
-  pos @U_CAP @DIAG_CAP -60;   pos @U_LC @DIAG_LC -48;
-  pos [t g u lc.t lc.g lc.u] [period comma] -70;
+  pos @T_CAP @DIAGR_CAP -85;   pos @T_CAP @ROUNDR_CAP -15;
+  pos @T_CAP @DIAGR_LC -90;    pos @T_CAP @ROUNDR_LC -90;
+  pos @T_CAP @STRR_LC -90;     pos @T_CAP @UR_LC -90;
+  pos @T_CAP @TBARLC_R -60;
+  pos @T_CAP @PUNCT -130;      pos @T_CAP @DASH -60;
+  pos @T_LC @DIAGR_LC -60;     pos @T_LC @ROUNDR_LC -12;
+  pos @T_LC @PUNCT -95;        pos @T_LC @DASH -45;
+  pos @U_CAP @DIAGR_CAP -80;   pos @U_CAP @ROUNDR_CAP -25;
+  pos @U_CAP @DIAGR_LC -60;    pos @U_CAP @ROUNDR_LC -55;
+  pos @U_CAP @STRR_LC -55;     pos @U_CAP @UR_LC -55;
+  pos @U_CAP @PUNCT -140;      pos @U_CAP @DASH -20;
+  pos @U_LC @DIAGR_LC -40;     pos @U_LC @PUNCT -60;
+  pos @DIAG_CAP @TBAR_R -80;   pos @DIAG_CAP @UR_CAP -60;
+  pos @DIAG_CAP @ROUNDR_CAP -20; pos @DIAG_CAP @UR_LC -45;
+  pos @DIAG_CAP @TBARLC_R -55;
+  pos @DIAG_LC @TBAR_R -90;    pos @DIAG_LC @TBARLC_R -55;
+  pos @DIAG_LC @UR_LC -45;
+  pos @ROUND_CAP @TBAR_R -25;  pos @ROUND_CAP @DIAGR_CAP -20;
+  pos @ROUND_CAP @UR_CAP -25;  pos @ROUND_CAP @DIAGR_LC -15;
+  pos @ROUND_CAP @PUNCT -20;
+  pos @ROUND_LC @TBAR_R -95;   pos @ROUND_LC @TBARLC_R -18;
+  pos @ROUND_LC @DIAGR_LC -12; pos @ROUND_LC @UR_LC -15;
+  pos @ZH_CAP @ROUNDR_CAP -20; pos @ZH_CAP @ROUNDR_LC -25;
+  pos @ZH_CAP @TBAR_R -25;     pos @ZH_CAP @UR_LC -30;
+  pos @ZH_LC @ROUNDR_LC -15;   pos @ZH_LC @TBARLC_R -12;
+  pos @FEET_CAP @TBAR_R -20;   pos @FEET_CAP @UR_CAP -20;
+  pos @FEET_CAP @UR_LC -25;
+  pos @FEET_LC @PUNCT 40;      pos @FEET_LC @TBARLC_R -12;
+  pos @ER_CAP @TBAR_R -80;     pos @ER_CAP @UR_CAP -60;
+  pos @ER_CAP @UR_LC -40;
+  pos @ER_LC @TBAR_R -90;      pos @ER_LC @TBARLC_R -45;
+  pos @ER_LC @UR_LC -40;
+  pos @STR_LC @TBAR_R -100;    pos @STR_LC @TBARLC_R -50;
+  pos [r] @DIAGR_CAP -80;      pos [r] @DIAGR_LC -55;
+  pos [r] @PUNCT -125;
+  pos [lc.r] @DIAGR_LC -25;    pos [lc.r] @PUNCT -20;
+  pos @DASH @TBAR_R -30;       pos @DASH @TBARLC_R -25;
 } kern;
 """)
     yus = [("ermal","smallyus","iotsyus"),("ibr","smallyus","iotsyus"),

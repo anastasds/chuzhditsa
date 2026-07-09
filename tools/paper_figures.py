@@ -418,7 +418,7 @@ def fig15():
         ox += bf.G[g]["adv"]*sc
     label(d, 110, oy2+34, "unkerned")
     hb_render(d, "Regular", "ГА", 700*S, oy2*S, 280*S)
-    label(d, 700, oy2+34, "class kern −75")
+    label(d, 700, oy2+34, "class kern −85")
     save(img, "fig15_fitting.png")
 
 def fig16():
