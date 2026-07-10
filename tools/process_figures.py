@@ -27,11 +27,14 @@ def font(size, bold=False):
 def commits():
     out = subprocess.run(
         ["git", "-C", REPO, "log", "--reverse", "--format=%ad|%h|%s",
-         "--date=format:%H:%M"], capture_output=True, text=True).stdout
+         "--date=format:%Y-%m-%d %H:%M"], capture_output=True, text=True).stdout
     rows = []
     for line in out.strip().splitlines():
         t, h, s = line.split("|", 2)
-        hh, mm = map(int, t.split(":"))
+        day, hm = t.split(" ")
+        if day != "2026-07-08":  # the figure depicts the first day only
+            continue
+        hh, mm = map(int, hm.split(":"))
         rows.append((hh + mm / 60, h, s))
     return rows
 
