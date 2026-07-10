@@ -48,7 +48,31 @@ SIDE = {
     "ч": "DF", "я": "DF",
     "у": "DD", "ж": "DD", "ў": "DD", "х": "DD", "ҳ": "DD", "ӱ": "DD", "ӯ": "DD",
     "д": "AD", "л": "AD", "ѫ": "AD", "ѧ": "AD",
+    # migrated superset (extension letters inherit their base letters' sides)
+    "э": "OR", "є": "RO", "ѳ": "RR", "і": "FF", "ї": "FF", "ј": "FF",
+    "ђ": "FF", "ћ": "FF", "ѓ": "FT", "ќ": "FD", "љ": "AR", "њ": "FR",
+    "ѩ": "FD", "ѭ": "FD", "ѐ": "RR", "ѝ": "FF", "ӓ": "RF", "ґ": "FT",
 }
+
+# combining marks (drawn trailing at negative x, v2.5 geometry; GPOS mark
+# anchors do the placement, so the drawn spot only matters as the
+# unanchored fallback) and the ligature stratum, both ported from
+# build_font.py. Lookup order is orthographic law: yus fusion first,
+# or н/л consume the soft sign before ьѧ can fuse (paper, Fig. 12).
+TOPMARKS = {"\u0300": [("L", -270, 820, -400, 970)],
+            "\u0301": [("L", -390, 820, -260, 970)],
+            "\u0304": [("L", -490, 880, -170, 880)],
+            "\u030C": [("L", -450, 970, -330, 850), ("L", -330, 850, -210, 970)],
+            "\u0308": [("D", -435, 870, 26), ("D", -225, 870, 26)],
+            "\u0306": [("A", -330, 930, 130, 205, 335)]}
+BOTMARKS = {"\u0328": [("L", -330, 0, -385, -80), ("L", -385, -80, -275, -150)],
+            "\u0322": [("L", -300, 0, -300, -150), ("L", -300, -150, -210, -150)]}
+OVERLAYS = {"\u0335": [("L", -450, 370, -215, 370)]}
+BOT_X = {"т": 240, "р": 55, "Т": 264, "Р": 50}
+YUS_LIGA = [("ь", "ѧ", "ѩ"), ("й", "ѧ", "ѩ"), ("ь", "ѫ", "ѭ"), ("й", "ѫ", "ѭ"),
+            ("Ь", "Ѧ", "Ѩ"), ("Й", "Ѧ", "Ѩ"), ("Ь", "Ѫ", "Ѭ"), ("Й", "Ѫ", "Ѭ")]
+SOFT_LIGA = [("н", "ь", "њ"), ("л", "ь", "љ"), ("Н", "Ь", "Њ"), ("Л", "Ь", "Љ")]
+EJECTIVES = [("т", "tpal"), ("к", "kpal"), ("ц", "tspal"), ("ч", "chpal"), ("п", "ppal")]
 KERN = {
     "RR": -14, "RF": -6, "FR": -6, "FF": 0, "DD": -28, "DR": -20, "RD": -20,
     "DF": -14, "FD": -14, "TT": 0, "TR": -12, "RT": -12, "TF": -4, "FT": -4,
@@ -165,6 +189,83 @@ def glyph_set(p):
     G["ӧ"] = dict(adv=486, s=[E(243, 250, R, Rv, 0, 360)] + dots(640))
     G["ӣ"] = dict(adv=490, s=G["и"]["s"] + [macron(650)])
     G["ӏ"] = dict(adv=220, s=[L((110, 0), (110, 700))])
+    # ------------------------------------------- migrated pan-Slavic superset
+    G["э"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.75 + 180, 360 - ap * 0.75 + 180),
+                              L((250 - R * 0.30, 270), (250 + R * 0.92, 270))])
+    G["є"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.75, 360 - ap * 0.75),
+                              L((250 - R * 0.92, 270), (250 + R * ct, 270))])
+    G["ѳ"] = dict(adv=486, s=[E(243, 250, R, Rv, 0, 360),
+                              L((243 - R * 0.92, 250), (243 + R * 0.92, 250))])
+    G["і"] = dict(adv=330, s=[L((165, 0), (165, 500)), DOT(165, 650, 26)])
+    G["ї"] = dict(adv=330, s=[L((165, 0), (165, 500)), DOT(82, 650, 26), DOT(248, 650, 26)])
+    G["ј"] = dict(adv=440, s=[L((300, -30), (300, 500)), A(200, -72, 103, 0, -150),
+                              DOT(300, 650, 26)])
+    G["ћ"] = dict(adv=500, s=[L((40, 0), (40, 700)), L((0, 560), (210, 560)),
+                              A(250, 290, 210, 0, 180), L((460, 0), (460, 290))])
+    G["ђ"] = dict(adv=500, s=[L((40, 0), (40, 700)), L((0, 560), (210, 560)),
+                              A(250, 290, 210, 0, 180), L((460, -40), (460, 290)),
+                              A(355, -40, 105, 0, -150)])
+    G["ѓ"] = dict(adv=440, s=G["г"]["s"] + [L((230, 610), (300, 700))])
+    G["ќ"] = dict(adv=470, s=G["к"]["s"] + [L((250, 610), (320, 700))])
+    G["ѐ"] = dict(adv=500, s=G["е"]["s"] + [L((215, 700), (285, 610))])
+    G["ѝ"] = dict(adv=490, s=G["и"]["s"] + [L((215, 700), (285, 610))])
+    G["ӓ"] = dict(adv=500, s=G["а"]["s"] + [DOT(190, 640, 26), DOT(360, 640, 26)])
+    G["ґ"] = dict(adv=440, s=G["г"]["s"] + [L((400, 500), (400, 600))])
+    G["њ"] = dict(adv=730, s=[L((40, 0), (40, 500)), L((400, 0), (400, 500)),
+                              L((40, 250), (400, 250)), L((400, 280), (545, 280)),
+                              A(545, 140, 140, 90, -90), L((545, 0), (400, 0))])
+    # љ: the bowl attaches to a vertical only — the right leg breaks
+    # diagonal-then-vertical (the Љ construction the first repair loop proved)
+    G["љ"] = dict(adv=690, s=[L((230, 500), (60, 0)), L((230, 500), (400, 240)),
+                              L((400, 240), (400, 0)), L((400, 240), (520, 240)),
+                              A(520, 120, 120, 90, -90), L((520, 0), (400, 0))])
+    G["ѩ"] = dict(adv=640, s=[L((70, 0), (70, 500)), L((70, 250), (310, 250)),
+                              L((390, 500), (230, 0)), L((390, 500), (550, 0)),
+                              L((295, 190), (485, 190))])
+    G["ѭ"] = dict(adv=660, s=[L((70, 0), (70, 500)), L((70, 500), (570, 500)),
+                              L((420, 500), (420, 290)), L((420, 290), (240, 0)),
+                              L((420, 290), (600, 0))])
+    # ejective fusions: the palochka rises to the upper half, keeping the
+    # ligature distinct from п (unencoded; reached only through GSUB)
+    G["tpal"] = dict(adv=600, s=[L((50, 500), (425, 500)), L((238, 0), (238, 500)),
+                                 L((510, 270), (510, 500))])
+    G["kpal"] = dict(adv=580, s=[L((40, 0), (40, 500)), L((40, 250), (400, 500)),
+                                 L((40, 250), (420, 0)), L((530, 270), (530, 500))])
+    G["tspal"] = dict(adv=600, s=[L((55, 0), (55, 500)), L((445, 0), (445, 500)),
+                                  L((55, 0), (445, 0)), L((445, 0), (445, -110)),
+                                  L((555, 270), (555, 500))])
+    G["chpal"] = dict(adv=620, s=[L((40, 500), (40, 390)), A(250, 390, 210, 180, 360),
+                                  L((460, 0), (460, 500)), L((570, 270), (570, 500))])
+    G["ppal"] = dict(adv=610, s=[L((55, 0), (55, 500)), L((445, 0), (445, 500)),
+                                 L((55, 500), (445, 500)), L((555, 270), (555, 500))])
+    # modifier letters (caseless): the aspiration marks are a raised small һ
+    G["\u02B0"] = dict(adv=340, s=[L((85, 420), (85, 840)), A(190, 610, 105, 180, 0),
+                                   L((295, 420), (295, 610))])
+    G["\u02B1"] = dict(adv=340, s=[L((85, 420), (85, 840)), L((85, 840), (25, 900)),
+                                   A(190, 610, 105, 180, 0), L((295, 420), (295, 610))])
+    # combining marks and overlays (zero advance)
+    for ch, strokes in list(TOPMARKS.items()) + list(BOTMARKS.items()) + list(OVERLAYS.items()):
+        G[ch] = dict(adv=0, s=[tuple(st) for st in strokes])
+    # ------------------------------------------------------------ punctuation
+    G["!"] = dict(adv=240, s=[L((120, 190), (120, 700)), DOT(120, 35, 28)])
+    G["?"] = dict(adv=500, s=[A(250, 545, 145, 180, -90), L((250, 400), (250, 190)),
+                              DOT(250, 35, 28)])
+    G["'"] = dict(adv=240, s=[L((125, 700), (108, 560))])
+    G["\u2019"] = dict(adv=240, s=[L((125, 700), (108, 560))])
+    G["\u00AB"] = dict(adv=460, s=[L((210, 375), (90, 250)), L((90, 250), (210, 125)),
+                                   L((370, 375), (250, 250)), L((250, 250), (370, 125))])
+    G["\u00BB"] = dict(adv=460, s=[L((90, 375), (210, 250)), L((210, 250), (90, 125)),
+                                   L((250, 375), (370, 250)), L((370, 250), (250, 125))])
+    G["\u00B7"] = dict(adv=240, s=[DOT(120, 250, 28)])
+    G["\u2010"] = dict(adv=340, s=[L((50, 250), (290, 250))])
+    G["\u2013"] = dict(adv=400, s=[L((40, 250), (360, 250))])
+    G["\u2014"] = dict(adv=700, s=[L((40, 250), (660, 250))])
+    G["\u2192"] = dict(adv=640, s=[L((60, 250), (540, 250)), L((540, 250), (410, 355)),
+                                   L((540, 250), (410, 145))])
+    G["\u25CC"] = dict(adv=500, s=[DOT(250 + 170 * math.cos(math.pi * i / 6),
+                                       250 + 170 * math.sin(math.pi * i / 6), 16)
+                                   for i in range(12)])
+    G["\u00A0"] = dict(adv=340, s=[])
     G["0"] = dict(adv=500, s=[E(250, 350, 210 - w / 2 + ov, 315 - w / 2 + ov + 36, 0, 360)])
     G["1"] = dict(adv=400, s=[L((230, 0), (230, 700)), L((230, 700), (100, 540))])
     G["2"] = dict(adv=500, s=[A(250, 505, 170, 165, -35), L((389, 407), (75, 0)),
@@ -217,7 +318,11 @@ def glyph_set(p):
               "Л": "л", "М": "м", "Н": "н", "П": "п", "Т": "т", "Х": "х", "Ц": "ц",
               "Ч": "ч", "Ш": "ш", "Щ": "щ", "Ъ": "ъ", "Ь": "ь", "Ы": "ы", "Џ": "џ",
               "Ң": "ң", "Ғ": "ғ", "Қ": "қ", "Ҳ": "ҳ", "Ҙ": "ҙ", "Ѕ": "ѕ", "Ѫ": "ѫ",
-              "Ѧ": "ѧ", "Ӏ": "ӏ"}
+              "Ѧ": "ѧ", "Ӏ": "ӏ",
+              "Ѓ": "ѓ", "Ќ": "ќ", "Ѩ": "ѩ", "Ѭ": "ѭ", "Љ": "љ", "Њ": "њ",
+              "Ґ": "ґ",
+              "tpal.cap": "tpal", "kpal.cap": "kpal", "tspal.cap": "tspal",
+              "chpal.cap": "chpal", "ppal.cap": "ppal"}
     for cap, low in scaled.items():
         C[cap] = scale_glyph(G[low], 1.10, 1.4)
         CAP_OF[cap] = low
@@ -266,6 +371,32 @@ def glyph_set(p):
     C["Ӯ"] = dict(adv=C["У"]["adv"], s=C["У"]["s"] + [L((150, 860), (430, 860))])
     CAP_OF["Ӯ"] = "у"
 
+    C["Э"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.75 + 180, 360 - ap * 0.75 + 180),
+                              L((320 - R7 * 0.30, 375), (320 + R7 * 0.92, 375))])
+    CAP_OF["Э"] = "э"
+    C["Є"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.75, 360 - ap * 0.75),
+                              L((320 - R7 * 0.92, 375), (320 + R7 * ct, 375))])
+    CAP_OF["Є"] = "є"
+    C["Ѳ"] = dict(adv=640, s=[E(320, 350, R7, R7v, 0, 360),
+                              L((320 - R7 * 0.92, 350), (320 + R7 * 0.92, 350))])
+    CAP_OF["Ѳ"] = "ѳ"
+    C["Ѐ"] = dict(adv=C["Е"]["adv"], s=C["Е"]["s"] + [L((285, 900), (355, 810))])
+    CAP_OF["Ѐ"] = "е"
+    C["Ѝ"] = dict(adv=C["И"]["adv"], s=C["И"]["s"] + [L((245, 900), (315, 810))])
+    CAP_OF["Ѝ"] = "и"
+    C["Ӓ"] = dict(adv=C["А"]["adv"], s=C["А"]["s"] + [DOT(170, 850, 28), DOT(350, 850, 28)])
+    CAP_OF["Ӓ"] = "а"
+    C["І"] = dict(adv=360, s=[L((180, 0), (180, 700))]); CAP_OF["І"] = "і"
+    C["Ї"] = dict(adv=360, s=[L((180, 0), (180, 700)), DOT(95, 850, 28),
+                              DOT(265, 850, 28)]); CAP_OF["Ї"] = "ї"
+    C["Ј"] = dict(adv=480, s=[L((330, -40), (330, 700)), A(220, -82, 113, 0, -150)])
+    CAP_OF["Ј"] = "ј"
+    C["Ћ"] = dict(adv=560, s=[L((30, 700), (490, 700)), L((150, 0), (150, 700)),
+                              A(330, 300, 180, 0, 180), L((510, 0), (510, 300))])
+    CAP_OF["Ћ"] = "ћ"
+    C["Ђ"] = dict(adv=560, s=[L((30, 700), (490, 700)), L((150, 0), (150, 700)),
+                              A(330, 300, 180, 0, 180), L((510, -40), (510, 300)),
+                              A(405, -40, 105, 0, -150)]); CAP_OF["Ђ"] = "ђ"
     G.update(C)
     return G, CAP_OF
 
@@ -322,9 +453,9 @@ def glyph_contours(gdef, p, slant):
 
 # ------------------------------------------------------------------ features
 def gname(ch):
-    return "uni%04X" % ord(ch)
+    return "uni%04X" % ord(ch) if len(ch) == 1 else ch
 
-def make_fea(G, CAP_OF, kern_scale):
+def make_fea(G, CAP_OF, kern_scale, boxes, xf):
     def cls(ch):
         return SIDE.get(ch) or (SIDE.get(CAP_OF[ch]) if ch in CAP_OF else None)
     chars = [ch for ch in G if cls(ch)]
@@ -343,6 +474,36 @@ def make_fea(G, CAP_OF, kern_scale):
         if sv and k[0] in lefts and k[1] in rights:
             lines.append(f"  pos @FIRST_{k[0]} @SECOND_{k[1]} {sv};")
     lines.append("} kern;")
+    # mark-to-base anchors from the built (post-shear) contours, v2.5 recipe:
+    # base top anchor at (centre, top+40); mark anchor at its own bbox edge
+    for m in TOPMARKS:
+        x0, y0, x1, y1 = boxes[gname(m)]
+        lines.append(f"markClass {gname(m)} <anchor {round((x0+x1)/2)} {round(y0-10)}> @TOP;")
+    for m in BOTMARKS:
+        x0, y0, x1, y1 = boxes[gname(m)]
+        lines.append(f"markClass {gname(m)} <anchor {round((x0+x1)/2)} {round(y1)}> @BOT;")
+    lines.append("feature mark {")
+    for ch in G:
+        if len(ch) != 1 or not ch.isalpha() or gname(ch) not in boxes:
+            continue
+        x0, y0, x1, y1 = boxes[gname(ch)]
+        tx, ty = round((x0 + x1) / 2), round(y1 + 40)
+        bx = xf(BOT_X[ch], -70) if ch in BOT_X else round((x0 + x1) / 2)
+        by = round(max(min(0, y0), -60) - 10)
+        lines.append(f"  pos base {gname(ch)} <anchor {tx} {ty}> mark @TOP <anchor {bx} {by}> mark @BOT;")
+    lines.append("} mark;")
+    # ligature stratum, ordered: yus fusion must win before н/л consume ь
+    lines.append("feature liga {\n  lookup IOTYUS {")
+    for a1, a2, out in YUS_LIGA:
+        lines.append(f"    sub {gname(a1)} {gname(a2)} by {gname(out)};")
+    lines.append("  } IOTYUS;\n  lookup SOFTFUSE {")
+    for a1, a2, out in SOFT_LIGA:
+        lines.append(f"    sub {gname(a1)} {gname(a2)} by {gname(out)};")
+    for base, out in EJECTIVES:
+        for pal in ("\u04C0", "\u04CF"):  # palochka is written caseless
+            lines.append(f"    sub {gname(base.upper())} {gname(pal)} by {out}.cap;")
+            lines.append(f"    sub {gname(base)} {gname(pal)} by {out};")
+    lines.append("  } SOFTFUSE;\n} liga;")
     return "\n".join(lines)
 
 # ------------------------------------------------------------------- builder
@@ -354,14 +515,20 @@ def build(style, wv, italic, fmt):
     order = [".notdef"] + [gname(ch) for ch in G]
     fb = FontBuilder(UPM, isTTF=(fmt == "ttf"))
     fb.setupGlyphOrder(order)
-    fb.setupCharacterMap({ord(ch): gname(ch) for ch in G})
-    metrics, shapes = {}, {}
+    fb.setupCharacterMap({ord(ch): gname(ch) for ch in G if len(ch) == 1})
+    metrics, shapes, boxes = {}, {}, {}
     all_glyphs = {".notdef": dict(adv=550, s=[])}
     all_glyphs.update({gname(ch): g for ch, g in G.items()})
     for name, gdef in all_glyphs.items():
         contours = [[(round(x), round(y)) for x, y in c]
                     for c in glyph_contours(gdef, p, slant)]
+        if contours:
+            xs = [x for c in contours for x, y in c]
+            ys = [y for c in contours for x, y in c]
+            boxes[name] = (min(xs), min(ys), max(xs), max(ys))
         adv = round((gdef["adv"] + 2 * p["sb"]) * p["widthScale"])
+        if gdef["adv"] == 0:
+            adv = 0  # combining marks and overlays carry no advance
         xs = [x for c in contours for x, y in c]
         metrics[name] = (adv, min(xs) if xs else 0)
         if fmt == "ttf":
@@ -396,7 +563,10 @@ def build(style, wv, italic, fmt):
                 usWeightClass=700 if bold else 400, sxHeight=500, sCapHeight=700)
     fb.setupPost(italicAngle=-float(slant))
     fb.font["head"].macStyle = (0x01 if bold else 0) | (0x02 if italic else 0)
-    addOpenTypeFeaturesFromString(fb.font, make_fea(G, CAP_OF, 0.7 if bold else 1.0))
+    tan = math.tan(math.radians(slant))
+    xf = lambda x, y: round((x + y * tan + p["sb"]) * p["widthScale"])
+    addOpenTypeFeaturesFromString(
+        fb.font, make_fea(G, CAP_OF, 0.7 if bold else 1.0, boxes, xf))
     path = os.path.join(OUT, f"{ps}.{fmt}")
     fb.save(path)
     return path
