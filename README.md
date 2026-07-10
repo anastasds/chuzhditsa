@@ -19,15 +19,21 @@ forms with round bowls drawn from Glagolitic — the oldest Slavic shapes markin
 words. It marks words, never speakers, and a loan that naturalizes graduates back to the
 plain alphabet.
 
-Current version: **2.1**. Start with the [plain-language whitepaper](WHITEPAPER.md), the
+Current version: **2.5**, with the **Chuzhditsa 2b** readability revision (v3) in
+[fonts/2b/](fonts/2b/) and its parametric builder in [tools/build_font_v3.py](tools/build_font_v3.py).
+Start with the [plain-language whitepaper](WHITEPAPER.md), the
 [English specification](CHUZHDITSA.en.md), or the [journal manuscript](paper/chuzhditsa.pdf).
+
+Designed and directed by **Anastas Stoyanovsky**; constructed, under his criticism, by
+Claude (Anthropic) — the process itself is documented in the third paper,
+[paper/process.pdf](paper/process.pdf).
 
 > Naming note: the system is *Chuzhditsa/чуждица*; this repository's slug (`chuzbitza`)
 > predates the final name.
 
 ## Quickstart
 
-- **Read the spec:** [English](CHUZHDITSA.en.md) · [български](CHUZHDITSA.md) · [українська](CHUZHDITSA.uk.md)
+- **Read the spec:** [English](CHUZHDITSA.en.md) · [български](CHUZHDITSA.md) · [українська](CHUZHDITSA.uk.md) · [русский](CHUZHDITSA.ru.md)
 - **See the typeface:** open [specimen.html](specimen.html) in a browser (fonts embedded, no install needed)
 - **Use the fonts:** install from [fonts/](fonts/) — four styles, TTF and OTF, licensed OFL
 - **Use the mapping in code:** [data/chuzhditsa.json](data/chuzhditsa.json) (phoneme→grapheme, machine-readable) and [tools/normalize.py](tools/normalize.py) (canonical-encoding normalizer)
@@ -39,6 +45,7 @@ Current version: **2.1**. Start with the [plain-language whitepaper](WHITEPAPER.
 | [English](CHUZHDITSA.en.md) | [Slovensky](CHUZHDITSA.sk.md) · [Српски](CHUZHDITSA.sr.md) · [Hrvatski](CHUZHDITSA.hr.md) |
 | [Български](CHUZHDITSA.md) | [Slovensko](CHUZHDITSA.sl.md) · [Bosanski](CHUZHDITSA.bs.md) · [Македонски](CHUZHDITSA.mk.md) |
 | [Українська](CHUZHDITSA.uk.md) | [Shqip](CHUZHDITSA.sq.md) |
+| [Русский](CHUZHDITSA.ru.md) | |
 
 ## Installing the fonts
 
@@ -58,6 +65,7 @@ orthography's fusion and anchoring rules are the font's GSUB/GPOS features.
 python3 -m pip install -r tools/requirements.txt
 
 python3 tools/build_font.py    # 1. build all 8 font files into fonts/
+python3 tools/build_font_v3.py # 1b. build the Chuzhditsa 2b (v3) family into fonts/v3/
 python3 tools/gen_docs.py      # 2. regenerate the three main docs + specimen.html (after step 1)
 python3 tools/proof.py         # 3. optional: render tools/proof.png (HarfBuzz-shaped proof sheet)
 python3 tools/render_hero.py   # 4. optional: regenerate docs/hero*.png
@@ -65,7 +73,7 @@ python3 tools/render_hero.py   # 4. optional: regenerate docs/hero*.png
 cd paper && xelatex chuzhditsa.tex && xelatex chuzhditsa.tex   # optional: the manuscript (XeLaTeX)
 ```
 
-`CHUZHDITSA.md`, `CHUZHDITSA.en.md`, `CHUZHDITSA.uk.md` and `specimen.html` are
+`CHUZHDITSA.md`, `CHUZHDITSA.en.md`, `CHUZHDITSA.uk.md`, `CHUZHDITSA.ru.md` and `specimen.html` are
 **generated** by `tools/gen_docs.py` — edit that script, not the outputs. The short
 per-language guides are hand-written.
 
@@ -74,9 +82,9 @@ per-language guides are hand-written.
 | Path | What it is |
 |---|---|
 | `README.md`, `WHITEPAPER.md` | You are here; plain-language overview |
-| `CHUZHDITSA*.md` | Specification (bg/en/uk, generated) + seven hand-written guides |
+| `CHUZHDITSA*.md` | Specification (bg/en/uk/ru, generated) + seven hand-written guides |
 | `specimen.html` | Self-contained type specimen with embedded fonts (generated) |
-| `fonts/` | Built font binaries, 4 styles × TTF/OTF (OFL 1.1) |
+| `fonts/` | Built font binaries, 4 styles × TTF/OTF; `fonts/2b/` and `fonts/v3/` = the 2b (v3) revision (OFL 1.1) |
 | `data/chuzhditsa.json` | Machine-readable phoneme→grapheme mapping |
 | `tools/` | Font builder, doc generator, proofs, normalizer (MIT) |
 | `paper/` | Three manuscripts (system, typeface construction, process study), XeLaTeX + PDF |

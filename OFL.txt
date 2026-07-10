@@ -1,4 +1,4 @@
-Copyright (c) 2026, the Chuzhditsa project,
+Copyright (c) 2026, Anastas Stoyanovsky,
 with Reserved Font Name "Chuzhditsa".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
