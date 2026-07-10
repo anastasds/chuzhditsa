@@ -2,7 +2,7 @@
 
 # Чуждица · Chuzhditsa
 
-**Езикови версии:** български · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md)
+**Езикови версии:** български · [English](CHUZHDITSA.en.md) · [українська](CHUZHDITSA.uk.md) · [русский](CHUZHDITSA.ru.md)
 **Кратки водачи:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Статия:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)
 
 **Разширена българска кирилица за чужди думи** — функционалният еквивалент на японската катакана: систематичен, детерминистичен слой за фонетичен запис на всеки от големите световни езици, плюс шрифт, чийто облик сам по себе си маркира „това е чужда дума“.

@@ -2,7 +2,7 @@
 
 # Chuzhditsa · Чуждица
 
-**Language versions:** [български](CHUZHDITSA.md) · English · [українська](CHUZHDITSA.uk.md)
+**Language versions:** [български](CHUZHDITSA.md) · English · [українська](CHUZHDITSA.uk.md) · [русский](CHUZHDITSA.ru.md)
 **Short guides:** [slovensky](CHUZHDITSA.sk.md) · [српски](CHUZHDITSA.sr.md) · [hrvatski](CHUZHDITSA.hr.md) · [slovensko](CHUZHDITSA.sl.md) · [bosanski](CHUZHDITSA.bs.md) · [македонски](CHUZHDITSA.mk.md) · [shqip](CHUZHDITSA.sq.md) — **Paper:** [paper/chuzhditsa.pdf](paper/chuzhditsa.pdf)
 
 **Extended Bulgarian Cyrillic for foreign words** — the functional equivalent of Japanese katakana: a systematic, deterministic layer for writing any of the world's major languages phonetically, plus a typeface whose look alone marks "this is a foreign word."
