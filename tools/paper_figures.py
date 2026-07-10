@@ -270,20 +270,40 @@ def fig8():
     save(img, "fig8_anchors.png")
 
 def fig9():
-    img, d = canvas(1560, 700)
+    # the closing family portrait renders from the SHIPPED v3 binaries
+    # (fonts/v3, the Chuzhditsa 2b revision) through the deployment shaping
+    # stack, not from the engine: this figure's claim is "this is the family",
+    # and the family is whatever the built fonts say it is
+    from PIL import Image as PImage, ImageDraw as PDraw, ImageFont as PFont
+    W2, H2 = 3120, 1400
+    img = PImage.new("L", (W2, H2), 255)
+    d = PDraw.Draw(img)
     rows = [
-        ("Regular", 52, "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЮЯ"),
-        ("Regular", 52, "абвгдежзийклмнопрстуфхцчшщъьыюя"),
-        ("Regular", 52, "Ўў Џџ Ҫҫ Ҙҙ Ққ Ңң Ҳҳ Ғғ Һһ Ѕѕ Ӏ Ӓӓ Ӧӧ Ӱӱ Ыы"),
-        ("Regular", 52, "Ѫѫ Ѧѧ Ѩѩ Ѭѭ Ӣӣ Ӯӯ · тʰ дʱ т̢ а̨ а̄ а́ а̌"),
-        ("Bold", 52, "ўӣкенд ҫӓңкс Пе̌йчиң Муҳаммад крўаса̨ бѩ"),
-        ("Italic", 52, "думи от чужбина, писани на чуждица"),
+        ("Regular", "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЮЯ"),
+        ("Regular", "абвгдежзийклмнопрстуфхцчшщъьыюя"),
+        ("Regular", "Ўў Џџ Ҫҫ Ҙҙ Ққ Ңң Ҳҳ Ғғ Һһ Ѕѕ Ӏ Ӓӓ Ӧӧ Ӱӱ Ыы"),
+        ("Regular", "Ѫѫ Ѧѧ Ѩѩ Ѭѭ Ӣӣ Ӯӯ · тʰ дʱ т̢ а̨ а̄ а́ а̌"),
+        ("Bold", "ўӣкенд ҫӓңкс Пе̌йчиң Муҳаммад крўаса̨ бѩ"),
+        ("Italic", "думи от чужбина, писани на чуждица"),
     ]
-    y = 95
-    for style, size, text in rows:
-        hb_render(d, style, text, 50*S, y*S, size*S)
-        y += 105
-    save(img, "fig9_specimen.png")
+    v3 = os.path.join(os.path.dirname(__file__), "..", "fonts", "v3")
+    y = 60
+    for style, text in rows:
+        path = os.path.join(v3, f"Chuzhditsa2b-{style}.ttf")
+        try:
+            f = PFont.truetype(path, 104, layout_engine=PFont.Layout.RAQM)
+        except Exception:
+            f = PFont.truetype(path, 104)
+        d.text((100, y), text, font=f, fill=0)
+        y += 210
+    bg = PImage.new("L", img.size, 255)
+    from PIL import ImageChops
+    bbox = ImageChops.difference(img, bg).getbbox()
+    if bbox:
+        img = img.crop((max(0, bbox[0]-40), max(0, bbox[1]-40),
+                        min(img.width, bbox[2]+40), min(img.height, bbox[3]+40)))
+    img.save(os.path.join(FIG, "fig9_specimen.png"))
+    print("fig9_specimen.png (from fonts/v3 binaries)")
 
 def fig10():
     img, d = canvas(1460, 400)
