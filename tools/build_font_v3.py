@@ -96,13 +96,16 @@ def glyph_set(p):
     Rav = Rv - (0 if w > 100 else 16)  # narrow a/р bowl reads taller: reduced allowance
     ct = math.cos(math.radians(ap * 0.75))  # bar terminus: flush at arc tips
     Rab = Ra - 12                 # a/р bowl, trimmed (review: reads oversized)
+    dr = max(26, min(w * 0.60, 62))  # diacritic dot radius: weight-derived,
+                                  # not a literal (the instrumented eval killed
+                                  # 26, then 0.46w; dots must clear a pixel)
 
     def L(a, b): return ("L", a[0], a[1], b[0], b[1])
     def A(cx, cy, r, a0, a1): return ("A", cx, cy, r, a0, a1)
     def E(cx, cy, rx, ry, a0, a1): return ("E", cx, cy, rx, ry, a0, a1)
     def DOT(x, y, r): return ("D", x, y, r)
     def breve(cx, cy): return A(cx, cy, 70, 195, 345)
-    def dots(y): return [DOT(165, y, 26), DOT(335, y, 26)]
+    def dots(y): return [DOT(165, y, dr), DOT(335, y, dr)]
     def macron(y): return L((120, y), (380, y))
 
     G = {}
@@ -148,7 +151,7 @@ def glyph_set(p):
                               L((140, 190), (360, 190))])
     G["қ"] = dict(adv=470, s=G["к"]["s"] + [L((420, 0), (420, -110))])
     G["ҫ"] = dict(adv=500, s=[E(250, 250, R, Rv, ap, 360 - ap),
-                              L((250, 250 - Rv), (250, 250 - Rv - 105))])
+                              L((250, 250 - Rv), (250, 250 - Rv - 135))])
     G["б"] = dict(adv=470, s=[L((40, 0), (40, 500)), L((40, 500), (360, 500)),
                               L((40, 280), (210, 280)), E(210, 140, 168, 140, 90, -90),
                               L((210, 0), (40, 0))])
@@ -159,7 +162,7 @@ def glyph_set(p):
     G["ғ"] = dict(adv=440, s=G["г"]["s"] + [L((0, 310), (240, 310))])
     G["з"] = dict(adv=455, s=[E(245, 378, 158, 134, 150, -80),
                               E(245, 127, 165, 139, 85, -165)])
-    G["ҙ"] = dict(adv=455, s=G["з"]["s"] + [L((245, 0), (245, -105))])
+    G["ҙ"] = dict(adv=455, s=G["з"]["s"] + [L((245, 0), (245, -135))])
     G["ѕ"] = dict(adv=455, s=[E(245, 381, 158, 131, 45, 270),
                               E(245, 119, 165, 131, 90, -135)])
     G["л"] = dict(adv=500, s=[L((250, 500), (70, 0)), L((250, 500), (430, 0))])
@@ -192,14 +195,17 @@ def glyph_set(p):
     # ------------------------------------------- migrated pan-Slavic superset
     G["э"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.75 + 180, 360 - ap * 0.75 + 180),
                               L((250 - R * 0.30, 270), (250 + R * 0.92, 270))])
-    G["є"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.75, 360 - ap * 0.75),
-                              L((250 - R * 0.92, 270), (250 + R * ct, 270))])
+    # є carries a half-bar from the bowl's centre to the arc tips — е's
+    # full bar is what the revision's round е took over, so the pair's
+    # contrast must live in the bar length (instrumented: 0 px before this)
+    G["є"] = dict(adv=500, s=[E(250, 250, R, Rv, ap, 360 - ap),
+                              L((250, 270), (250 + R * math.cos(math.radians(ap)), 270))])
     G["ѳ"] = dict(adv=486, s=[E(243, 250, R, Rv, 0, 360),
                               L((243 - R * 0.92, 250), (243 + R * 0.92, 250))])
-    G["і"] = dict(adv=330, s=[L((165, 0), (165, 500)), DOT(165, 650, 26)])
-    G["ї"] = dict(adv=330, s=[L((165, 0), (165, 500)), DOT(82, 650, 26), DOT(248, 650, 26)])
+    G["і"] = dict(adv=330, s=[L((165, 0), (165, 500)), DOT(165, 650, dr)])
+    G["ї"] = dict(adv=330, s=[L((165, 0), (165, 500)), DOT(82, 650, dr), DOT(248, 650, dr)])
     G["ј"] = dict(adv=440, s=[L((300, -30), (300, 500)), A(200, -72, 103, 0, -150),
-                              DOT(300, 650, 26)])
+                              DOT(300, 650, dr)])
     G["ћ"] = dict(adv=500, s=[L((40, 0), (40, 700)), L((0, 560), (210, 560)),
                               A(250, 290, 210, 0, 180), L((460, 0), (460, 290))])
     G["ђ"] = dict(adv=500, s=[L((40, 0), (40, 700)), L((0, 560), (210, 560)),
@@ -209,7 +215,7 @@ def glyph_set(p):
     G["ќ"] = dict(adv=470, s=G["к"]["s"] + [L((250, 610), (320, 700))])
     G["ѐ"] = dict(adv=500, s=G["е"]["s"] + [L((215, 700), (285, 610))])
     G["ѝ"] = dict(adv=490, s=G["и"]["s"] + [L((215, 700), (285, 610))])
-    G["ӓ"] = dict(adv=500, s=G["а"]["s"] + [DOT(190, 640, 26), DOT(360, 640, 26)])
+    G["ӓ"] = dict(adv=500, s=G["а"]["s"] + [DOT(190, 640, dr), DOT(360, 640, dr)])
     G["ґ"] = dict(adv=440, s=G["г"]["s"] + [L((400, 500), (400, 600))])
     G["њ"] = dict(adv=730, s=[L((40, 0), (40, 500)), L((400, 0), (400, 500)),
                               L((40, 250), (400, 250)), L((400, 280), (545, 280)),
@@ -245,18 +251,19 @@ def glyph_set(p):
                                    A(190, 610, 105, 180, 0), L((295, 420), (295, 610))])
     # combining marks and overlays (zero advance)
     for ch, strokes in list(TOPMARKS.items()) + list(BOTMARKS.items()) + list(OVERLAYS.items()):
-        G[ch] = dict(adv=0, s=[tuple(st) for st in strokes])
+        G[ch] = dict(adv=0, s=[("D", st[1], st[2], dr) if st[0] == "D" else tuple(st)
+                               for st in strokes])
     # ------------------------------------------------------------ punctuation
-    G["!"] = dict(adv=240, s=[L((120, 190), (120, 700)), DOT(120, 35, 28)])
+    G["!"] = dict(adv=240, s=[L((120, 190), (120, 700)), DOT(120, 35, dr)])
     G["?"] = dict(adv=500, s=[A(250, 545, 145, 180, -90), L((250, 400), (250, 190)),
-                              DOT(250, 35, 28)])
+                              DOT(250, 35, dr)])
     G["'"] = dict(adv=240, s=[L((125, 700), (108, 560))])
     G["\u2019"] = dict(adv=240, s=[L((125, 700), (108, 560))])
     G["\u00AB"] = dict(adv=460, s=[L((210, 375), (90, 250)), L((90, 250), (210, 125)),
                                    L((370, 375), (250, 250)), L((250, 250), (370, 125))])
     G["\u00BB"] = dict(adv=460, s=[L((90, 375), (210, 250)), L((210, 250), (90, 125)),
                                    L((250, 375), (370, 250)), L((370, 250), (250, 125))])
-    G["\u00B7"] = dict(adv=240, s=[DOT(120, 250, 28)])
+    G["\u00B7"] = dict(adv=240, s=[DOT(120, 250, dr)])
     G["\u2010"] = dict(adv=340, s=[L((50, 250), (290, 250))])
     G["\u2013"] = dict(adv=400, s=[L((40, 250), (360, 250))])
     G["\u2014"] = dict(adv=700, s=[L((40, 250), (660, 250))])
@@ -284,10 +291,10 @@ def glyph_set(p):
                               E(250, 178, 180 - w / 2 + ov, 180 - w / 2 + ov - 4, 0, 360)])
     G["9"] = dict(adv=500, s=[E(250, 495, r69x, r69y, 0, 360),
                               L((250 + r69x * 0.766, 495 - r69y * 0.643), (212, 0))])
-    G["."] = dict(adv=240, s=[DOT(120, 35, 28)])
+    G["."] = dict(adv=240, s=[DOT(120, 35, dr)])
     G[","] = dict(adv=240, s=[L((130, 60), (90, -90))])
     G["-"] = dict(adv=340, s=[L((50, 250), (290, 250))])
-    G[":"] = dict(adv=240, s=[DOT(120, 35, 28), DOT(120, 400, 28)])
+    G[":"] = dict(adv=240, s=[DOT(120, 35, dr), DOT(120, 400, dr)])
     G[" "] = dict(adv=340, s=[])
 
     # ---------------------------------------------------------- uppercase
@@ -336,12 +343,12 @@ def glyph_set(p):
                               L((515, 0), (515, -85))]); CAP_OF["Д"] = "д"
     C["Е"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.75, 360 - ap * 0.75),
                               L((40, 375), (320 + R7 * ct, 375))]); CAP_OF["Е"] = "е"
-    C["Ё"] = dict(adv=640, s=C["Е"]["s"] + [DOT(230, 850, 28), DOT(410, 850, 28)])
+    C["Ё"] = dict(adv=640, s=C["Е"]["s"] + [DOT(230, 850, dr), DOT(410, 850, dr)])
     CAP_OF["Ё"] = "е"
     C["О"] = dict(adv=640, s=[E(320, 350, R7, R7v, 0, 360)]); CAP_OF["О"] = "о"
     C["С"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap, 360 - ap)]); CAP_OF["С"] = "с"
     C["Ҫ"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap, 360 - ap),
-                              L((320, 350 - R7v), (320, 350 - R7v - 105))])
+                              L((320, 350 - R7v), (320, 350 - R7v - 135))])
     CAP_OF["Ҫ"] = "с"
     C["Ф"] = dict(adv=660, s=[E(330, 350, R7 - 40, R7v - 40, 0, 360),
                               L((330, -40), (330, 740))]); CAP_OF["Ф"] = "ф"
@@ -363,8 +370,8 @@ def glyph_set(p):
                               L((320 - R7 * ct, 375), (320 + R7 * 0.92, 375))])
     CAP_OF["Ә"] = "ә"
     C["Ӧ"] = dict(adv=640, s=[E(320, 350, R7, R7v, 0, 360),
-                              DOT(230, 850, 28), DOT(410, 850, 28)]); CAP_OF["Ӧ"] = "о"
-    C["Ӱ"] = dict(adv=540, s=C["У"]["s"] + [DOT(190, 850, 28), DOT(370, 850, 28)])
+                              DOT(230, 850, dr), DOT(410, 850, dr)]); CAP_OF["Ӧ"] = "о"
+    C["Ӱ"] = dict(adv=540, s=C["У"]["s"] + [DOT(190, 850, dr), DOT(370, 850, dr)])
     CAP_OF["Ӱ"] = "у"
     C["Ӣ"] = dict(adv=C["И"]["adv"], s=C["И"]["s"] + [L((140, 860), (420, 860))])
     CAP_OF["Ӣ"] = "и"
@@ -384,11 +391,11 @@ def glyph_set(p):
     CAP_OF["Ѐ"] = "е"
     C["Ѝ"] = dict(adv=C["И"]["adv"], s=C["И"]["s"] + [L((245, 900), (315, 810))])
     CAP_OF["Ѝ"] = "и"
-    C["Ӓ"] = dict(adv=C["А"]["adv"], s=C["А"]["s"] + [DOT(170, 850, 28), DOT(350, 850, 28)])
+    C["Ӓ"] = dict(adv=C["А"]["adv"], s=C["А"]["s"] + [DOT(170, 850, dr), DOT(350, 850, dr)])
     CAP_OF["Ӓ"] = "а"
     C["І"] = dict(adv=360, s=[L((180, 0), (180, 700))]); CAP_OF["І"] = "і"
     C["Ї"] = dict(adv=360, s=[L((180, 0), (180, 700)), DOT(95, 850, 28),
-                              DOT(265, 850, 28)]); CAP_OF["Ї"] = "ї"
+                              DOT(265, 850, dr)]); CAP_OF["Ї"] = "ї"
     C["Ј"] = dict(adv=480, s=[L((330, -40), (330, 700)), A(220, -82, 113, 0, -150)])
     CAP_OF["Ј"] = "ј"
     C["Ћ"] = dict(adv=560, s=[L((30, 700), (490, 700)), L((150, 0), (150, 700)),

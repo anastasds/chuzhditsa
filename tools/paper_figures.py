@@ -447,7 +447,7 @@ def fig16():
     d = D.Draw(img)
     y = 40
     for size in (64, 44, 32, 24, 18, 13):
-        f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "Chuzhditsa-Regular.ttf"), size)
+        f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "v3", "Chuzhditsa2b-Regular.ttf"), size)
         d.text((50, y), f"{size}  Прекарахме ўӣкенда в Мӱнхен с Һӓри: ўиски и џаз.", font=f, fill="black")
         y += size + 24
     img.save(os.path.join(FIG, "fig16_waterfall.png"))
@@ -469,7 +469,7 @@ def fig18():
     lbl = F.truetype("/System/Library/Fonts/Helvetica.ttc", 24)
     rows = []
     for px, mag in ((48, 1), (18, 3), (12, 4)):
-        f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "Chuzhditsa-Regular.ttf"), px)
+        f = F.truetype(os.path.join(FIG, "..", "..", "fonts", "v3", "Chuzhditsa2b-Regular.ttf"), px)
         canvas_row = I.new("L", (int(px*30), int(px*2.2)), 255)
         D.Draw(canvas_row).text((2, 2), pairs, font=f, fill=0)
         bbox = ImageOps.invert(canvas_row).getbbox()
