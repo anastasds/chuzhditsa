@@ -79,7 +79,7 @@ per-language guides are hand-written.
 | `fonts/` | Built font binaries, 4 styles × TTF/OTF (OFL 1.1) |
 | `data/chuzhditsa.json` | Machine-readable phoneme→grapheme mapping |
 | `tools/` | Font builder, doc generator, proofs, normalizer (MIT) |
-| `paper/` | Two manuscripts (system + typeface construction), XeLaTeX + PDF |
+| `paper/` | Three manuscripts (system, typeface construction, process study), XeLaTeX + PDF |
 
 ## Name
 
