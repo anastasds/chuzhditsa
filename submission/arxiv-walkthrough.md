@@ -7,9 +7,12 @@ these are the account, endorsement, and submit actions the builder cannot do.
 
 ## 0. One-time setup
 
-1. Register at arxiv.org with your email. If you have any academic address,
-   use it — it can auto-qualify you and skip endorsement. `lindenpmg.com` will
-   **not** auto-qualify, so plan on the endorsement step below.
+1. Register at arxiv.org with a **personal or academic email — not the
+   company (lindenpmg) address**; this project stays off the business identity.
+   The registration email becomes the semi-public author contact on the record,
+   so pick one you're content to keep. An academic address (if you have any
+   affiliation) can auto-qualify you and skip endorsement; a personal address
+   will not, so plan on the endorsement step below.
 2. Add an ORCID iD to your profile if you have one (create one free at
    orcid.org — it's the author identifier journals will also want).
 
