@@ -95,3 +95,27 @@ compromises read as principled, well-declared, not fatal.
 4. **Latent Bulgarian primacy** (Preslav, "primary locus") — move the "records the
    pilot, not a hierarchy" disavowal earlier and apply it to the heritage claims.
 Facts check out (1945 reform, ѕ 1944 revival, Vuk/Mrkalj, Glagolitic chronology).
+
+---
+
+## Follow-up: four-expert citation audit (Slavic, phonology, typology, conlang)
+
+Every one of the paper's citations was re-verified bibliographically and for faithful
+use. Outcome: only **one** entry was actually wrong.
+- **merunka** — publisher was Nová Forma (that is his 2014 book); the 2018 Interslavic
+  book is Prague: Slovanská unie, subtitle added. FIXED.
+- **pitman** — bibliographically correct, but the 1969 book (by ITA's own champions)
+  supports the dual-system *mechanism*, not the 1970s *abandonment*; wording softened.
+- **daniels** — orphan entry (fully specified inside comrie96/cubberley); cut. The
+  mis-keyed `danielsX` renamed `fishman`.
+- **Cahill & Rice** — unverified "9–25" page span dropped.
+- Faithfulness confirmed exactly for the load-bearing cases: Sampson (the softened
+  featural language now represents him correctly), Bunčić "diaphasic diglyphia",
+  Sproat's "Regularity" claim (checked against his full-text PDF), Cubberley (near-
+  verbatim), Danchev, Robertson (accented-speech), Irwin (three loan routes).
+- **Added** the previously-orphaned in-text refs as entries: Vajs 1927, Parčić 1905
+  (the Glagolitic missals), and the *Handbook of the IPA* (1999) for the nineteen
+  non-Slavic phoneme inventories the audit had sourced only for Slavic. Cited the
+  1945 Bulgarian reform, Vuk 1818/Mrkalj, the 1944 Macedonian commission, and the
+  ю-ligature/denasalization to sources already in the bibliography. Korean
+  tense=geminate flagged as one analysis of the contrast.
