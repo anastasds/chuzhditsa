@@ -14,6 +14,11 @@ license terms, entering personal data, or pressing *submit*. Those are the
 author's — Anastas Stoyanovsky's — and they are the one place in this project
 where the signature has to be a hand, not a workshop. Each is marked **[you]**.
 
+One standing preference: all of it goes under a **personal or academic
+identity, not the company (lindenpmg) one** — arXiv email, ORCID, and every
+byline contact alike. The `[contact]` placeholders in the cover letters and
+pitch take that non-company address.
+
 ## Agreed sequence
 
 1. Typeface + orthography papers → arXiv.
