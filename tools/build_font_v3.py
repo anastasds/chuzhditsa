@@ -706,14 +706,14 @@ FAMILIES = [
     dict(name="Chuzhditsa Serif", file="ChuzhditsaSerif", caps="butt", serifs=True,
          diagClamp=108, contrast=0.34, aperture=52, wvText=92, wvBold=136,
          sbText=58, sbBold=66, wsText=1.02, wsBold=1.06),
-    # Inline weight/fit re-matched to Times after the boolean union: the
-    # 84/0.58 calibration had been made against seam-inflated rendering and
-    # read light on honest outlines; capScale closes the cap-height gap
-    # (Cyrillic 500/700 vs Times 448/662 cannot share one yScale)
+    # Inline weight/fit converged by reader proofing after the boolean union
+    # invalidated the seam-era calibration: 84/0.52 with a 58-unit fit —
+    # density metrics read darker/tighter than the page does; capScale closes
+    # the cap-height gap (Cyrillic 500/700 vs Times 448/662 share no yScale)
     dict(name="Chuzhditsa Inline", file="ChuzhditsaInline", caps="butt", serifs=True,
          serifLen=52, serifTh=20, serifThF=0.4, diagClamp=86,
-         contrast=0.50, aperture=52, wvText=90, wvBold=134,
-         sbText=40, sbBold=50, wsText=0.93, wsBold=0.98, yScale=0.88,
+         contrast=0.52, aperture=52, wvText=84, wvBold=130,
+         sbText=58, sbBold=68, wsText=0.93, wsBold=0.98, yScale=0.88,
          capScale=1.0714),
 ]
 STYLES = [("Regular", False), ("Bold", False),

@@ -27,10 +27,11 @@
 \newcommand{\src}[1]{{\ipafont #1}}
 
 \title{\textbf{Chuzhditsa: a phonological citation register for Cyrillic}}
-\author{Anastas Stoyanovsky\thanks{Fonts, build toolchain, and the twenty-language audit are available in the accompanying repository; the typeface used for all object-language examples in this manuscript is the system being described.}\\[3pt] {\normalsize Unaffiliated \quad \texttt{anastas@stoyanovs.ky}}}
+\author{Anastas Stoyanovsky\thanks{Fonts, build toolchain, and the twenty-language audit are available in the accompanying repository (\texttt{github.com/anastasds/chuzhditsa}); the typeface used for all object-language examples in this manuscript is the system being described.}\\[3pt] {\normalsize Unaffiliated \quad \texttt{anastas@stoyanovs.ky}}}
 \date{}
 
 \begin{document}
+\special{pdf:docinfo << /Title (Chuzhditsa: a phonological citation register for Cyrillic) /Author (Anastas Stoyanovsky) >>}
 \maketitle
 
 \begin{abstract}
@@ -45,17 +46,17 @@ Every literate community borrows words faster than its orthography naturalizes t
 
 Japanese shows the layer can be institutionalized: katakana is a full parallel syllabary whose use \emph{is} the marking of foreignness, and whose adaptation conventions (\phon{naɪt}~$\rightarrow$~\src{ナイト}) are conventionalized enough that, for a given source pronunciation, writers usually converge on one spelling.
 
-No major Slavic Cyrillic orthography has an analogous register. Loanwords enter Bulgarian, Russian, Serbian or Ukrainian through ad hoc transcription: sound-based and spelling-based renderings compete (\cz{ланч}~$\sim$~\cz{лънч} for \emph{lunch}), phonemes without Cyrillic letters collapse unpredictably (\ph{θ}~$\rightarrow$~т or с; \ph{w}~$\rightarrow$~в or у), and nothing in the written form signals that a word is a guest rather than a native.
+Loanwords enter Bulgarian, Russian, Serbian or Ukrainian through ad hoc transcription: sound-based and spelling-based renderings compete (\cz{ланч}~$\sim$~\cz{лънч} for \emph{lunch}), phonemes without Cyrillic letters collapse unpredictably (\ph{θ}~$\rightarrow$~т or с; \ph{w}~$\rightarrow$~в or у), and nothing in the written form signals that a word is a guest rather than a native.
 
-This paper describes Chuzhditsa, a designed orthographic register that supplies the missing device for Cyrillic, piloted on Bulgarian and then generalized to the Slavic superset.
+This paper describes Chuzhditsa, a designed orthographic register that supplies the missing device for Cyrillic, piloted on Bulgarian and then generalized to the Slavic superset — the union of the Slavic Cyrillic alphabets.
 
 One distinction must be drawn before anything else, because three different tasks hide under ``writing foreign words,'' and a system is judged unfairly when measured against a task it does not attempt. \emph{Loanword adaptation} bends a word to the recipient phonology — katakana's main business, and the business of every integrated borrowing. \emph{Phonemic transcription} records the source phonology in a technical alphabet — the IPA's business. Between them sits \emph{phonological citation}: writing a foreign word, name, or example so that a native reader can recover an adequate approximation of its source pronunciation, in the native script, without technical training.
 
 Chuzhditsa is primarily the third: unlike katakana it \emph{extends} the recipient inventory to preserve source contrasts rather than collapsing them into native phonotactics; unlike the IPA it stays inside Cyrillic reading habits. Its use as a marking register for not-yet-naturalized loans is a secondary, optional application, and a loan that naturalizes is expected to leave the register.
 
-The system makes three claims of general interest to writing-system design. First, that a citation register can be built as a \emph{compositional diacritic grammar}: rather than inventing letters ad libitum, a small set of recurrent operations — most featurally atomic, one (the hook) relational to its base letter (\S\ref{sec:hook}) — derives the entire extension inventory. The analogy to Hangul is one of compositional logic, not of Sampson's (1985) strict shape-iconicity; systematic diacritic derivation is what Czech, Vietnamese, and the IPA already do, and only the laryngeal gradient (\S\ref{sec:hook}) reaches for genuinely featural letterforms (Sampson 1985; Kim-Renaud 1997).
+The system makes three claims of general interest to writing-system design.
 
-Second, that such a register can be assembled almost entirely from attested material: dead letters of the target orthography's own history and living letters of related orthographies, with invention reserved for genuine residue. Third, that the register-marking function that Japanese distributes over a second character inventory can instead be carried by a second \emph{typeface register} — realized here as an OpenType family whose substitution (GSUB) and positioning (GPOS) rules are the orthography's fusion and attachment rules, executable rather than merely described.
+First, that a citation register can be built as a \emph{compositional diacritic grammar}: rather than inventing letters ad libitum, a small set of recurrent operations — most featurally atomic, one (the hook) relational to its base letter (\S\ref{sec:hook}) — derives the entire extension inventory. The analogy to Hangul is one of compositional logic, not of Sampson's (1985) strict shape-iconicity; systematic diacritic derivation is what Czech, Vietnamese, and the IPA already do, and only the laryngeal gradient (\S\ref{sec:hook}) reaches for genuinely featural letterforms (Sampson 1985; Kim-Renaud 1997). Second, that such a register can be assembled almost entirely from attested material: dead letters of the target orthography's own history and living letters of related orthographies, with invention reserved for genuine residue. Third, that the register-marking function that Japanese distributes over a second character inventory can instead be carried by a second \emph{typeface register} — realized here as an OpenType family whose substitution (GSUB) and positioning (GPOS) rules are the orthography's fusion and attachment rules, executable rather than merely described.
 
 \section{Background}
 
@@ -101,14 +102,14 @@ Mark & Operation & Derivations \\
 \cz{ь} & palatalization & \cz{нь} \ph{ɲ} · \cz{ль} \ph{ʎ} · \cz{хь} \ph{ç} · \cz{сь} \ph{ɕ} \\
 \bottomrule
 \end{tabular}
-\caption{The featural operations. Each mark encodes a stable operation; most are featurally atomic, while the hook is relational to its base (\S\ref{sec:hook}). Precomposed Unicode letters are used where they exist.}
+\caption{The compositional operations. Each mark encodes a stable operation; most are featurally atomic, while the hook is relational to its base (\S\ref{sec:hook}). Precomposed Unicode letters are used where they exist.}
 \label{tab:grammar}
 \end{table}
 
 
 Table~\ref{tab:inventory} lays out the complete designed inventory — every letter the system adds to a Slavic Cyrillic base, set in the typeface itself.
 
-\begin{table}[ht]\centering\small
+\begin{table}[ht]\centering\footnotesize
 \begin{tabular}{llllll}
 \toprule
 Letter & Unicode & Value & Construction & Origin \\
@@ -149,7 +150,7 @@ Letter & Unicode & Value & Construction & Origin \\
 The three back fricatives that plague Cyrillic transcription of Arabic, English and German — \ph{x}, \ph{ħ}, \ph{h} — receive a designed gradient: articulatory weakening maps to graphic lightening. Native \cz{х} (\ph{x}$\sim$\ph{χ}) is two full crossing strokes, the densest friction; pharyngeal \cz{ҳ} (\ph{ħ}) is \cz{х} pulled deeper by the place hook; glottal \cz{һ} (\ph{h}$\sim$\ph{ɦ}) is a single open arc, literally the most open glyph of the three; and aspiration \cz{◌ʰ}, a feature rather than a segment, is \cz{һ} reduced to a superscript. Arabic exhibits the full triple within ordinary vocabulary: \cz{һила̄л} \ph{hilaːl}, \cz{Муҳаммад} \ph{muħammad}, \cz{Ха̄лид} \ph{xaːlid}. We suggest the mapping \emph{articulatory gradient $\rightarrow$ visual gradient} as a candidate principle for alphabet extension — a heuristic with a lineage in the featural conscripts, from Bell's \emph{Visible Speech} (1867), where glyph shape encodes articulation directly, through Shavian and Quikscript, though those aimed at whole-language reform rather than a citation register.
 
 \subsection{The Indic stress test}
-Hindi--Urdu and Bengali cross a four-way laryngeal contrast with a dental/retroflex place contrast. The grammar covers the entire grid with zero new letters: \cz{т}~\ph{t̪}, \cz{тʰ}~\ph{t̪ʰ}, \cz{д}~\ph{d̪}, \cz{дʱ}~\ph{d̪ʱ}; retroflex \cz{т̢ т̢ʰ д̢ д̢ʱ}, plus \cz{н̢}~\ph{ɳ}, \cz{р̢}~\ph{ɽ}, \cz{р̢ʱ}~\ph{ɽʱ}. A single word such as \cz{т̢ʰӣк} (\emph{ṭhīk}, \ph{ʈʰiːk}) composes three features on one base — hook, aspiration, length — which is precisely the featural claim made concrete.
+Hindi--Urdu and Bengali cross a four-way laryngeal contrast with a dental/retroflex place contrast. The grammar covers the entire grid with zero new letters: \cz{т}~\ph{t̪}, \cz{тʰ}~\ph{t̪ʰ}, \cz{д}~\ph{d̪}, \cz{дʱ}~\ph{d̪ʱ}; retroflex \cz{т̢ т̢ʰ д̢ д̢ʱ}, plus \cz{н̢}~\ph{ɳ}, \cz{р̢}~\ph{ɽ}, \cz{р̢ʱ}~\ph{ɽʱ}. A single word such as \cz{т̢ʰӣк} (\emph{ṭhīk}, \ph{ʈʰiːk}) composes three features on one base — hook, aspiration, length — which is precisely the compositional-grammar claim made concrete.
 
 \section{The ligature stratum}
 
@@ -162,7 +163,7 @@ Stress takes the grave of Bulgarian lexicography (\cz{ба̀бушкъ}); Mandar
 \section{From Bulgarian to the Slavic superset}
 \label{sec:panslavic}
 
-The pilot treated Bulgarian's thirty letters as the base. Nothing in the compositional grammar is Bulgarian-specific, however, and the generalization is administrative rather than structural. We use \emph{superset} in its set-theoretic sense — the union of the Slavic Cyrillic character inventories — and intend no pan-Slavist claim; the older political resonance of a ``unifying'' Slavic frame is precisely not the argument, as the Ukrainian constraint below makes concrete. the base becomes each language's own Cyrillic alphabet (for the phoneme inventories, see Comrie \& Corbett 1993), and the extension and prosodic strata apply unchanged.
+The pilot treated Bulgarian's thirty letters as the base. Nothing in the compositional grammar is Bulgarian-specific, however, and the generalization is administrative rather than structural. We use \emph{superset} in its set-theoretic sense — the union of the Slavic Cyrillic character inventories — and intend no pan-Slavist claim; the older political resonance of a ``unifying'' Slavic frame is precisely not the argument, as the Ukrainian constraint below makes concrete. The base becomes each language's own Cyrillic alphabet (for the phoneme inventories, see Comrie \& Corbett 1993), and the extension and prosodic strata apply unchanged.
 
 Concretely, the typeface's character set was widened to the Slavic Cyrillic superset — Russian \cz{э ё ы}, Ukrainian \cz{і ї є ґ}, Belarusian \cz{ў}, Serbian \cz{ј љ њ ђ ћ џ}, Macedonian \cz{ѕ ѓ ќ} — so that any Slavic Cyrillic text sets natively. (\cz{ѕ} is doubly loaded: a distinctive letter of the Macedonian alphabet and, as such, an emblem in the Bulgaria–North Macedonia language dispute. It is used here as shared Old Cyrillic heritage — current Cyrillic-wide before the nineteenth century, readopted by the 1944 Macedonian commission (Comrie \& Corbett 1993) — claimed as the property of neither side.)
 
@@ -251,7 +252,7 @@ Indonesian & Standard & \cz{ң ъ һ} & — & — \\
 \caption{Per-language audit summary. ``Extensions exercised'' lists the letters and marks the language's inventory actually requires; palatalization via \cz{ь} and length via \cz{◌̄} are counted where load-bearing. Mergers and losses are the declared ones of \S\ref{sec:mergers}.}
 \label{tab:audit}
 \end{table}
- Table~\ref{tab:examples} samples the audit; the full 125-item set is Appendix~\ref{app:audit}. Declared mergers\label{sec:mergers} are: all rhotics~$\rightarrow$~\cz{р}; \ph{ʂ}/\ph{ʃ}~$\rightarrow$~\cz{ш}; \ph{ɸ}/\ph{f}~$\rightarrow$~\cz{ф}; \ph{ɦ}/\ph{h}~$\rightarrow$~\cz{һ}; implosives~$\rightarrow$~\cz{б д}; \ph{q}/\ph{ɢ}~$\rightarrow$~\cz{қ} (so Persian \emph{ق} and \emph{غ}, one phoneme in the Tehran reference, both~$\rightarrow$~\cz{қ}); the pharyngealized emphatics \ph{tˤ dˤ sˤ ðˤ}~$\rightarrow$~plain \cz{т д с ҙ} (Arabic); the open/close mid vowels \ph{e}/\ph{ɛ}~$\rightarrow$~\cz{е}, \ph{o}/\ph{ɔ}~$\rightarrow$~\cz{о}, and \ph{ø}/\ph{œ}~$\rightarrow$~\cz{ӧ} (Romance, Bengali); Korean tense (fortis) consonants written as geminates (one analysis of the contrast); English input referenced to a rhotic accent (GA), with tense \ph{i}/\ph{u} written \cz{ӣ}/\cz{ӯ} although General American has no phonemic length — a transcription convention imported for reader familiarity, flagged rather than hidden. \ph{ʕ} is written (\cz{Ӏ}) but \ph{ʔ} is assigned no grapheme and is dropped throughout. Declared losses are prosodic, with one segmental case: Mandarin Tone~1 and the neutral tone are both unmarked and so coincide; six-tone systems fold into four marks; and Vietnamese phonemic vowel length is neutralized wherever a tone mark is present (length drops under tone). A rendering that engages none of these is \emph{exact} in the Method's sense.
+ Table~\ref{tab:examples} samples the audit; the full 125-item set is Appendix~\ref{app:audit}. Declared mergers\label{sec:mergers} are: all rhotics~$\rightarrow$~\cz{р}; \ph{ʂ}/\ph{ʃ}~$\rightarrow$~\cz{ш}; \ph{ɸ}/\ph{f}~$\rightarrow$~\cz{ф}; \ph{ɦ}/\ph{h}~$\rightarrow$~\cz{һ}; implosives~$\rightarrow$~\cz{б д}; \ph{q}/\ph{ɢ}~$\rightarrow$~\cz{қ} (so Persian {\ipafont ق} and {\ipafont غ}, one phoneme in the Tehran reference, both~$\rightarrow$~\cz{қ}); the pharyngealized emphatics \ph{tˤ dˤ sˤ ðˤ}~$\rightarrow$~plain \cz{т д с ҙ} (Arabic); the open/close mid vowels \ph{e}/\ph{ɛ}~$\rightarrow$~\cz{е}, \ph{o}/\ph{ɔ}~$\rightarrow$~\cz{о}, and \ph{ø}/\ph{œ}~$\rightarrow$~\cz{ӧ} (Romance, Bengali); Korean tense (fortis) consonants written as geminates (one analysis of the contrast); English input referenced to a rhotic accent (GA), with tense \ph{i}/\ph{u} written \cz{ӣ}/\cz{ӯ} although General American has no phonemic length — a transcription convention imported for reader familiarity, flagged rather than hidden. \ph{ʕ} is written (\cz{Ӏ}) but \ph{ʔ} is assigned no grapheme and is dropped throughout. Declared losses are prosodic, with one segmental case: Mandarin Tone~1 and the neutral tone are both unmarked and so coincide; six-tone systems fold into four marks; and Vietnamese phonemic vowel length is neutralized wherever a tone mark is present (length drops under tone). A rendering that engages none of these is \emph{exact} in the Method's sense.
 
 \begin{table}[ht]\centering\small
 \begin{tabular}{llll}
