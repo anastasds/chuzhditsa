@@ -29,7 +29,7 @@ The conceptual claim is scoped to what the artifact supports: parametric type
 fails as a theory of all letterforms and succeeds as a theory of one design
 language at a time -- Hofstadter's half of the 1982 debate for the quantifier
 "all," Knuth's for "one at a time." The complete source, fonts, and shaping-
-test harness are public at [repository URL / Zenodo DOI]; a preprint is at
+test harness are public at https://github.com/anastasds/chuzhditsa (Zenodo DOI to be minted); a preprint is at
 arXiv:[id]. The work was constructed and drafted by a language model under my
 direction and criticism; that process is itself documented in a companion
 paper, and I take full authorial responsibility for the submission.
@@ -64,7 +64,7 @@ audit; it does *not* claim communicative success. Whether readers recover
 pronunciations, whether transcribers converge, and whether the typeface reads
 as "citation" rather than "archaic" are empirical questions I identify as the
 next study rather than answer here. The full mapping, the machine-readable
-audit dataset, and the fonts are public at [repository URL / Zenodo DOI]; a
+audit dataset, and the fonts are public at https://github.com/anastasds/chuzhditsa (Zenodo DOI to be minted); a
 preprint is at arXiv:[id]. A companion paper documents the typeface's
 construction, and the system was constructed and drafted by a language model
 under my direction, for which I take full authorial responsibility.

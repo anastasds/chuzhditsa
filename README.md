@@ -28,8 +28,6 @@ Designed and directed by **Anastas Stoyanovsky**; constructed, under his critici
 Claude (Anthropic) — the process itself is documented in the third paper,
 [paper/process.pdf](paper/process.pdf).
 
-> Naming note: the system is *Chuzhditsa/чуждица*; this repository's slug (`chuzbitza`)
-> predates the final name.
 
 ## Quickstart
 
