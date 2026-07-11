@@ -48,11 +48,11 @@ Anastas Stoyanovsky
 
 Dear Editors,
 
-I am submitting *Chuzhditsa: a featural citation register for Cyrillic, from
+I am submitting *Chuzhditsa: a phonological citation register for Cyrillic, from
 Bulgarian to the Slavic superset* for consideration. The paper identifies a
 functional layer that most orthographies lack -- phonological citation, between
 loanword adaptation and technical transcription -- and works out one concrete,
-implementable occupant of it for Slavic Cyrillic: a featural grammar of
+implementable occupant of it for Slavic Cyrillic: a compositional grammar of
 diacritic operations assembled from attested Cyrillic material, a prosodic
 stratum, and a register-marking typeface whose Glagolitic-derived forms carry
 the "foreignness" signal that Japanese distributes over katakana.
@@ -101,8 +101,8 @@ demonstration of a superior workflow, and the limitations section is candid
 about n=1, retrospective intent, and a favorable task. The paper was itself
 drafted by the participating model under my direction, which the manuscript
 discloses and analyzes as part of its subject; I take full authorial
-responsibility. The companion papers it studies are public at [repository URL /
-Zenodo DOI] and at arXiv:[id typeface], arXiv:[id orthography], so the
+responsibility. The companion papers it studies are public at
+https://github.com/anastasds/chuzhditsa and at arXiv:[id typeface], arXiv:[id orthography], so the
 artifacts it describes are independently inspectable.
 
 Sincerely,
