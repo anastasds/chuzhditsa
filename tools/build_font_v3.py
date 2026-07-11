@@ -7,8 +7,9 @@ stack, same output conventions, writes to ../fonts/v3/.
 
 v3 engine features vs build_font.py:
   - tangent-angle contrast: w(theta) = wh + (wv-wh)|sin theta|^1.3, wh = 0.90 wv
-  - two-case skeletons on x-height 500 / cap 700 with class-derived fitting
-    (flat 42 / round 34 / diagonal 28 per side, text master)
+  - two-case skeletons on x-height 500 / cap 700; fitting is a per-family
+    scalar sidebearing over per-glyph advances baked into the skeletons
+    (the R/F/D/T/A/O side classes drive kerning only, not fitting)
   - elliptical bowls: +48u vertical radius, overshooting the rounded-terminal
     envelope, not the guides
   - aperture parameter (55 deg) with bar termini flush at arc tips: r cos(.75a)
@@ -28,8 +29,11 @@ are ALL built here, per family, so every family carries the same ~175 codepoints
 plus liga + mark + kern features (merged from the migration in build_font.py).
 
 Run:  python3 tools/build_font_v3.py
+Reproducible: head timestamps are pinned via SOURCE_DATE_EPOCH (overridable
+in the environment), so identical sources produce byte-identical binaries.
 """
 import math, os
+os.environ.setdefault("SOURCE_DATE_EPOCH", "1767225600")  # 2026-01-01T00:00:00Z
 from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen

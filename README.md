@@ -64,6 +64,8 @@ python3 -m pip install -r tools/requirements.txt
 
 python3 tools/build_font.py    # 1. build all 8 font files into fonts/
 python3 tools/build_font_v3.py # 1b. build the four v3 families (2b/Grotesk/Serif/Inline) into fonts/v3/
+#     builds are byte-reproducible: head timestamps are pinned via SOURCE_DATE_EPOCH
+#     (set in-script, overridable in the environment) — identical source, identical bytes
 python3 tools/gen_docs.py      # 2. regenerate the three main docs + specimen.html (after step 1)
 python3 tools/proof.py         # 3. optional: render tools/proof.png (HarfBuzz-shaped proof sheet)
 python3 tools/render_hero.py   # 4. optional: regenerate docs/hero*.png
