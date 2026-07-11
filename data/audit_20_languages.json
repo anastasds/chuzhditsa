@@ -86,9 +86,9 @@
       "ъ",
       "ҫ"
      ],
-     "note_bg": "ъ /ɜː/, ҫ /θ/",
-     "note_en": "ъ /ɜː/, ҫ /θ/",
-     "note_uk": "ъ /ɜː/, ҫ /θ/"
+     "note_bg": "ъ /ɝ/, ҫ /θ/",
+     "note_en": "ъ /ɝ/, ҫ /θ/",
+     "note_uk": "ъ /ɝ/, ҫ /θ/"
     },
     {
      "word": "world",
@@ -104,8 +104,8 @@
     },
     {
      "word": "squirrel",
-     "ipa": "/ˈskwɪrəl/",
-     "chuzhditsa": "скўиръл",
+     "ipa": "/ˈskwɝəl/",
+     "chuzhditsa": "скўъръл",
      "extensions": [
       "ў",
       "ъ"
@@ -139,7 +139,7 @@
     },
     {
      "word": "cat · cut · cart",
-     "ipa": "/kæt/ /kʌt/ /kɑɹt/",
+     "ipa": "/kæt/ /kʌt/ /kɑrt/",
      "chuzhditsa": "кӓт · кът · карт",
      "extensions": [
       "ӓ",
@@ -157,7 +157,7 @@
    "name_uk": "Мандаринська · Mandarin",
    "reference_variety": "Standard (Beijing)",
    "mergers": "tʂ tɕ → ч; ʐ → ж",
-   "losses": "tone sandhi",
+   "losses": "tone sandhi; T1 = neutral tone",
    "extensions_exercised": [
     "◌̌",
     "ң",
@@ -317,7 +317,7 @@
     },
     {
      "word": "घर ghar",
-     "ipa": "/ɡʱər/",
+     "ipa": "/ɡʱəɾ/",
      "chuzhditsa": "гʱър",
      "extensions": [
       "ʱ",
@@ -449,12 +449,12 @@
     {
      "word": "Madrid",
      "ipa": "/maˈðɾið/",
-     "chuzhditsa": "Мадриҙ",
+     "chuzhditsa": "Маҙриҙ",
      "extensions": [
       "ҙ"
      ],
-     "note_bg": "крайно /ð/ → ҙ",
-     "note_en": "final /ð/ → ҙ",
+     "note_bg": "/ð/ → ҙ",
+     "note_en": "/ð/ → ҙ",
      "note_uk": "кінцеве /ð/ → ҙ"
     },
     {
@@ -473,7 +473,7 @@
    "name_bg": "Френски · French",
    "name_uk": "Французька · French",
    "reference_variety": "Parisian",
-   "mergers": "ʁ → р",
+   "mergers": "ʁ → р; ɛ ɔ œ → е о ӧ",
    "losses": "—",
    "extensions_exercised": [
     "ѫ",
@@ -488,7 +488,7 @@
    "examples": [
     {
      "word": "bonjour",
-     "ipa": "/bɔ̃ˈʒuʁ/",
+     "ipa": "/bɔ̃ʒuʁ/",
      "chuzhditsa": "бѫжур",
      "extensions": [
       "ѫ"
@@ -555,7 +555,7 @@
     },
     {
      "word": "parfum",
-     "ipa": "/paʁˈfœ̃/",
+     "ipa": "/paʁfœ̃/",
      "chuzhditsa": "парфӧ̨",
      "extensions": [
       "ӧ",
@@ -594,7 +594,7 @@
    "name_bg": "Арабски · Arabic (MSA)",
    "name_uk": "Арабська · Arabic (MSA)",
    "reference_variety": "Modern Standard Arabic",
-   "mergers": "χ → х",
+   "mergers": "χ → х; emphatics → plain",
    "losses": "—",
    "extensions_exercised": [
     "һ",
@@ -689,13 +689,12 @@
    "name_bg": "Бенгалски · Bengali",
    "name_uk": "Бенгальська · Bengali",
    "reference_variety": "Standard (Kolkata)",
-   "mergers": "—",
+   "mergers": "ɔ → о",
    "losses": "—",
    "extensions_exercised": [
     "◌̢",
     "ʱ",
-    "ʰ",
-    "◌̄"
+    "ʰ"
    ],
    "examples": [
     {
@@ -778,10 +777,9 @@
     {
      "word": "ধন্যবাদ dhonnobād",
      "ipa": "/d̪ʱɔnnobad̪/",
-     "chuzhditsa": "дʱонноба̄д",
+     "chuzhditsa": "дʱоннобад",
      "extensions": [
-      "ʱ",
-      "◌̄"
+      "ʱ"
      ],
      "note_bg": "дʱ + геминат",
      "note_en": "дʱ + geminate",
@@ -794,7 +792,7 @@
    "name_bg": "Португалски · Portuguese",
    "name_uk": "Португальська · Portuguese",
    "reference_variety": "Brazilian",
-   "mergers": "ʁ → р",
+   "mergers": "ʁ → р; ɛ ɔ → е о",
    "losses": "—",
    "extensions_exercised": [
     "◌̨"
@@ -888,7 +886,7 @@
     },
     {
      "word": "бабушка",
-     "ipa": "/ˈbabuʂkə/",
+     "ipa": "/ˈbabʊʂkə/",
      "chuzhditsa": "бабушка",
      "extensions": [],
      "note_bg": "фонемно, не фонетично: редукцията не се записва",
@@ -920,7 +918,7 @@
    "name_bg": "Японски · Japanese",
    "name_uk": "Японська · Japanese",
    "reference_variety": "Tokyo",
-   "mergers": "ɸ → ф; ɯ → у",
+   "mergers": "ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н",
    "losses": "pitch accent",
    "extensions_exercised": [
     "◌̄",
@@ -1005,6 +1003,7 @@
    "losses": "—",
    "extensions_exercised": [
     "ӱ",
+    "ъ",
     "ӧ",
     "◌̄"
    ],
@@ -1012,9 +1011,10 @@
     {
      "word": "München",
      "ipa": "/ˈmʏnçən/",
-     "chuzhditsa": "Мӱнхьен",
+     "chuzhditsa": "Мӱнхьън",
      "extensions": [
-      "ӱ"
+      "ӱ",
+      "ъ"
      ],
      "note_bg": "ӱ /ʏ/ + хь /ç/ ich-Laut",
      "note_en": "ӱ /ʏ/ + хь /ç/ ich-Laut",
@@ -1182,8 +1182,8 @@
     },
     {
      "word": "Việt Nam",
-     "ipa": "/vjət̚ naːm/",
-     "chuzhditsa": "Вьет На̄м",
+     "ipa": "/vjə̀t̚ naːm/",
+     "chuzhditsa": "Вьѐт На̄м",
      "extensions": [
       "◌̄"
      ],
@@ -1205,7 +1205,7 @@
     },
     {
      "word": "nước",
-     "ipa": "/nɨək/",
+     "ipa": "/nɨə́k/",
      "chuzhditsa": "ны́ък",
      "extensions": [
       "ы",
@@ -1461,7 +1461,7 @@
    "examples": [
     {
      "word": "dhahabu",
-     "ipa": "/ðahaˈbu/",
+     "ipa": "/ðaˈhabu/",
      "chuzhditsa": "ҙаһабу",
      "extensions": [
       "ҙ",
@@ -1713,8 +1713,8 @@
      "extensions": [
       "ң"
      ],
-     "note_bg": "ң в три позиции",
-     "note_en": "ң in three positions",
+     "note_bg": "ң в две позиции",
+     "note_en": "ң in two positions",
      "note_uk": "ң у трьох позиціях"
     }
    ]

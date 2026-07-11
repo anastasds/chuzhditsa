@@ -66,7 +66,7 @@
     {"ipa": "æ", "graphemes": "ӓ", "codepoints": ["U+04D3"]},
     {"ipa": "ə ʌ ɜ", "graphemes": "ъ", "context": "word-final unstressed schwa keeps the source vowel letter (Гӧ̄те, бабушка)"},
     {"ipa": "a ɑ", "graphemes": "а"},
-    {"ipa": "ɨ ɯ", "graphemes": "ы"},
+    {"ipa": "ɨ", "graphemes": "ы", "note": "Korean ɯ → ы; Japanese ɯ → у by declared convention"},
     {"ipa": "y ʏ", "graphemes": "ӱ", "codepoints": ["U+04F1"]},
     {"ipa": "ø œ", "graphemes": "ӧ", "codepoints": ["U+04E7"]},
     {"ipa": "ɔ̃ õ", "graphemes": "ѫ", "codepoints": ["U+046B"]},

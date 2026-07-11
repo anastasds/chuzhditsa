@@ -191,12 +191,12 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | thanks | /θæŋks/ | **ҫӓңкс** | ҫ /θ/, ӓ /æ/, ң /ŋ/ — three new letters |
 | this | /ðɪs/ | **ҙис** | ҙ /ð/ |
 | thriller | /ˈθrɪlɚ/ | **ҫрилър** | ҫ + ъ for /ə/ |
-| birthday | /ˈbɝθdeɪ/ | **бърҫдей** | ъ /ɜː/, ҫ /θ/ |
+| birthday | /ˈbɝθdeɪ/ | **бърҫдей** | ъ /ɝ/, ҫ /θ/ |
 | world | /wɝld/ | **ўърлд** | ў + ър |
-| squirrel | /ˈskwɪrəl/ | **скўиръл** | ў in a cluster |
+| squirrel | /ˈskwɝəl/ | **скўъръл** | ў in a cluster |
 | Harry | /ˈhæri/ | **Һӓри** | һ /h/, ӓ /æ/ |
 | ring | /rɪŋ/ | **риң** | ң — no fake г |
-| cat · cut · cart | /kæt/ /kʌt/ /kɑɹt/ | **кӓт · кът · карт** | minimal triple preserved |
+| cat · cut · cart | /kæt/ /kʌt/ /kɑrt/ | **кӓт · кът · карт** | minimal triple preserved |
 
 ### Mandarin
 
@@ -218,7 +218,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | धन्यवाद dhanyavād | /d̪ʱənjəˈʋaːd̪/ | **дʱънйъва̄д** | дʱ, two schwas → ъ |
 | ठीक ṭhīk | /ʈʰiːk/ | **т̢ʰӣк** | retroflex ◌̢ + aspiration + length |
 | दिल्ली Dillī | /d̪ɪlliː/ | **Диллӣ** | dental д, no hook; geminate |
-| घर ghar | /ɡʱər/ | **гʱър** | гʱ breathy г |
+| घर ghar | /ɡʱəɾ/ | **гʱър** | гʱ breathy г |
 | झील jhīl | /dʒʱiːl/ | **џʱӣл** | џʱ — voiced affricate with breathiness |
 | चाय chāy | /tʃaːj/ | **ча̄й** | ч |
 | पानी pānī | /paːniː/ | **па̄нӣ** | double length |
@@ -233,20 +233,20 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | jamón | /xaˈmon/ | **хамон** | j = /x/ → native х |
 | agua | /ˈaɣwa/ | **ағўа** | ғ /ɣ/ + ў /w/ |
 | niño | /ˈniɲo/ | **ниньо** | ɲ → нь (native mechanism) |
-| Madrid | /maˈðɾið/ | **Мадриҙ** | final /ð/ → ҙ |
+| Madrid | /maˈðɾið/ | **Маҙриҙ** | /ð/ → ҙ |
 | paella | /paˈeʎa/ | **паелья** | ʎ → ль |
 
 ### French
 
 | word | IPA | chuzhditsa | what it shows |
 |---|---|---|---|
-| bonjour | /bɔ̃ˈʒuʁ/ | **бѫжур** | ѫ /ɔ̃/ — the resurrected yus |
+| bonjour | /bɔ̃ʒuʁ/ | **бѫжур** | ѫ /ɔ̃/ — the resurrected yus |
 | vin | /vɛ̃/ | **вѧ** | ѧ /ɛ̃/ |
 | blanc | /blɑ̃/ | **бла̨** | а̨ /ɑ̃/ — the yus tail, by rule |
 | croissant | /kʁwasɑ̃/ | **крўаса̨** | ў + а̨ |
 | deux | /dø/ | **дӧ** | ӧ /ø/ |
 | rue | /ʁy/ | **рӱ** | ӱ /y/ |
-| parfum | /paʁˈfœ̃/ | **парфӧ̨** | ӧ̨ /œ̃/ — umlaut + nasal, two marks |
+| parfum | /paʁfœ̃/ | **парфӧ̨** | ӧ̨ /œ̃/ — umlaut + nasal, two marks |
 | bien | /bjɛ̃/ | **бѩ** | ѩ /jɛ̃/ — the iotated yus, a ligature |
 | grenouille | /ɡʁənuj/ | **грънуй** | schwa → ъ |
 
@@ -273,7 +273,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | মিষ্টি mishṭi | /miʃʈi/ | **мишт̢и** | ш + т̢ in a cluster |
 | ভাই bhāi | /bʱai/ | **бʱай** | бʱ |
 | মাছ māchh | /mat͡ɕʰ/ | **мачʰ** | final aspiration |
-| ধন্যবাদ dhonnobād | /d̪ʱɔnnobad̪/ | **дʱонноба̄д** | дʱ + geminate |
+| ধন্যবাদ dhonnobād | /d̪ʱɔnnobad̪/ | **дʱоннобад** | дʱ + geminate |
 
 ### Portuguese
 
@@ -291,7 +291,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 |---|---|---|---|
 | мышь | /mɨʂ/ | **мыш** | ы comes back home; no silent ь |
 | Хрущёв | /xrʊˈɕːɵf/ | **Хрушчов** | Rus. щ /ɕː/ ≠ Bul. щ /ʃt/ |
-| бабушка | /ˈbabuʂkə/ | **бабушка** | phonemic, not phonetic: reduction goes unwritten |
+| бабушка | /ˈbabʊʂkə/ | **бабушка** | phonemic, not phonetic: reduction goes unwritten |
 | ёлка | /ˈjɵlkə/ | **йолка** | ё → йо |
 | Пётр | /pʲɵtr/ | **Пьотр** | palatalization with ь |
 
@@ -310,7 +310,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 
 | word | IPA | chuzhditsa | what it shows |
 |---|---|---|---|
-| München | /ˈmʏnçən/ | **Мӱнхьен** | ӱ /ʏ/ + хь /ç/ ich-Laut |
+| München | /ˈmʏnçən/ | **Мӱнхьън** | ӱ /ʏ/ + хь /ç/ ich-Laut |
 | Goethe | /ˈɡøːtə/ | **Гӧ̄те** | long ӧ̄ /øː/ |
 | Zürich | /ˈtsyːʁɪç/ | **Цӱ̄рихь** | ц + ӱ̄ |
 | Straße | /ˈʃtʁaːsə/ | **штра̄се** | шт cluster — native to Bulgarian |
@@ -332,9 +332,9 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | word | IPA | chuzhditsa | what it shows |
 |---|---|---|---|
 | phở | /fəː˧˩˧/ | **фъ̌** | ъ /əː/ + tone ◌̌ (length drops under tone) |
-| Việt Nam | /vjət̚ naːm/ | **Вьет На̄м** | ье |
+| Việt Nam | /vjə̀t̚ naːm/ | **Вьѐт На̄м** | ье |
 | Hà Nội | /haː nôj/ | **Һа̀ Но̀й** | һ + tones |
-| nước | /nɨək/ | **ны́ък** | ы /ɨ/ + rising tone |
+| nước | /nɨə́k/ | **ны́ък** | ы /ɨ/ + rising tone |
 | bánh mì | /ɓajŋ mì/ | **ба́нь мѝ** | implosive ɓ → б (merged) |
 
 ### Turkish
@@ -366,13 +366,13 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | قم Qom | /ɢom/ | **Қом** | қ /ɢ/ |
 | خدا khodā | /xoˈdɒː/ | **хода̄** | х /x/ |
 | شیراز Shirāz | /ʃiːˈɾɒːz/ | **Шӣра̄з** | ӣ + а̄ |
-| دوغ dugh | /duːɣ/ | **дӯғ** | ӯ + final ғ |
+| دوغ dugh | /duːɢ/ | **дӯқ** | ق/غ merged in Tehran → қ |
 
 ### Swahili
 
 | word | IPA | chuzhditsa | what it shows |
 |---|---|---|---|
-| dhahabu | /ðahaˈbu/ | **ҙаһабу** | ҙ + һ (Arabic loans in Swahili) |
+| dhahabu | /ðaˈhabu/ | **ҙаһабу** | ҙ + һ (Arabic loans in Swahili) |
 | thelathini | /θelaˈθini/ | **ҫелаҫини** | double ҫ |
 | ng'ombe | /ŋombe/ | **ңомбе** | initial ң — impossible today |
 | ghali | /ɣali/ | **ғали** | ғ |
@@ -406,7 +406,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | bahasa | /baˈhasa/ | **баһаса** | һ |
 | terima kasih | /təˈrima ˈkasih/ | **търима касиһ** | schwa → ъ, final һ |
 | nyanyi | /ɲaɲi/ | **няньи** | нь |
-| ngomong | /ŋɔmɔŋ/ | **ңомоң** | ң in three positions |
+| ngomong | /ŋɔmɔŋ/ | **ңомоң** | ң in two positions |
 
 ## Tone and stress: merits and shortcomings
 
