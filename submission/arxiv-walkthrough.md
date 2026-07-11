@@ -7,8 +7,8 @@ these are the account, endorsement, and submit actions the builder cannot do.
 
 ## 0. One-time setup
 
-1. Register at arxiv.org with a **personal or academic email — not the
-   company (lindenpmg) address**; this project stays off the business identity.
+1. Register at arxiv.org with the personal address **anastas@stoyanovs.ky** (not
+   the company lindenpmg address); this project stays off the business identity.
    The registration email becomes the semi-public author contact on the record,
    so pick one you're content to keep. An academic address (if you have any
    affiliation) can auto-qualify you and skip endorsement; a personal address

@@ -64,7 +64,7 @@ a follow-up.
 Full package and the underlying research repository available on request.
 
 Anastas Stoyanovsky
-[contact]
+Unaffiliated · anastas@stoyanovs.ky
 
 ## Disclosure standard for any real submission — **[you]**
 

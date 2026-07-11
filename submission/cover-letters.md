@@ -40,7 +40,7 @@ welcome the journal arranging.
 
 Sincerely,
 Anastas Stoyanovsky
-[contact]
+Unaffiliated · anastas@stoyanovs.ky
 
 ---
 
@@ -75,7 +75,7 @@ help in arranging it.
 
 Sincerely,
 Anastas Stoyanovsky
-[contact]
+Unaffiliated · anastas@stoyanovs.ky
 
 ---
 
@@ -107,4 +107,4 @@ artifacts it describes are independently inspectable.
 
 Sincerely,
 Anastas Stoyanovsky
-[contact]
+Unaffiliated · anastas@stoyanovs.ky
