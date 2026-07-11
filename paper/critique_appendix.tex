@@ -33,5 +33,22 @@
 27 & all of these are offset. look online at typesetting manuals and guides to figure out how to do this properly & defect* & \texttt{b305f0d} \\
 28 & this is a typeface paper that can't make a typeface. look at online guides about how to make typefaces to figure out what you're doing wrong & redirection & \texttt{b305f0d} \\
 29 & now look at existing fonts to learn how to kern & redirection & \texttt{f77ef68} \\
+\midrule
+\multicolumn{4}{@{}l}{\emph{Second window: the submission day (11 July); timestamps approximated by the answering commit.}} \\
+\midrule
+30 & we have new arrivals from Claude Design: build\_font\_v3 (1).py, typeface (4).tex, Chuzhditsa Fonts - let's bring them all in and update all the papers. in particular, use the inline font for the paper, but discuss all the variations, making sure to pull in what Claude Design contributed to the typeface tex & logistics & \texttt{d43519f} \\
+31 & the chuzhditsa paper doesn't seem to have been regenerated with the new font. has the typeface paper been updated with learnings? can the python script exactly reproduce these fonts? & verification & \texttt{448095c} \\
+32 & the chuzhditza paper should be using the inline font - the one it is using now looks terrible & defect & \texttt{fb0001e} \\
+33 & just use the font directly without modification, it's rendering wrong & redirection* & \texttt{5987415} \\
+34 & why does it look weirdly bold? & defect & \texttt{2d75b53} \\
+35 & it still doesn;t flow well, is this the inline variant being used? & defect* & \texttt{0701dc6} \\
+36 & it looks a lot better, but I did notice that there are a lot of long paragraphs, let's break them up for readability without sacrificing any of the useful language & redirection & \texttt{41711af} \\
+37 & and wouldn't it be a better title if it were cut off to just be "Chuzhditsa: a phonological citation register for Cyrillic"? & redirection & \texttt{41711af} \\
+38 & also I am sure that we can condense the abstract down to about half its size & redirection & \texttt{41711af} \\
+39 & alright then I think the chuzhditsa paper should be ready to be uploaded to lingbuzz - I'm going to review the typeface paper next, and am already started on it. anything left to do for either? & logistics* & \texttt{2fe9a5a} \\
+40 & the typeface paper is not updated with the latest fonts & defect & \texttt{9453c36} \\
+41 & the chudhista font is unreadable with this distance between letters, it needs an increased inter letter distance to be readable & defect & \texttt{2fe9a5a} \\
+42 & and the font is still too bold & defect & \texttt{2fe9a5a} \\
+43 & update the typeface and process papers & logistics & \texttt{HEAD} \\
 \bottomrule
 \end{longtable}
