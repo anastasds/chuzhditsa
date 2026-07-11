@@ -1,0 +1,93 @@
+Plain-text abstracts for arXiv (LaTeX stripped; object-language and IPA
+rendered as plain Unicode). Paste into the arXiv abstract field verbatim.
+
+================================================================
+THE LETTER AS A PROGRAM: CONSTRUCTING THE CHUZHDITSA TYPEFACE
+arXiv primary: cs.GR   cross-list: cs.DL, cs.CL
+================================================================
+
+This is a case study in parametric typeface construction for a designed
+Cyrillic orthographic register. Chuzhditsa is a four-style Cyrillic family
+(Regular, Bold, Italic, Bold Italic; TTF and CFF) generated entirely from
+centerline primitives -- lines, arcs, rings -- by a stroke-expansion engine
+in which weight, slant, terminals, joins, fitting, and a canon of optical
+corrections are code. We document the engine and, in detail, the corrections
+that separate a naively expanded stroke font from a typographically credible
+one: butt and cut terminals, mitered path chaining, curvature-clamped weight,
+widened bold advances, overshoots and optical centering. We then show how the
+font's OpenType layer functions as an executable reference implementation of
+the orthography it serves -- ligature lookup order, computed mark anchors, and
+normalization coverage make prose-level spelling rules machine-testable -- and
+close with a small instrumented evaluation of mark survival and confusable-pair
+contrast at reading sizes, and with a readability revision that the parametric
+claim made cheap: a tangent-angle contrast function, an aperture parameter, a
+two-master optical-size split, and a class-kerning matrix rebuilt from an audit
+of the shipped binaries. The conceptual claim is deliberately scoped:
+parametric type fails as a theory of all letterforms and succeeds as a theory
+of one design language at a time.
+
+================================================================
+CHUZHDITSA: A FEATURAL CITATION REGISTER FOR CYRILLIC,
+FROM BULGARIAN TO THE SLAVIC SUPERSET
+arXiv primary: cs.CL   cross-list: cs.DL
+================================================================
+
+Between ordinary orthography and specialist transcription lies a mostly
+unoccupied middle layer: a conventional way to write a foreign word, name, or
+example in the native script so that a reader can recover an adequate
+approximation of its source pronunciation without technical training. No major
+Slavic Cyrillic orthography occupies that layer -- foreign words enter through
+ad hoc transcription, and the result is systematic indeterminacy (Bulgarian
+Вашингтон ~ Уошингтън). We present Chuzhditsa (Bulg. чуждица, 'foreignism'), a
+computable, Cyrillic-based phonological citation register for foreign words,
+names, and pedagogical transcription; its secondary use is as a visual register
+for unassimilated loans. The nearest existing precedent is Japanese katakana,
+which shows a visually distinct foreignness register can operate at national
+scale -- though katakana adapts loans into native phonology, where a citation
+register must extend the inventory to preserve source contrasts. The system is
+constructed from attested Cyrillic material and evaluated for internal
+consistency, cross-linguistic coverage, and typographic implementability. It
+supplies (i) a featural grammar of diacritic operations deriving letters for
+non-Slavic phonemes, (ii) a prosodic layer for stress, tone, and length, and
+(iii) a register-marking typeface whose Glagolitic-derived forms perform the
+katakana function visually. We evaluate the system against the phonologies of
+twenty major languages under declared reference varieties and a three-way
+coverage classification, generalize it from a Bulgarian pilot to the full
+Slavic Cyrillic superset, and describe a parametric OpenType implementation in
+which the orthography's fusion and anchoring rules are executable GSUB/GPOS
+code. What is demonstrated is a coherent, technically implementable candidate
+evaluated by an internally scored audit; communicative success -- pronunciation
+recovery, transcriber convergence, register perception -- is identified as the
+next experiment, not claimed here.
+
+================================================================
+THE CRITIC AND THE BUILDER: HOW THE CHUZHDITSA PAPERS WERE WRITTEN
+arXiv primary: cs.HC   cross-list: cs.CL, cs.SE, cs.AI
+================================================================
+
+Two companion papers -- an orthography paper proposing a featural citation
+register for Cyrillic, and a typeface paper documenting its parametric
+implementation -- were produced in a single day of collaboration between a
+human and a large language model. This paper is about the day; its claims stand
+or fall independently of the companions' theses. It is an n=1 process study in
+the autoethnographic tradition, written against a complete audit trail: a
+thirty-six-commit repository history, verbatim conversation transcripts, and a
+running lab-notebook memory file. The division of labor is sharply asymmetric
+and, by the author's own later account, deliberately so: he set out to test
+whether a model could perform skilled work he could not himself perform, and
+withheld directions toward solutions by design, offering judgment alone. The
+human contributed no code and almost no prose; the model contributed
+essentially all of both. What the human contributed was criticism: twenty-five
+utterances totalling 401 words, nearly all of them verdicts on rendered
+artifacts, which drove fourteen commits and some 570 inserted lines. Every
+quantitative claim is recomputed from the archived record by an audit script
+that ships with the paper, and the full utterance corpus is printed and coded
+in an appendix. The paper's central observation is that the criticism changed
+the builder's operative method, not merely its outputs: from patching to
+preserving relationships, from trusting compilation to testing behavior, from
+deriving conventions to measuring exemplars, from local repairs to reusable
+checks. We position the episode against the automation literature and offer it
+as a documented case worth instrumenting, not as a demonstrated superior
+workflow. The paper closes with the authorship accounting current editorial
+policy requires -- made reflexively awkward, and therefore explicit, by the
+fact that the model wrote this sentence.
