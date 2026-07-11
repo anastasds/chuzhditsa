@@ -27,38 +27,35 @@ parametric type fails as a theory of all letterforms and succeeds as a theory
 of one design language at a time.
 
 ================================================================
-CHUZHDITSA: A FEATURAL CITATION REGISTER FOR CYRILLIC,
-FROM BULGARIAN TO THE SLAVIC SUPERSET
-arXiv primary: cs.CL   cross-list: cs.DL
+CHUZHDITSA: A PHONOLOGICAL CITATION REGISTER FOR CYRILLIC
+LingBuzz primary; arXiv optional: cs.CL   cross-list: cs.DL
 ================================================================
 
-Between ordinary orthography and specialist transcription lies a mostly
-unoccupied middle layer: a conventional way to write a foreign word, name, or
-example in the native script so that a reader can recover an adequate
-approximation of its source pronunciation without technical training. No major
-Slavic Cyrillic orthography occupies that layer -- foreign words enter through
-ad hoc transcription, and the result is systematic indeterminacy (Bulgarian
-Вашингтон ~ Уошингтън). We present Chuzhditsa (Bulg. чуждица, 'foreignism'), a
-computable, Cyrillic-based phonological citation register for foreign words,
-names, and pedagogical transcription; its secondary use is as a visual register
-for unassimilated loans. The nearest existing precedent is Japanese katakana,
-which shows a visually distinct foreignness register can operate at national
-scale -- though katakana adapts loans into native phonology, where a citation
-register must extend the inventory to preserve source contrasts. The system is
-constructed from attested Cyrillic material and evaluated for internal
-consistency, cross-linguistic coverage, and typographic implementability. It
-supplies (i) a featural grammar of diacritic operations deriving letters for
-non-Slavic phonemes, (ii) a prosodic layer for stress, tone, and length, and
-(iii) a register-marking typeface whose Glagolitic-derived forms perform the
-katakana function visually. We evaluate the system against the phonologies of
-twenty major languages under declared reference varieties and a three-way
-coverage classification, generalize it from a Bulgarian pilot to the full
-Slavic Cyrillic superset, and describe a parametric OpenType implementation in
-which the orthography's fusion and anchoring rules are executable GSUB/GPOS
-code. What is demonstrated is a coherent, technically implementable candidate
-evaluated by an internally scored audit; communicative success -- pronunciation
-recovery, transcriber convergence, register perception -- is identified as the
-next experiment, not claimed here.
+Between ordinary orthography and specialist transcription lies a layer that
+alphabets fill only patchily: a conventional way to write a foreign word in
+the native script so that a reader can recover an adequate approximation of
+its source pronunciation without technical training. No major Slavic Cyrillic
+orthography occupies that layer -- foreign words enter through ad hoc
+transcription, with systematic indeterminacy as the result (Bulgarian
+Вашингтон ~ Уошингтън, Данчев 1982). We present Chuzhditsa (Bulg. чуждица,
+'foreignism'), a computable, Cyrillic-based phonological citation register for
+foreign words, names, and pedagogical transcription. Japanese katakana proves
+that a visually distinct foreignness register can operate at the scale of a
+national orthography -- though katakana adapts loans into native phonology,
+where a citation register must extend the inventory to preserve source
+contrasts.
+
+Chuzhditsa supplies (i) a compositional grammar of diacritic operations
+deriving letters for non-Slavic phonemes from attested Cyrillic material --
+revivals, imports, and rule-derived residue; (ii) a prosodic layer for stress,
+tone, and length; and (iii) a register-marking typeface whose substitution and
+positioning rules (GSUB/GPOS) are the orthography's fusion and attachment
+rules, executable rather than merely described. We evaluate coverage against
+twenty languages under declared reference varieties and a three-way
+classification (exact, conventionally merged, declared loss), generalize the
+Bulgarian pilot to the Slavic Cyrillic superset with an external stress test
+on Albanian, and offer the laryngeal series' articulatory-to-visual gradient
+as a candidate heuristic for alphabet extension, not a demonstrated law.
 
 ================================================================
 THE CRITIC AND THE BUILDER: HOW THE CHUZHDITSA PAPERS WERE WRITTEN

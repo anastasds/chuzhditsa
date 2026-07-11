@@ -48,8 +48,8 @@ Unaffiliated · anastas@stoyanovs.ky
 
 Dear Editors,
 
-I am submitting *Chuzhditsa: a phonological citation register for Cyrillic, from
-Bulgarian to the Slavic superset* for consideration. The paper identifies a
+I am submitting *Chuzhditsa: a phonological citation register for Cyrillic* for
+consideration. The paper identifies a
 functional layer that most orthographies lack -- phonological citation, between
 loanword adaptation and technical transcription -- and works out one concrete,
 implementable occupant of it for Slavic Cyrillic: a compositional grammar of
