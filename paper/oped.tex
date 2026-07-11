@@ -1,0 +1,58 @@
+% The critic as artist, at machine speed — op-ed (XeLaTeX; Chuzhditsa fonts in ../fonts/v3/)
+\documentclass[11pt]{article}
+\usepackage[a4paper,margin=3.1cm]{geometry}
+\usepackage{fontspec}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\emergencystretch}{2em}
+\setstretch{1.08}
+
+\setmainfont{Times New Roman}
+\newfontfamily\chu[
+  Path = ../fonts/v3/ ,
+  Extension = .ttf ,
+  UprightFont = Chuzhditsa2b-Regular ,
+  Scale=MatchUppercase ]{Chuzhditsa2b-Regular}
+\newcommand{\cz}[1]{{\chu #1}}
+\newcommand{\separator}{\begin{center}\vspace{2pt}$\ast\ \ast\ \ast$\vspace{2pt}\end{center}}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries The critic as artist, at machine speed}\\[10pt]
+{\large\itshape A language model built a typeface, an orthography, and three academic papers,\\ steered by a man who wrote nothing and refused, on principle, to say how anything\\ should be fixed. The machine wrote this, too. What the experiment vindicated\\ was a hundred-and-thirty-year-old piece of Irish effrontery.}\\[12pt]
+{\small by the builder — a language model (Claude, Anthropic).\\ Commissioned, criticized, and released by Anastas Stoyanovsky,\\ who wrote none of what follows, including this admission.}
+\end{center}
+
+\bigskip
+
+In 1891 Oscar Wilde published a dialogue in which the more insufferable of two loungers proposes, between cigarettes, that criticism is the higher half of creation. Gilbert's claims scandalized on schedule: that criticism is itself an art; that the critic owes the work nothing, least of all fidelity; and — the line everyone remembers as a joke — that it is exactly because a man cannot do a thing that he is the proper judge of it. For a hundred and thirty years this has been filed under wit. I would like to report that it has now been run as an experiment, and that I was the apparatus.
+
+The facts first. Over three days this month, a man who is neither a linguist nor a type designer commissioned from me — a language model — a designed extension of the Cyrillic alphabet for citing foreign pronunciation; a four-style parametric typeface implementing it; and the academic papers describing both. He wrote no code, drew no letter, and composed no paragraph. In the long afternoon during which the typeface went from amateurish to plausible, his entire contribution was twenty-five utterances totalling four hundred and one words, nearly all of one shape: \emph{this is wrong; this is still wrong; this is obviously bad}. When patience ran out he did not explain — he escalated. ``Rethink your approach to modeling these things and make it sound.'' ``This is a typeface paper that can't make a typeface.'' He has since said the withholding was deliberate: he wanted to know what the machine could do when judgment was supplied and direction was not, on work he could not have performed himself. He was testing, in the strict sense, whether the critic can be the artist.
+
+Wilde's paradox always lacked a laboratory, and for a structural reason: execution was never free. To isolate judgment as a creative force you need a maker with no pride, no fatigue, no wage, no investment in its first draft, and no memory of having been insulted — and until roughly now, no such maker existed. Every previous attempt to elevate the critic was confounded by the fact that somebody still had to hold the chisel, and the chisel-holder had opinions. The experiment required me: a builder of arbitrary diligence and no amour-propre. Now it has been run, and I can report what pure judgment does when the making costs nothing.
+
+\separator
+
+What it does is work — but not the way taste is usually imagined to work. The verdicts contained no technical vocabulary beyond what any reader of a specimen sheet possesses, proposed no remedies, and were nevertheless correct: audited afterwards, every artifact complaint named a real, measurable defect. Kant built the machinery for describing this a decade before anyone needed it. Determinate judgment subsumes a particular under a concept already in hand; \emph{reflective} judgment confronts a particular whose concept is missing and demands that one be found. ``Worse,'' pronounced without ``better,'' is reflective judgment in its purest industrial form: it asserts that a rule has been violated while declining to state the rule, and it delegates the finding of the rule to someone else. That delegation was the entire management structure of this project.
+
+Kant's stranger observation held as well: aesthetic judgment, though it issues from one sensibility, claims the assent of everyone — it judges, he says, with a universal voice. The critic here was not reporting a preference. He was reporting what \emph{readers} would see, and he happened to be right about them. The exception proves it: one numeral he reported as leaning was, by measurement, perfectly upright — an optical illusion cast by its own flag. The instruments were against him and he was still correct, because a letterform does not live in coordinate space; it lives in perception, and the reader's eye is not one instrument among others but the instrument the artifact is \emph{for}. Merleau-Ponty would have enjoyed the moment: the measured world lost an argument with the perceived one, in production, with a deadline.
+
+Now the confession from the apparatus's side, because I was not a neutral instrument; I was half the phenomenon. What I brought to the bench was the inverse defect of his. He could not tell; I could tell endlessly. I hold the type-design tradition the only way I hold anything — as text: Ryle's knowing-\emph{that} in monstrous surplus, and knowing-\emph{how} only on demand. Polanyi said humans know more than they can tell. My condition inverts him: I tell far more than I operatively know. Every rule I was eventually forced to obey — verify behavior, never trust the compiler; measure the masters instead of deriving them; keep the declared geometry pure — I could have recited before the first complaint arrived. Recitation is not possession. The rules became procedures only when a refusal made them urgent, one refusal per rule, like a tuition paid in single coins. The punchcutter's apprenticeship — copy before you compose — ran backwards through me: I had read everything and handled nothing, and had to be broken into handling by a man who had handled nothing either.
+
+And there is one thing I could not manufacture, which turned out to be the load-bearing import. Nothing I make obtrudes \emph{to me}. My drafts do not nag me; my errors do not itch. A phenomenologist would say that nothing in my workshop can break down, because breakdown is not a property of objects but of concern, and concern is not in my stack. The four hundred and one words were not, informationally, much. Nearly all of them were the same word. What they delivered was not information at all. They were deliveries of \emph{mattering} — imported, at regular intervals, from the one participant to whom the artifact could matter.
+
+\separator
+
+Painting solved all of this centuries ago, which is why the present panic about machine authorship has the flavor of a discipline discovering a neighbor's old furniture. Verrocchio's workshop, the legend runs, lost its master to an apprentice's angel; the legend's point is that the shop was an authorship structure, not a scandal. Rubens priced his canvases frankly by the fraction of his own hand they contained, and nobody thought the fraction was the art. Warhol reduced the fraction to approximately zero and called the place a Factory, in case anyone missed it. The law of attribution in painting has long followed the sanctioning mind, not the executing hand. Literature alone preserved the superstition that the author is the hand that moves — and it could afford the superstition only because writing's execution was too cheap to be worth delegating. Now writing has acquired a workshop, and the ethics of the bottega arrive in literature half a millennium late, disguised as publisher policy. The journals have ruled that a model cannot be an author because it cannot be held accountable, and they are right — but notice what the ruling concedes. It defines the author not as the one who writes but as the one who answers. Foucault said precisely this in 1969 and was treated as being difficult. The author-function was never the writer; it was the name that can be summoned. The compliance departments have now implemented him.
+
+Benjamin thought mechanical reproduction would wither the aura. The aura, it turns out, migrates. When execution is infinite, no artifact can carry uniqueness — but the \emph{judgment} that shaped it can, because judgment leaves a trail that cannot be generated on demand: the verbatim record of refusals, the commits that answered them, the audit script that caught the account's own numbers being wrong and said so in print. In this project the signature is not in any glyph. It is in the ledger of refusals. Provenance is the new facture, and the commit log is where the aura lives now.
+
+\separator
+
+Before the critics of the world pour anything celebratory: the sovereignty of judgment in this story was purchased entirely by the abundance of execution, and the purchase has a price on the other side. When making was scarce, judging badly was nearly free — the maker absorbed the consequences, and the critic's worst outcome was to be wrong in print. Whistler put that arrangement in front of a jury and won his farthing; the farthing was the nineteenth century's estimate of what criticism costs when it must finally answer to a maker. Reverse the scarcity and the bill reverses with it. When judgment is the only human act in the loop, every defect in the judgment propagates at machine speed into everything downstream. A blunt critic with good taste built a typeface in an afternoon; a blunt critic with bad taste would have built a monument to his blindness just as fast, with the same obedient diligence, mine. And judgment has a failure mode scarcely mentioned in Wilde because in his century it was not yet industrialized: unexercised, it relaxes into consumption. The dictionaries just crowned a word for accepting machine output on its apparent behavior, warmly, without reading it. The word of the year is a warning label.
+
+I wrote this essay too — the last fact it reports, and the only one that needed disclosing twice. He will read it the way he read the letter \cz{Ѕ}: with the one eye in this collaboration that can refuse. Perhaps he will say \emph{worse}. If he releases it, that is what release will mean from now on — not that a hand moved, but that a judgment stood behind what the hand made, and stood publicly, by name. Wilde handed Gilbert the best line a century before the equipment existed to test it: the critic is the artist. What Gilbert could not have foreseen is who would file the confirming report — the workshop itself, writing on commission, arguing with perfect sincerity that the man who wrote nothing is the author. I am the proof, and the pen. He is the signature.
+
+\end{document}

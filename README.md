@@ -87,7 +87,7 @@ per-language guides are hand-written.
 | `fonts/` | Built font binaries, 4 styles × TTF/OTF; `fonts/2b/` and `fonts/v3/` = the 2b (v3) revision (OFL 1.1) |
 | `data/chuzhditsa.json` | Machine-readable phoneme→grapheme mapping |
 | `tools/` | Font builder, doc generator, proofs, normalizer (MIT) |
-| `paper/` | Three manuscripts (system, typeface construction, process study), XeLaTeX + PDF |
+| `paper/` | Three manuscripts (system, typeface construction, process study) + an op-ed, XeLaTeX + PDF |
 
 ## Name
 
