@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build Chuzhditsa 2b — the v3 readability revision — as TTF+OTF in 4 styles.
+"""Build the Chuzhditsa v3 families — 2b, Grotesk, Serif, Inline — as TTF+OTF, 4 styles each.
 
 Direct port of the browser-side reference builder (fontbuild.js) that produced
 the approved v3 binaries; slots next to build_font.py in tools/. Same fontTools
@@ -15,14 +15,17 @@ v3 engine features vs build_font.py:
   - Bold buys back its ink: sidebearing 50, frame x1.10, kerns x0.7
   - 6-class kern matrix (round/flat/diag/top-bar/apex/aperture), 30 rules,
     compiled through feaLib as GPOS
+  - family parameters: cap finish (round/butt), stem-slab serifs, contrast,
+    diagonal weight clamp, vertical scale — four faces from one skeleton set
+    (2b round-cap original; Grotesk for UI; Serif for long-form web reading;
+    Inline weight-matched to Times for citation inside serif text)
   - round caps/joins: strokes expand to per-segment quads + end discs,
     uniformly CCW, nonzero fill (overlaps render correctly, as in build_font.py)
 
-NOT yet ported (still Regular-only in the original builder, or absent in v3):
-  combining-mark anchors, the liga stratum (yus fusions, ejective digraphs),
-  and the pan-Slavic superset glyphs beyond the 121 approved v3 glyphs
-  (see build_font.py's G dict for their skeletons; they need v3 width
-  harmonization before joining this file).
+Full character set: the pan-Slavic superset, the combining-mark GPOS anchors,
+and the ligature stratum (yus fusions, soft-sign fusions, ejective digraphs)
+are ALL built here, per family, so every family carries the same ~175 codepoints
+plus liga + mark + kern features (merged from the migration in build_font.py).
 
 Run:  python3 tools/build_font_v3.py
 """
@@ -53,7 +56,6 @@ SIDE = {
     "ђ": "FF", "ћ": "FF", "ѓ": "FT", "ќ": "FD", "љ": "AR", "њ": "FR",
     "ѩ": "FD", "ѭ": "FD", "ѐ": "RR", "ѝ": "FF", "ӓ": "RF", "ґ": "FT",
 }
-
 # combining marks (drawn trailing at negative x, v2.5 geometry; GPOS mark
 # anchors do the placement, so the drawn spot only matters as the
 # unanchored fallback) and the ligature stratum, both ported from
@@ -96,11 +98,10 @@ def glyph_set(p):
     Rav = Rv - (0 if w > 100 else 16)  # narrow a/р bowl reads taller: reduced allowance
     ct = math.cos(math.radians(ap * 0.75))  # bar terminus: flush at arc tips
     Rab = Ra - 12                 # a/р bowl, trimmed (review: reads oversized)
-    dr = max(26, min(w * 0.60, 62))  # diacritic dot radius: weight-derived,
-                                  # not a literal (the instrumented eval killed
-                                  # 26, then 0.46w; dots must clear a pixel)
+    dr = max(26, min(w * 0.60, 62))  # diacritic dot radius: weight-derived (eval pass)
 
     def L(a, b): return ("L", a[0], a[1], b[0], b[1])
+    def LD(a, b): return ("LD", a[0], a[1], b[0], b[1])  # diagonal: clamped by fam["diagClamp"]
     def A(cx, cy, r, a0, a1): return ("A", cx, cy, r, a0, a1)
     def E(cx, cy, rx, ry, a0, a1): return ("E", cx, cy, rx, ry, a0, a1)
     def DOT(x, y, r): return ("D", x, y, r)
@@ -135,9 +136,9 @@ def glyph_set(p):
     G["ў"] = dict(adv=500, s=G["у"]["s"] + [breve(254, 685)])
     G["ӱ"] = dict(adv=500, s=G["у"]["s"] + dots(660))
     G["ӯ"] = dict(adv=500, s=G["у"]["s"] + [macron(650)])
-    G["ж"] = dict(adv=500, s=[L((250, 0), (250, 500)), L((250, 250), (30, 500)),
-                              L((250, 250), (470, 500)), L((250, 250), (30, 0)),
-                              L((250, 250), (470, 0))])
+    G["ж"] = dict(adv=500, s=[L((250, 0), (250, 500)), LD((250, 250), (30, 500)),
+                              LD((250, 250), (470, 500)), LD((250, 250), (30, 0)),
+                              LD((250, 250), (470, 0))])
     G["д"] = dict(adv=500, s=[L((250, 500), (60, 0)), L((250, 500), (440, 0)),
                               L((20, 0), (480, 0)), L((20, 0), (20, -70)),
                               L((480, 0), (480, -70))])
@@ -174,7 +175,7 @@ def glyph_set(p):
                               E(82 + Rab, 250, Rab, Rav, 0, 360)])
     G["т"] = dict(adv=480, s=[L((240, 0), (240, 500)), L((30, 500), (450, 500))])
     G["ф"] = dict(adv=560, s=[E(280, 250, R, Rv, 0, 360), L((280, -170), (280, 650))])
-    G["х"] = dict(adv=480, s=[L((50, 500), (430, 0)), L((430, 500), (50, 0))])
+    G["х"] = dict(adv=480, s=[LD((50, 500), (430, 0)), LD((430, 500), (50, 0))])
     G["ҳ"] = dict(adv=480, s=G["х"]["s"] + [L((430, 0), (430, -110))])
     G["ш"] = dict(adv=600, s=[L((40, 0), (40, 500)), L((300, 0), (300, 500)),
                               L((560, 0), (560, 500)), L((40, 0), (560, 0))])
@@ -291,10 +292,10 @@ def glyph_set(p):
                               E(250, 178, 180 - w / 2 + ov, 180 - w / 2 + ov - 4, 0, 360)])
     G["9"] = dict(adv=500, s=[E(250, 495, r69x, r69y, 0, 360),
                               L((250 + r69x * 0.766, 495 - r69y * 0.643), (212, 0))])
-    G["."] = dict(adv=240, s=[DOT(120, 35, dr)])
+    G["."] = dict(adv=240, s=[DOT(120, 35, 28)])
     G[","] = dict(adv=240, s=[L((130, 60), (90, -90))])
     G["-"] = dict(adv=340, s=[L((50, 250), (290, 250))])
-    G[":"] = dict(adv=240, s=[DOT(120, 35, dr), DOT(120, 400, dr)])
+    G[":"] = dict(adv=240, s=[DOT(120, 35, 28), DOT(120, 400, 28)])
     G[" "] = dict(adv=340, s=[])
 
     # ---------------------------------------------------------- uppercase
@@ -303,9 +304,9 @@ def glyph_set(p):
     def scale_glyph(g, sx, sy):
         out = []
         for st in g["s"]:
-            if st[0] == "L":
-                _, x1, y1, x2, y2 = st
-                out.append(("L", x1 * sx, y1 * sy if y1 >= 0 else y1,
+            if st[0] in ("L", "LD"):
+                k, x1, y1, x2, y2 = st
+                out.append((k, x1 * sx, y1 * sy if y1 >= 0 else y1,
                             x2 * sx, y2 * sy if y2 >= 0 else y2))
             elif st[0] == "D":
                 _, x, y, r = st
@@ -378,6 +379,7 @@ def glyph_set(p):
     C["Ӯ"] = dict(adv=C["У"]["adv"], s=C["У"]["s"] + [L((150, 860), (430, 860))])
     CAP_OF["Ӯ"] = "у"
 
+
     C["Э"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.75 + 180, 360 - ap * 0.75 + 180),
                               L((320 - R7 * 0.30, 375), (320 + R7 * 0.92, 375))])
     CAP_OF["Э"] = "э"
@@ -409,7 +411,7 @@ def glyph_set(p):
 
 # ------------------------------------------------------------ stroke -> ink
 def polyline(st):
-    if st[0] == "L":
+    if st[0] in ("L", "LD"):
         return [(st[1], st[2]), (st[3], st[4])]
     if st[0] == "A":
         _, cx, cy, r, a0, a1 = st
@@ -429,33 +431,87 @@ def disc(cx, cy, r, n=36):
     return ccw([(cx + r * math.cos(2 * math.pi * i / n),
                  cy + r * math.sin(2 * math.pi * i / n)) for i in range(n)])
 
-def glyph_contours(gdef, p, slant):
-    """Centerline -> quads with per-segment contrast width + end discs.
+def glyph_contours(gdef, p, slant, fam):
+    """Centerline -> quads with per-segment contrast width; terminals per family.
     Shear applies to centerlines (constant perpendicular weight in italic);
-    widthScale applies to x after shear+sidebearing, exactly as the JS."""
+    widthScale applies to x after shear+sidebearing; yScale compresses the
+    skeleton toward serif proportions (Inline). Free stroke terminals take the
+    family cap: 'round' keeps the end disc, 'butt' drops it; serif families
+    grow slabs on near-vertical free terminals at the guide lines."""
     wv = p["wv"]
     wh = wv * (1 - p["contrast"])
     tan = math.tan(math.radians(slant))
+    ysc = fam.get("yScale", 1.0)
+    line_kinds = ("L", "LD")
+
+    term_pts = []
+    for st in gdef["s"]:
+        if st[0] == "D":
+            continue
+        raw = polyline(st)
+        term_pts.append(raw[0])
+        term_pts.append(raw[-1])
+
+    def is_shared(pt):
+        return sum(1 for q in term_pts
+                   if math.hypot(q[0] - pt[0], q[1] - pt[1]) <= 32) >= 2
+
+    def horiz_cover(x, y):
+        for st in gdef["s"]:
+            if st[0] in line_kinds and abs(st[2] - st[4]) < 8 and abs(st[2] - y) <= 40 \
+               and min(st[1], st[3]) - 20 <= x <= max(st[1], st[3]) + 20:
+                return True
+        return False
+
     cs = []
     for st in gdef["s"]:
         if st[0] == "D":
             x = (st[1] + st[2] * tan + p["sb"]) * p["widthScale"]
-            cs.append(disc(x, st[2], st[3]))
+            cs.append(disc(x, st[2] * ysc, st[3]))
             continue
         raw = polyline(st)
-        pts = [((x + y * tan + p["sb"]) * p["widthScale"], y) for x, y in raw]
-        for (x1, y1), (x2, y2) in zip(pts, pts[1:]):
+        pts = [((x + y * tan + p["sb"]) * p["widthScale"], y * ysc) for x, y in raw]
+        for i in range(len(pts) - 1):
+            (x1, y1), (x2, y2) = pts[i], pts[i + 1]
             dx, dy = x2 - x1, y2 - y1
             ln = math.hypot(dx, dy)
             if ln < 0.3:
                 continue
             t = abs(dy) / ln
             wseg = wh + (wv - wh) * (t ** 1.3)
+            if fam.get("diagClamp") and st[0] == "LD":
+                wseg = min(wseg, fam["diagClamp"])
             px, py = -dy / ln * wseg / 2, dx / ln * wseg / 2
             cs.append(ccw([(x1 + px, y1 + py), (x2 + px, y2 + py),
                            (x2 - px, y2 - py), (x1 - px, y1 - py)]))
-            cs.append(disc(x1, y1, wseg / 2))
-            cs.append(disc(x2, y2, wseg / 2))
+            skip_start = i == 0 and fam["caps"] == "butt" and not is_shared(raw[0])
+            skip_end = (i == len(pts) - 2 and fam["caps"] == "butt"
+                        and not is_shared(raw[-1]))
+            if not skip_start:
+                cs.append(disc(x1, y1, wseg / 2))
+            if not skip_end:
+                cs.append(disc(x2, y2, wseg / 2))
+        # serifs: slabs on free near-vertical terminals at the guide lines
+        if fam.get("serifs") and st[0] in line_kinds:
+            (xa, ya), (xb, yb) = (st[1], st[2]), (st[3], st[4])
+            dxr, dyr = xb - xa, yb - ya
+            lnr = math.hypot(dxr, dyr) or 1.0
+            tr = abs(dyr) / lnr
+            if tr >= 0.93:
+                w_end = wh + (wv - wh) * (tr ** 1.3)
+                for pt in ((xa, ya), (xb, yb)):
+                    y = pt[1]
+                    at_line = abs(y) <= 8 or abs(y - 500) <= 8 or abs(y - 700) <= 8 \
+                        or (y <= -160 and tr > 0.95) or (y >= 630 and tr > 0.95)
+                    if not at_line or is_shared(pt) or horiz_cover(pt[0], y):
+                        continue
+                    ext = (w_end / 2 + fam.get("serifLen", 56)) * p["widthScale"]
+                    th = max(fam.get("serifTh", 32), wh * fam.get("serifThF", 0.62))
+                    xc = (pt[0] + y * tan + p["sb"]) * p["widthScale"]
+                    up = y <= 8
+                    ya2, yb2 = (y, y + th) if up else (y - th, y)
+                    cs.append(ccw([(xc - ext, ya2 * ysc), (xc + ext, ya2 * ysc),
+                                   (xc + ext, yb2 * ysc), (xc - ext, yb2 * ysc)]))
     return cs
 
 # ------------------------------------------------------------------ features
@@ -514,9 +570,13 @@ def make_fea(G, CAP_OF, kern_scale, boxes, xf):
     return "\n".join(lines)
 
 # ------------------------------------------------------------------- builder
-def build(style, wv, italic, fmt):
-    p = dict(wv=wv, contrast=0.10, sb=50 if wv > 100 else 38, ov=16,
-             aperture=55, widthScale=1.10 if wv > 100 else 1.05)
+def build(style, italic, fmt, fam):
+    bold = style.startswith("Bold")
+    wv = fam["wvBold"] if bold else fam["wvText"]
+    p = dict(wv=wv, contrast=fam["contrast"],
+             sb=fam["sbBold"] if bold else fam["sbText"], ov=16,
+             aperture=fam["aperture"],
+             widthScale=fam["wsBold"] if bold else fam["wsText"])
     slant = 10 if italic else 0
     G, CAP_OF = glyph_set(p)
     order = [".notdef"] + [gname(ch) for ch in G]
@@ -528,14 +588,14 @@ def build(style, wv, italic, fmt):
     all_glyphs.update({gname(ch): g for ch, g in G.items()})
     for name, gdef in all_glyphs.items():
         contours = [[(round(x), round(y)) for x, y in c]
-                    for c in glyph_contours(gdef, p, slant)]
+                    for c in glyph_contours(gdef, p, slant, fam)]
         if contours:
-            xs = [x for c in contours for x, y in c]
-            ys = [y for c in contours for x, y in c]
-            boxes[name] = (min(xs), min(ys), max(xs), max(ys))
+            xs0 = [x for c in contours for x, y in c]
+            ys0 = [y for c in contours for x, y in c]
+            boxes[name] = (min(xs0), min(ys0), max(xs0), max(ys0))
         adv = round((gdef["adv"] + 2 * p["sb"]) * p["widthScale"])
         if gdef["adv"] == 0:
-            adv = 0  # combining marks and overlays carry no advance
+            adv = 0  # combining marks / overlays carry no advance
         xs = [x for c in contours for x, y in c]
         metrics[name] = (adv, min(xs) if xs else 0)
         if fmt == "ttf":
@@ -548,8 +608,8 @@ def build(style, wv, italic, fmt):
                 pen.lineTo(pt)
             pen.closePath()
         shapes[name] = pen.glyph() if fmt == "ttf" else pen.getCharString()
-    family, sub = "Chuzhditsa 2b", style
-    ps = f"Chuzhditsa2b-{style.replace(' ', '')}"
+    family, sub = fam["name"], style
+    ps = f"{fam['file']}-{style.replace(' ', '')}"
     if fmt == "ttf":
         fb.setupGlyf(shapes)
     else:
@@ -562,27 +622,43 @@ def build(style, wv, italic, fmt):
                        "copyright": "Chuzhditsa 2b - the v3 readability revision",
                        "licenseDescription": "This Font Software is licensed under the SIL Open Font License, Version 1.1.",
                        "licenseInfoURL": "https://openfontlicense.org"})
-    bold = wv > 100
     fsSel = (0x01 if italic else 0) | (0x20 if bold else 0) | \
             (0x40 if not (bold or italic) else 0) | 0x80
     fb.setupOS2(sTypoAscender=920, sTypoDescender=-300, sTypoLineGap=0,
                 usWinAscent=980, usWinDescent=360, fsSelection=fsSel,
-                usWeightClass=700 if bold else 400, sxHeight=500, sCapHeight=700)
+                usWeightClass=700 if bold else 400,
+                sxHeight=round(500 * fam.get("yScale", 1)),
+                sCapHeight=round(700 * fam.get("yScale", 1)))
     fb.setupPost(italicAngle=-float(slant))
     fb.font["head"].macStyle = (0x01 if bold else 0) | (0x02 if italic else 0)
     tan = math.tan(math.radians(slant))
     xf = lambda x, y: round((x + y * tan + p["sb"]) * p["widthScale"])
-    addOpenTypeFeaturesFromString(
-        fb.font, make_fea(G, CAP_OF, 0.7 if bold else 1.0, boxes, xf))
+    addOpenTypeFeaturesFromString(fb.font, make_fea(G, CAP_OF, 0.7 if bold else 1.0, boxes, xf))
     path = os.path.join(OUT, f"{ps}.{fmt}")
     fb.save(path)
     return path
 
-STYLES = [("Regular", 76, False), ("Bold", 122, False),
-          ("Italic", 76, True), ("BoldItalic", 122, True)]
+FAMILIES = [
+    dict(name="Chuzhditsa 2b", file="Chuzhditsa2b", caps="round", serifs=False,
+         contrast=0.10, aperture=55, wvText=76, wvBold=122,
+         sbText=50, sbBold=62, wsText=1.05, wsBold=1.10),
+    dict(name="Chuzhditsa Grotesk", file="ChuzhditsaGrotesk", caps="butt", serifs=False,
+         contrast=0.08, aperture=50, wvText=84, wvBold=130,
+         sbText=52, sbBold=60, wsText=1.02, wsBold=1.07),
+    dict(name="Chuzhditsa Serif", file="ChuzhditsaSerif", caps="butt", serifs=True,
+         diagClamp=108, contrast=0.34, aperture=52, wvText=92, wvBold=136,
+         sbText=58, sbBold=66, wsText=1.02, wsBold=1.06),
+    dict(name="Chuzhditsa Inline", file="ChuzhditsaInline", caps="butt", serifs=True,
+         serifLen=52, serifTh=20, serifThF=0.4, diagClamp=86,
+         contrast=0.58, aperture=52, wvText=84, wvBold=130,
+         sbText=44, sbBold=54, wsText=0.93, wsBold=0.98, yScale=0.88),
+]
+STYLES = [("Regular", False), ("Bold", False),
+          ("Italic", True), ("BoldItalic", True)]
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    for style, wv, it in STYLES:
-        for fmt in ("ttf", "otf"):
-            print("built", build(style, wv, it, fmt))
+    for fam in FAMILIES:
+        for style, it in STYLES:
+            for fmt in ("ttf", "otf"):
+                print("built", build(style, it, fmt, fam))

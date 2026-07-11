@@ -63,7 +63,7 @@ orthography's fusion and anchoring rules are the font's GSUB/GPOS features.
 python3 -m pip install -r tools/requirements.txt
 
 python3 tools/build_font.py    # 1. build all 8 font files into fonts/
-python3 tools/build_font_v3.py # 1b. build the Chuzhditsa 2b (v3) family into fonts/v3/
+python3 tools/build_font_v3.py # 1b. build the four v3 families (2b/Grotesk/Serif/Inline) into fonts/v3/
 python3 tools/gen_docs.py      # 2. regenerate the three main docs + specimen.html (after step 1)
 python3 tools/proof.py         # 3. optional: render tools/proof.png (HarfBuzz-shaped proof sheet)
 python3 tools/render_hero.py   # 4. optional: regenerate docs/hero*.png
@@ -82,7 +82,7 @@ per-language guides are hand-written.
 | `README.md`, `WHITEPAPER.md` | You are here; plain-language overview |
 | `CHUZHDITSA*.md` | Specification (bg/en/uk/ru, generated) + seven hand-written guides |
 | `specimen.html` | Self-contained type specimen with embedded fonts (generated) |
-| `fonts/` | Built font binaries, 4 styles × TTF/OTF; `fonts/2b/` and `fonts/v3/` = the 2b (v3) revision (OFL 1.1) |
+| `fonts/` | Built font binaries; `fonts/v3/` = four families (2b, Grotesk, Serif, Inline) × 4 styles × TTF/OTF from one skeleton (OFL 1.1) |
 | `data/chuzhditsa.json` | Machine-readable phoneme→grapheme mapping |
 | `tools/` | Font builder, doc generator, proofs, normalizer (MIT) |
 | `paper/` | Four papers: system, typeface construction, process study, and an annotated op-ed (XeLaTeX + PDF) |

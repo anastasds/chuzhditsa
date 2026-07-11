@@ -278,24 +278,27 @@ def fig9():
     W2, H2 = 3120, 1400
     img = PImage.new("L", (W2, H2), 255)
     d = PDraw.Draw(img)
-    rows = [
-        ("Regular", "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЫЮЯ"),
-        ("Regular", "абвгдежзийклмнопрстуфхцчшщъьыюя"),
-        ("Regular", "Ўў Џџ Ҫҫ Ҙҙ Ққ Ңң Ҳҳ Ғғ Һһ Ѕѕ Ӏ Ӓӓ Ӧӧ Ӱӱ Ыы"),
-        ("Regular", "Ѫѫ Ѧѧ Ѩѩ Ѭѭ Ӣӣ Ӯӯ · тʰ дʱ т̢ а̨ а̄ а́ а̌"),
-        ("Bold", "ўӣкенд ҫӓңкс Пе̌йчиң Муҳаммад крўаса̨ бѩ"),
-        ("Italic", "думи от чужбина, писани на чуждица"),
-    ]
+    # four families from one skeleton, then 2b in its four styles
+    SPEC = "Чуждица · абвгдежзийклмноп · Ўў Ҫҫ Ҙҙ Ққ Ңң Ҳҳ Ѕѕ Ӓӓ · тʰ а̨ · 0123"
+    fams = [("2b (round-cap register)", "Chuzhditsa2b-Regular"),
+            ("Grotesk (butt, for UI)", "ChuzhditsaGrotesk-Regular"),
+            ("Serif (slab, long-form)", "ChuzhditsaSerif-Regular"),
+            ("Inline (Times-matched)", "ChuzhditsaInline-Regular")]
+    styles = [("2b Bold", "Chuzhditsa2b-Bold"), ("2b Italic", "Chuzhditsa2b-Italic")]
     v3 = os.path.join(os.path.dirname(__file__), "..", "fonts", "v3")
+    lab = PFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)
+    def line(label, psname, text, y, size=92):
+        path = os.path.join(v3, f"{psname}.ttf")
+        try: f = PFont.truetype(path, size, layout_engine=PFont.Layout.RAQM)
+        except Exception: f = PFont.truetype(path, size)
+        d.text((100, y + 22), label, font=lab, fill=(140))
+        d.text((760, y), text, font=f, fill=0)
     y = 60
-    for style, text in rows:
-        path = os.path.join(v3, f"Chuzhditsa2b-{style}.ttf")
-        try:
-            f = PFont.truetype(path, 104, layout_engine=PFont.Layout.RAQM)
-        except Exception:
-            f = PFont.truetype(path, 104)
-        d.text((100, y), text, font=f, fill=0)
-        y += 210
+    for label, ps in fams:
+        line(label, ps, SPEC, y); y += 180
+    y += 30
+    for label, ps in styles:
+        line(label, ps, "ўӣкенд ҫӓңкс Муҳаммад крўаса̨ бѩ думи от чужбина", y); y += 180
     bg = PImage.new("L", img.size, 255)
     from PIL import ImageChops
     bbox = ImageChops.difference(img, bg).getbbox()
