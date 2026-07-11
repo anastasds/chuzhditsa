@@ -35,14 +35,39 @@ inspectable; the press pieces are last because they presuppose the papers.
 
 ---
 
-## Stage 1 — arXiv (typeface, then orthography)
+## Stage 1 — preprints (typeface, then orthography)
+
+The two papers do **not** share one preprint home, because they have different
+readerships. The typeface paper goes to arXiv; the orthography paper's natural
+home is **LingBuzz**, the linguistics preprint archive, with arXiv optional.
 
 **Category recommendations**
 
 | Paper | Primary | Cross-list |
 |---|---|---|
 | The letter as a program (typeface) | cs.GR (Graphics) | cs.DL, cs.CL |
-| Chuzhditsa (orthography) | cs.CL (Computation and Language) | cs.DL |
+| Chuzhditsa (orthography) | **LingBuzz** (primary); arXiv cs.CL optional | cs.DL |
+
+### Orthography paper → LingBuzz (primary), arXiv cs.CL (optional)
+
+**LingBuzz** (lingbuzz.net; est. 2004, M. Starke, U. Tromsø; ~9{,}500 papers)
+is the arXiv of linguistics and the right room for the citation-register paper:
+its readers and the reviewers at the target linguistics venues are there, not on
+arXiv cs.CL (which skews NLP/ML). Practical wins: it is PDF-native (no font
+compilation), and it allows **guest upload** — no arXiv-style endorsement wall.
+
+- Go to lingbuzz.net → "publish a paper." Upload `paper/chuzhditsa.pdf`.
+- Metadata: authors, title, date, **domains** (tag: phonology, morphology,
+  writing systems / sociolinguistics as available), keywords, abstract (from
+  `abstracts.txt`). Leave the "to appear in" field blank until a journal
+  accepts; linguistics journals treat a LingBuzz preprint as normal.
+- Optionally **also** post to arXiv cs.CL (cross-list cs.DL) so the companions
+  sit together with linked IDs and reach the CS side; identical PDF and abstract.
+  Only worth the extra arXiv endorsement step if you want that reach.
+
+### Typeface paper → arXiv cs.GR
+
+LingBuzz is off-topic for type technology; the typeface paper's home is arXiv.
 
 **Format: PDF-only is the pragmatic choice.** All four papers are XeLaTeX and
 depend on two macOS system fonts (Times New Roman, Arial Unicode MS) plus the
@@ -70,10 +95,13 @@ reason to hold rights back.
 - **[you]** arXiv account; if not already endorsed for cs.CL / cs.GR, request
   endorsement (an established author in the category vouches — the builder can
   draft the endorsement request).
-- **[you]** New submission → upload `paper/typeface.pdf` → paste the plain-text
-  abstract, title, author → pick cs.GR primary, cs.DL + cs.CL cross-list →
-  choose license → submit. Repeat for `paper/chuzhditsa.pdf`.
-- Note the assigned arXiv IDs back here; the journal cover letters cite them.
+- **[you]** arXiv new submission → upload `paper/typeface.pdf` → paste the
+  plain-text abstract, title, author → cs.GR primary, cs.DL + cs.CL cross-list →
+  license → submit.
+- **[you]** LingBuzz → "publish a paper" → upload `paper/chuzhditsa.pdf` with
+  its metadata (no endorsement needed). Optionally also arXiv cs.CL.
+- Note the assigned arXiv IDs and the LingBuzz ID back here; the cover letters
+  cite them.
 
 ---
 
