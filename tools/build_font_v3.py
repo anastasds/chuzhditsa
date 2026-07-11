@@ -712,7 +712,7 @@ FAMILIES = [
     # the cap-height gap (Cyrillic 500/700 vs Times 448/662 share no yScale)
     dict(name="Chuzhditsa Inline", file="ChuzhditsaInline", caps="butt", serifs=True,
          serifLen=52, serifTh=16, serifThF=0.4, diagClamp=86,
-         contrast=0.56, aperture=52, wvText=84, wvBold=130,
+         contrast=0.54, aperture=52, wvText=80, wvBold=126,
          sbText=58, sbBold=68, wsText=0.93, wsBold=0.98, yScale=0.88,
          capScale=1.0714),
 ]
