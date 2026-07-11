@@ -5,6 +5,39 @@ sys.path.insert(0, os.path.dirname(__file__))
 from PIL import Image, ImageDraw, ImageFont
 import build_font as bf
 from proof import render as hb_render
+import uharfbuzz as _hb
+from fontTools.ttLib import TTFont as _TTFont
+
+_v3cache = {}
+def _v3load(style):
+    if style not in _v3cache:
+        path = os.path.join(os.path.dirname(__file__), "..", "fonts", "v3",
+                            f"ChuzhditsaInline-{style}.ttf")
+        _v3cache[style] = (_TTFont(path),
+                           _hb.Font(_hb.Face(_hb.Blob.from_file_path(path))))
+    return _v3cache[style]
+
+def hb3(draw, style, text, x0, y0, size, fill="black", holefill="white", features=None):
+    """proof.render, but from the SHIPPED v3 2b binaries with optional
+    feature control ({'liga': False} etc.) — behavioral figures render the
+    Inline cut the manuscript itself is set in, through the deployment stack."""
+    tt, f = _v3load(style)
+    glyf, names, scale = tt["glyf"], tt.getGlyphOrder(), size/1000.0
+    buf = _hb.Buffer(); buf.add_str(text); buf.guess_segment_properties()
+    _hb.shape(f, buf, features or {})
+    penx = x0
+    for info, pos in zip(buf.glyph_infos, buf.glyph_positions):
+        g = glyf[names[info.codepoint]]
+        if g.numberOfContours > 0:
+            coords, ends, _ = g.getCoordinates(glyf); start, sol, hol = 0, [], []
+            for e in ends:
+                pts = [(penx+(pos.x_offset+cx)*scale, y0-(pos.y_offset+cy)*scale) for cx,cy in coords[start:e+1]]
+                a = sum(x1*y2-x2*y1 for (x1,y1),(x2,y2) in zip(pts,pts[1:]+pts[:1]))
+                (hol if a>0 else sol).append(pts); start = e+1
+            for q in sol: draw.polygon(q, fill=fill)
+            for q in hol: draw.polygon(q, fill=holefill)
+        penx += pos.x_advance*scale
+    return penx
 
 FIG = os.path.join(os.path.dirname(__file__), "..", "paper", "figures")
 os.makedirs(FIG, exist_ok=True)
@@ -246,26 +279,38 @@ def fig6():
 
 def fig7():
     img, d = canvas(1460, 700)
-    # the rejected mock: bar runs INTO the full palochka -- it was a fusion
-    tpal_v1 = dict(adv=780, strokes=[("L",70,700,650,700),("L",330,0,330,700),("L",650,0,650,700)])
-    panels = [(tpal_v1,"\u0442\u04c0 fused, full palochka"),(bf.G["p"],"\u043f"),(bf.G["tpal"],"\u0442\u04c0 shipped: raised palochka")]
-    for i,(g,name) in enumerate(panels):
-        ox = 130 + i*470
-        draw_contours(d, bf.glyph_contours(g, 90, 50, 0), ox, 340, SC)
-        label(d, ox, 370, name)
-    # the failure was a reading-size phenomenon: show it at reading size
+    # the rejected mock (bar running into a full palochka) rebuilt in the v3
+    # anatomy so all three panels share the shipped letterforms; п and the
+    # shipped fusion are shaped live from the binaries
+    import importlib.util as _ilu
+    _spec = _ilu.spec_from_file_location("bf3", os.path.join(os.path.dirname(__file__), "build_font_v3.py"))
+    bf3 = _ilu.module_from_spec(_spec); _spec.loader.exec_module(_bf3 := bf3)
+    fam = dict(bf3.FAMILIES[3]); ppar = dict(wv=fam["wvText"], contrast=fam["contrast"],
+        sb=fam["sbText"], ov=16, aperture=fam["aperture"], widthScale=fam["wsText"])
+    mock = dict(adv=620, s=[("L",50,500,600,500),("L",238,0,238,500),("L",545,0,545,500)])
+    mock_cs = bf3.union_contours([[(round(x),round(y)) for x,y in c]
+                                  for c in bf3.glyph_contours(mock, ppar, 0, fam)])
+    def draw_mock(ox, oy, sc):
+        for c in mock_cs:
+            d.polygon([((ox+x*sc)*S,(oy-y*sc)*S) for x,y in c], fill="black")
+    SC7 = 0.56
+    draw_mock(130, 340, SC7); label(d, 130, 370, "\u0442\u04c0 fused, full palochka")
+    hb3(d, "Regular", "п", (130+470)*S, 340*S, 500*S); label(d, 600, 370, "\u043f")
+    hb3(d, "Regular", "тӀ", (130+940)*S, 340*S, 500*S); label(d, 1070, 370, "\u0442\u04c0 shipped: raised palochka")
     label(d, 130, 480, "at reading size:")
     ox = 380
-    for g, _ in panels:
-        for sc in (0.085, 0.06):
-            draw_contours(d, bf.glyph_contours(g, 90, 50, 0), ox, 560, sc)
-            ox += g["adv"] * sc + 26
+    for kind in ("mock", "п", "тӀ"):
+        for px in (44, 30):
+            if kind == "mock":
+                draw_mock(ox, 560, px/1000*0.95); ox += 620*px/1000 + 26
+            else:
+                ox = hb3(d, "Regular", kind, ox*S, 560*S, px*S)/S + 26
         ox += 90
     save(img, "fig7_ligature.png")
 
 def fig8():
     img, d = canvas(1460, 460)
-    hb_render(d, "Regular", "А̄ а̄ ӧ̄ т̢ Т̢", 80*S, 360*S, 300*S)
+    hb3(d, "Regular", "А̄ а̄ ӧ̄ т̢ Т̢", 80*S, 360*S, 300*S)
     label(d, 80, 400, "one mark, five computed anchors: cap, x-height, above dots, under stem")
     save(img, "fig8_anchors.png")
 
@@ -310,7 +355,7 @@ def fig9():
 
 def fig10():
     img, d = canvas(1460, 400)
-    hb_render(d, "Regular", "Аа Бб Рр Фф Ѩѩ", 70*S, 300*S, 165*S)
+    hb3(d, "Regular", "Аа Бб Рр Фф Ѩѩ", 70*S, 300*S, 165*S)
     label(d, 70, 350, "two-case architecture: custom а б р ф; systematic derivation elsewhere")
     save(img, "fig10_cases.png")
 
@@ -374,33 +419,25 @@ def fig11():
 
 def fig12():
     img, d = canvas(1460, 700)
-    # wrong lookup order: soft-fusion consumes ь first -> љ + ѫ
-    ox = 140
-    for g in ("lc.lsoft", "lc.bigyus"):
-        draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, 250, 0.34)
-        ox += bf.G[g]["adv"]*0.34
-    label(d, 140, 285, "soft-sign fusion first:  љ + ѫ  — the documented spelling is unreachable")
-    ox = 140
-    for g in ("lc.l", "lc.iotbyus"):
-        draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, 610, 0.34)
-        ox += bf.G[g]["adv"]*0.34
-    label(d, 140, 645, "yus fusion ordered first:  л + ѭ  — as the orthography specifies")
+    # both rows shaped from the shipped v3 binaries: the wrong-order row is
+    # the literal glyph sequence a soft-first cascade would leave behind
+    hb3(d, "Regular", "љѧ", 140*S, 250*S, 240*S)
+    label(d, 140, 285, "soft-sign fusion first:  љ + ѧ  — the documented spelling is unreachable")
+    hb3(d, "Regular", "льѧ", 140*S, 610*S, 240*S)
+    label(d, 140, 645, "yus fusion ordered first:  л + ѩ  — as the orthography specifies")
     save(img, "fig12_lookup_order.png")
 
 def fig13():
     img, d = canvas(1460, 620)
-    pairs = [(("lc.n","lc.ermal"), "lc.nsoft"), (("lc.l","lc.ermal"), "lc.lsoft"),
-             (("lc.ermal","lc.smallyus"), "lc.iotsyus"), (("lc.ermal","lc.bigyus"), "lc.iotbyus")]
-    for i, (parts, fused) in enumerate(pairs):
+    # shipped-binary shaping: left = the raw sequence (liga disabled),
+    # right = the same string through the live GSUB fusion
+    pairs = ["нь", "ль", "ьѧ", "ьѫ"]
+    for i, seq in enumerate(pairs):
         ox = 90 + (i % 2)*700
         oy = 230 + (i // 2)*290
-        for g in parts:
-            draw_contours(d, bf.glyph_contours(bf.G[g], 90, 50, 0), ox, oy, 0.26)
-            ox += bf.G[g]["adv"]*0.26 + 10
-        ox += 16
-        draw_contours(d, bf.glyph_contours(bf.G["arrow"], 90, 50, 0), ox, oy+13, 0.26)
-        ox += bf.G["arrow"]["adv"]*0.26 + 26
-        draw_contours(d, bf.glyph_contours(bf.G[fused], 90, 50, 0), ox, oy, 0.26)
+        ox = hb3(d, "Regular", seq, ox*S, oy*S, 180*S, features={"liga": False})/S + 26
+        ox = hb3(d, "Regular", "→", ox*S, (oy-30)*S, 130*S)/S + 26
+        hb3(d, "Regular", seq, ox*S, oy*S, 180*S)
     label(d, 90, 555, "the GSUB fusion inventory: нь, ль, ьѧ, ьѫ — sequence in, silhouette out")
     save(img, "fig13_fusions.png")
 
@@ -458,8 +495,8 @@ def fig16():
 
 def fig17():
     img, d = canvas(1460, 420)
-    hb_render(d, "Regular", "0123456789", 60*S, 180*S, 110*S)
-    hb_render(d, "Regular", "«чуждица» — тире · !?", 60*S, 330*S, 110*S)
+    hb3(d, "Regular", "0123456789", 60*S, 180*S, 110*S)
+    hb3(d, "Regular", "«чуждица» — тире · !?", 60*S, 330*S, 110*S)
     label(d, 60, 360, "figures and punctuation, same vocabulary: rings, lines, dots")
     save(img, "fig17_digits.png")
 
