@@ -254,10 +254,19 @@ def glyph_set(p):
                                    L((295, 420), (295, 610))])
     G["\u02B1"] = dict(adv=340, s=[L((85, 420), (85, 840)), L((85, 840), (25, 900)),
                                    A(190, 610, 105, 180, 0), L((295, 420), (295, 610))])
-    # combining marks and overlays (zero advance)
+    # combining marks and overlays (zero advance). The ink sits at positive x
+    # (+660 from the v2.5 trailing-negative convention): a zero-advance glyph
+    # whose bbox is entirely negative is legal but unconventional, and some
+    # glyph caches handle it poorly; GPOS anchors are computed from the built
+    # bbox, so attachment is identical either way.
+    def _mk(st):
+        if st[0] == "D":
+            return ("D", st[1] + 660, st[2], dr)
+        if st[0] == "L":
+            return ("L", st[1] + 660, st[2], st[3] + 660, st[4])
+        return (st[0], st[1] + 660, *st[2:])  # A: cx shifts, radius/angles keep
     for ch, strokes in list(TOPMARKS.items()) + list(BOTMARKS.items()) + list(OVERLAYS.items()):
-        G[ch] = dict(adv=0, s=[("D", st[1], st[2], dr) if st[0] == "D" else tuple(st)
-                               for st in strokes])
+        G[ch] = dict(adv=0, s=[_mk(st) for st in strokes])
     # ------------------------------------------------------------ punctuation
     G["!"] = dict(adv=240, s=[L((120, 190), (120, 700)), DOT(120, 35, dr)])
     G["?"] = dict(adv=500, s=[A(250, 545, 145, 180, -90), L((250, 400), (250, 190)),
