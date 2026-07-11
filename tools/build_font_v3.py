@@ -421,6 +421,17 @@ def glyph_set(p):
     C["Ђ"] = dict(adv=560, s=[L((30, 700), (490, 700)), L((150, 0), (150, 700)),
                               A(330, 300, 180, 0, 180), L((510, -40), (510, 300)),
                               A(405, -40, 105, 0, -150)]); CAP_OF["Ђ"] = "ђ"
+    caps_k = p.get("capScale", 1.0)
+    if caps_k != 1.0:
+        # cap-height correction toward the host serif face (Inline): Cyrillic's
+        # x/cap ratio (500/700) is taller than Times' (448/662), so one yScale
+        # cannot match both; caps and digits get their own vertical scale, with
+        # negative y (descender feet) left untouched by scale_glyph's rule
+        for name in list(C):
+            C[name] = scale_glyph(C[name], 1.0, caps_k)
+            C[name]["adv"] = round(C[name]["adv"] / 1.0)
+        for dg in "0123456789":
+            G[dg] = scale_glyph(G[dg], 1.0, caps_k)
     G.update(C)
     return G, CAP_OF
 
@@ -621,6 +632,7 @@ def build(style, italic, fmt, fam):
     p = dict(wv=wv, contrast=fam["contrast"],
              sb=fam["sbBold"] if bold else fam["sbText"], ov=16,
              aperture=fam["aperture"],
+             capScale=fam.get("capScale", 1.0),
              widthScale=fam["wsBold"] if bold else fam["wsText"])
     slant = 10 if italic else 0
     G, CAP_OF = glyph_set(p)
@@ -674,7 +686,7 @@ def build(style, italic, fmt, fam):
                 usWinAscent=980, usWinDescent=360, fsSelection=fsSel,
                 usWeightClass=700 if bold else 400,
                 sxHeight=round(500 * fam.get("yScale", 1)),
-                sCapHeight=round(700 * fam.get("yScale", 1)))
+                sCapHeight=round(700 * fam.get("capScale", 1) * fam.get("yScale", 1)))
     fb.setupPost(italicAngle=-float(slant))
     fb.font["head"].macStyle = (0x01 if bold else 0) | (0x02 if italic else 0)
     tan = math.tan(math.radians(slant))
@@ -694,10 +706,15 @@ FAMILIES = [
     dict(name="Chuzhditsa Serif", file="ChuzhditsaSerif", caps="butt", serifs=True,
          diagClamp=108, contrast=0.34, aperture=52, wvText=92, wvBold=136,
          sbText=58, sbBold=66, wsText=1.02, wsBold=1.06),
+    # Inline weight/fit re-matched to Times after the boolean union: the
+    # 84/0.58 calibration had been made against seam-inflated rendering and
+    # read light on honest outlines; capScale closes the cap-height gap
+    # (Cyrillic 500/700 vs Times 448/662 cannot share one yScale)
     dict(name="Chuzhditsa Inline", file="ChuzhditsaInline", caps="butt", serifs=True,
          serifLen=52, serifTh=20, serifThF=0.4, diagClamp=86,
-         contrast=0.58, aperture=52, wvText=84, wvBold=130,
-         sbText=44, sbBold=54, wsText=0.93, wsBold=0.98, yScale=0.88),
+         contrast=0.50, aperture=52, wvText=90, wvBold=134,
+         sbText=40, sbBold=50, wsText=0.93, wsBold=0.98, yScale=0.88,
+         capScale=1.0714),
 ]
 STYLES = [("Regular", False), ("Bold", False),
           ("Italic", True), ("BoldItalic", True)]
