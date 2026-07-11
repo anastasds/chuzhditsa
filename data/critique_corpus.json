@@ -435,7 +435,38 @@
    "text": "update the typeface and process papers",
    "referent": "paper currency",
    "diagnosis": null,
-   "commit": "HEAD"
+   "commit": "56df35c"
+  },
+  {
+   "id": 44,
+   "ts": "2026-07-11T22:01:26Z",
+   "window": "submission",
+   "category": "defect",
+   "secondary": "verification demand",
+   "text": "the font in the chuzhditsa paper is still a little too thick - or is the inline variant not being used?",
+   "referent": "Inline weight in situ",
+   "diagnosis": "Regular Inline confirmed in use; thins ran 40/1000 em vs Times' ~30; contrast 0.52->0.56, slabs 20->16",
+   "commit": "4958d9e"
+  },
+  {
+   "id": 45,
+   "ts": "2026-07-11T22:26:10Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "more evidence of it being too thick still",
+   "referent": "Inline weight, Figure 1 evidence",
+   "diagnosis": "equal-stem geometric forms read darker than modulated serif; stems 84->80 (~95% of host stem), contrast 0.54",
+   "commit": "1d20762"
+  },
+  {
+   "id": 46,
+   "ts": "2026-07-11T22:40:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "update the typeface and process papers",
+   "referent": "paper currency",
+   "diagnosis": null,
+   "commit": "pending"
   }
  ]
 }

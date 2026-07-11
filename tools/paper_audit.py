@@ -91,7 +91,7 @@ def main():
         print("excluded:", [(u["id"], u["category"]) for u in day2 if u not in d2crit])
         print("answering commits (submission window):")
         log2 = git("log", "--reverse", "--format=%h %ad %s",
-                   "--date=format:%H:%M", "d43519f~1..2fe9a5a")
+                   "--date=format:%H:%M", "d43519f~1..1d20762")
         for l in log2.strip().splitlines():
             print("  " + l)
 
