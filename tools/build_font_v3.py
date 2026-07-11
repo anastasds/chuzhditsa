@@ -21,7 +21,8 @@ v3 engine features vs build_font.py:
     (2b round-cap original; Grotesk for UI; Serif for long-form web reading;
     Inline weight-matched to Times for citation inside serif text)
   - round caps/joins: strokes expand to per-segment quads + end discs,
-    uniformly CCW, nonzero fill (overlaps render correctly, as in build_font.py)
+    then boolean-unioned into disjoint outlines (skia-pathops) so coverage-
+    summing rasterizers cannot darken the overlap seams into a fake bold
 
 Full character set: the pan-Slavic superset, the combining-mark GPOS anchors,
 and the ligature stratum (yus fusions, soft-sign fusions, ejective digraphs)
@@ -38,6 +39,7 @@ from fontTools.fontBuilder import FontBuilder
 from fontTools.pens.ttGlyphPen import TTGlyphPen
 from fontTools.pens.t2CharStringPen import T2CharStringPen
 from fontTools.feaLib.builder import addOpenTypeFeaturesFromString
+import pathops
 
 UPM = 1000
 OUT = os.path.join(os.path.dirname(__file__), "..", "fonts", "v3")
@@ -582,6 +584,36 @@ def make_fea(G, CAP_OF, kern_scale, boxes, xf):
     lines.append("  } SOFTFUSE;\n} liga;")
     return "\n".join(lines)
 
+def union_contours(contours):
+    """Boolean-union the overlapping per-segment quads and discs into clean
+    disjoint outlines ('union before you emit'). Nonzero-winding rasterizers
+    draw the overlapping form correctly, but renderers that accumulate
+    per-contour antialiasing coverage darken every seam, reading as a fake
+    bold; a unioned outline is seam-free everywhere."""
+    if not contours:
+        return contours
+    path = pathops.Path()
+    for c in contours:
+        path.moveTo(*c[0])
+        for pt in c[1:]:
+            path.lineTo(*pt)
+        path.close()
+    path.fillType = pathops.FillType.WINDING
+    simple = pathops.simplify(path, clockwise=False)
+    out, cur = [], []
+    for verb, pts in simple:
+        if verb == pathops.PathVerb.MOVE:
+            if cur: out.append(cur)
+            cur = [(round(pts[0][0]), round(pts[0][1]))]
+        elif verb == pathops.PathVerb.LINE:
+            cur.append((round(pts[0][0]), round(pts[0][1])))
+        elif verb == pathops.PathVerb.CLOSE:
+            if cur: out.append(cur); cur = []
+        else:  # QUAD/CUBIC should not occur from line input; flatten defensively
+            cur.append((round(pts[-1][0]), round(pts[-1][1])))
+    if cur: out.append(cur)
+    return out
+
 # ------------------------------------------------------------------- builder
 def build(style, italic, fmt, fam):
     bold = style.startswith("Bold")
@@ -602,6 +634,7 @@ def build(style, italic, fmt, fam):
     for name, gdef in all_glyphs.items():
         contours = [[(round(x), round(y)) for x, y in c]
                     for c in glyph_contours(gdef, p, slant, fam)]
+        contours = union_contours(contours)
         if contours:
             xs0 = [x for c in contours for x, y in c]
             ys0 = [y for c in contours for x, y in c]
