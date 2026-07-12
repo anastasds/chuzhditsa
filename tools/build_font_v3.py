@@ -49,7 +49,7 @@ OUT = os.path.join(os.path.dirname(__file__), "..", "fonts", "v3")
 # R round | F flat | D diagonal/open | T top-bar overhang | A apex | O aperture
 SIDE = {
     "о": "RR", "с": "RO", "е": "RR", "ҫ": "RO", "з": "OR", "ѕ": "RR", "ҙ": "OR",
-    "ә": "OR", "ӧ": "RR", "ф": "RR", "ё": "RR",
+    "ӧ": "RR", "ф": "RR", "ё": "RR", "ә": "RR",
     "а": "RF", "ъ": "FR", "в": "FR", "б": "FR", "ь": "FR", "ю": "FR", "р": "FR",
     "н": "FF", "и": "FF", "ц": "FF", "м": "FF", "п": "FF", "ш": "FF", "щ": "FF",
     "џ": "FF", "ң": "FF", "й": "FF", "ӣ": "FF", "ы": "FF", "һ": "FF", "ӏ": "FF",
@@ -199,8 +199,10 @@ def glyph_set(p):
     G["ң"] = dict(adv=490, s=G["н"]["s"] + [L((445, 0), (445, -110))])
     G["һ"] = dict(adv=500, s=[L((40, 0), (40, 700)), A(250, 290, 210, 0, 180),
                               L((460, 0), (460, 290))])
-    G["ә"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.75 + 180, 360 - ap * 0.75 + 180),
-                              L((250 - R * ct, 270), (250 + R * 0.92, 270))])
+    # ә (schwa, U+04D9): an 'e' rotated 180° — aperture at the upper right and a
+    # mid bar, so it does not collide with э (backwards-e, aperture on the left)
+    G["ә"] = dict(adv=500, s=[E(250, 250, R, Rv, 55 + ap * 0.6, 415 - ap * 0.6),
+                              L((250 - R * ct, 250), (250 + R * 0.85, 250))])
     G["ӧ"] = dict(adv=486, s=[E(243, 250, R, Rv, 0, 360)] + dots(640))
     G["ӣ"] = dict(adv=490, s=G["и"]["s"] + [macron(650)])
     G["ӏ"] = dict(adv=220, s=[L((110, 0), (110, 700))])
@@ -389,8 +391,8 @@ def glyph_set(p):
                               L((320, 380), (90, 0))]); CAP_OF["Я"] = "я"
     C["Һ"] = dict(adv=540, s=[L((40, 0), (40, 700)), A(270, 400, 230, 0, 180),
                               L((500, 0), (500, 400))]); CAP_OF["Һ"] = "һ"
-    C["Ә"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.75 + 180, 360 - ap * 0.75 + 180),
-                              L((320 - R7 * ct, 375), (320 + R7 * 0.92, 375))])
+    C["Ә"] = dict(adv=640, s=[E(320, 350, R7, R7v, 55 + ap * 0.6, 415 - ap * 0.6),
+                              L((320 - R7 * ct, 350), (320 + R7 * 0.85, 350))])
     CAP_OF["Ә"] = "ә"
     C["Ӧ"] = dict(adv=640, s=[E(320, 350, R7, R7v, 0, 360),
                               DOT(230, 850, dr), DOT(410, 850, dr)]); CAP_OF["Ӧ"] = "о"
