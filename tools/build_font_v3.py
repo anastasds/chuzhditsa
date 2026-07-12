@@ -118,7 +118,10 @@ def glyph_set(p):
 
     G = {}
     G["о"] = dict(adv=486, s=[E(243, 250, R, Rv, 0, 360)])
-    G["с"] = dict(adv=500, s=[E(250, 250, R, Rv, ap, 360 - ap)])
+    # с/ҫ open on the right, so the aperture recedes there; a 420 advance
+    # gives them a normal right sidebearing instead of the round-letter default
+    # that left ҫӓ, са, со gaping (typographer/kerning fix)
+    G["с"] = dict(adv=420, s=[E(250, 250, R, Rv, ap, 360 - ap)])
     # е: a closed bowl (aperture ap·0.45) so its silhouette differs from the
     # open epsilon of є by shape, not merely by bar length (typographer review)
     G["е"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.45, 360 - ap * 0.45),
@@ -168,7 +171,7 @@ def glyph_set(p):
     G["ѧ"] = dict(adv=500, s=[L((250, 500), (70, 0)), L((250, 500), (430, 0)),
                               L((146, 210), (354, 210)), L((250, 210), (250, 0))])
     G["қ"] = dict(adv=470, s=G["к"]["s"] + [L((420, 0), (420, -110))])
-    G["ҫ"] = dict(adv=500, s=[E(250, 250, R, Rv, ap, 360 - ap),
+    G["ҫ"] = dict(adv=420, s=[E(250, 250, R, Rv, ap, 360 - ap),
                               L((250, 250 - Rv), (250, 250 - Rv - 135))])
     G["б"] = dict(adv=470, s=[L((40, 0), (40, 500)), L((40, 500), (360, 500)),
                               L((40, 280), (210, 280)), E(210, 140, 168, 140, 90, -90),
