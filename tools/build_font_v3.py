@@ -103,6 +103,7 @@ def glyph_set(p):
     Rv, R7v = R + 48, R7 + 48     # vertical radii: overshoot the cap envelope
     Rav = Rv - (0 if w > 100 else 16)  # narrow a/р bowl reads taller: reduced allowance
     ct = math.cos(math.radians(ap * 0.75))  # bar terminus: flush at arc tips
+    ct_e = math.cos(math.radians(ap * 0.45))  # closed-е bar terminus
     Rab = Ra - 12                 # a/р bowl, trimmed (review: reads oversized)
     dr = max(26, min(w * 0.60, 62))  # diacritic dot radius: weight-derived (eval pass)
 
@@ -118,8 +119,10 @@ def glyph_set(p):
     G = {}
     G["о"] = dict(adv=486, s=[E(243, 250, R, Rv, 0, 360)])
     G["с"] = dict(adv=500, s=[E(250, 250, R, Rv, ap, 360 - ap)])
-    G["е"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.75, 360 - ap * 0.75),
-                              L((70, 270), (250 + R * ct, 270))])
+    # е: a closed bowl (aperture ap·0.45) so its silhouette differs from the
+    # open epsilon of є by shape, not merely by bar length (typographer review)
+    G["е"] = dict(adv=500, s=[E(250, 250, R, Rv, ap * 0.45, 360 - ap * 0.45),
+                              L((70, 270), (250 + R * ct_e, 270))])
     G["ё"] = dict(adv=500, s=G["е"]["s"] + dots(640))
     G["н"] = dict(adv=490, s=[L((55, 0), (55, 500)), L((445, 0), (445, 500)),
                               L((55, 250), (445, 250))])
@@ -292,6 +295,19 @@ def glyph_set(p):
     G["\u00BB"] = dict(adv=460, s=[L((90, 375), (210, 250)), L((210, 250), (90, 125)),
                                    L((250, 375), (370, 250)), L((370, 250), (250, 125))])
     G["\u00B7"] = dict(adv=240, s=[DOT(120, 250, dr)])
+    # brackets and quotes that frame a citation \u2014 a register face must set its
+    # own parentheses and quotation marks, not fall back to the host (review)
+    G["("] = dict(adv=300, s=[E(410, 250, 340, 410, 129, 231)])
+    G[")"] = dict(adv=300, s=[E(-110, 250, 340, 410, -51, 51)])
+    G["["] = dict(adv=300, s=[L((95, -110), (95, 700)), L((95, 700), (240, 700)),
+                              L((95, -110), (240, -110))])
+    G["]"] = dict(adv=300, s=[L((205, -110), (205, 700)), L((60, 700), (205, 700)),
+                              L((60, -110), (205, -110))])
+    G[";"] = dict(adv=240, s=[DOT(120, 400, dr), L((130, 60), (90, -90))])
+    G["\u0022"] = dict(adv=380, s=[L((120, 700), (120, 540)), L((260, 700), (260, 540))])
+    G["\u201C"] = dict(adv=420, s=[L((110, 700), (140, 545)), L((250, 700), (280, 545))])
+    G["\u201D"] = dict(adv=420, s=[L((140, 700), (110, 545)), L((280, 700), (250, 545))])
+    G["\u2018"] = dict(adv=240, s=[L((108, 700), (125, 560))])
     G["\u2010"] = dict(adv=340, s=[L((50, 250), (290, 250))])
     G["\u2013"] = dict(adv=400, s=[L((40, 250), (360, 250))])
     G["\u2014"] = dict(adv=700, s=[L((40, 250), (660, 250))])
@@ -369,8 +385,8 @@ def glyph_set(p):
     C["Д"] = dict(adv=540, s=[L((270, 700), (70, 0)), L((270, 700), (470, 0)),
                               L((25, 0), (515, 0)), L((25, 0), (25, -85)),
                               L((515, 0), (515, -85))]); CAP_OF["Д"] = "д"
-    C["Е"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.75, 360 - ap * 0.75),
-                              L((40, 375), (320 + R7 * ct, 375))]); CAP_OF["Е"] = "е"
+    C["Е"] = dict(adv=640, s=[E(320, 350, R7, R7v, ap * 0.45, 360 - ap * 0.45),
+                              L((40, 375), (320 + R7 * ct_e, 375))]); CAP_OF["Е"] = "е"
     C["Ё"] = dict(adv=640, s=C["Е"]["s"] + [DOT(230, 850, dr), DOT(410, 850, dr)])
     CAP_OF["Ё"] = "е"
     C["О"] = dict(adv=640, s=[E(320, 350, R7, R7v, 0, 360)]); CAP_OF["О"] = "о"
@@ -556,7 +572,7 @@ def glyph_contours(gdef, p, slant, fam):
 def gname(ch):
     return "uni%04X" % ord(ch) if len(ch) == 1 else ch
 
-def make_fea(G, CAP_OF, kern_scale, boxes, xf):
+def make_fea(G, CAP_OF, kern_scale, boxes, xf, register=True):
     def cls(ch):
         return SIDE.get(ch) or (SIDE.get(CAP_OF[ch]) if ch in CAP_OF else None)
     chars = [ch for ch in G if cls(ch)]
@@ -593,18 +609,24 @@ def make_fea(G, CAP_OF, kern_scale, boxes, xf):
         by = round(max(min(0, y0), -60) - 10)
         lines.append(f"  pos base {gname(ch)} <anchor {tx} {ty}> mark @TOP <anchor {bx} {by}> mark @BOT;")
     lines.append("} mark;")
-    # ligature stratum, ordered: yus fusion must win before н/л consume ь
-    lines.append("feature liga {\n  lookup IOTYUS {")
-    for a1, a2, out in YUS_LIGA:
-        lines.append(f"    sub {gname(a1)} {gname(a2)} by {gname(out)};")
-    lines.append("  } IOTYUS;\n  lookup SOFTFUSE {")
-    for a1, a2, out in SOFT_LIGA:
-        lines.append(f"    sub {gname(a1)} {gname(a2)} by {gname(out)};")
-    for base, out in EJECTIVES:
-        for pal in ("\u04C0", "\u04CF"):  # palochka is written caseless
-            lines.append(f"    sub {gname(base.upper())} {gname(pal)} by {out}.cap;")
-            lines.append(f"    sub {gname(base)} {gname(pal)} by {out};")
-    lines.append("  } SOFTFUSE;\n} liga;")
+    # ligature stratum, ordered: yus fusion must win before н/л consume ь.
+    # register-only: the orthographic fusions (нь->њ etc.) change letter
+    # identity and would corrupt ordinary Cyrillic (деньги->дењги), so only the
+    # register cuts (2b, Inline) carry them; the general text/UI cuts (Grotesk,
+    # Serif) ship without any fusion, safe for plain Cyrillic (typographer
+    # review). In a register cut, disable 'liga' to set non-Chuzhditsa text.
+    if register:
+        lines.append("feature liga {\n  lookup IOTYUS {")
+        for a1, a2, out in YUS_LIGA:
+            lines.append(f"    sub {gname(a1)} {gname(a2)} by {gname(out)};")
+        lines.append("  } IOTYUS;\n  lookup SOFTFUSE {")
+        for a1, a2, out in SOFT_LIGA:
+            lines.append(f"    sub {gname(a1)} {gname(a2)} by {gname(out)};")
+        for base, out in EJECTIVES:
+            for pal in ("\u04C0", "\u04CF"):  # palochka is written caseless
+                lines.append(f"    sub {gname(base.upper())} {gname(pal)} by {out}.cap;")
+                lines.append(f"    sub {gname(base)} {gname(pal)} by {out};")
+        lines.append("  } SOFTFUSE;\n} liga;")
     return "\n".join(lines)
 
 def union_contours(contours):
@@ -687,15 +709,16 @@ def build(style, italic, fmt, fam):
                          "ItalicAngle": -slant}, shapes, {})
     fb.setupHorizontalMetrics(metrics)
     fb.setupHorizontalHeader(ascent=920, descent=-300)
-    fb.setupNameTable({"familyName": family, "styleName": sub, "psName": ps,
-                       "fullName": f"{family} {sub}", "version": "Version 3.0",
-                       "copyright": "Chuzhditsa 2b - the v3 readability revision",
+    disp = {"BoldItalic": "Bold Italic"}.get(sub, sub)
+    fb.setupNameTable({"familyName": family, "styleName": disp, "psName": ps,
+                       "fullName": f"{family} {disp}", "version": "Version 3.0",
+                       "copyright": "Chuzhditsa - a designed Cyrillic citation register (v3)",
                        "licenseDescription": "This Font Software is licensed under the SIL Open Font License, Version 1.1.",
                        "licenseInfoURL": "https://openfontlicense.org"})
     fsSel = (0x01 if italic else 0) | (0x20 if bold else 0) | \
             (0x40 if not (bold or italic) else 0) | 0x80
     fb.setupOS2(sTypoAscender=920, sTypoDescender=-300, sTypoLineGap=0,
-                usWinAscent=980, usWinDescent=360, fsSelection=fsSel,
+                usWinAscent=980, usWinDescent=360, fsSelection=fsSel, fsType=0,
                 usWeightClass=700 if bold else 400,
                 sxHeight=round(500 * fam.get("yScale", 1)),
                 sCapHeight=round(700 * fam.get("capScale", 1) * fam.get("yScale", 1)))
@@ -703,7 +726,9 @@ def build(style, italic, fmt, fam):
     fb.font["head"].macStyle = (0x01 if bold else 0) | (0x02 if italic else 0)
     tan = math.tan(math.radians(slant))
     xf = lambda x, y: round((x + y * tan + p["sb"]) * p["widthScale"])
-    addOpenTypeFeaturesFromString(fb.font, make_fea(G, CAP_OF, 0.7 if bold else 1.0, boxes, xf))
+    addOpenTypeFeaturesFromString(fb.font,
+                                  make_fea(G, CAP_OF, 0.7 if bold else 1.0, boxes, xf,
+                                           register=fam.get("register", False)))
     path = os.path.join(OUT, f"{ps}.{fmt}")
     fb.save(path)
     return path
@@ -711,7 +736,7 @@ def build(style, italic, fmt, fam):
 FAMILIES = [
     dict(name="Chuzhditsa 2b", file="Chuzhditsa2b", caps="round", serifs=False,
          contrast=0.10, aperture=55, wvText=76, wvBold=122,
-         sbText=50, sbBold=62, wsText=1.05, wsBold=1.10),
+         sbText=50, sbBold=62, wsText=1.05, wsBold=1.10, register=True),
     dict(name="Chuzhditsa Grotesk", file="ChuzhditsaGrotesk", caps="butt", serifs=False,
          contrast=0.08, aperture=50, wvText=84, wvBold=130,
          sbText=52, sbBold=60, wsText=1.02, wsBold=1.07),
@@ -726,7 +751,7 @@ FAMILIES = [
          serifLen=52, serifTh=16, serifThF=0.4, diagClamp=86,
          contrast=0.54, aperture=52, wvText=80, wvBold=126,
          sbText=58, sbBold=68, wsText=0.93, wsBold=0.98, yScale=0.88,
-         capScale=1.0714),
+         capScale=1.0714, register=True),
 ]
 STYLES = [("Regular", False), ("Bold", False),
           ("Italic", True), ("BoldItalic", True)]

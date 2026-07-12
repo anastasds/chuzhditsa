@@ -320,30 +320,38 @@ def fig9():
     # stack, not from the engine: this figure's claim is "this is the family",
     # and the family is whatever the built fonts say it is
     from PIL import Image as PImage, ImageDraw as PDraw, ImageFont as PFont
-    W2, H2 = 3120, 1400
-    img = PImage.new("L", (W2, H2), 255)
-    d = PDraw.Draw(img)
     # four families from one skeleton, then 2b in its four styles
     SPEC = "Чуждица · абвгдежзийклмноп · Ўў Ҫҫ Ҙҙ Ққ Ңң Ҳҳ Ѕѕ Ӓӓ · тʰ а̨ · 0123"
+    STYLE_STR = "ўӣкенд ҫӓңкс Муҳаммад крўаса̨ бѩ думи от чужбина"
     fams = [("2b (round-cap register)", "Chuzhditsa2b-Regular"),
-            ("Grotesk (butt, for UI)", "ChuzhditsaGrotesk-Regular"),
-            ("Serif (slab, long-form)", "ChuzhditsaSerif-Regular"),
+            ("Grotesk (butt, alt. to 2b)", "ChuzhditsaGrotesk-Regular"),
+            ("Serif (slab)", "ChuzhditsaSerif-Regular"),
             ("Inline (Times-matched)", "ChuzhditsaInline-Regular")]
     styles = [("2b Bold", "Chuzhditsa2b-Bold"), ("2b Italic", "Chuzhditsa2b-Italic")]
     v3 = os.path.join(os.path.dirname(__file__), "..", "fonts", "v3")
     lab = PFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 40)
-    def line(label, psname, text, y, size=92):
-        path = os.path.join(v3, f"{psname}.ttf")
-        try: f = PFont.truetype(path, size, layout_engine=PFont.Layout.RAQM)
-        except Exception: f = PFont.truetype(path, size)
+    X0, SZ = 760, 92
+    def loadf(ps):
+        path = os.path.join(v3, f"{ps}.ttf")
+        try: return PFont.truetype(path, SZ, layout_engine=PFont.Layout.RAQM)
+        except Exception: return PFont.truetype(path, SZ)
+    # size the canvas so the widest rendered line never clips the frame
+    _m = PImage.new("L", (10, 10)); _md = PDraw.Draw(_m)
+    widest = max([_md.textlength(SPEC, font=loadf(ps)) for _, ps in fams]
+                 + [_md.textlength(STYLE_STR, font=loadf(ps)) for _, ps in styles])
+    W2, H2 = int(X0 + widest + 120), 1400
+    img = PImage.new("L", (W2, H2), 255)
+    d = PDraw.Draw(img)
+    def line(label, psname, text, y, size=SZ):
+        f = loadf(psname)
         d.text((100, y + 22), label, font=lab, fill=(140))
-        d.text((760, y), text, font=f, fill=0)
+        d.text((X0, y), text, font=f, fill=0)
     y = 60
     for label, ps in fams:
         line(label, ps, SPEC, y); y += 180
     y += 30
     for label, ps in styles:
-        line(label, ps, "ўӣкенд ҫӓңкс Муҳаммад крўаса̨ бѩ думи от чужбина", y); y += 180
+        line(label, ps, STYLE_STR, y); y += 180
     bg = PImage.new("L", img.size, 255)
     from PIL import ImageChops
     bbox = ImageChops.difference(img, bg).getbbox()

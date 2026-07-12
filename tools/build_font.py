@@ -782,7 +782,7 @@ def build(style, w, italic, fmt):
     bold = w > 100
     fsSel = (0x01 if italic else 0) | (0x20 if bold else 0) | (0x40 if not (bold or italic) else 0) | 0x80
     fb.setupOS2(sTypoAscender=1050, sTypoDescender=-350, sTypoLineGap=0,
-                usWinAscent=1100, usWinDescent=450, fsSelection=fsSel,
+                usWinAscent=1100, usWinDescent=450, fsSelection=fsSel, fsType=0,
                 usWeightClass=700 if bold else 400, sxHeight=500, sCapHeight=700)
     fb.setupPost(italicAngle=-12.0 if italic else 0.0)
     fb.font["head"].macStyle = (0x01 if bold else 0) | (0x02 if italic else 0)
