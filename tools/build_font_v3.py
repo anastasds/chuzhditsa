@@ -159,12 +159,11 @@ def glyph_set(p):
                               L((88, 500), (250, 235)), L((412, 500), (250, 235)),
                               L((250, 235), (250, 0)),
                               L((250, 140), (88, 0)), L((250, 140), (412, 0))])
-    # small yus: an 'A' with the yus's inner element — a small arch on two legs
-    # nested in the lower centre (Times/Arial draw it; without it ѧ is a bare A
-    # indistinguishable from А)
+    # small yus: an 'A' with the yus's inner element — a central stem hanging
+    # from the crossbar to the baseline (the Arial-Unicode form; without it ѧ
+    # is a bare A indistinguishable from А)
     G["ѧ"] = dict(adv=500, s=[L((250, 500), (70, 0)), L((250, 500), (430, 0)),
-                              L((120, 205), (380, 205)), A(250, 90, 90, 0, 180),
-                              L((160, 90), (160, 0)), L((340, 90), (340, 0))])
+                              L((146, 210), (354, 210)), L((250, 210), (250, 0))])
     G["қ"] = dict(adv=470, s=G["к"]["s"] + [L((420, 0), (420, -110))])
     G["ҫ"] = dict(adv=500, s=[E(250, 250, R, Rv, ap, 360 - ap),
                               L((250, 250 - Rv), (250, 250 - Rv - 135))])
@@ -245,8 +244,7 @@ def glyph_set(p):
                               A(520, 120, 120, 90, -90), L((520, 0), (400, 0))])
     G["ѩ"] = dict(adv=640, s=[L((70, 0), (70, 500)), L((70, 250), (310, 250)),
                               L((390, 500), (230, 0)), L((390, 500), (550, 0)),
-                              L((270, 205), (510, 205)), A(390, 90, 82, 0, 180),
-                              L((308, 90), (308, 0)), L((472, 90), (472, 0))])
+                              L((297, 210), (483, 210)), L((390, 210), (390, 0))])
     # iotated big yus: iota element + the corrected big-yus body (▽ + stem + legs)
     G["ѭ"] = dict(adv=680, s=[L((70, 0), (70, 500)), L((70, 500), (620, 500)),
                               L((300, 500), (450, 240)), L((620, 500), (450, 240)),

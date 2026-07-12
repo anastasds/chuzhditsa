@@ -97,7 +97,7 @@ G = {
 # yuses: legs spread for daylight, internals weight-capped (the counter
 # between leg, bar and inner stem drowns at full Bold weight)
 "bigyus": dict(adv=660, strokes=[(L,120,700,540,700,116),(L,120,700,330,330,116),(L,540,700,330,330,116),(L,330,330,330,0,96),(L,330,190,120,0,116),(L,330,190,540,0,116)]),
-"smallyus": dict(adv=660, strokes=[(L,330,700,90,0,116),(L,330,700,570,0,116),(L,155,287,505,287,116),(A,330,130,120,0,180),(L,210,130,210,0,96),(L,450,130,450,0,96)]),
+"smallyus": dict(adv=660, strokes=[(L,330,700,90,0,116),(L,330,700,570,0,116),(L,191,294,469,294,116),(L,330,294,330,0,96)]),
 "dzh": dict(adv=660, strokes=[(L,150,700,150,60),(L,510,700,510,60),(L,150,60,510,60),(L,330,60,330,-160)]),
 "shha": dict(adv=640, strokes=[(L,150,0,150,700),(A,315,300,165,180,0),(L,480,0,480,300)]),
 "adia": dict(adv=660, strokes=[(L,70,0,330,718),(L,330,718,590,0),(L,190,230,470,230)]+DOTS),
@@ -147,7 +147,7 @@ G = {
 # lives entirely above the bowl and can never cross its counter
 "lsoft": dict(adv=900, strokes=[(L,70,0,330,700),(L,330,700,520,340),(L,520,340,520,0),(A,649,163,168,140,-140)]),
 # iotated yuses (Old Cyrillic revivals, U+0468/046C): stem + connector + yus
-"iotsyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,395,350,116),(L,510,700,280,0,116),(L,510,700,740,0,116),(L,350,287,670,287,116),(A,510,130,110,0,180),(L,400,130,400,0,96),(L,620,130,620,0,96)]),
+"iotsyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,350,395,350,116),(L,510,700,280,0,116),(L,510,700,740,0,116),(L,377,294,643,294,116),(L,510,294,510,0,96)]),
 "iotbyus": dict(adv=840, strokes=[(L,130,0,130,700),(L,130,700,720,700,116),(L,360,700,540,330,116),(L,720,700,540,330,116),(L,540,330,540,0,96),(L,540,190,360,0,116),(L,540,190,720,0,116)]),
 # ejective fusions: in the ligature the palochka rises to the upper half
 # (like the apostrophe of t' k'), keeping the fusion distinct from п
