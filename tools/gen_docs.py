@@ -253,7 +253,7 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 ## Архитектура: три слоя
 
 1. **Основа** — 30-те български букви, непроменени по стойност.
-2. **Разширения** — букви за звукове извън българската фонология, изведени по featural граматика (една модификация = един фонетичен признак).
+2. **Разширения** — букви за звукове извън българската фонология, изведени по композиционна граматика (една модификация = един фонетичен признак).
 3. **Просодия** — незадължителни знаци за ударение, тон и дължина, наслагващи се върху всяка гласна.
 
 Маркирането на чуждата дума става **чрез самия шрифт**: както катакана се различава от хирагана по формата, не по инвентара, така чужд текст се набира в Chuzhditsa — монолинеен, с кръгли глаголически дъна̀ — и се разпознава от три метра. Две граници са част от дизайна: регистърът бележи етап от живота на думата, не петно върху нея (усвоената заемка завършва в обикновената азбука, точно както テンプラ стана 天ぷら), и бележи **думи, никога говорещи**.
@@ -273,7 +273,7 @@ HEAD["bg"] = """# Чуждица · Chuzhditsa
 - **Възкресените букви** — ѫ, ѧ (юсовете, старобългарските носовки: ѫ стои в правописа до 1945 г., ѧ — до XIX в., а в изговора живеят до XI–XIII в.) и ѕ (ѕело, /dz/ — жива буква на македонския книжовен език, взета назаем, не възкресена) наследяват звуковете и местата на глаголическите Ⱘ, Ⱔ, Ⰷ; самите кирилски форми са преработки (ѕ по модела на гръцката стигма).
 - **Регистровата функция** — глаголицата е оцеляла векове като „другото писмо“ за специална употреба (литургия в Хърватия до началото на XX в.: последният глаголически мисал е печатан 1905 г. и е в употреба до 1927 г.); тук „специалната употреба“ е чуждото.
 
-## Дизайнов интегритет: featural граматика
+## Дизайнов интегритет: композиционна граматика
 
 Всеки диакритичен ход означава точно един признак, и се прилага навсякъде, където признакът се появи:
 
@@ -403,7 +403,7 @@ HEAD["en"] = """# Chuzhditsa · Чуждица
 ## Architecture: three layers
 
 1. **Base** — the 30 Bulgarian letters, unchanged in value.
-2. **Extensions** — letters for sounds outside Bulgarian phonology, derived by a featural grammar (one modification = one phonetic feature).
+2. **Extensions** — letters for sounds outside Bulgarian phonology, derived by a compositional grammar (one modification = one recurring phonetic relation).
 3. **Prosody** — optional marks for stress, tone and length that stack onto any vowel.
 
 Marking a word as foreign is done **by the typeface itself**: just as katakana differs from hiragana in shape rather than inventory, foreign text is set in Chuzhditsa — monoline, with round Glagolitic bowls — and is recognizable from across the room. Two boundaries are part of the design: the register marks a stage in a word's life, not a stain on it (a loan that naturalizes graduates to the plain alphabet, exactly as テンプラ became 天ぷら), and it marks **words, never speakers**.
@@ -423,7 +423,7 @@ What exactly the typeface takes from Glagolitic:
 - **The revived letters** — ѫ, ѧ (the yuses, Old Bulgarian's nasal vowels: ѫ stood in the orthography until 1945, ѧ until the 19th century, and both were alive in speech into the 11th–13th centuries) and ѕ (dzelo, /dz/ — a living letter of standard Macedonian, borrowed rather than revived) inherit the sounds and alphabet slots of Glagolitic Ⱘ, Ⱔ, Ⰷ; the Cyrillic shapes themselves are reworkings (ѕ on the model of Greek stigma).
 - **The register function** — Glagolitic survived for centuries as "the other script" for special use (liturgy in Croatia into the early 20th century: the last Glagolitic missal was printed in 1905 and used until 1927); here the special use is foreignness.
 
-## Design integrity: the featural grammar
+## Design integrity: the compositional grammar
 
 Every diacritic move means exactly one feature, and applies wherever that feature appears:
 
@@ -553,7 +553,7 @@ HEAD["uk"] = """# Чуждица · Chuzhditsa
 ## Архітектура: три шари
 
 1. **Основа** — 30 болгарських літер, незмінних за значенням.
-2. **Розширення** — літери для звуків поза болгарською фонологією, виведені за ознаковою (featural) граматикою (одна модифікація = одна фонетична ознака).
+2. **Розширення** — літери для звуків поза болгарською фонологією, виведені за композиційною граматикою (одна модифікація = одна фонетична ознака).
 3. **Просодія** — необов'язкові знаки наголосу, тону й довготи, що нашаровуються на будь-який голосний.
 
 Позначення чужого слова відбувається **самим шрифтом**: як катакана відрізняється від хірагани формою, а не інвентарем, так чужий текст набирається шрифтом Chuzhditsa — монолінійним, із круглими глаголичними чашами — і впізнається здалеку. Дві межі є частиною дизайну: регістр позначає етап у житті слова, а не пляму на ньому (засвоєне запозичення переходить до звичайної абетки, точно як テンプラ стало 天ぷら), і позначає **слова, ніколи мовців**.
@@ -703,7 +703,7 @@ HEAD["ru"] = """# Чуждица · Chuzhditsa
 ## Архитектура: три слоя
 
 1. **Основа** — 30 болгарских букв, неизменных по значению.
-2. **Расширения** — буквы для звуков за пределами болгарской фонологии, выведенные по признаковой (featural) грамматике (одна модификация = один фонетический признак).
+2. **Расширения** — буквы для звуков за пределами болгарской фонологии, выведенные по композиционной грамматике (одна модификация = один фонетический признак).
 3. **Просодия** — необязательные знаки ударения, тона и долготы, наслаивающиеся на любую гласную.
 
 Пометка чужого слова происходит **самим шрифтом**: как катакана отличается от хираганы формой, а не инвентарём, так чужой текст набирается шрифтом Chuzhditsa — монолинейным, с круглыми глаголическими чашами — и узнаётся издалека. Две границы входят в дизайн: регистр отмечает этап в жизни слова, а не пятно на нём (усвоенное заимствование выпускается в обычный алфавит, точно как テンプラ стало 天ぷら), и отмечает **слова, никогда — говорящих**.

@@ -12,7 +12,7 @@
 ## Architecture: three layers
 
 1. **Base** — the 30 Bulgarian letters, unchanged in value.
-2. **Extensions** — letters for sounds outside Bulgarian phonology, derived by a featural grammar (one modification = one phonetic feature).
+2. **Extensions** — letters for sounds outside Bulgarian phonology, derived by a compositional grammar (one modification = one recurring phonetic relation).
 3. **Prosody** — optional marks for stress, tone and length that stack onto any vowel.
 
 Marking a word as foreign is done **by the typeface itself**: just as katakana differs from hiragana in shape rather than inventory, foreign text is set in Chuzhditsa — monoline, with round Glagolitic bowls — and is recognizable from across the room. Two boundaries are part of the design: the register marks a stage in a word's life, not a stain on it (a loan that naturalizes graduates to the plain alphabet, exactly as テンプラ became 天ぷら), and it marks **words, never speakers**.
@@ -32,7 +32,7 @@ What exactly the typeface takes from Glagolitic:
 - **The revived letters** — ѫ, ѧ (the yuses, Old Bulgarian's nasal vowels: ѫ stood in the orthography until 1945, ѧ until the 19th century, and both were alive in speech into the 11th–13th centuries) and ѕ (dzelo, /dz/ — a living letter of standard Macedonian, borrowed rather than revived) inherit the sounds and alphabet slots of Glagolitic Ⱘ, Ⱔ, Ⰷ; the Cyrillic shapes themselves are reworkings (ѕ on the model of Greek stigma).
 - **The register function** — Glagolitic survived for centuries as "the other script" for special use (liturgy in Croatia into the early 20th century: the last Glagolitic missal was printed in 1905 and used until 1927); here the special use is foreignness.
 
-## Design integrity: the featural grammar
+## Design integrity: the compositional grammar
 
 Every diacritic move means exactly one feature, and applies wherever that feature appears:
 
