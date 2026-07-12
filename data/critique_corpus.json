@@ -570,6 +570,37 @@
    "referent": "the typographer review's findings",
    "diagnosis": null,
    "commit": "babbbbf"
+  },
+  {
+   "id": 57,
+   "ts": "2026-07-12T12:50:21Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "let's make sure we update the process paper too, and finally let's update the github docs",
+   "referent": "the process paper corpus + repository docs",
+   "diagnosis": null,
+   "commit": "93d47c4"
+  },
+  {
+   "id": 58,
+   "ts": "2026-07-12T16:54:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "we should really fix the ҫӓ kerning",
+   "referent": "с/ҫ spacing before round letters",
+   "diagnosis": "с/ҫ open on the right; the round-letter advance left ~37px gaps before ҫӓ/са/со; advance 500->420",
+   "commit": "7d51cce"
+  },
+  {
+   "id": 59,
+   "ts": "2026-07-12T17:07:27Z",
+   "window": "submission",
+   "category": "logistics",
+   "secondary": "verification demand",
+   "text": "and finally is there a v3 release cut on github?",
+   "referent": "release state",
+   "diagnosis": "no v3 release existed; the v3 assets had been clobbered onto the stale v2.5 release; cut v3.0",
+   "commit": "v3.0"
   }
  ]
 }
