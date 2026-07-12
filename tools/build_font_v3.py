@@ -152,8 +152,13 @@ def glyph_set(p):
                               L((55, 0), (445, 0)), L((445, 0), (445, -110))])
     G["џ"] = dict(adv=490, s=[L((55, 0), (55, 500)), L((445, 0), (445, 500)),
                               L((55, 0), (445, 0)), L((250, 0), (250, -110))])
-    G["ѫ"] = dict(adv=500, s=[L((100, 500), (400, 500)), L((250, 500), (250, 290)),
-                              L((250, 290), (70, 0)), L((250, 290), (430, 0))])
+    # big yus: the canonical inverted-triangle body (▽ under the bar) over a
+    # central stem with flared trident legs — not a bare pillar (Times/Georgia/
+    # STIX all draw the ▽; the earlier skeleton omitted it)
+    G["ѫ"] = dict(adv=500, s=[L((88, 500), (412, 500)),
+                              L((88, 500), (250, 235)), L((412, 500), (250, 235)),
+                              L((250, 235), (250, 0)),
+                              L((250, 140), (88, 0)), L((250, 140), (412, 0))])
     G["ѧ"] = dict(adv=500, s=[L((250, 500), (70, 0)), L((250, 500), (430, 0)),
                               L((140, 190), (360, 190))])
     G["қ"] = dict(adv=470, s=G["к"]["s"] + [L((420, 0), (420, -110))])
@@ -235,9 +240,11 @@ def glyph_set(p):
     G["ѩ"] = dict(adv=640, s=[L((70, 0), (70, 500)), L((70, 250), (310, 250)),
                               L((390, 500), (230, 0)), L((390, 500), (550, 0)),
                               L((295, 190), (485, 190))])
-    G["ѭ"] = dict(adv=660, s=[L((70, 0), (70, 500)), L((70, 500), (570, 500)),
-                              L((420, 500), (420, 290)), L((420, 290), (240, 0)),
-                              L((420, 290), (600, 0))])
+    # iotated big yus: iota element + the corrected big-yus body (▽ + stem + legs)
+    G["ѭ"] = dict(adv=680, s=[L((70, 0), (70, 500)), L((70, 500), (620, 500)),
+                              L((300, 500), (450, 240)), L((620, 500), (450, 240)),
+                              L((450, 240), (450, 0)),
+                              L((450, 140), (290, 0)), L((450, 140), (610, 0))])
     # ejective fusions: the palochka rises to the upper half, keeping the
     # ligature distinct from п (unencoded; reached only through GSUB)
     G["tpal"] = dict(adv=600, s=[L((50, 500), (425, 500)), L((238, 0), (238, 500)),
