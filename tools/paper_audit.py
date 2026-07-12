@@ -80,7 +80,7 @@ def main():
     if day2:
         d2crit = [u for u in day2 if u["category"] in
                   ("defect", "escalation", "verification", "redirection")]
-        print("\n== utterances (second window: submission day, 11 July) ==")
+        print("\n== utterances (second window: submission prep, 11--12 July) ==")
         print("critique utterances:", len(d2crit))
         print("words:", sum(len(u["text"].split()) for u in d2crit))
         by2 = {}
@@ -91,7 +91,7 @@ def main():
         print("excluded:", [(u["id"], u["category"]) for u in day2 if u not in d2crit])
         print("answering commits (submission window):")
         log2 = git("log", "--reverse", "--format=%h %ad %s",
-                   "--date=format:%H:%M", "d43519f~1..1d20762")
+                   "--date=format:%H:%M", "d43519f~1..babbbbf")
         for l in log2.strip().splitlines():
             print("  " + l)
 

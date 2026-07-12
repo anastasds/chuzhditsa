@@ -1,5 +1,5 @@
 {
- "description": "The complete user-message record of the first day's afternoon critique loop, extracted verbatim from the session transcript (typos preserved). Window: 2026-07-08T17:42Z through 2026-07-09T00:09Z (repository-local 13:42-20:09, UTC-4). Messages are segmented into utterances at blank lines, the segmentation used by the process paper. Coding is by a single coder (the model), post hoc, primary-category; multi-label ambiguity is flagged in 'secondary'. 'commit' names the repository commit that answered the utterance, assigned by the coder from the commit log and lab notebook. A second window ('submission', 11 July 2026) was added when the collection returned for submission preparation: utterances 30-43, coded in the same scheme by the same single coder. Day-2 timestamps are approximated by the answering commit's timestamp (the live session, unlike day 1's exported transcript, carries no per-message times); utterance 30's text is quoted from the session's compaction summary rather than a raw transcript.",
+ "description": "The complete user-message record of the first day's afternoon critique loop, extracted verbatim from the session transcript (typos preserved). Window: 2026-07-08T17:42Z through 2026-07-09T00:09Z (repository-local 13:42-20:09, UTC-4). Messages are segmented into utterances at blank lines, the segmentation used by the process paper. Coding is by a single coder (the model), post hoc, primary-category; multi-label ambiguity is flagged in 'secondary'. 'commit' names the repository commit that answered the utterance, assigned by the coder from the commit log and lab notebook. A second window ('submission', 11 July 2026) was added when the collection returned for submission preparation: utterances 30-43, coded in the same scheme by the same single coder. Day-2 timestamps are approximated by the answering commit's timestamp (the live session, unlike day 1's exported transcript, carries no per-message times); utterance 30's text is quoted from the session's compaction summary rather than a raw transcript. The submission window extended across 11--12 July as publication preparation continued (utterances 30--56).",
  "categories": {
   "defect": "defect verdict: an artifact, a fault, sometimes a location",
   "escalation": "escalation of standard, no new fault named",
@@ -467,6 +467,109 @@
    "referent": "paper currency",
    "diagnosis": null,
    "commit": "1989654"
+  },
+  {
+   "id": 47,
+   "ts": "2026-07-11T19:56:16Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "let's do one last pass as an expert phonologist and linguist so that the tables are correct and the appendices, and then we're ready to publish",
+   "referent": "the orthography tables + appendix",
+   "diagnosis": "commissioned expert review; 50 phonological corrections found and applied",
+   "commit": "73831ac"
+  },
+  {
+   "id": 48,
+   "ts": "2026-07-12T10:07:47Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "let's resume the corrections started yesterday",
+   "referent": "the interrupted verification",
+   "diagnosis": null,
+   "commit": "378ee29"
+  },
+  {
+   "id": 49,
+   "ts": "2026-07-12T10:40:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "let's update the github README and guides",
+   "referent": "repository docs",
+   "diagnosis": null,
+   "commit": "ff3f740"
+  },
+  {
+   "id": 50,
+   "ts": "2026-07-12T11:02:49Z",
+   "window": "submission",
+   "category": "defect",
+   "secondary": "verification demand",
+   "text": "it looks like ѫ has gotten mangled?",
+   "referent": "the big yus letterform",
+   "diagnosis": "big yus was drawn without its canonical inverted triangle; redrawn against four reference fonts",
+   "commit": "ff3f740"
+  },
+  {
+   "id": 51,
+   "ts": "2026-07-12T11:27:27Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "do it",
+   "referent": "a full letterform-fidelity audit of every extension glyph vs reference fonts",
+   "diagnosis": "schwa found identical to э; fixed; rest verified canonical",
+   "commit": "2449950"
+  },
+  {
+   "id": 52,
+   "ts": "2026-07-12T11:45:08Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "the yuses still aren't right: ѧ renders as A",
+   "referent": "the small yus letterform",
+   "diagnosis": "small yus lacked its inner element; the earlier audit had compared silhouettes, not interiors",
+   "commit": "1f3ff60"
+  },
+  {
+   "id": 53,
+   "ts": "2026-07-12T11:54:02Z",
+   "window": "submission",
+   "category": "defect",
+   "secondary": "direction",
+   "text": "its still wrong it should have a central stem",
+   "referent": "the small yus inner element",
+   "diagnosis": "the inner element is a central stem (Arial-Unicode form), not the arch first tried",
+   "commit": "8ce53af"
+  },
+  {
+   "id": 54,
+   "ts": "2026-07-12T11:54:02Z",
+   "window": "submission",
+   "category": "defect",
+   "secondary": "direction",
+   "text": "crossbar 210 is better",
+   "referent": "the small yus crossbar height",
+   "diagnosis": null,
+   "commit": "8ce53af"
+  },
+  {
+   "id": 55,
+   "ts": "2026-07-12T12:20:00Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "now review the typeface paper as a professional typographer",
+   "referent": "the typeface paper + shipped fonts",
+   "diagnosis": "commissioned adversarial review; found always-on fusions corrupting plain Cyrillic, an epsilon-shaped е, a clipped specimen, and pen-theory errors",
+   "commit": "babbbbf"
+  },
+  {
+   "id": 56,
+   "ts": "2026-07-12T12:42:21Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "let's fix everything",
+   "referent": "the typographer review's findings",
+   "diagnosis": null,
+   "commit": "babbbbf"
   }
  ]
 }
