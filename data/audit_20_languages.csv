@@ -11,11 +11,11 @@ English,General American,ring,/rɪŋ/,риң,ң,ң — no fake г,rhotic → р,
 English,General American,cat · cut · cart,/kæt/ /kʌt/ /kɑrt/,кӓт · кът · карт,ӓ ъ,minimal triple preserved,rhotic → р,—
 Mandarin,Standard (Beijing),北京 Běijīng,/pèɪ.tɕíŋ/,Пе̌йчиң,◌̌ ң,"unaspirated b/j are voiceless → п/ч; tone 3 ◌̌, ң",tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
 Mandarin,Standard (Beijing),茶 chá,/ʈʂʰǎ/,чʰа́,ʰ ◌́,aspiration ʰ + tone 2,tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
-Mandarin,Standard (Beijing),谢谢 xièxie,/ɕjê.ɕje/,сьѐсье,,ɕ → сь,tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
+Mandarin,Standard (Beijing),谢谢 xièxie,/ɕjê.ɕje/,сьѐсье,◌̀,ɕ → сь,tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
 Mandarin,Standard (Beijing),人 rén,/ʐə̌n/,жъ́н,ъ ◌́,"ʐ → ж, ъ /ə/",tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
 Mandarin,Standard (Beijing),上海 Shànghǎi,/ʂâŋ.xàɪ/,Ша̀ңха̌й,◌̀ ң ◌̌,"ʂ → ш, х /x/",tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
 Mandarin,Standard (Beijing),猫 māo,/máʊ/,мао,,tone 1 = unmarked,tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
-Mandarin,Standard (Beijing),气 qì,/tɕʰî/,чʰѝ,ʰ,aspirated affricate + tone 4,tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
+Mandarin,Standard (Beijing),气 qì,/tɕʰî/,чʰѝ,ʰ ◌̀,aspirated affricate + tone 4,tʂ tɕ → ч; ʐ → ж,tone sandhi; T1 = neutral tone
 Hindi-Urdu,Delhi,भारत Bhārat,/ˈbʱaːɾət̪/,Бʱа̄рът,ʱ ◌̄ ъ,"ʱ breathy voice, а̄ length, ъ /ə/",ɦ → һ,—
 Hindi-Urdu,Delhi,धन्यवाद dhanyavād,/d̪ʱənjəˈʋaːd̪/,дʱънйъва̄д,ʱ ъ ◌̄,"дʱ, two schwas → ъ",ɦ → һ,—
 Hindi-Urdu,Delhi,ठीक ṭhīk,/ʈʰiːk/,т̢ʰӣк,◌̢ ʰ ӣ,retroflex ◌̢ + aspiration + length,ɦ → һ,—
@@ -84,22 +84,22 @@ Korean,Seoul,한글 hangul,/hanɡɯl/,һангыл,һ ы,һ + ы /ɯ/,tense = ge
 Korean,Seoul,태권도 taekwondo,/tʰɛk͈wʌndo/,тʰеккўъндо,ʰ ў ъ,тʰ aspiration; tense к͈ = кк,tense = geminate,—
 Korean,Seoul,부산 Busan,/pusan/,Пусан,,lax п,tense = geminate,—
 Vietnamese,Hanoi,phở,/fəː˧˩˧/,фъ̌,ъ ◌̌,ъ /əː/ + tone ◌̌ (length drops under tone),ɓ ɗ → б д,6 tones → 4 marks
-Vietnamese,Hanoi,Việt Nam,/vjə̀t̚ naːm/,Вьѐт На̄м,◌̄,ье,ɓ ɗ → б д,6 tones → 4 marks
+Vietnamese,Hanoi,Việt Nam,/vjə̀t̚ naːm/,Вьѐт На̄м,◌̀ ◌̄,ье,ɓ ɗ → б д,6 tones → 4 marks
 Vietnamese,Hanoi,Hà Nội,/haː nôj/,Һа̀ Но̀й,һ ◌̀,һ + tones,ɓ ɗ → б д,6 tones → 4 marks
 Vietnamese,Hanoi,nước,/nɨə́k/,ны́ък,ы ◌́ ъ,ы /ɨ/ + rising tone,ɓ ɗ → б д,6 tones → 4 marks
-Vietnamese,Hanoi,bánh mì,/ɓajŋ mì/,ба́нь мѝ,◌́,implosive ɓ → б (merged),ɓ ɗ → б д,6 tones → 4 marks
+Vietnamese,Hanoi,bánh mì,/ɓáɲ mì/,ба́нь мѝ,◌́ ◌̀,implosive ɓ → б (merged),ɓ ɗ → б д,6 tones → 4 marks
 Turkish,Istanbul,Atatürk,/aˈtatyɾc/,Ататӱрк,ӱ,ӱ /y/,ɫ → л,—
 Turkish,Istanbul,ırmak,/ɯɾˈmak/,ырмак,ы,ı /ɯ/ → ы,ɫ → л,—
 Turkish,Istanbul,göl,/ɟøl/,гӧл,ӧ,ӧ /ø/,ɫ → л,—
 Turkish,Istanbul,dağ,/daː/,да̄,◌̄,ğ = pure length → ◌̄,ɫ → л,—
-Turkish,Istanbul,teşekkür,/teʃekˈcyɾ/,тешеккӱр,ӱ,geminate + ӱ,ɫ → л,—
+Turkish,Istanbul,teşekkür,/teʃekˈkyɾ/,тешеккӱр,ӱ,geminate + ӱ,ɫ → л,—
 Turkish,Istanbul,İstanbul,/isˈtanbuɫ/,Истанбул,,ɫ → л (merged),ɫ → л,—
-Italian,Standard,pizza,/ˈpittsa/,пицца,,the geminate is written double,—,—
-Italian,Standard,zero,/ˈdzɛːro/,ѕеро,ѕ,"ѕ /dz/ — alive in Macedonian, borrowed here",—,—
-Italian,Standard,gnocchi,/ˈɲɔkki/,ньокки,,нь + кк,—,—
-Italian,Standard,famiglia,/faˈmiʎʎa/,фамилья,,ль,—,—
-Italian,Standard,spaghetti,/spaˈɡetti/,спагетти,,тт,—,—
-Persian,Tehran,تهران Tehrān,/tʰehˈɾɒːn/,Теһра̄н,һ ◌̄,һ between vowels,ɢ → қ,—
+Italian,Standard,pizza,/ˈpittsa/,пицца,,the geminate is written double,ɛ ɔ → е о; ʎʎ → ль,—
+Italian,Standard,zero,/ˈdzɛːro/,ѕеро,ѕ,"ѕ /dz/ — alive in Macedonian, borrowed here",ɛ ɔ → е о; ʎʎ → ль,—
+Italian,Standard,gnocchi,/ˈɲɔkki/,ньокки,,нь + кк,ɛ ɔ → е о; ʎʎ → ль,—
+Italian,Standard,famiglia,/faˈmiʎʎa/,фамилья,,ль — palatal geminates degeminate (declared),ɛ ɔ → е о; ʎʎ → ль,—
+Italian,Standard,spaghetti,/spaˈɡetti/,спагетти,,тт,ɛ ɔ → е о; ʎʎ → ль,—
+Persian,Tehran,تهران Tehrān,/tehˈɾɒːn/,Теһра̄н,һ ◌̄,һ between vowels,ɢ → қ,—
 Persian,Tehran,قم Qom,/ɢom/,Қом,қ,қ /ɢ/,ɢ → қ,—
 Persian,Tehran,خدا khodā,/xoˈdɒː/,хода̄,◌̄,х /x/,ɢ → қ,—
 Persian,Tehran,شیراز Shirāz,/ʃiːˈɾɒːz/,Шӣра̄з,ӣ ◌̄,ӣ + а̄,ɢ → қ,—

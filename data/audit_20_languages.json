@@ -163,8 +163,8 @@
     "ң",
     "ʰ",
     "◌́",
-    "ъ",
-    "◌̀"
+    "◌̀",
+    "ъ"
    ],
    "examples": [
     {
@@ -195,7 +195,9 @@
      "word": "谢谢 xièxie",
      "ipa": "/ɕjê.ɕje/",
      "chuzhditsa": "сьѐсье",
-     "extensions": [],
+     "extensions": [
+      "◌̀"
+     ],
      "note_bg": "ɕ → сь",
      "note_en": "ɕ → сь",
      "note_uk": "ɕ → сь"
@@ -239,7 +241,8 @@
      "ipa": "/tɕʰî/",
      "chuzhditsa": "чʰѝ",
      "extensions": [
-      "ʰ"
+      "ʰ",
+      "◌̀"
      ],
      "note_bg": "аспирирана африката + тон 4",
      "note_en": "aspirated affricate + tone 4",
@@ -1161,9 +1164,9 @@
    "extensions_exercised": [
     "ъ",
     "◌̌",
+    "◌̀",
     "◌̄",
     "һ",
-    "◌̀",
     "ы",
     "◌́"
    ],
@@ -1185,6 +1188,7 @@
      "ipa": "/vjə̀t̚ naːm/",
      "chuzhditsa": "Вьѐт На̄м",
      "extensions": [
+      "◌̀",
       "◌̄"
      ],
      "note_bg": "ье",
@@ -1218,10 +1222,11 @@
     },
     {
      "word": "bánh mì",
-     "ipa": "/ɓajŋ mì/",
+     "ipa": "/ɓáɲ mì/",
      "chuzhditsa": "ба́нь мѝ",
      "extensions": [
-      "◌́"
+      "◌́",
+      "◌̀"
      ],
      "note_bg": "имплозивно ɓ → б (слети)",
      "note_en": "implosive ɓ → б (merged)",
@@ -1289,7 +1294,7 @@
     },
     {
      "word": "teşekkür",
-     "ipa": "/teʃekˈcyɾ/",
+     "ipa": "/teʃekˈkyɾ/",
      "chuzhditsa": "тешеккӱр",
      "extensions": [
       "ӱ"
@@ -1314,7 +1319,7 @@
    "name_bg": "Италиански · Italian",
    "name_uk": "Італійська · Italian",
    "reference_variety": "Standard",
-   "mergers": "—",
+   "mergers": "ɛ ɔ → е о; ʎʎ → ль",
    "losses": "—",
    "extensions_exercised": [
     "ѕ"
@@ -1354,9 +1359,9 @@
      "ipa": "/faˈmiʎʎa/",
      "chuzhditsa": "фамилья",
      "extensions": [],
-     "note_bg": "ль",
-     "note_en": "ль",
-     "note_uk": "ль"
+     "note_bg": "ль — палаталните геминати се опростяват",
+     "note_en": "ль — palatal geminates degeminate (declared)",
+     "note_uk": "ль — палатальные геминаты упрощаются"
     },
     {
      "word": "spaghetti",
@@ -1386,7 +1391,7 @@
    "examples": [
     {
      "word": "تهران Tehrān",
-     "ipa": "/tʰehˈɾɒːn/",
+     "ipa": "/tehˈɾɒːn/",
      "chuzhditsa": "Теһра̄н",
      "extensions": [
       "һ",

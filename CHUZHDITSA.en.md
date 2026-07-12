@@ -335,7 +335,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | Việt Nam | /vjə̀t̚ naːm/ | **Вьѐт На̄м** | ье |
 | Hà Nội | /haː nôj/ | **Һа̀ Но̀й** | һ + tones |
 | nước | /nɨə́k/ | **ны́ък** | ы /ɨ/ + rising tone |
-| bánh mì | /ɓajŋ mì/ | **ба́нь мѝ** | implosive ɓ → б (merged) |
+| bánh mì | /ɓáɲ mì/ | **ба́нь мѝ** | implosive ɓ → б (merged) |
 
 ### Turkish
 
@@ -345,7 +345,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | ırmak | /ɯɾˈmak/ | **ырмак** | ı /ɯ/ → ы |
 | göl | /ɟøl/ | **гӧл** | ӧ /ø/ |
 | dağ | /daː/ | **да̄** | ğ = pure length → ◌̄ |
-| teşekkür | /teʃekˈcyɾ/ | **тешеккӱр** | geminate + ӱ |
+| teşekkür | /teʃekˈkyɾ/ | **тешеккӱр** | geminate + ӱ |
 | İstanbul | /isˈtanbuɫ/ | **Истанбул** | ɫ → л (merged) |
 
 ### Italian
@@ -355,14 +355,14 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | pizza | /ˈpittsa/ | **пицца** | the geminate is written double |
 | zero | /ˈdzɛːro/ | **ѕеро** | ѕ /dz/ — alive in Macedonian, borrowed here |
 | gnocchi | /ˈɲɔkki/ | **ньокки** | нь + кк |
-| famiglia | /faˈmiʎʎa/ | **фамилья** | ль |
+| famiglia | /faˈmiʎʎa/ | **фамилья** | ль — palatal geminates degeminate (declared) |
 | spaghetti | /spaˈɡetti/ | **спагетти** | тт |
 
 ### Persian
 
 | word | IPA | chuzhditsa | what it shows |
 |---|---|---|---|
-| تهران Tehrān | /tʰehˈɾɒːn/ | **Теһра̄н** | һ between vowels |
+| تهران Tehrān | /tehˈɾɒːn/ | **Теһра̄н** | һ between vowels |
 | قم Qom | /ɢom/ | **Қом** | қ /ɢ/ |
 | خدا khodā | /xoˈdɒː/ | **хода̄** | х /x/ |
 | شیراز Shirāz | /ʃiːˈɾɒːz/ | **Шӣра̄з** | ӣ + а̄ |

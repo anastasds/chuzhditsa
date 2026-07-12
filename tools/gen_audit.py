@@ -33,7 +33,7 @@ META = {
  "Korean":       ("Seoul", "tense = geminate", "—"),
  "Vietnamese":   ("Hanoi", "ɓ ɗ → б д", "6 tones → 4 marks"),
  "Turkish":      ("Istanbul", "ɫ → л", "—"),
- "Italian":      ("Standard", "—", "—"),
+ "Italian":      ("Standard", "ɛ ɔ → е о; ʎʎ → ль", "—"),
  "Persian":      ("Tehran", "ɢ → қ", "—"),
  "Swahili":      ("Standard", "implosives → б д", "—"),
  "Greek":        ("Standard Modern", "—", "—"),
@@ -48,6 +48,8 @@ EXT_LETTERS = set("ўҫҙӓӧӱңқғҳһѕџѫѧѩѭӣӯыъ" + "ўҫҙӓӧӱң
 EXT_MARKS = {"̀": "◌̀", "́": "◌́", "̄": "◌̄", "̆": "◌̆",
              "̌": "◌̌", "̢": "◌̢", "̨": "◌̨"}
 EXT_MODS = {"ʰ", "ʱ"}
+# precomposed carriers whose diacritic must still register in extensions_used
+EXT_PRECOMPOSED = {"ѐ": "◌̀", "Ѐ": "◌̀", "ѝ": "◌̀", "Ѝ": "◌̀"}
 
 
 def extensions_used(rendering):
@@ -60,6 +62,8 @@ def extensions_used(rendering):
             tag = EXT_MARKS[ch]
         elif ch in EXT_MODS:
             tag = ch
+        elif ch in EXT_PRECOMPOSED:
+            tag = EXT_PRECOMPOSED[ch]
         if tag and tag not in seen:
             seen.add(tag)
             used.append(tag)
