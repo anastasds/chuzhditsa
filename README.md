@@ -19,11 +19,13 @@ the oldest Slavic shapes marking the newest words — in a four-face family that
 Times-matched cut for citations inside ordinary serif text. It marks words, never speakers, and a loan that naturalizes graduates back to the
 plain alphabet.
 
-Current version: **2.5**, with the v3 revision — four families from one skeleton set
+Current version: **3.0** — four families from one skeleton set
 (**2b** register face, **Grotesk**, **Serif**, and the Times-matched **Inline** the papers
 are set in) — in [fonts/v3/](fonts/v3/), built by [tools/build_font_v3.py](tools/build_font_v3.py).
 Start with the [plain-language whitepaper](WHITEPAPER.md), the
-[English specification](CHUZHDITSA.en.md), or the [journal manuscript](paper/chuzhditsa.pdf).
+[English specification](CHUZHDITSA.en.md), or the manuscript
+([paper/chuzhditsa.pdf](paper/chuzhditsa.pdf), on LingBuzz as
+[lingbuzz/010134](https://ling.auf.net/lingbuzz/010134)).
 
 Designed and directed by **Anastas Stoyanovsky**; constructed, under his criticism, by
 Claude (Anthropic) — the process itself is documented in the process study,
@@ -101,6 +103,21 @@ language would supposedly be better off without. The name is chosen against that
 where purism hands the foreignism an expulsion order, this system hands it a well-made
 costume and a seat. Piloted on Bulgarian, generalized to the Slavic Cyrillic superset,
 validated externally on Albanian.
+
+## Citing
+
+The system paper is on LingBuzz: [ling.auf.net/lingbuzz/010134](https://ling.auf.net/lingbuzz/010134).
+
+```bibtex
+@misc{stoyanovsky2026chuzhditsa,
+  author = {Stoyanovsky, Anastas},
+  title  = {Chuzhditsa: a phonological citation register for {Cyrillic}},
+  year   = {2026},
+  month  = jul,
+  note   = {Ms., LingBuzz 010134},
+  url    = {https://ling.auf.net/lingbuzz/010134}
+}
+```
 
 ## License
 
