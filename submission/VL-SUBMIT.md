@@ -9,6 +9,7 @@ Everything is prepared; the clicks are yours.
 | `paper/typeface_vl.pdf` | **Complete version** (18 pp, author-identified) |
 | `paper/typeface_vl_anon.pdf` | **Anonymized version** ([ANON] placeholders, docinfo scrubbed) |
 | `submission/vl_cover_letter.txt` | Cover letter + author bio (<100 words) |
+| `paper/vl_bio.pdf` / `submission/vl_bio.txt` | **Bio file** (47 words) — upload where the platform asks for a biography file |
 
 Both are generated from `paper/typeface.tex` by `tools/gen_vl.py` — if the canonical
 paper changes, regenerate; never hand-edit the `_vl` files.

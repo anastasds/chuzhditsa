@@ -1,0 +1,5 @@
+Anastas Stoyanovsky is an independent researcher. He designed and directed the
+Chuzhditsa project — a phonological citation register for Cyrillic and the
+four-family parametric typeface that implements it — and is the author of its
+companion papers on the orthography and on the human–AI production process
+behind the artifacts.
