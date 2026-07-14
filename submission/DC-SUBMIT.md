@@ -12,7 +12,7 @@ Upload these:
 
 Metadata to paste:
 - Title: *The critic and the builder: how the Chuzhditsa papers were written*
-- Abstract: the 217-word paragraph from p. 1 of the DC PDFs
+- Abstract: the 147-word paragraph from p. 1 of the DC PDFs
 - Keywords: `artificial intelligence; creative collaboration; criticism; design process; large language models; type design`
 
 Notes:
