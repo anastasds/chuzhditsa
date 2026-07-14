@@ -633,6 +633,16 @@
    "referent": "top-bar (T-right) kern class",
    "diagnosis": "TT/TR/TF too weak (гт 34px vs 15px norm); strengthened to -85/-60/-35 with x1.3 Bold boost",
    "commit": null
+  },
+  {
+   "id": 63,
+   "ts": "2026-07-13T11:55:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "the kerning of улу is also too wide. the Һ and its lowercase stand too tall, they should match surrounding characters in style. ба are a bit too far apart too. Ат kerning can also be tightened. Ҫе could be tightened too.",
+   "referent": "diagonal/apex kern classes; б, С, Ҫ advances; һ/Һ letterforms",
+   "diagnosis": "five-part verdict: DD/DA/DT strengthened; б and С/Ҫ had round-letter advances despite narrower ink; һ stem 700->640 (solution-free 'match surrounding style' — two failed alignments taught that h-identity needs the stem-above-arch differential); Һ found canonical and reverted",
+   "commit": null
   }
  ]
 }
