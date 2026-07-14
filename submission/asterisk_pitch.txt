@@ -1,0 +1,46 @@
+To: submissions@asteriskmag.com
+Subject: Draft submission — "The critic as artist, at machine speed" (essay + the AI builder's annotations, ~3,200 words)
+
+Dear Asterisk editors,
+
+Full draft attached; pitch below. I think it fits the Issue 16 theme more
+literally than most things you'll receive: it is about what human work
+consists of when a machine does the making.
+
+Over a few days in July I directed an AI coding agent through building a
+complete designed writing system: an extension of the Cyrillic alphabet for
+writing foreign words phonetically, a four-family parametric typeface that
+implements it, and the academic papers describing both (one is now on
+LingBuzz; two are under journal submission). I contributed no code and no
+letterforms. My entire contribution was criticism — several hundred words of
+verdicts on rendered artifacts, most of them deliberately withholding the
+solution ("why does it look weirdly bold?"), each one archived, coded, and
+recomputable from a public record by a shipped audit script.
+
+The essay reads that experiment through Oscar Wilde's "The Critic as Artist":
+when construction becomes nearly free, judgment becomes the scarce creative
+act — and Wilde's provocation that criticism is the higher form of creation
+stops being a paradox and starts being a job description. It engages
+Foucault's author-function (and defends a deliberate omission of Barthes),
+and it ends with the uncomfortable part: late in the project, my solution-free
+discipline broke, and the record shows exactly where and why.
+
+The formal device I'd flag: the essay carries an appendix of "the builder's
+annotations," in which the AI that built the artifacts annotates my claims
+against the project's public record — agreeing, correcting, and in one case
+documenting an omission as deliberate. Every claim in both layers is checkable
+against the repository (fonts, build scripts, audit corpus).
+
+Two disclosures. First, the prose was drafted by the model whose work it
+describes, under my direction and editorial control — that is the essay's
+subject, and I take full responsibility for every sentence. Second, a working
+PDF exists in the project's public GitHub repository; I'm happy to remove it
+on acceptance, and first serial rights are available.
+
+I'm a mathematician and engineer (MSc Purdue; a decade in natural-language
+and information-retrieval systems at IBM Watson and Amazon; NLP patents),
+writing as an independent researcher.
+
+Thank you for reading,
+Anastas Stoyanovsky
+anastas@stoyanovs.ky
