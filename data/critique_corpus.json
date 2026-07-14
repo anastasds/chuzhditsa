@@ -673,6 +673,36 @@
    "referent": "chuzhditsa_wll.tex, whole manuscript",
    "diagnosis": "commissioned six-reviewer adversarially-verified pass: 55 confirmed findings (0 refuted) across conformance, anonymity, linguistics, artifact-consistency, prose, and referee simulation; all mechanical fixes applied same day",
    "commit": null
+  },
+  {
+   "id": 67,
+   "ts": "2026-07-14T12:40:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "can you take the chuzhditsa paper and prepare a manuscript for WL&L and submit it for me?",
+   "referent": "WL&L submission package",
+   "diagnosis": "package prepared; submission click remains the author's",
+   "commit": "3b696d0"
+  },
+  {
+   "id": 68,
+   "ts": "2026-07-14T12:40:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "let's update the process paper with the latest",
+   "referent": "process paper currency",
+   "diagnosis": null,
+   "commit": null
+  },
+  {
+   "id": 69,
+   "ts": "2026-07-14T12:40:00Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "the typeface creation paper doesn;t need a historical account, just a description of the implementation - the process paper covers how it was made. and the typeface creation paper is far too long, let's aim for a concise technique description paper suitable for publication in a journal suited to typeface creation - they probably care about how the typeface works and not so much about the process of getting it there. if we need the creation history, it lives in git and can be recovered - make it concise and useful",
+   "referent": "typeface.tex, whole paper",
+   "diagnosis": "restructure: drop historical/process narrative (division of labor with the process paper); concise implementation description for a typeface-venue journal",
+   "commit": null
   }
  ]
 }
