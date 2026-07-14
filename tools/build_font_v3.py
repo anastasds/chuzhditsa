@@ -411,8 +411,10 @@ def glyph_set(p):
     C["Я"] = dict(adv=520, s=[L((470, 0), (470, 700)), L((470, 700), (200, 700)),
                               E(200, 540, 170, 160, 90, 270), L((200, 380), (470, 380)),
                               L((320, 380), (90, 0))]); CAP_OF["Я"] = "я"
-    C["Һ"] = dict(adv=540, s=[L((40, 0), (40, 700)), A(270, 400, 230, 0, 180),
-                              L((500, 0), (500, 400))]); CAP_OF["Һ"] = "һ"
+    # Һ: hoop at the lowercase proportion (peak ~0.78 of stem, like һ's 500/640),
+    # not a balloon riding the cap line — the ascender differential reads as h
+    C["Һ"] = dict(adv=520, s=[L((40, 0), (40, 700)), A(255, 330, 215, 0, 180),
+                              L((470, 0), (470, 330))]); CAP_OF["Һ"] = "һ"
     C["Ә"] = dict(adv=640, s=[E(320, 350, R7, R7v, 55 + ap * 0.6, 415 - ap * 0.6),
                               L((320 - R7 * ct, 350), (320 + R7 * 0.85, 350))])
     CAP_OF["Ә"] = "ә"

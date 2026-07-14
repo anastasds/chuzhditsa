@@ -643,6 +643,16 @@
    "referent": "diagonal/apex kern classes; б, С, Ҫ advances; һ/Һ letterforms",
    "diagnosis": "five-part verdict: DD/DA/DT strengthened; б and С/Ҫ had round-letter advances despite narrower ink; һ stem 700->640 (solution-free 'match surrounding style' — two failed alignments taught that h-identity needs the stem-above-arch differential); Һ found canonical and reverted",
    "commit": null
+  },
+  {
+   "id": 64,
+   "ts": "2026-07-14T09:20:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "Һ has become even more exaggerated, it should have the hoop become smaller, not bigger. and is Т a real letter",
+   "referent": "Һ letterform; Т identity query",
+   "diagnosis": "direction correction after the builder's revert: hoop reduced to the lowercase proportion (peak ~0.78 of stem, r 230->215, sprung 400->330); Т verified correct (scaled т = canonical Te) and left unchanged",
+   "commit": null
   }
  ]
 }
