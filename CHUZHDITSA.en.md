@@ -57,7 +57,7 @@ Everything the system adds to any Slavic Cyrillic alphabet — every letter with
 | letter | Unicode | value | construction | origin |
 |---|---|---|---|---|
 | **Ўў** | U+040E/045E | /w/ | у + breve | import: Belarusian |
-| **Џџ** | U+040F/045F | /d͡ʒ/ | own shape | import: Serbian |
+| **Џџ** | U+040F/045F | /dʒ/ | own shape | import: Serbian |
 | **Ҫҫ** | U+04AA/04AB | /θ/ | с + hook | import: Bashkir |
 | **Ҙҙ** | U+0498/0499 | /ð/ | з + hook | import: Bashkir |
 | **Ққ** | U+049A/049B | /q ɢ/ | к + hook | import: Kazakh |
@@ -65,7 +65,7 @@ Everything the system adds to any Slavic Cyrillic alphabet — every letter with
 | **Ҳҳ** | U+04B2/04B3 | /ħ/ | х + hook | import: Tajik |
 | **Ғғ** | U+0492/0493 | /ɣ/ | г + crossbar | import: Kazakh |
 | **Һһ** | U+04BA/04BB | /h ɦ/ | own shape | import: Tatar |
-| **Ѕѕ** | U+0405/0455 | /d͡z/ | own shape | alive in Macedonian (dzelo) |
+| **Ѕѕ** | U+0405/0455 | /dz/ | own shape | alive in Macedonian (dzelo) |
 | **Ӏ** | U+04C0 | /ʕ/; тӀ кӀ цӀ | palochka | import: Caucasus |
 | **т̢ д̢ н̢ р̢** | база + U+0322 | /ʈ ɖ ɳ ɽ/ | base + hook | derived by rule |
 | **◌ʰ** | U+02B0 | aspiration | raised miniature һ | derived |
@@ -272,7 +272,7 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 | বড় bôṛo | /bɔɽo/ | **бор̢о** | р̢ /ɽ/ |
 | মিষ্টি mishṭi | /miʃʈi/ | **мишт̢и** | ш + т̢ in a cluster |
 | ভাই bhāi | /bʱai/ | **бʱай** | бʱ |
-| মাছ māchh | /mat͡ɕʰ/ | **мачʰ** | final aspiration |
+| মাছ māchh | /matɕʰ/ | **мачʰ** | final aspiration |
 | ধন্যবাদ dhonnobād | /d̪ʱɔnnobad̪/ | **дʱоннобад** | дʱ + geminate |
 
 ### Portuguese
@@ -392,10 +392,10 @@ Canonical encoding is **NFC**. Where Unicode has a precomposed letter it is cano
 
 | word | IPA | chuzhditsa | what it shows |
 |---|---|---|---|
-| Wrocław | /ˈvrɔt͡swaf/ | **Вроцўаф** | ł /w/ → ў |
+| Wrocław | /ˈvrɔtswaf/ | **Вроцўаф** | ł /w/ → ў |
 | mąka | /ˈmɔ̃ka/ | **мѫка** | ą is the old nasal: the yus meets its own descendant |
-| pięć | /pʲɛ̃t͡ɕ/ | **пѩч** | ѩ — the font fuses ьѧ by itself |
-| szczęście | /ˈʂt͡ʂɛ̃ɕt͡ɕɛ/ | **шчѧсьче** | the famous cluster, tamed |
+| pięć | /pʲɛ̃tɕ/ | **пѩч** | ѩ — the font fuses ьѧ by itself |
+| szczęście | /ˈʂtʂɛ̃ɕtɕɛ/ | **шчѧсьче** | the famous cluster, tamed |
 | Kraków | /ˈkrakuf/ | **Кракуф** | final devoicing, honestly |
 
 ### Indonesian

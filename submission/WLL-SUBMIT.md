@@ -32,9 +32,16 @@ Everything is prepared; the clicks are yours.
 - **Double-blind**: the manuscript PDF is verified clean of identity (author, email,
   repo, docinfo). The LingBuzz preprint (010134) is public — that is expressly permitted
   by Benjamins' preprint policy and normal practice; the cover letter discloses it.
-- Reference style: converted to Benjamins/Unified-Style-Sheet sentence-case titles in the
-  WLL copy. The style sheet prefers full given names over initials — easy to complete at
-  revision if asked; guessing 30+ first names now would risk errors.
+- Reference style: Benjamins/Unified-Style-Sheet conformant — sentence-case titles (WLL
+  copy), full given names (except Alder et al., kept as published), spelled-out publishers,
+  DOIs where verified, USS ordering. A six-reviewer pre-submission pass (55 confirmed
+  findings) was applied 2026-07-14; the full report is in the session record.
+- If EM asks for **suggested reviewers**, see the list in the session notes (Meletis,
+  Bunčić, Haralambous, Gnanadesikan, Sebba) — verify none is a current WL&L editor first.
+- Deferred to revision stage (deliberate): per-variety JIPA Illustration citations are
+  referenced generically in the Method rather than as nine individual entries (avoids
+  unverifiable page numbers); an anonymized repository mirror (e.g. anonymous.4open.science)
+  is available as an option if the editors ask for reviewable data beyond the appendix.
 - Production formatting (Word file, 13×22 cm area, double spacing) applies to the
   **final** accepted manuscript, not this submission.
 - `chuzhditsa_wll.tex` is generated from `chuzhditsa.tex` by a scripted transform —

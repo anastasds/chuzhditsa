@@ -26,21 +26,21 @@ Hindi-Urdu,Delhi,चाय chāy,/tʃaːj/,ча̄й,◌̄,ч,ɦ → һ,—
 Hindi-Urdu,Delhi,पानी pānī,/paːniː/,па̄нӣ,◌̄ ӣ,double length,ɦ → һ,—
 Hindi-Urdu,Delhi,लड़का laṛkā,/ləɽkaː/,лър̢ка̄,ъ ◌̢ ◌̄,р̢ /ɽ/ retroflex flap,ɦ → һ,—
 Hindi-Urdu,Delhi,हवा havā,/ɦəˈʋaː/,һъва̄,һ ъ ◌̄,һ /ɦ/ (merges with /h/),ɦ → һ,—
-Spanish,Castilian,cerveza,/θeɾˈβeθa/,ҫервеҫа,ҫ,Castilian /θ/ → ҫ,β → в; rhotics → р,—
-Spanish,Castilian,jamón,/xaˈmon/,хамон,,j = /x/ → native х,β → в; rhotics → р,—
-Spanish,Castilian,agua,/ˈaɣwa/,ағўа,ғ ў,ғ /ɣ/ + ў /w/,β → в; rhotics → р,—
-Spanish,Castilian,niño,/ˈniɲo/,ниньо,,ɲ → нь (native mechanism),β → в; rhotics → р,—
-Spanish,Castilian,Madrid,/maˈðɾið/,Маҙриҙ,ҙ,/ð/ → ҙ,β → в; rhotics → р,—
-Spanish,Castilian,paella,/paˈeʎa/,паелья,,ʎ → ль,β → в; rhotics → р,—
-French,Parisian,bonjour,/bɔ̃ʒuʁ/,бѫжур,ѫ,ѫ /ɔ̃/ — the resurrected yus,ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,vin,/vɛ̃/,вѧ,ѧ,ѧ /ɛ̃/,ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,blanc,/blɑ̃/,бла̨,◌̨,"а̨ /ɑ̃/ — the yus tail, by rule",ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,croissant,/kʁwasɑ̃/,крўаса̨,ў ◌̨,ў + а̨,ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,deux,/dø/,дӧ,ӧ,ӧ /ø/,ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,rue,/ʁy/,рӱ,ӱ,ӱ /y/,ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,parfum,/paʁfœ̃/,парфӧ̨,ӧ ◌̨,"ӧ̨ /œ̃/ — umlaut + nasal, two marks",ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,bien,/bjɛ̃/,бѩ,ѩ,"ѩ /jɛ̃/ — the iotated yus, a ligature",ʁ → р; ɛ ɔ œ → е о ӧ,—
-French,Parisian,grenouille,/ɡʁənuj/,грънуй,ъ,schwa → ъ,ʁ → р; ɛ ɔ œ → е о ӧ,—
+Spanish,Castilian,cerveza,/θeɾˈβeθa/,ҫервеҫа,ҫ,Castilian /θ/ → ҫ,rhotics → р (β ð ɣ by positional rule),—
+Spanish,Castilian,jamón,/xaˈmon/,хамон,,j = /x/ → native х,rhotics → р (β ð ɣ by positional rule),—
+Spanish,Castilian,agua,/ˈaɣwa/,ағўа,ғ ў,ғ /ɣ/ + ў /w/,rhotics → р (β ð ɣ by positional rule),—
+Spanish,Castilian,niño,/ˈniɲo/,ниньо,,ɲ → нь (native mechanism),rhotics → р (β ð ɣ by positional rule),—
+Spanish,Castilian,Madrid,/maˈðɾið/,Маҙриҙ,ҙ,/ð/ → ҙ,rhotics → р (β ð ɣ by positional rule),—
+Spanish,Castilian,paella,/paˈeʎa/,паелья,,ʎ → ль,rhotics → р (β ð ɣ by positional rule),—
+French,Parisian,bonjour,/bɔ̃ʒuʁ/,бѫжур,ѫ,ѫ /ɔ̃/ — the resurrected yus,ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,vin,/vɛ̃/,вѧ,ѧ,ѧ /ɛ̃/,ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,blanc,/blɑ̃/,бла̨,◌̨,"а̨ /ɑ̃/ — the yus tail, by rule",ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,croissant,/kʁwasɑ̃/,крўаса̨,ў ◌̨,ў + а̨,ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,deux,/dø/,дӧ,ӧ,ӧ /ø/,ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,rue,/ʁy/,рӱ,ӱ,ӱ /y/,ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,parfum,/paʁfœ̃/,парфӧ̨,ӧ ◌̨,"ӧ̨ /œ̃/ — umlaut + nasal, two marks",ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,bien,/bjɛ̃/,бѩ,ѩ,"ѩ /jɛ̃/ — the iotated yus, a ligature",ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
+French,Parisian,grenouille,/ɡʁənuj/,грънуй,ъ,schwa → ъ,ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ,—
 Arabic (MSA),Modern Standard Arabic,هلال hilāl,/hiˈlaːl/,һила̄л,һ ◌̄,һ /h/ — light h,χ → х; emphatics → plain,—
 Arabic (MSA),Modern Standard Arabic,محمد Muḥammad,/muˈħammad/,Муҳаммад,ҳ,ҳ /ħ/ — pharyngeal h,χ → х; emphatics → plain,—
 Arabic (MSA),Modern Standard Arabic,خالد Khālid,/ˈxaːlid/,Ха̄лид,◌̄,х /x/ — the native х: all three H's in three names,χ → х; emphatics → plain,—
@@ -54,7 +54,7 @@ Bengali,Standard (Kolkata),কলকাতা Kolkātā,/kolkat̪a/,Колкат
 Bengali,Standard (Kolkata),বড় bôṛo,/bɔɽo/,бор̢о,◌̢,р̢ /ɽ/,ɔ → о,—
 Bengali,Standard (Kolkata),মিষ্টি mishṭi,/miʃʈi/,мишт̢и,◌̢,ш + т̢ in a cluster,ɔ → о,—
 Bengali,Standard (Kolkata),ভাই bhāi,/bʱai/,бʱай,ʱ,бʱ,ɔ → о,—
-Bengali,Standard (Kolkata),মাছ māchh,/mat͡ɕʰ/,мачʰ,ʰ,final aspiration,ɔ → о,—
+Bengali,Standard (Kolkata),মাছ māchh,/matɕʰ/,мачʰ,ʰ,final aspiration,ɔ → о,—
 Bengali,Standard (Kolkata),ধন্যবাদ dhonnobād,/d̪ʱɔnnobad̪/,дʱоннобад,ʱ,дʱ + geminate,ɔ → о,—
 Portuguese,Brazilian,São Paulo,/sɐ̃w̃ ˈpawlu/,Са̨у Паулу,◌̨,а̨ nasal + у semivowel,ʁ → р; ɛ ɔ → е о,—
 Portuguese,Brazilian,pão,/pɐ̃w̃/,па̨у,◌̨,nasal diphthong,ʁ → р; ɛ ɔ → е о,—
@@ -66,28 +66,28 @@ Russian,Standard,Хрущёв,/xrʊˈɕːɵf/,Хрушчов,,Rus. щ /ɕː/ ≠
 Russian,Standard,бабушка,/ˈbabʊʂkə/,бабушка,,"phonemic, not phonetic: reduction goes unwritten",ɕː → шч,reduction (phonemic input)
 Russian,Standard,ёлка,/ˈjɵlkə/,йолка,,ё → йо,ɕː → шч,reduction (phonemic input)
 Russian,Standard,Пётр,/pʲɵtr/,Пьотр,,palatalization with ь,ɕː → шч,reduction (phonemic input)
-Japanese,Tokyo,東京 Tōkyō,/toːkʲoː/,То̄кьо̄,◌̄,double length ◌̄,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н,pitch accent
-Japanese,Tokyo,大阪 Ōsaka,/oːsaka/,О̄сака,◌̄,initial long vowel,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н,pitch accent
-Japanese,Tokyo,可愛い kawaii,/kaɰaiː/,каўаӣ,ў ӣ,ў + ӣ,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н,pitch accent
-Japanese,Tokyo,富士 Fuji,/ɸɯʑi/,Фуџи,џ,"ɸ → ф, ʑ → џ (merged)",ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н,pitch accent
-Japanese,Tokyo,ラーメン rāmen,/ɾaːmeɴ/,ра̄мен,◌̄,chōonpu → the length bar,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н,pitch accent
-Japanese,Tokyo,寿司 sushi,/sɯɕi/,суши,,ɯ → у (merged),ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н,pitch accent
-German,Standard,München,/ˈmʏnçən/,Мӱнхьън,ӱ ъ,ӱ /ʏ/ + хь /ç/ ich-Laut,—,—
-German,Standard,Goethe,/ˈɡøːtə/,Гӧ̄те,ӧ ◌̄,long ӧ̄ /øː/,—,—
-German,Standard,Zürich,/ˈtsyːʁɪç/,Цӱ̄рихь,ӱ ◌̄,ц + ӱ̄,—,—
-German,Standard,Straße,/ˈʃtʁaːsə/,штра̄се,◌̄,шт cluster — native to Bulgarian,—,—
-German,Standard,Bach,/bax/,Бах,,ach-Laut = native х,—,—
-German,Standard,schön,/ʃøːn/,шӧ̄н,ӧ ◌̄,ӧ̄,—,—
+Japanese,Tokyo,東京 Tōkyō,/toːkʲoː/,То̄кьо̄,◌̄,double length ◌̄,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched),pitch accent
+Japanese,Tokyo,大阪 Ōsaka,/oːsaka/,О̄сака,◌̄,initial long vowel,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched),pitch accent
+Japanese,Tokyo,可愛い kawaii,/kaɰaiː/,каўаӣ,ў ӣ,ў + ӣ,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched),pitch accent
+Japanese,Tokyo,富士 Fuji,/ɸɯʑi/,Фуџи,џ,"ɸ → ф, ʑ → џ (merged)",ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched),pitch accent
+Japanese,Tokyo,ラーメン rāmen,/ɾaːmeɴ/,ра̄мен,◌̄,chōonpu → the length bar,ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched),pitch accent
+Japanese,Tokyo,寿司 sushi,/sɯɕi/,суши,,ɯ → у (merged),ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched),pitch accent
+German,Standard,München,/ˈmʏnçən/,Мӱнхьън,ӱ ъ,ӱ /ʏ/ + хь /ç/ ich-Laut,ɛː/eː → е̄,—
+German,Standard,Goethe,/ˈɡøːtə/,Гӧ̄те,ӧ ◌̄,long ӧ̄ /øː/,ɛː/eː → е̄,—
+German,Standard,Zürich,/ˈtsyːʁɪç/,Цӱ̄рихь,ӱ ◌̄,ц + ӱ̄,ɛː/eː → е̄,—
+German,Standard,Straße,/ˈʃtʁaːsə/,штра̄се,◌̄,шт cluster — native to Bulgarian,ɛː/eː → е̄,—
+German,Standard,Bach,/bax/,Бах,,ach-Laut = native х,ɛː/eː → е̄,—
+German,Standard,schön,/ʃøːn/,шӧ̄н,ӧ ◌̄,ӧ̄,ɛː/eː → е̄,—
 Korean,Seoul,서울 Seoul,/sʌ.ul/,Съул,ъ,ㅓ /ʌ/ → ъ,tense = geminate,—
 Korean,Seoul,김치 kimchi,/kimtɕʰi/,кимчʰи,ʰ,aspirated чʰ,tense = geminate,—
 Korean,Seoul,한글 hangul,/hanɡɯl/,һангыл,һ ы,һ + ы /ɯ/,tense = geminate,—
 Korean,Seoul,태권도 taekwondo,/tʰɛk͈wʌndo/,тʰеккўъндо,ʰ ў ъ,тʰ aspiration; tense к͈ = кк,tense = geminate,—
 Korean,Seoul,부산 Busan,/pusan/,Пусан,,lax п,tense = geminate,—
-Vietnamese,Hanoi,phở,/fəː˧˩˧/,фъ̌,ъ ◌̌,ъ /əː/ + tone ◌̌ (length drops under tone),ɓ ɗ → б д,6 tones → 4 marks
-Vietnamese,Hanoi,Việt Nam,/vjə̀t̚ naːm/,Вьѐт На̄м,◌̀ ◌̄,ье,ɓ ɗ → б д,6 tones → 4 marks
-Vietnamese,Hanoi,Hà Nội,/haː nôj/,Һа̀ Но̀й,һ ◌̀,һ + tones,ɓ ɗ → б д,6 tones → 4 marks
-Vietnamese,Hanoi,nước,/nɨə́k/,ны́ък,ы ◌́ ъ,ы /ɨ/ + rising tone,ɓ ɗ → б д,6 tones → 4 marks
-Vietnamese,Hanoi,bánh mì,/ɓáɲ mì/,ба́нь мѝ,◌́ ◌̀,implosive ɓ → б (merged),ɓ ɗ → б д,6 tones → 4 marks
+Vietnamese,Hanoi,phở,/fəː˧˩˧/,фъ̌,ъ ◌̌,ъ /əː/ + tone ◌̌ (length drops under tone),ɓ ɗ → б д,6 tones → 4 marks; length under tone
+Vietnamese,Hanoi,Việt Nam,/vjə̀t̚ naːm/,Вьѐт На̄м,◌̀ ◌̄,ье,ɓ ɗ → б д,6 tones → 4 marks; length under tone
+Vietnamese,Hanoi,Hà Nội,/haː nôj/,Һа̀ Но̀й,һ ◌̀,һ + tones,ɓ ɗ → б д,6 tones → 4 marks; length under tone
+Vietnamese,Hanoi,nước,/nɨə́k/,ны́ък,ы ◌́ ъ,ы /ɨ/ + rising tone,ɓ ɗ → б д,6 tones → 4 marks; length under tone
+Vietnamese,Hanoi,bánh mì,/ɓáɲ mì/,ба́нь мѝ,◌́ ◌̀,implosive ɓ → б (merged),ɓ ɗ → б д,6 tones → 4 marks; length under tone
 Turkish,Istanbul,Atatürk,/aˈtatyɾc/,Ататӱрк,ӱ,ӱ /y/,ɫ → л,—
 Turkish,Istanbul,ırmak,/ɯɾˈmak/,ырмак,ы,ı /ɯ/ → ы,ɫ → л,—
 Turkish,Istanbul,göl,/ɟøl/,гӧл,ӧ,ӧ /ø/,ɫ → л,—
@@ -99,11 +99,11 @@ Italian,Standard,zero,/ˈdzɛːro/,ѕеро,ѕ,"ѕ /dz/ — alive in Macedonian,
 Italian,Standard,gnocchi,/ˈɲɔkki/,ньокки,,нь + кк,ɛ ɔ → е о; ʎʎ → ль,—
 Italian,Standard,famiglia,/faˈmiʎʎa/,фамилья,,ль — palatal geminates degeminate (declared),ɛ ɔ → е о; ʎʎ → ль,—
 Italian,Standard,spaghetti,/spaˈɡetti/,спагетти,,тт,ɛ ɔ → е о; ʎʎ → ль,—
-Persian,Tehran,تهران Tehrān,/tehˈɾɒːn/,Теһра̄н,һ ◌̄,һ between vowels,ɢ → қ,—
-Persian,Tehran,قم Qom,/ɢom/,Қом,қ,қ /ɢ/,ɢ → қ,—
-Persian,Tehran,خدا khodā,/xoˈdɒː/,хода̄,◌̄,х /x/,ɢ → қ,—
-Persian,Tehran,شیراز Shirāz,/ʃiːˈɾɒːz/,Шӣра̄з,ӣ ◌̄,ӣ + а̄,ɢ → қ,—
-Persian,Tehran,دوغ dugh,/duːɢ/,дӯқ,ӯ қ,ق/غ merged in Tehran → қ,ɢ → қ,—
+Persian,Tehran,تهران Tehrān,/tehˈɾɒːn/,Теһра̄н,һ ◌̄,һ between vowels,ɢ → қ,ʔ dropped
+Persian,Tehran,قم Qom,/ɢom/,Қом,қ,қ /ɢ/,ɢ → қ,ʔ dropped
+Persian,Tehran,خدا khodā,/xoˈdɒː/,хода̄,◌̄,х /x/,ɢ → қ,ʔ dropped
+Persian,Tehran,شیراز Shirāz,/ʃiːˈɾɒːz/,Шӣра̄з,ӣ ◌̄,ӣ + а̄,ɢ → қ,ʔ dropped
+Persian,Tehran,دوغ dugh,/duːɢ/,дӯқ,ӯ қ,ق/غ merged in Tehran → қ,ɢ → қ,ʔ dropped
 Swahili,Standard,dhahabu,/ðaˈhabu/,ҙаһабу,ҙ һ,ҙ + һ (Arabic loans in Swahili),implosives → б д,—
 Swahili,Standard,thelathini,/θelaˈθini/,ҫелаҫини,ҫ,double ҫ,implosives → б д,—
 Swahili,Standard,ng'ombe,/ŋombe/,ңомбе,ң,initial ң — impossible today,implosives → б д,—
@@ -114,11 +114,11 @@ Greek,Standard Modern,δεν,/ðen/,ҙен,ҙ,δ → ҙ,—,—
 Greek,Standard Modern,γάλα,/ˈɣala/,ғала,ғ,γ → ғ,—,—
 Greek,Standard Modern,ευχαριστώ,/efxariˈsto/,ефхаристо,,χ = native х,—,—
 Greek,Standard Modern,χάος,/ˈxaos/,хаос,,Greek becomes fully writable,—,—
-Polish,Standard,Wrocław,/ˈvrɔt͡swaf/,Вроцўаф,ў,ł /w/ → ў,ɕ → сь; ʂ → ш,—
-Polish,Standard,mąka,/ˈmɔ̃ka/,мѫка,ѫ,ą is the old nasal: the yus meets its own descendant,ɕ → сь; ʂ → ш,—
-Polish,Standard,pięć,/pʲɛ̃t͡ɕ/,пѩч,ѩ,ѩ — the font fuses ьѧ by itself,ɕ → сь; ʂ → ш,—
-Polish,Standard,szczęście,/ˈʂt͡ʂɛ̃ɕt͡ɕɛ/,шчѧсьче,ѧ,"the famous cluster, tamed",ɕ → сь; ʂ → ш,—
-Polish,Standard,Kraków,/ˈkrakuf/,Кракуф,,"final devoicing, honestly",ɕ → сь; ʂ → ш,—
+Polish,Standard,Wrocław,/ˈvrɔtswaf/,Вроцўаф,ў,ł /w/ → ў,ʂ → ш; tʂ tɕ → ч,—
+Polish,Standard,mąka,/ˈmɔ̃ka/,мѫка,ѫ,ą is the old nasal: the yus meets its own descendant,ʂ → ш; tʂ tɕ → ч,—
+Polish,Standard,pięć,/pʲɛ̃tɕ/,пѩч,ѩ,ѩ — the font fuses ьѧ by itself,ʂ → ш; tʂ tɕ → ч,—
+Polish,Standard,szczęście,/ˈʂtʂɛ̃ɕtɕɛ/,шчѧсьче,ѧ,"the famous cluster, tamed",ʂ → ш; tʂ tɕ → ч,—
+Polish,Standard,Kraków,/ˈkrakuf/,Кракуф,,"final devoicing, honestly",ʂ → ш; tʂ tɕ → ч,—
 Indonesian,Standard,orang,/ˈoraŋ/,ораң,ң,ң,—,—
 Indonesian,Standard,bahasa,/baˈhasa/,баһаса,һ,һ,—,—
 Indonesian,Standard,terima kasih,/təˈrima ˈkasih/,търима касиһ,ъ һ,"schwa → ъ, final һ",—,—

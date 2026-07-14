@@ -663,6 +663,16 @@
    "referent": "Һ letterform, second correction",
    "diagnosis": "the proportion-scaled hoop (peak 0.78 of stem) rejected; reference measurement (Arial Unicode/Geneva/New York/SF: arch peak 0.59-0.66 of cap) showed the canonical capital is the lowercase hoop unchanged beneath a taller stem — hoop returned to A(250,290,210), peak at x-height",
    "commit": null
+  },
+  {
+   "id": 66,
+   "ts": "2026-07-14T11:30:00Z",
+   "window": "submission",
+   "category": "verification",
+   "text": "now do a reviewer pass to make sure that the chuzhditsa paper is ready for submission to the WL&L venue",
+   "referent": "chuzhditsa_wll.tex, whole manuscript",
+   "diagnosis": "commissioned six-reviewer adversarially-verified pass: 55 confirmed findings (0 refuted) across conformance, anonymity, linguistics, artifact-consistency, prose, and referee simulation; all mechanical fixes applied same day",
+   "commit": null
   }
  ]
 }

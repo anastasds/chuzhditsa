@@ -16,7 +16,7 @@ SRC = os.path.join(ROOT, "paper", "chuzhditsa.tex")
 DST = os.path.join(ROOT, "paper", "chuzhditsa_wll.tex")
 
 ABSTRACT = r"""\begin{abstract}
-\noindent Alphabets only patchily provide a middle layer between everyday spelling and technical transcription: a conventional register for writing a foreign word so that its source pronunciation is recoverable. No major Slavic Cyrillic orthography occupies that layer; loanwords enter through ad hoc transcription, with systematic indeterminacy as the result (Bulgarian \cz{Вашингтон}~$\sim$~\cz{Уошингтън}). We present \emph{Chuzhditsa} (Bulgarian чуждица, `foreignism'), a computable Cyrillic-based \emph{phonological citation register}: (i) a compositional grammar of diacritic operations deriving letters for non-Slavic phonemes from attested Cyrillic material; (ii) a prosodic layer for stress, tone, length; (iii) a register-marking typeface whose OpenType rules are the orthography's rules, executable rather than merely described. Coverage is evaluated against twenty languages under a three-way classification of exact, merged, and declared loss.
+\noindent Alphabets only patchily provide a middle layer between everyday spelling and technical transcription: a conventional register for writing a foreign word so that its source pronunciation is recoverable. No major Slavic Cyrillic orthography occupies that layer; loanwords enter through recipient-adapting transcription, with systematic indeterminacy as the result (Bulgarian \cz{Вашингтон}~$\sim$~\cz{Уошингтън}). We present \emph{Chuzhditsa} (Bulgarian чуждица, `foreignism'), a computable Cyrillic-based \emph{phonological citation register}: (i) a compositional grammar of diacritic operations deriving letters for non-Slavic phonemes from attested Cyrillic material; (ii) a prosodic layer for stress, tone, length; (iii) a register-marking typeface whose OpenType rules are the orthography's rules, executable rather than merely described. Coverage is evaluated against twenty languages under a three-way classification of exact, merged, and declared loss.
 
 \medskip
 \noindent\textbf{Keywords:} writing systems, orthography design, Cyrillic, loanword adaptation, phonological transcription, Slavic languages, katakana, biscriptality, OpenType, Bulgarian
@@ -70,6 +70,12 @@ def main():
         r"\special{pdf:docinfo << /Title (Chuzhditsa: a phonological citation register for Cyrillic) >>}",
         "anonymize docinfo")
     rep("\\maketitle", "\\maketitle\n\\onehalfspacing", "spacing")
+    rep("is the subject of the companion paper; here we state",
+        "is the subject of a companion paper (reference withheld for review); here we state",
+        "anonymize companion ref 1")
+    rep("A companion paper documents the construction level",
+        "A companion paper (reference withheld for review) documents the construction level",
+        "anonymize companion ref 2")
 
     m = re.search(r"\\begin\{abstract\}.*?\\end\{abstract\}", s, re.S)
     if not m:
@@ -78,7 +84,10 @@ def main():
     n += 1
 
     for a, b in TITLES:
-        rep(a, b, "USS title case")
+        if a not in s:
+            sys.exit(f"gen_wll: anchor not found (USS title case): {a[:60]}...")
+        s = s.replace(a, b)  # all occurrences — some volumes are cited more than once
+        n += 1
 
     for bad in ("Stoyanovsky", "stoyanovs.ky", "anastasds", "lindenpmg"):
         if bad in s:

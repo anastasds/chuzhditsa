@@ -399,7 +399,7 @@
    "name_bg": "Испански · Spanish",
    "name_uk": "Іспанська · Spanish",
    "reference_variety": "Castilian",
-   "mergers": "β → в; rhotics → р",
+   "mergers": "rhotics → р (β ð ɣ by positional rule)",
    "losses": "—",
    "extensions_exercised": [
     "ҫ",
@@ -476,7 +476,7 @@
    "name_bg": "Френски · French",
    "name_uk": "Французька · French",
    "reference_variety": "Parisian",
-   "mergers": "ʁ → р; ɛ ɔ œ → е о ӧ",
+   "mergers": "ʁ → р; ɛ ɔ œ → е о ӧ; ɥ → ӱ",
    "losses": "—",
    "extensions_exercised": [
     "ѫ",
@@ -768,7 +768,7 @@
     },
     {
      "word": "মাছ māchh",
-     "ipa": "/mat͡ɕʰ/",
+     "ipa": "/matɕʰ/",
      "chuzhditsa": "мачʰ",
      "extensions": [
       "ʰ"
@@ -921,7 +921,7 @@
    "name_bg": "Японски · Japanese",
    "name_uk": "Японська · Japanese",
    "reference_variety": "Tokyo",
-   "mergers": "ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н",
+   "mergers": "ɸ → ф; ɯ → у (conv.); ʑ → џ; ɴ → н; ɕ → ш (entrenched)",
    "losses": "pitch accent",
    "extensions_exercised": [
     "◌̄",
@@ -1002,7 +1002,7 @@
    "name_bg": "Немски · German",
    "name_uk": "Німецька · German",
    "reference_variety": "Standard",
-   "mergers": "—",
+   "mergers": "ɛː/eː → е̄",
    "losses": "—",
    "extensions_exercised": [
     "ӱ",
@@ -1160,7 +1160,7 @@
    "name_uk": "В'єтнамська · Vietnamese",
    "reference_variety": "Hanoi",
    "mergers": "ɓ ɗ → б д",
-   "losses": "6 tones → 4 marks",
+   "losses": "6 tones → 4 marks; length under tone",
    "extensions_exercised": [
     "ъ",
     "◌̌",
@@ -1380,7 +1380,7 @@
    "name_uk": "Перська · Persian",
    "reference_variety": "Tehran",
    "mergers": "ɢ → қ",
-   "losses": "—",
+   "losses": "ʔ dropped",
    "extensions_exercised": [
     "һ",
     "◌̄",
@@ -1591,7 +1591,7 @@
    "name_bg": "Полски · Polish",
    "name_uk": "Польська · Polish",
    "reference_variety": "Standard",
-   "mergers": "ɕ → сь; ʂ → ш",
+   "mergers": "ʂ → ш; tʂ tɕ → ч",
    "losses": "—",
    "extensions_exercised": [
     "ў",
@@ -1602,7 +1602,7 @@
    "examples": [
     {
      "word": "Wrocław",
-     "ipa": "/ˈvrɔt͡swaf/",
+     "ipa": "/ˈvrɔtswaf/",
      "chuzhditsa": "Вроцўаф",
      "extensions": [
       "ў"
@@ -1624,7 +1624,7 @@
     },
     {
      "word": "pięć",
-     "ipa": "/pʲɛ̃t͡ɕ/",
+     "ipa": "/pʲɛ̃tɕ/",
      "chuzhditsa": "пѩч",
      "extensions": [
       "ѩ"
@@ -1635,7 +1635,7 @@
     },
     {
      "word": "szczęście",
-     "ipa": "/ˈʂt͡ʂɛ̃ɕt͡ɕɛ/",
+     "ipa": "/ˈʂtʂɛ̃ɕtɕɛ/",
      "chuzhditsa": "шчѧсьче",
      "extensions": [
       "ѧ"
