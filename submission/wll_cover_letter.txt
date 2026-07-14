@@ -1,0 +1,38 @@
+Dear Editors of Written Language & Literacy,
+
+I am pleased to submit the manuscript "Chuzhditsa: a phonological citation
+register for Cyrillic" for consideration as a research article.
+
+The paper addresses a layer of writing systems that alphabets fill only
+patchily: a conventional, learnable register for writing foreign words so
+that their source pronunciation is recoverable. Taking the Japanese katakana
+register as the scale proof and the gaps of Slavic Cyrillic loanword
+transcription as the problem case, it presents a designed solution — a
+computable, inventory-extending citation register built from attested
+Cyrillic material — together with a twenty-language coverage evaluation
+under an explicit three-way classification (exact, conventionally merged,
+declared loss), and a register-marking typeface whose OpenType substitution
+and positioning rules are the orthography's rules in executable form. I
+believe the combination of orthography design, evaluation methodology, and
+the "literacy and technology" dimension makes it a natural fit for the
+journal's scope, and the paper engages work published in its pages
+(Unseth 2005 on script choice).
+
+The manuscript is approximately 6,700 words (excluding references and a
+generated appendix presenting the full audit example set). It is not under
+consideration elsewhere. A preprint is posted on LingBuzz (no. 010134), in
+line with the publisher's preprint policy; the anonymized manuscript
+withholds author identity and the repository reference for double-blind
+review, and both can be supplied to the editorial office on request.
+
+All object-language examples are set live in the typeface under discussion,
+so the submitted PDF has all fonts embedded; the system's fonts, build
+toolchain, and machine-readable audit data are publicly archived under open
+licenses.
+
+Thank you for your consideration.
+
+Sincerely,
+Anastas Stoyanovsky
+Unaffiliated (independent researcher)
+anastas@stoyanovs.ky

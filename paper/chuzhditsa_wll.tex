@@ -1,0 +1,358 @@
+% Chuzhditsa — manuscript for submission (XeLaTeX; requires the Chuzhditsa fonts in ../fonts/)
+\documentclass[12pt]{article}
+\usepackage[a4paper,margin=2.7cm]{geometry}
+\usepackage{fontspec}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\setlength{\emergencystretch}{2em}
+
+\setmainfont{Times New Roman}
+\newfontfamily\ipafont{Arial Unicode MS}[Scale=MatchLowercase]
+\newfontfamily\chu[
+  Path = ../fonts/v3/ ,
+  Extension = .ttf ,
+  UprightFont = ChuzhditsaInline-Regular ,
+  BoldFont = ChuzhditsaInline-Bold ,
+  ItalicFont = ChuzhditsaInline-Italic ,
+  BoldItalicFont = ChuzhditsaInline-BoldItalic ,
+  ]{ChuzhditsaInline-Regular}
+
+% object language in the Chuzhditsa face; phonemic strings in an IPA-complete font
+\newcommand{\cz}[1]{{\chu #1}}
+\newcommand{\ph}[1]{{\ipafont/#1/}}
+\newcommand{\phon}[1]{{\ipafont[#1]}}
+\newcommand{\src}[1]{{\ipafont #1}}
+
+\title{\textbf{Chuzhditsa: a phonological citation register for Cyrillic}}
+\author{{\normalsize [Author details withheld for double-blind review]}\thanks{Fonts, build toolchain, and the twenty-language audit are available in an open repository (reference withheld for review); the typeface used for all object-language examples in this manuscript is the system being described.}}
+\date{}
+
+\begin{document}
+\special{pdf:docinfo << /Title (Chuzhditsa: a phonological citation register for Cyrillic) >>}
+\maketitle
+\onehalfspacing
+
+\begin{abstract}
+\noindent Alphabets only patchily provide a middle layer between everyday spelling and technical transcription: a conventional register for writing a foreign word so that its source pronunciation is recoverable. No major Slavic Cyrillic orthography occupies that layer; loanwords enter through ad hoc transcription, with systematic indeterminacy as the result (Bulgarian \cz{Вашингтон}~$\sim$~\cz{Уошингтън}). We present \emph{Chuzhditsa} (Bulgarian чуждица, `foreignism'), a computable Cyrillic-based \emph{phonological citation register}: (i) a compositional grammar of diacritic operations deriving letters for non-Slavic phonemes from attested Cyrillic material; (ii) a prosodic layer for stress, tone, length; (iii) a register-marking typeface whose OpenType rules are the orthography's rules, executable rather than merely described. Coverage is evaluated against twenty languages under a three-way classification of exact, merged, and declared loss.
+
+\medskip
+\noindent\textbf{Keywords:} writing systems, orthography design, Cyrillic, loanword adaptation, phonological transcription, Slavic languages, katakana, biscriptality, OpenType, Bulgarian
+\end{abstract}
+
+\section{Introduction}
+
+Every literate community borrows words faster than its orthography naturalizes them — an instance of the general problem of fit between a writing system and a changing language (Coulmas 2003). What most orthographies lack is a \emph{productive} middle layer between everyday spelling and technical transcription: a conventional register for writing a foreign word so that its source pronunciation is recoverable. The layer is not empty — monolingual dictionaries fill it with pronunciation respelling, Japanese with furigana glosses, and the zonal constructed language Interslavic with an extended Cyrillic that already revives the yuses (Merunka 2018) — but no major Slavic Cyrillic orthography has an inventory-\emph{extending}, register-marked device of this kind.
+
+Japanese shows the layer can be institutionalized: katakana is a full parallel syllabary whose use \emph{is} the marking of foreignness, and whose adaptation conventions (\phon{naɪt}~$\rightarrow$~\src{ナイト}) are conventionalized enough that, for a given source pronunciation, writers usually converge on one spelling.
+
+Loanwords enter Bulgarian, Russian, Serbian or Ukrainian through ad hoc transcription: sound-based and spelling-based renderings compete (\cz{ланч}~$\sim$~\cz{лънч} for \emph{lunch}), phonemes without Cyrillic letters collapse unpredictably (\ph{θ}~$\rightarrow$~т or с; \ph{w}~$\rightarrow$~в or у), and nothing in the written form signals that a word is a guest rather than a native.
+
+This paper describes Chuzhditsa, a designed orthographic register that supplies the missing device for Cyrillic, piloted on Bulgarian and then generalized to the Slavic superset — the union of the Slavic Cyrillic alphabets.
+
+One distinction must be drawn before anything else, because three different tasks hide under ``writing foreign words,'' and a system is judged unfairly when measured against a task it does not attempt. \emph{Loanword adaptation} bends a word to the recipient phonology — katakana's main business, and the business of every integrated borrowing. \emph{Phonemic transcription} records the source phonology in a technical alphabet — the IPA's business. Between them sits \emph{phonological citation}: writing a foreign word, name, or example so that a native reader can recover an adequate approximation of its source pronunciation, in the native script, without technical training.
+
+Chuzhditsa is primarily the third: unlike katakana it \emph{extends} the recipient inventory to preserve source contrasts rather than collapsing them into native phonotactics; unlike the IPA it stays inside Cyrillic reading habits. Its use as a marking register for not-yet-naturalized loans is a secondary, optional application, and a loan that naturalizes is expected to leave the register.
+
+The system makes three claims of general interest to writing-system design.
+
+First, that a citation register can be built as a \emph{compositional diacritic grammar}: rather than inventing letters ad libitum, a small set of recurrent operations — most featurally atomic, one (the hook) relational to its base letter (\S\ref{sec:hook}) — derives the entire extension inventory. The analogy to Hangul is one of compositional logic, not of Sampson's (1985) strict shape-iconicity; systematic diacritic derivation is what Czech, Vietnamese, and the IPA already do, and only the laryngeal gradient (\S\ref{sec:hook}) reaches for genuinely featural letterforms (Sampson 1985; Kim-Renaud 1997). Second, that such a register can be assembled almost entirely from attested material: dead letters of the target orthography's own history and living letters of related orthographies, with invention reserved for genuine residue. Third, that the register-marking function that Japanese distributes over a second character inventory can instead be carried by a second \emph{typeface register} — realized here as an OpenType family whose substitution (GSUB) and positioning (GPOS) rules are the orthography's fusion and attachment rules, executable rather than merely described.
+
+\section{Background}
+
+\subsection{Katakana as an adaptation layer}
+Katakana's success rests on three properties (Irwin 2011; Stanlaw 2004): conventionalized conversion that renders the loan's \emph{adapted Japanese pronunciation} — an adaptation that has historically travelled by ear, by dictionary, and sometimes by spelling (Irwin 2011: 76--79) — rather than transliterating the source orthography letter for letter, the orthographic reflex of loanword adaptation as a systematic mapping onto native categories, whether modelled phonologically or perceptually (Kang 2011; Peperkamp \& Dupoux 2003); graphic distinctness sufficient to mark register at a glance; and extensibility (\src{ヴ} for \ph{v}, \src{ファ} for \ph{fa}) when the inventory runs out. Chuzhditsa adopts all three as requirements, and hardens the first: its input is pronunciation only. The idealization should be stated as such — real katakana practice varies by borrowing period, donor language, brand convention, and register (Irwin 2011) — and Chuzhditsa aims to be what katakana is often described as being: the target is a convention strict enough to converge, not a claim that Japanese practice already converges. Katakana also carries a social record that a designed analogue cannot disclaim: loanword marking has been read as a badge of incomplete nativeness, and katakana is deployed to mark foreigners' accented Japanese as well as foreign words (Irwin 2011; Robertson 2020). We therefore state the register's semantics narrowly: it asserts that a word's phonology lies off the native grid — nothing about its right to exist in the language, and nothing about its user. Its proposed semantics is lexical rather than ethnolinguistic — it marks words, never speakers — though a designed intention is not a sociolinguistic guarantee: registers acquire social meanings their designers do not control, and whether readers would honor the boundary is an empirical question for user studies. A naturalized loan is expected to exit the register, exactly as \src{テンプラ} became \src{天ぷら}.
+
+\subsection{The Cyrillic commonwealth}
+Cyrillic today serves more than fifty languages, whose principal non-Slavic adaptations Comrie (1996) surveys, and the non-Slavic ones have already engineered letters for most sounds Slavic lacks: Kazakh \cz{қ}~\ph{q}, \cz{ң}~\ph{ŋ}, \cz{ғ} (\ph{ʁ} in Kazakh, reassigned here to \ph{ɣ}: as with \cz{ҳ}, the borrowing is of the grapheme and its construction); Bashkir \cz{ҫ}~\ph{θ}, \cz{ҙ}~\ph{ð}; Tajik \cz{ӣ}~\ph{iː} and \cz{ҳ} (\ph{h} in Tajik, reassigned here to \ph{ħ}: the borrowing is of the \emph{grapheme and its compositional construction} — х plus the place hook — not of its Tajik value, and the Caucasian digraph хӀ is the nearer phonetic precedent); Altai \cz{ӧ}~\ph{ø}, \cz{ӱ}~\ph{y}; Belarusian \cz{ў}~\ph{w}; Serbian \cz{џ}~\ph{dʒ}; the Caucasian palochka \cz{Ӏ}. These letters carry decades of typographic and pedagogic practice. A design that imports them inherits that practice for free — an option unavailable to katakana's designers and, we will argue, the single largest economy in the present system. Modifying Cyrillic is not, however, a politically neutral act: script is a charged identity marker across the region — Serbian Latin/Cyrillic digraphia, the state-driven Latinizations of Kazakh and Moldovan, the recurring Cyrillic-versus-Latin debates — and a proposal that \emph{adds letters} must be read in that light. Chuzhditsa mitigates the charge structurally: it alters no existing orthography, imports only attested material, and petitions no authority (\S\ref{sec:limits}, \S Adoption). It does not pretend the act is neutral.
+
+\subsection{The Glagolitic precedent}
+Bulgaria is a primary locus of a script replacement: Glagolitic, the first Slavic alphabet, created — or, on Cubberley's reading, formalized — by Constantine-Cyril for the Moravian mission of 863, was gradually displaced by Cyrillic, devised by Constantine's disciples at the Preslav Literary School in the 890s on the model of Greek uncial, drawing on Glagolitic mainly for the sounds Greek lacked (Schenker 1995; Cubberley 1996). Glagolitic then survived for a millennium as a special-register script (Croatian liturgical use into the twentieth century; the last \emph{wholly} Glagolitic missal appeared in 1905 (Par\v{c}i\'c), and the final printed Glagolitic missal (Vajs 1927) set only the Ordinary of the Mass in Glagolitic beside Latin transliteration). Chuzhditsa knowingly reverses the vector: the visual DNA of the \emph{oldest} Slavic letterforms — round bowls, even low-contrast proportions (the shipped family is two-case, but keeps the unicameral source's evenness) — marks the \emph{newest} words, and the letters it revives (\cz{ѫ ѧ ѩ ѭ}) inherit the sound-slots of Glagolitic ancestors (the Cyrillic shapes themselves are reworkings). The big yus \cz{ѫ} in particular survived in Bulgarian spelling until the 1945 orthographic reform (Comrie \& Corbett 1993), by then carrying a non-nasal value, its nasality lost by roughly the eleventh century (Cubberley 1996).
+
+\section{Design principles}
+
+\begin{enumerate}
+\item \textbf{Determinism, relative to normalized phonological input.} One \emph{specified input} phoneme, one rendering, within a declared mapping: given the same source pronunciation in the reference variety, two transcribers converge. The choice of source pronunciation itself (dialect, variant, spelling pronunciation) is outside the system's jurisdiction, and loss is permitted but must be declared (\S\ref{sec:mergers}).
+\item \textbf{Compositional transparency.} Every diacritic operation encodes one recurrent phonological \emph{relation} to its base letter and applies wherever that relation appears. Some operations are featurally atomic (nasalization, aspiration, length); one is relational rather than atomic — the place hook means ``place shifted off the native grid,'' interpreted relative to the base and \emph{not} in one articulatory direction (retraction on \cz{к х}, advancement on \cz{с з}, retroflexion on \cz{т д р}; \S\ref{sec:hook}) — so the operations form a compositional diacritic grammar, featural in Sampson's extended sense but not in the strict shape-iconic sense Hangul exemplifies; only the laryngeal gradient approaches the latter.
+\item \textbf{Pair symmetry.} Obstruent letters enter the system in voiceless/voiced pairs aligned with the native series. This principle outranks heritage: the historical theta-letter fita (\cz{ѳ}) was rejected because it has no voiced partner and derives from no rule; the Bashkir pair \cz{ҫ}/\cz{ҙ} (\ph{θ}/\ph{ð}) does its work systematically.
+\item \textbf{Precedent first.} Revive native dead letters, then import living Cyrillic letters, and only then derive new combinations; never invent an unattested base shape.
+\item \textbf{Pan-Cyrillic legibility.} Every base skeleton follows the reader's existing Cyrillic, and every extension should be guessable at first sight by any Cyrillic reader from its base letter plus a transparent mark — a design \emph{goal}, aimed at rather than achieved, of the kind the orthography-development literature calls ease of transfer (Cahill \& Rice 2014).
+
+Three properties must be kept distinct here: that a letter exists in Unicode, that it has established use in \emph{some} Cyrillic orthography, and that it will be transparently interpretable to readers of \emph{any} Cyrillic orthography. This paper demonstrates the first two — a Bulgarian reader has no prior acquaintance with Kazakh \cz{қ} or Bashkir \cz{ҙ}, and importing an attested letter buys typographic and pedagogic precedent, not automatic legibility. The third is the criterion the design aims at, and it remains an empirical claim for the reader study of \S\ref{sec:limits}.
+\item \textbf{Register by typeface.} Foreignness is marked by letterform register, not by punctuation or a second inventory: text set in the Chuzhditsa face is thereby marked — though where katakana marks by a stable script-\emph{encoding} contrast, this marks by a \emph{rendering} contrast that a plain-text channel loses (\S\ref{sec:limits}); in the terms of the biscriptality literature, a \emph{diaphasic diglyphia}: functional differentiation between two glyphic variants of one script (Bun\v{c}i\'c, Lippert \& Rabus 2016; the nearest historical parallel is the German practice of setting foreign words in roman within blackletter text; other register mechanisms — italics, small caps, Japanese ruby glosses — trade distinctiveness against availability and learning cost, and a bespoke face buys the first at the expense of the second two), and a socially meaningful orthographic choice in Sebba's (2007) sense.
+\end{enumerate}
+
+\section{The compositional grammar}\label{sec:hook}
+
+Table~\ref{tab:grammar} gives the full operation set. The place hook generalizes a precedent internal to the Slavic base inventory itself — \cz{щ} \emph{is} \cz{ш} with a hook — and the glide breve generalizes \cz{и}~$\rightarrow$~\cz{й}. Where Unicode supplies precomposed hooked letters (\cz{қ ң ҳ ҫ ҙ}) they are used; elsewhere the same hook is written with combining U+0322 (\cz{т̢ д̢ р̢}).
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{lll}
+\toprule
+Mark & Operation & Derivations \\
+\midrule
+\cz{◌̆} breve & vowel $\rightarrow$ glide & \cz{и→й} \ph{j} · \cz{у→ў} \ph{w} \\
+\cz{◌̢} hook below & place shifted off the native grid & \cz{қ} \ph{q} · \cz{ҳ} \ph{ħ} · \cz{ң} \ph{ŋ} · \cz{ҫ} \ph{θ} · \cz{ҙ} \ph{ð} · \cz{т̢} \ph{ʈ} · \cz{д̢} \ph{ɖ} · \cz{р̢} \ph{ɽ} \\
+\cz{◌̵} crossbar & lenition & \cz{г→ғ} \ph{ɣ} \\
+\cz{◌̈} double dot & vowel fronting & \cz{ӓ} \ph{æ} · \cz{ӧ} \ph{ø œ} · \cz{ӱ} \ph{y ʏ} \\
+\cz{◌̨} yus tail & nasalization & \cz{ѫ} \ph{ɔ̃ õ} · \cz{ѧ} \ph{ɛ̃} · \cz{а̨} \ph{ɑ̃ ɐ̃} · \cz{ӧ̨} \ph{œ̃} \\
+\cz{◌ʰ ◌ʱ} raised \cz{һ} & aspiration; breathy voice & \cz{пʰ тʰ кʰ чʰ} · \cz{бʱ дʱ гʱ џʱ} \\
+\cz{◌̄} macron & vowel length & \cz{ӣ ӯ} (precomposed) · \cz{а̄ е̄ о̄} \\
+\cz{Ӏ} palochka & laryngeal--pharyngeal action & \cz{тӀ кӀ цӀ} (ejectives) · bare \cz{Ӏ} = \ph{ʕ} \\
+\cz{ь} & palatalization & \cz{нь} \ph{ɲ} · \cz{ль} \ph{ʎ} · \cz{хь} \ph{ç} · \cz{сь} \ph{ɕ} \\
+\bottomrule
+\end{tabular}
+\caption{The compositional operations. Each mark encodes a stable operation; most are featurally atomic, while the hook is relational to its base (\S\ref{sec:hook}). Precomposed Unicode letters are used where they exist.}
+\label{tab:grammar}
+\end{table}
+
+
+Table~\ref{tab:inventory} lays out the complete designed inventory — every letter the system adds to a Slavic Cyrillic base, set in the typeface itself.
+
+\begin{table}[ht]\centering\footnotesize\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{llllll}
+\toprule
+Letter & Unicode & Value & Construction & Origin \\
+\midrule
+\cz{Ўў} & U+040E/045E & \ph{w} & у + breve & import: Belarusian \\
+\cz{Џџ} & U+040F/045F & \ph{d͡ʒ} & own shape & import: Serbian \\
+\cz{Ҫҫ} & U+04AA/04AB & \ph{θ} & с + hook & import: Bashkir \\
+\cz{Ҙҙ} & U+0498/0499 & \ph{ð} & з + hook & import: Bashkir \\
+\cz{Ққ} & U+049A/049B & \ph{q ɢ} & к + hook & import: Kazakh \\
+\cz{Ңң} & U+04A2/04A3 & \ph{ŋ} & н + hook & import: Kazakh \\
+\cz{Ҳҳ} & U+04B2/04B3 & \ph{ħ} & х + hook & import: Tajik \\
+\cz{Ғғ} & U+0492/0493 & \ph{ɣ} & г + crossbar & import: Kazakh (\ph{ʁ} there; construction borrowed) \\
+\cz{Һһ} & U+04BA/04BB & \ph{h ɦ} & own shape & import: Tatar \\
+\cz{Ѕѕ} & U+0405/0455 & \ph{d͡z} & own shape & revival; living in Macedonian (dzelo) \\
+\cz{Ӏ} & U+04C0 & \ph{ʕ}; \cz{тӀ кӀ цӀ} & palochka & import: Caucasus \\
+\cz{т̢ д̢ н̢ р̢} & base + U+0322 & \ph{ʈ ɖ ɳ ɽ} & base + hook & derived by rule \\
+\cz{◌ʰ} & U+02B0 & aspiration & raised miniature \cz{һ} & derived \\
+\cz{◌ʱ} & U+02B1 & breathy voice & raised hooked \cz{һ} & derived \\
+\cz{Ӓӓ} & U+04D2/04D3 & \ph{æ} & а + double dot & import: Mari \\
+\cz{Ӧӧ} & U+04E6/04E7 & \ph{ø œ} & о + double dot & import: Altai \\
+\cz{Ӱӱ} & U+04F0/04F1 & \ph{y ʏ} & у + double dot & import: Altai \\
+\cz{Ыы} & U+042B/044B & \ph{ɨ}; Korean \ph{ɯ} & own shape & import: Russian; also Old Bulgarian \\
+\cz{Ѫѫ} & U+046A/046B & \ph{ɔ̃ õ} & nasal о & revival (shape to 1945; nasal value $\sim$11th c.) \\
+\cz{Ѧѧ} & U+0466/0467 & \ph{ɛ̃} & nasal е & revival: Old Bulgarian \\
+\cz{Ѩѩ} & U+0468/0469 & \ph{jɛ̃} & ligature ь+ѧ & revival: Old Bulgarian \\
+\cz{Ѭѭ} & U+046C/046D & \ph{jɔ̃} & ligature ь+ѫ & revival: Old Bulgarian \\
+\cz{а̨ ӧ̨} & V + U+0328 & \ph{ɑ̃ ɐ̃ œ̃} & vowel + yus tail & derived by rule \\
+\cz{Ӣӣ Ӯӯ} & U+04E2/3, EE/EF & \ph{iː uː} & vowel + macron & import: Tajik (ӯ is \ph{ɵ} there) \\
+\cz{◌̄} & U+0304 & length & macron & derived \\
+\cz{◌́ ◌̀ ◌̌} & U+0301/0300/030C & tone, stress & dictionary layer & derived \\
+\bottomrule
+\end{tabular}
+\caption{The complete designed inventory. The letter column is set in the Chuzhditsa face. Every letter is a standard Cyrillic-block codepoint; the combining and modifier characters are likewise standard Unicode (The Unicode Consortium 2024).}
+\label{tab:inventory}
+\end{table}
+
+\subsection{The laryngeal gradient}
+The three back fricatives that plague Cyrillic transcription of Arabic, English and German — \ph{x}, \ph{ħ}, \ph{h} — receive a designed gradient: articulatory weakening maps to graphic lightening. Native \cz{х} (\ph{x}$\sim$\ph{χ}) is two full crossing strokes, the densest friction; pharyngeal \cz{ҳ} (\ph{ħ}) is \cz{х} pulled deeper by the place hook; glottal \cz{һ} (\ph{h}$\sim$\ph{ɦ}) is a single open arc, literally the most open glyph of the three; and aspiration \cz{◌ʰ}, a feature rather than a segment, is \cz{һ} reduced to a superscript. Arabic exhibits the full triple within ordinary vocabulary: \cz{һила̄л} \ph{hilaːl}, \cz{Муҳаммад} \ph{muħammad}, \cz{Ха̄лид} \ph{xaːlid}. We suggest the mapping \emph{articulatory gradient $\rightarrow$ visual gradient} as a candidate principle for alphabet extension — a heuristic with a lineage in the featural conscripts, from Bell's \emph{Visible Speech} (1867), where glyph shape encodes articulation directly, through Shavian and Quikscript, though those aimed at whole-language reform rather than a citation register.
+
+\subsection{The Indic stress test}
+Hindi--Urdu and Bengali cross a four-way laryngeal contrast with a dental/retroflex place contrast. The grammar covers the entire grid with zero new letters: \cz{т}~\ph{t̪}, \cz{тʰ}~\ph{t̪ʰ}, \cz{д}~\ph{d̪}, \cz{дʱ}~\ph{d̪ʱ}; retroflex \cz{т̢ т̢ʰ д̢ д̢ʱ}, plus \cz{н̢}~\ph{ɳ}, \cz{р̢}~\ph{ɽ}, \cz{р̢ʱ}~\ph{ɽʱ}. A single word such as \cz{т̢ʰӣк} (\emph{ṭhīk}, \ph{ʈʰiːk}) composes three features on one base — hook, aspiration, length — which is precisely the compositional-grammar claim made concrete.
+
+\section{The ligature stratum}
+
+Cyrillic has always ligated: \cz{ю} is a historic ligature of і+оу (the у element later dropped; Cubberley 1996), Serbian \cz{љ њ} were fused from л/н+ь by Vuk Karad\v{z}i\'c in 1818, building on Mrkalj's digraphs (Comrie \& Corbett 1993), and Old Bulgarian possessed iotated nasals. Chuzhditsa's ligature stratum is therefore conservative, and it is implemented as executable GSUB rules rather than prose: (i)~\cz{нь ль} fuse to њ/љ-forms automatically (\cz{ниньо}, \cz{фамилья} set with fused palatals); (ii)~the iotated yuses \cz{ѩ}~\ph{jɛ̃} and \cz{ѭ}~\ph{jɔ̃} are revived as directly typeable letters, and the sequences \cz{ь}+\cz{ѧ} and \cz{ь}+\cz{ѫ} fuse to them automatically (French \emph{bien}~$\rightarrow$~\cz{бѩ}; Polish \emph{pięć}~$\rightarrow$~\cz{пѩч}); (iii)~ejective digraphs \cz{тӀ кӀ пӀ цӀ чӀ} fuse with the palochka \emph{raised to the upper half}, echoing the apostrophe of scholarly romanization (\phon{tʼ kʼ}) — a fused full-height palochka was rejected in testing because \cz{тӀ} became confusable with \cz{п}. The governing rule: only sequences denoting a single phoneme, with Slavic or Old Cyrillic precedent, may fuse; mechanical soft pairs (\cz{сь хь}) remain visibly two-part.
+
+\section{The prosodic stratum}
+
+Stress takes the grave of Bulgarian lexicography (\cz{ба̀бушкъ}); Mandarin tones 2--4 take acute, caron, grave, with tone 1 unmarked — pinyin minus the macron, which Chuzhditsa reserves for length. The unmarked first tone resolves the collision by construction: \cz{ма̄} can only mean a long vowel. Three costs are declared rather than hidden. Tone and stress marks are homoglyphic across source languages, resolved only by knowing the lexical source (katakana shares exactly this property). Diacritic stacking degrades: Vietnamese \emph{phở} wants quality, length and tone at once (\cz{фъ̄̌}), and the running-text rule drops length first (\cz{фъ̌}). And four marks cannot represent six-tone systems without folding (Vietnamese \emph{hỏi}/\emph{ngã} merge on the caron; \emph{nặng} falls together with \emph{huyền} on the grave). The design verdict generalizes katakana's own: prosody is optional annotation — a dictionary layer, not an orthographic one — and the system claims no tonal adequacy beyond that annotative role.
+
+\section{From Bulgarian to the Slavic superset}
+\label{sec:panslavic}
+
+The pilot treated Bulgarian's thirty letters as the base. Nothing in the compositional grammar is Bulgarian-specific, however, and the generalization is administrative rather than structural. We use \emph{superset} in its set-theoretic sense — the union of the Slavic Cyrillic character inventories — and intend no pan-Slavist claim; the older political resonance of a ``unifying'' Slavic frame is precisely not the argument, as the Ukrainian constraint below makes concrete. The base becomes each language's own Cyrillic alphabet (for the phoneme inventories, see Comrie \& Corbett 1993), and the extension and prosodic strata apply unchanged.
+
+Concretely, the typeface's character set was widened to the Slavic Cyrillic superset — Russian \cz{э ё ы}, Ukrainian \cz{і ї є ґ}, Belarusian \cz{ў}, Serbian \cz{ј љ њ ђ ћ џ}, Macedonian \cz{ѕ ѓ ќ} — so that any Slavic Cyrillic text sets natively. (\cz{ѕ} is doubly loaded: a distinctive letter of the Macedonian alphabet and, as such, an emblem in the Bulgaria–North Macedonia language dispute. It is used here as shared Old Cyrillic heritage — current Cyrillic-wide before the nineteenth century, readopted by the 1944 Macedonian commission (Comrie \& Corbett 1993) — claimed as the property of neither side.)
+
+One design conflict surfaced and is instructive: the pilot's round е-form was, in fact, the shape of Ukrainian \cz{є}; pan-Slavic coverage forced \cz{е} to a closed bowl — aperture roughly half the open forms' — so its silhouette parts from the open epsilon of \cz{є}, which keeps the wide aperture and a half-bar. Extending a script for one language can silently occupy a sibling's letterform space; superset-first design catches this early.
+
+For each language the system's marginal contribution differs, and several languages turn out to need the extension layer for \emph{native} material, not only loans: Slovak \emph{ä} is \cz{ӓ} and Slovak \emph{h} is \ph{ɦ}~$\rightarrow$~\cz{һ}; Slovenian's native schwa (\emph{polglasnik}) is exactly \cz{ъ} (\cz{пъс} \ph{pəs} `dog'); Serbian's pitch accents are the prosodic layer's use case; Polish \emph{ą ę} are the yuses meeting their own descendants (\cz{мѫка}, \cz{пѩч}). Latin-alphabet Slavic languages connect through a deterministic bridge: Gaj's digraphs map one-to-one onto Serbian Cyrillic letters (\emph{lj nj dž}~$\rightarrow$~\cz{љ њ џ}), and the residue is rule-derived — Czech \emph{ř} \ph{r̝}, the notorious singleton, is written \cz{р̌} with the caron it already wears; Slovak long syllabic liquids \emph{ĺ ŕ} take the length macron (\cz{вр̄ба} \ph{vr̩ːba}).
+
+The generalization also has ancestors to acknowledge: the determinism principle is Vuk Karad\v{z}i\'c's \emph{пиши као што говориш} avant la lettre, and Serbian orthography contributed \cz{џ љ њ ј} — and the very idea of fused palatals — before this project existed; Ukrainian orthography constrained the design as a peer, not a client (the є letterform conflict above was resolved in Ukrainian's favor). The Bulgarian name records the pilot, not a hierarchy.
+
+The citation-register framing predicts something checkable across the family: \emph{integrated} loans differ by language, because each language adapted the word to its own habits, while the \emph{citation} form is shared, because its input is the source pronunciation. Table~\ref{tab:multibase} shows the pattern.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{llllll}
+\toprule
+Source & Bulgarian & Russian & Ukrainian & Serbian & shared citation form \\
+\midrule
+\emph{weekend} & \cz{уикенд} & \cz{уик-энд} & \cz{вікенд} & \cz{викенд} & \cz{ўӣкенд} \\
+\emph{jazz} & \cz{джаз} & \cz{джаз} & \cz{джаз} & \cz{џез} & \cz{џӓз} \\
+\bottomrule
+\end{tabular}
+\caption{Integrated loans vary by recipient language; the citation register does not, because its input is the source pronunciation rather than any recipient's adaptation.}
+\label{tab:multibase}
+\end{table}
+
+As an external stress test we applied the system to Albanian, a non-Slavic Balkan language: every Albanian phoneme lands on an existing letter (\emph{ë}~\ph{ə}~$\rightarrow$~\cz{ъ}, \emph{th/dh}~$\rightarrow$~\cz{ҫ}/\cz{ҙ}, \emph{y}~$\rightarrow$~\cz{ӱ}, \emph{xh}~$\rightarrow$~\cz{џ}, \emph{x}~\ph{dz}~$\rightarrow$~\cz{ѕ}, \emph{q/gj}~$\rightarrow$~\cz{кь}/\cz{гь}): \cz{Шкьипърѝа}, \cz{Тира̀нъ}. A system built for Slavic phonology plus its compositional operations appears to cover the Balkan sprachbund without amendment. The practical beneficiary is not Albanian itself, which is securely Latin-written, but Cyrillic-language text citing Albanian: the \emph{ë} that Macedonian and Serbian renderings currently drop is exactly \cz{ъ}.
+
+\section{Typeface implementation}
+
+The Chuzhditsa family (Regular, Bold, Italic, Bold Italic; TTF and CFF/OTF) is generated by a compact parametric builder: every glyph is declared as centerline strokes — lines, arcs, and the full circles that give the face its Glagolitic character — and expanded to outlines with weight and slant as parameters. The construction itself — terminals, joins, the optical-correction canon, fitting, and the small-size behavior of the marks — is the subject of the companion paper; here we state only its orthographic consequences.
+
+Capitals stand at 700 units, lowercase at an x-height of 500 with true two-case architecture (bowl-and-stem \cz{а}, ascending \cz{б}, descending \cz{р}). Every combining mark receives computed GPOS mark-to-base anchors (the macron of \cz{а̄} attaches 251 units lower than that of \cz{А̄}; the retroflex hook of \cz{т̢} lands on the letter's stem), and the ligature stratum is a GSUB \texttt{liga} feature — the orthography's rules are the font's code, verified by HarfBuzz shaping tests in the build toolchain — a concrete instance of Sproat's (2000) regularity hypothesis: the mapping from linguistic representation to written form is a regular relation, computable by finite-state means.
+
+The linguistic point of this engineering is falsifiability: an orthographic rule that exists as a GSUB lookup either fires or does not, so the specification's claims about fusion and attachment are machine-checkable properties of an artifact rather than intentions in prose. The manuscript the reader is holding sets all object-language material in this typeface.
+
+\begin{figure}[ht]\centering
+\fbox{\parbox{0.92\linewidth}{\setstretch{1.25}\normalsize
+Прекарахме \cz{ўӣкенда} в планината и казахме \cz{ҫӓңкс}. \\
+Прекарахме \emph{weekend}а в планината и казахме \emph{thanks}. \\
+Прекарахме уикенда в планината и казахме тенкс.
+}}
+\caption{The register in context, at reading size, in a Bulgarian sentence (``We spent the weekend in the mountains and said thanks''). Top: the foreign words set in the Chuzhditsa face inline in the Cyrillic body face — the proposed register. Middle: the current practice of Latin italics. Bottom: plain recipient-adapting transcription, which marks nothing. The bespoke face marks more distinctively than italics and, unlike them, preserves the source contrasts (\cz{ў} \ph{w}, \cz{ҫ} \ph{θ}, \cz{ӓ} \ph{æ}, \cz{ң} \ph{ŋ}) — at the cost, stated in \S\ref{sec:limits}, of depending on font control. Whether readers parse the top line as ``foreign'' rather than ``archaic'' is the open perception question.}
+\label{fig:register}
+\end{figure}
+
+\section{Evaluation: the twenty-language audit}\label{sec:audit}
+
+\textbf{Method.} The audit set is not a demographic top-twenty: it is a high-speaker-count convenience sample adjusted for phonological diversity and Slavic relevance, comprising English, Mandarin, Hindi--Urdu, Spanish, French, Arabic (MSA), Bengali, Portuguese, Russian, Japanese, German, Korean, Vietnamese, Turkish, Italian, Persian, Swahili, Greek, Polish, and Indonesian; clicks were excluded by scope. Each language is audited under one declared reference variety (General American English; Standard Mandarin; Delhi Hindi; Castilian Spanish; Parisian French; MSA; Brazilian Portuguese; Seoul Korean; Hanoi Vietnamese; and the respective standards elsewhere), with inventories taken from the language illustrations of the \emph{Handbook of the IPA} (International Phonetic Association 1999) and standard language descriptions (for Slavic, Comrie \& Corbett 1993).
+
+Every phoneme of each inventory is classified three ways: \emph{exact} (a rendering that preserves all of that language's contrasts involving the phoneme), \emph{conventional merger} (a declared many-to-one mapping, enumerated below), or \emph{declared loss} (prosodic folding, plus the one segmental length-under-tone case). A rendering that depends on position (\ph{w}, \ph{ɲ}) counts as exact when the positional rule is stated. The system is deterministic relative to this input: variety choice is a parameter of the audit, not of the mapping. Against existing practice the relevant baselines are the national transcription traditions — Bulgarian's prescriptive system (Данчев 1982) and its analogues — which are recipient-adapting by design; Chuzhditsa differs precisely in preserving source contrasts those systems merge, which is what the citation-register framing predicts.
+
+One boundary of this evaluation must be stated plainly: it is an \emph{engineering coverage audit}, internally scored. The author of the mappings selected the reference varieties, declared the acceptable mergers, assembled the examples, and judged exactness; the machine-readable dataset makes every judgment inspectable and refutable, but no independent phonologist has yet re-scored it, no blinded transcribers have been tested for convergence, and no unseen language has been audited that was not available while the system was being refined (the Albanian application is a stress test, not external validation).
+
+The sample is moreover biased toward segmental inventories: complex lexical tone (only Mandarin and Vietnamese), ATR and vowel-harmony systems, contrastive phonation, and ejectives are under-represented or routed to loss, so the exact-rate is best read as an upper bound. And because the author defines which mappings count as conventional mergers, the audit scores representational capacity against the declared rules, not adequacy against an external standard — functional load of the merged contrast, minimal-pair recoverability, or blind-transcriber convergence, the appropriate next instruments. What the audit establishes is representational capacity under the declared rules — not communicative success, which is the next experiment's question.
+
+The audit's full 125-item example set is printed as Appendix~\ref{app:audit} and accompanies the repository in machine-readable form (\texttt{data/audit\_20\_languages.json}/\texttt{.csv}, generated from the same source table as the appendix and the per-language guides, so the three cannot drift), together with the phoneme-to-grapheme mapping it instantiates (\texttt{data/chuzhditsa.json}).
+
+Table~\ref{tab:audit} summarizes the audit per language: the reference variety, the extension letters the language actually exercises, the conventional mergers engaged, and the declared losses. The pattern worth reading off is that no language needs more than a small subset of the inventory, that the mergers cluster on rhotics and sibilant places, and that declared loss is confined to prosody and the one length-under-tone case.
+
+\begin{table}[ht]\centering\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lllll}
+\toprule
+Language & Reference variety & Extensions exercised & Mergers engaged & Declared losses \\
+\midrule
+English & General American & \cz{ў ҫ ҙ ӓ ң ӣ ӯ ъ һ џ} & rhotic $\rightarrow$ \cz{р} & — \\
+Mandarin & Standard (Beijing) & \cz{ң ъ} \cz{◌ʰ} tones & \ph{tʂ tɕ}$\rightarrow$\cz{ч}; \ph{ʐ}$\rightarrow$\cz{ж} & sandhi; T1 = neutral \\
+Hindi--Urdu & Delhi & \cz{т̢ д̢ н̢ р̢} \cz{◌ʰ ◌ʱ} \cz{ӣ ъ һ џ} & \ph{ɦ}$\rightarrow$\cz{һ} & — \\
+Spanish & Castilian & \cz{ҫ ҙ ғ ў} & \ph{β}$\rightarrow$\cz{в}; rhotics & — \\
+French & Parisian & \cz{ѫ ѧ ѩ а̨ ӧ̨ ӧ ӱ ў ъ} & \ph{ʁ}$\rightarrow$\cz{р}; \ph{ɛ ɔ œ}$\rightarrow$\cz{е о ӧ}; \ph{ɥ}$\rightarrow$\cz{ӱ} & — \\
+Arabic & MSA & \cz{ҫ ҙ ҳ һ қ ғ џ Ӏ ◌̄} & \ph{χ}$\rightarrow$\cz{х}; emphatics$\rightarrow$plain & — \\
+Bengali & Standard & \cz{т̢ д̢ р̢ ң ӓ} \cz{◌ʰ ◌ʱ} & \ph{ɔ}$\rightarrow$\cz{о} & — \\
+Portuguese & Brazilian & \cz{а̨ ѫ е̨ и̨ у̨} & \ph{ʁ}$\rightarrow$\cz{р}; \ph{ɛ ɔ}$\rightarrow$\cz{е о} & — \\
+Russian & Standard & \cz{ы} (native) & \ph{ɕː}$\rightarrow$\cz{шч} & reduction (phonemic input) \\
+Japanese & Tokyo & \cz{◌̄ ў џ} & \ph{ɸ}$\rightarrow$\cz{ф}; \ph{ɯ}$\rightarrow$\cz{у}; \ph{ʑ}$\rightarrow$\cz{џ}; \ph{ɴ}$\rightarrow$\cz{н} & pitch accent \\
+German & Standard & \cz{ӧ ӱ һ ң ◌̄} + \cz{хь} & \ph{ɛː}/\ph{eː}$\rightarrow$\cz{е̄} & — \\
+Korean & Seoul & \cz{◌ʰ} \cz{ы ъ һ} & tense = geminate & — \\
+Vietnamese & Hanoi & \cz{ы ъ һ ң ғ ◌̄} tones & \ph{ɓ ɗ}$\rightarrow$\cz{б д} & 6 tones$\rightarrow$4; length/tone \\
+Turkish & Istanbul & \cz{ӧ ӱ ы џ ◌̄} & \ph{ɫ}$\rightarrow$\cz{л} & — \\
+Italian & Standard & \cz{ѕ} & \ph{ɛ ɔ}$\rightarrow$\cz{е о} & — \\
+Persian & Tehran & \cz{қ һ ӓ ◌̄} & \ph{ɢ}$\rightarrow$\cz{қ} & \ph{ʔ} dropped \\
+Swahili & Standard & \cz{ҫ ҙ ғ ң һ} & implosives $\rightarrow$ \cz{б д} & — \\
+Greek & Standard Modern & \cz{ҫ ҙ ғ} & — & — \\
+Polish & Standard & \cz{ѫ ѧ ѩ ў ы} & \ph{ɕ}$\rightarrow$\cz{сь}; \ph{ʂ}$\rightarrow$\cz{ш}; \ph{t͡ʂ}/\ph{t͡ɕ}$\rightarrow$\cz{ч} & — \\
+Indonesian & Standard & \cz{ң ъ һ џ} & — & — \\
+\bottomrule
+\end{tabular}
+\caption{Per-language audit summary. ``Extensions exercised'' lists the letters and marks the language's inventory actually requires; palatalization via \cz{ь} and length via \cz{◌̄} are counted where load-bearing. Mergers and losses are the declared ones of \S\ref{sec:mergers}.}
+\label{tab:audit}
+\end{table}
+ Table~\ref{tab:examples} samples the audit; the full 125-item set is Appendix~\ref{app:audit}. Declared mergers\label{sec:mergers} are: all rhotics~$\rightarrow$~\cz{р}; \ph{ʂ}/\ph{ʃ}~$\rightarrow$~\cz{ш}; \ph{ɸ}/\ph{f}~$\rightarrow$~\cz{ф}; \ph{ɦ}/\ph{h}~$\rightarrow$~\cz{һ}; implosives~$\rightarrow$~\cz{б д}; \ph{q}/\ph{ɢ}~$\rightarrow$~\cz{қ} (so Persian {\ipafont ق} and {\ipafont غ}, one phoneme in the Tehran reference, both~$\rightarrow$~\cz{қ}); the pharyngealized emphatics \ph{tˤ dˤ sˤ ðˤ}~$\rightarrow$~plain \cz{т д с ҙ} (Arabic); the open/close mid vowels \ph{e}/\ph{ɛ}~$\rightarrow$~\cz{е}, \ph{o}/\ph{ɔ}~$\rightarrow$~\cz{о}, and \ph{ø}/\ph{œ}~$\rightarrow$~\cz{ӧ} (Romance, Bengali); Korean tense (fortis) consonants written as geminates (one analysis of the contrast); \ph{x}/\ph{χ}~$\rightarrow$~\cz{х}; the affricates \ph{tʃ tʂ tɕ}~$\rightarrow$~\cz{ч} and \ph{dʒ dʐ dʑ}~$\rightarrow$~\cz{џ}, with \ph{ʒ}/\ph{ʐ}~$\rightarrow$~\cz{ж} (so Polish \emph{cz}/\emph{ć} and Mandarin's retroflex/palatal series each fall together); \ph{v}/\ph{β}~$\rightarrow$~\cz{в}; \ph{l}/\ph{ɫ}~$\rightarrow$~\cz{л}; \ph{y}/\ph{ʏ}~$\rightarrow$~\cz{ӱ}; French \ph{ɥ}~$\rightarrow$~\cz{ӱ} (the glide written with its vowel counterpart, licensed by the systematic \ph{y}$\sim$[ɥ] alternation); Japanese \ph{ɯ} ([ɯ̟ᵝ], compressed-rounded)~$\rightarrow$~\cz{у} by convention, where Korean \ph{ɯ}~$\rightarrow$~\cz{ы}; German \ph{ɛː}/\ph{eː}~$\rightarrow$~\cz{е̄}; English input referenced to a rhotic accent (GA), with tense \ph{i}/\ph{u} written \cz{ӣ}/\cz{ӯ} although General American has no phonemic length — a transcription convention imported for reader familiarity, flagged rather than hidden. \ph{ʕ} is written (\cz{Ӏ}); \ph{ʔ} is written with the apostrophe \cz{’} in Arabic contexts and dropped elsewhere, as the shipped mapping (\texttt{data/chuzhditsa.json}) specifies. Declared losses are prosodic, with two segmental cases: Mandarin Tone~1 and the neutral tone are both unmarked and so coincide; six-tone systems fold into four marks (Vietnamese \emph{hỏi}/\emph{ngã} merge on the caron, and \emph{nặng} falls together with \emph{huyền} on the grave); Vietnamese phonemic vowel length is neutralized wherever a tone mark is present (length drops under tone); and \ph{ʔ} is dropped outside Arabic contexts (Persian). A rendering that engages none of these is \emph{exact} in the Method's sense.
+
+\begin{table}[ht]\centering\small
+\begin{tabular}{llll}
+\toprule
+Source & & IPA & Chuzhditsa \\
+\midrule
+English & \emph{thanks} & \phon{θæŋks} & \cz{ҫӓңкс} \\
+English & \emph{weekend} & \phon{ˈwiːkɛnd} & \cz{ўӣкенд} \\
+Mandarin & \src{北京} \emph{Běijīng} & \phon{peɪ.tɕiŋ}, T3+T1 & \cz{Пе̌йчиң} \\
+Hindi & \src{ठीक} \emph{ṭhīk} & \phon{ʈʰiːk} & \cz{т̢ʰӣк} \\
+Arabic & محمد \emph{Muḥammad} & \phon{muˈħammad} & \cz{Муҳаммад} \\
+French & \emph{croissant} & \phon{kʁwasɑ̃} & \cz{крўаса̨} \\
+French & \emph{bien} & \phon{bjɛ̃} & \cz{бѩ} \\
+Polish & \emph{Wrocław} & \phon{ˈvrɔt͡swaf} & \cz{Вроцўаф} \\
+Japanese & \src{東京} \emph{Tōkyō} & \phon{toːkʲoː} & \cz{То̄кьо̄} \\
+Korean & \src{한글} \emph{hangul} & \phon{hanɡɯl} & \cz{һангыл} \\
+Georgian & \src{წყალი} \emph{c\textquotesingle qali} & \phon{t͡sʼqʼali} & \cz{цӀқӀали} \\
+Albanian & \emph{Shqipëria} & \phon{ʃcipəˈɾia} & \cz{Шкьипърѝа} \\
+\bottomrule
+\end{tabular}
+\caption{Sampled audit items, plus two out-of-sample demonstrations (the Georgian ejectives and the Albanian stress test); the Chuzhditsa column is set in the typeface under discussion, with live GSUB fusion and GPOS anchoring. In the Mandarin row the caron on \cz{е̌} is tone 3, attached to the first syllable's vowel; tone 1 is unmarked by rule.}
+\label{tab:examples}
+\end{table}
+
+\section{Adoption: lessons from planned and organic systems}
+
+A designed register lives or dies socially, not technically; the sociolinguistics of script choice behaves like the sociolinguistics of language choice (Fishman 1977; Unseth 2005). Four historical cases bound the space Chuzhditsa enters. The comparison is organized by recurrent factors rather than narrative sympathy: community ownership, institutional sponsorship, literacy burden, identity payoff, compatibility with existing orthographic practice, domain of use, prestige and stigma, and the mundane infrastructure of input methods and type.
+
+\textbf{The planned failures.} Volap\"uk collapsed within a decade, less on linguistic defects than on its inventor's proprietary control of the standard (Garv\'ia 2015). Esperanto — maximally learnable, energetically organized — plateaued as a voluntary subculture: it extended nobody's existing practice and attached to no prior community, so adopting it meant \emph{joining a new identity} rather than exercising an old one (Forster 1982; Garv\'ia 2015).
+
+The Deseret alphabet is the sharpest lesson, because it controls for institutional power: commissioned by Brigham Young, taught in classes from church-printed primers, backed by church funds, it was abandoned within roughly two decades — sponsorship without a felt need or an identity payoff bought nothing (Alder, Goodfellow \& Watt 1984). Learnability and patronage, the two levers a designer can pull, decided none of these cases.
+
+Nearer to Chuzhditsa than any whole-language project is the Initial Teaching Alphabet, a transitional English orthography whose central difficulty — treated at length by its own champions (Pitman \& St John 1969) — was the dual system and the transition back to standard spelling, and which was largely abandoned in the following decade: the same leave-the-register burden a citation register asks its users to carry when a loan naturalizes.
+
+\textbf{The designed success.} Hangul is the one engineered script that won, and its path is instructive precisely because the design was not what won. Completed in 1443 and promulgated in 1446 (Ledyard 1998), it was opposed at once by the literati — the collective Ch'oe Malli memorial of 1444 — and spent four and a half centuries outside prestige writing, surviving in low-stakes registers: women's correspondence, vernacular fiction, private devotion (Lee \& Ramsey 2011). What revalued it was not its featural elegance but nineteenth-century nationalism, culminating in the 1894 Kabo edict that made the national script the base of official documents (King 1998). The mandate arrived 448 years after the design; the niche did the surviving.
+
+\textbf{The organic success.} Katakana never asked anyone to change anything. It began as monks' abbreviated annotation glosses on Chinese texts in the early Heian period, drifted into a division of labor with hiragana over a millennium, and was codified only in 1900 by the implementing regulations of the Elementary School Order — with the loanword-register specialization consolidating later still (Seeley 1991; Twine 1991). Codification ratified practice; it did not create it.
+
+The pattern reduces to four conditions, against which Chuzhditsa can be scored honestly. (i) \emph{Additive, not substitutive}: the winners changed no existing spelling; Chuzhditsa alters nothing in any native orthography by construction. (ii) \emph{Identity attachment}: Hangul survived on Korean-ness, not on design merit; Chuzhditsa's revivals — the yuses, the Glagolitic letterforms — are the analogous move available to a designed system, heritage rather than invention. (iii) \emph{A survivable low-stakes niche before any mandate}: Hangul had the vernacular genres, katakana the annotation margin; the dictionary pronunciation field, the language classroom, and the subtitle are proposed as the equivalent low-stakes niche. (iv) \emph{Codification last}: every mandate that worked ratified existing practice, which is why this specification petitions no orthographic authority.
+
+Four cases cannot license induction, and none of this predicts uptake; the comparison identifies necessary-looking conditions, not sufficient ones. One condition, moreover, cannot be engineered around: on the planned/organic axis Chuzhditsa sits with Esperanto and Deseret, not with katakana. Assembly from attested material is a mitigation — every letter arrives with a history already attached — but it is not an exemption, and the Deseret case fixes an upper bound on what design quality plus sponsorship can buy without a community that recognizes itself in the script.
+
+\section{Limitations}\label{sec:limits}
+
+\textbf{Register versus encoding.} The register's marking lives at two levels that must not be conflated. The phonological extensions are plain-text-safe: they are standard Unicode letters that survive copy, paste, search, and font substitution. The \emph{visual} register, however, is carried by typeface choice — a diaphasic diglyphia in Bun\v{c}i\'c's terms, not an encoded script contrast — and it degrades exactly where font control degrades: plain-text channels keep the letters but lose the look. The register is moreover invisible to non-visual access — a screen reader or a plain-text client receives the phonological letters but no foreignness signal at all, a cost of marking by font rather than by inventory. Whether readers actually perceive the Glagolitic-derived forms as ``foreign register'' rather than ``archaic,'' ``ecclesiastical,'' or merely ``a display font'' is an empirical question this paper does not answer; a perception study — mixed native/Chuzhditsa text, register-identification and readability tasks with Cyrillic readers — is the single most valuable next experiment.
+
+\textbf{Input assumptions.} The mapping consumes a source pronunciation in a declared reference variety. Dialect choice, phonemic versus phonetic input, and spelling-influenced variant pronunciations are parameters the user supplies, not problems the system solves; learnability of the extension letters, and the cost of input methods for them, are likewise open. The keyboard prototype in the repository addresses input mechanics but not habit.
+
+\textbf{System-internal residue.} The place hook is polysemous by direction — uvular on \cz{к}, pharyngeal on \cz{х}, \emph{fronting} to interdental on \cz{с з}, retroflex on \cz{т д р} — so ``retraction'' would misname it; the mark encodes ``off the native grid,'' not one direction. No attested language contrasts two of its values on one base letter, so the ambiguity is theoretical, but it is a real weakening of the one-mark-one-meaning claim. \ph{ɕ} keeps two spellings (\cz{сь} under contrast, \cz{ш} by entrenchment) — the one point where usage beat system. Six-tone prosodies fold lossily into four marks. Click phonology is future work, as is a mark-to-mark (\texttt{mkmk}) positioning pass for the rare double-stacked vowel.
+
+\section{Conclusion}
+
+What this paper demonstrates is deliberately narrower than what it proposes. It demonstrates that a coherent, technically implementable candidate for a katakana-like citation register can be \emph{constructed} on an alphabet without inventing a parallel inventory: a compositional grammar over attested Cyrillic material covers twenty phonologies under internally scored audit, one historical script supplies the register aesthetics, and the whole specification compiles to a font whose OpenType rules \emph{are} the orthography. Whether the register \emph{communicates} — whether readers recover pronunciations, transcribers converge, and the typeface signals ``foreign citation'' rather than ``archaic'' — is not demonstrated here; those are the claims the perception study of \S\ref{sec:limits} exists to test, and until it is run this paper should be read as a design proposition with an inspectable artifact, not as evidence of communicative success. The generalization from Bulgarian to the Slavic superset cost one letterform (е) and no grammar changes, which we take as evidence that the operation layer, not the letter list, is the right unit of design.
+
+The contribution we would defend most broadly is the vertical integration. A phonological distinction here is traceable, without a gap, through a graphemic operation, a Unicode sequence, a glyph construction, an OpenType behavior, and a rendered artifact — and each level is testable at its own altitude: mappings against inventories, spellings against shaping, constructions against binaries. A companion paper documents the construction level; the same end-to-end coherence is what makes every claim in this paper falsifiable by mechanical means, and it is a property worth wanting in any designed writing system, whatever the fate of this one.
+
+\begin{thebibliography}{99}
+\bibitem{alder} Alder, D.~D., P.~J.~Goodfellow \& R.~G.~Watt. 1984. Creating a new alphabet for Zion: The origin of the Deseret alphabet. \emph{Utah Historical Quarterly} 52(3). 275--286.
+\bibitem{bell} Bell, A.~M. 1867. \emph{Visible speech: The science of universal alphabetics}. London: Simpkin, Marshall.
+\bibitem{buncic} Bun\v{c}i\'c, D., S.~L.~Lippert \& A.~Rabus (eds.). 2016. \emph{Biscriptality: A sociolinguistic typology}. Heidelberg: Universit\"atsverlag Winter.
+\bibitem{cahill} Cahill, M. \& K.~Rice (eds.). 2014. \emph{Developing orthographies for unwritten languages}. Dallas, TX: SIL International.
+\bibitem{comrie} Comrie, B. \& G.~G.~Corbett (eds.). 1993. \emph{The Slavonic languages}. London: Routledge.
+\bibitem{comrie96} Comrie, B. 1996. Adaptations of the Cyrillic alphabet. In P.~Daniels \& W.~Bright (eds.), \emph{The world's writing systems}, 700--726. New York: OUP.
+\bibitem{coulmas} Coulmas, F. 2003. \emph{Writing systems: An introduction to their linguistic analysis}. Cambridge: CUP.
+\bibitem{cubberley} Cubberley, P. 1996. The Slavic alphabets. In P.~Daniels \& W.~Bright (eds.), \emph{The World's Writing Systems}, 346--355. New York: OUP.
+\bibitem{danchev} Данчев, А. 1982. \emph{Българска транскрипция на английски имена}. 2.~изд. София: Народна просвета.
+\bibitem{fishman} Fishman, J.~A. (ed.). 1977. \emph{Advances in the creation and revision of writing systems}. The Hague: Mouton.
+\bibitem{forster} Forster, P.~G. 1982. \emph{The Esperanto movement}. The Hague: Mouton.
+\bibitem{garvia} Garv\'ia, R. 2015. \emph{Esperanto and its rivals: The struggle for an international language}. Philadelphia: University of Pennsylvania Press.
+\bibitem{ipa} International Phonetic Association. 1999. \emph{Handbook of the International Phonetic Association: A guide to the use of the International Phonetic Alphabet}. Cambridge: CUP.
+\bibitem{irwin} Irwin, M. 2011. \emph{Loanwords in Japanese}. Amsterdam/Philadelphia: John Benjamins.
+\bibitem{kang} Kang, Y. 2011. Loanword phonology. In M.~van Oostendorp, C.~J.~Ewen, E.~Hume \& K.~Rice (eds.), \emph{The Blackwell companion to phonology}, vol.~4, 2258--2282. Malden, MA: Wiley-Blackwell.
+\bibitem{kimrenaud} Kim-Renaud, Y.-K. (ed.). 1997. \emph{The Korean alphabet: Its history and structure}. Honolulu: University of Hawai`i Press.
+\bibitem{king98} King, R. 1998. Nationalism and language reform in Korea: The questione della lingua in precolonial Korea. In H.~I.~Pai \& T.~R.~Tangherlini (eds.), \emph{Nationalism and the construction of Korean identity}, 33--72. Berkeley: Institute of East Asian Studies.
+\bibitem{ledyard} Ledyard, G.~K. 1998. \emph{The Korean language reform of 1446}. Seoul: Sin'gu Munhwasa.
+\bibitem{leeramsey} Lee, K.-M. \& S.~R.~Ramsey. 2011. \emph{A history of the Korean language}. Cambridge: CUP.
+\bibitem{merunka} Merunka, V. 2018. \emph{Interslavic zonal constructed language: An introduction for English-speakers}. Prague: Slovansk\'a unie.
+\bibitem{parcic} Par\v{c}i\'c, D.~A.\ (ed.). 1905. \emph{Rimski misal slov\v{e}nskim jezikom} (Missale Romanum slavonico idiomate), 3rd edn. Rome: Typis S.~Congregationis de Propaganda Fide.
+\bibitem{peperkamp} Peperkamp, S. \& E.~Dupoux. 2003. Reinterpreting loanword adaptations: The role of perception. \emph{Proceedings of the 15th International Congress of Phonetic Sciences}, 367--370.
+\bibitem{pitman} Pitman, J. \& J.~St John. 1969. \emph{Alphabets and reading: The Initial Teaching Alphabet}. London: Pitman.
+\bibitem{robertson} Robertson, W.~C. 2020. \emph{Scripting Japan: Orthography, variation, and the creation of meaning in written Japanese}. London: Routledge.
+\bibitem{sampson} Sampson, G. 1985. \emph{Writing systems: A linguistic introduction}. Stanford: Stanford University Press.
+\bibitem{schenker} Schenker, A.~M. 1995. \emph{The dawn of Slavic: An introduction to Slavic philology}. New Haven: Yale University Press.
+\bibitem{sebba} Sebba, M. 2007. \emph{Spelling and society: The culture and politics of orthography around the world}. Cambridge: CUP.
+\bibitem{seeley} Seeley, C. 1991. \emph{A history of writing in Japan}. Leiden: Brill.
+\bibitem{sproat} Sproat, R. 2000. \emph{A computational theory of writing systems}. Cambridge: CUP.
+\bibitem{stanlaw} Stanlaw, J. 2004. \emph{Japanese English: Language and culture contact}. Hong Kong: Hong Kong University Press.
+\bibitem{twine} Twine, N. 1991. \emph{Language and the modern state: The reform of written Japanese}. London: Routledge.
+\bibitem{unicode} The Unicode Consortium. 2024. \emph{The Unicode Standard}, Version 16.0.0. South San Francisco, CA: The Unicode Consortium.
+\bibitem{unseth} Unseth, P. 2005. Sociolinguistic parallels between choosing scripts and languages. \emph{Written Language \& Literacy} 8(1). 19--42.
+\bibitem{vajs} Vajs, J.\ (ed.). 1927. \emph{Rimski misal slov\v{e}nskim jezikom} (Missale Romanum slavonico idiomate). Rome: Typis Polyglottis Vaticanis.
+\end{thebibliography}
+
+\appendix
+\section{The twenty-language audit: full example set}\label{app:audit}
+
+\noindent The complete audit set behind Table~\ref{tab:audit} and Table~\ref{tab:examples}: 125 examples across the twenty audit languages, each with source form, source-variety IPA, Chuzhditsa rendering (set live in the typeface, with GSUB fusion and GPOS anchoring), and the extension letters the rendering exercises noted where instructive. Language headers restate the declared reference variety and the declared mergers and losses of \S\ref{sec:mergers}; every rendering not engaging a declared merger or loss is \emph{exact} in the sense of the Method paragraph of \S\ref{sec:audit}. This appendix is generated from the same machine-readable table (\texttt{data/audit\_20\_languages.json}) distributed with the fonts.
+
+\input{audit_appendix}
+
+\end{document}
