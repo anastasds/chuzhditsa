@@ -1,0 +1,40 @@
+Dear Editors of Digital Creativity,
+
+I am pleased to submit "The critic and the builder: how the Chuzhditsa papers
+were written" for consideration as a research article.
+
+The paper is a documented, auditable single-case study of human-AI production
+in a creative-technical task. An AI coding agent constructed a parametric
+Cyrillic typeface family — and drafted the manuscripts describing it — steered
+by a human who wrote no code and drew no letterforms; his contribution was
+criticism, mostly withholding solutions by design. The complete criticism
+channel is archived as a machine-readable corpus, and a shipped audit script
+re-derives every quantitative claim in the paper from the archived record.
+The findings concern what criticism changed (the builder's method more than
+its artifacts), where the method broke (solution-free discipline gave way on
+a stubborn letterform), where machine verification failed and the human eye
+did not, and how criticism itself became partly delegated to machine-run
+adversarial panels by the end. I believe this sits squarely in Digital
+Creativity's territory: the practical and theoretical dimensions of making
+with digital media, reported from inside a new configuration of making.
+
+One aspect deserves plain statement up front. The manuscript was drafted by
+the language model whose conduct it documents, under my direction and
+editorial control — this is disclosed in the author note, analyzed in the
+paper's "Authorship and disclosure" section against ICMJE/COPE and publisher
+policies, and declared on the title page per Taylor & Francis's AI policy.
+No AI tool is listed as an author; I am accountable for the content. The
+AI-mediated production process is the object of study, and the paper's
+integrity rests on artifact-level verifiability rather than on testimony:
+its numbers are recomputable by any reader from the public record.
+
+The manuscript is approximately 9,400 words. It is not under consideration
+elsewhere. Both versions are supplied (complete and anonymized for
+double-anonymous review).
+
+Thank you for your consideration.
+
+Sincerely,
+Anastas Stoyanovsky
+Unaffiliated (independent researcher)
+anastas@stoyanovs.ky
