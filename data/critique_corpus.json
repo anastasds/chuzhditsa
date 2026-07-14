@@ -653,6 +653,16 @@
    "referent": "Һ letterform; Т identity query",
    "diagnosis": "direction correction after the builder's revert: hoop reduced to the lowercase proportion (peak ~0.78 of stem, r 230->215, sprung 400->330); Т verified correct (scaled т = canonical Te) and left unchanged",
    "commit": null
+  },
+  {
+   "id": 65,
+   "ts": "2026-07-14T10:05:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "the lowercase is fine, the uppercase became a caricature",
+   "referent": "Һ letterform, second correction",
+   "diagnosis": "the proportion-scaled hoop (peak 0.78 of stem) rejected; reference measurement (Arial Unicode/Geneva/New York/SF: arch peak 0.59-0.66 of cap) showed the canonical capital is the lowercase hoop unchanged beneath a taller stem — hoop returned to A(250,290,210), peak at x-height",
+   "commit": null
   }
  ]
 }
