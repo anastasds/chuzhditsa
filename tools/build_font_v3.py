@@ -83,7 +83,7 @@ SOFT_LIGA = [("н", "ь", "њ"), ("л", "ь", "љ"), ("Н", "Ь", "Њ"), ("Л", 
 EJECTIVES = [("т", "tpal"), ("к", "kpal"), ("ц", "tspal"), ("ч", "chpal"), ("п", "ppal")]
 KERN = {
     "RR": -14, "RF": -6, "FR": -6, "FF": 0, "DD": -28, "DR": -20, "RD": -20,
-    "DF": -14, "FD": -14, "TT": 0, "TR": -12, "RT": -12, "TF": -4, "FT": -4,
+    "DF": -14, "FD": -14, "TT": -85, "TR": -60, "RT": -12, "TF": -35, "FT": -4,
     "TD": -16, "DT": -16, "RA": -22, "FA": -16, "DA": -28, "TA": -95,
     "OO": -34, "OR": -16, "OF": -8, "OD": -24, "OA": -26, "OT": -14,
     "FO": -10, "RO": -18, "DO": -24, "TO": -16,
@@ -589,8 +589,12 @@ def make_fea(G, CAP_OF, kern_scale, boxes, xf, register=True):
     for k, names in sorted(rights.items()):
         lines.append(f"@SECOND_{k} = [{' '.join(sorted(names))}];")
     lines.append("feature kern {")
+    # top-bar (T-right) kerns are structural, not rhythmic: the void under the
+    # bar grows with Bold's x1.10 frame, so these keys boost in Bold rather
+    # than shrinking with the rhythm kerns
+    BOLD_BOOST = {"TT": 1.3, "TR": 1.3, "TF": 1.3}
     for k, v in KERN.items():
-        sv = round(v * kern_scale)
+        sv = round(v * (BOLD_BOOST[k] if kern_scale < 1 and k in BOLD_BOOST else kern_scale))
         if sv and k[0] in lefts and k[1] in rights:
             lines.append(f"  pos @FIRST_{k[0]} @SECOND_{k[1]} {sv};")
     lines.append("} kern;")

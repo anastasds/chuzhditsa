@@ -601,6 +601,38 @@
    "referent": "release state",
    "diagnosis": "no v3 release existed; the v3 assets had been clobbered onto the stale v2.5 release; cut v3.0",
    "commit": "v3.0"
+  },
+  {
+   "id": 60,
+   "ts": "2026-07-13T09:10:00Z",
+   "window": "submission",
+   "category": "defect",
+   "contested": true,
+   "upheld": false,
+   "text": "\"/w/ → в or у\" doesnt seem right",
+   "referent": "chuzhditsa.tex intro, ad-hoc collapse examples",
+   "diagnosis": "challenged as a mapping; verified as a description of existing practice (Уотсон/Ватсон doublets) and upheld as written — refuted with sources",
+   "commit": null
+  },
+  {
+   "id": 61,
+   "ts": "2026-07-13T09:40:00Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "I don't think we need the \"not a demonstrated law\" phrase in the abstract, it makes it end on a weak note",
+   "referent": "chuzhditsa.tex abstract",
+   "diagnosis": "double hedge; 'candidate heuristic' already carries it",
+   "commit": "27b1732"
+  },
+  {
+   "id": 62,
+   "ts": "2026-07-13T10:30:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "first can we fix the гт kerning",
+   "referent": "top-bar (T-right) kern class",
+   "diagnosis": "TT/TR/TF too weak (гт 34px vs 15px norm); strengthened to -85/-60/-35 with x1.3 Bold boost",
+   "commit": null
   }
  ]
 }

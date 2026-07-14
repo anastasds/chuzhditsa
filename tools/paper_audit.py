@@ -80,7 +80,7 @@ def main():
     if day2:
         d2crit = [u for u in day2 if u["category"] in
                   ("defect", "escalation", "verification", "redirection")]
-        print("\n== utterances (second window: submission prep, 11--12 July) ==")
+        print("\n== utterances (second window: submission prep, 11--13 July) ==")
         print("critique utterances:", len(d2crit))
         print("words:", sum(len(u["text"].split()) for u in d2crit))
         by2 = {}
