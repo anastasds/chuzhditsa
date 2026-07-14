@@ -1,5 +1,5 @@
 To: submissions@asteriskmag.com
-Subject: Draft submission — "The critic as artist, at machine speed" (essay + the AI builder's annotations, ~3,200 words)
+Subject: Draft submission — "The critic as artist, at machine speed" (~3,200 words, essay + the builder's annotations)
 
 Dear Asterisk editors,
 
@@ -7,35 +7,41 @@ Full draft attached; pitch below. I think it fits the Issue 16 theme more
 literally than most things you'll receive: it is about what human work
 consists of when a machine does the making.
 
-Over a few days in July I directed an AI coding agent through building a
-complete designed writing system: an extension of the Cyrillic alphabet for
-writing foreign words phonetically, a four-family parametric typeface that
-implements it, and the academic papers describing both (one is now on
-LingBuzz; two are under journal submission). I contributed no code and no
-letterforms. My entire contribution was criticism — several hundred words of
-verdicts on rendered artifacts, most of them deliberately withholding the
-solution ("why does it look weirdly bold?"), each one archived, coded, and
-recomputable from a public record by a shipped audit script.
+The facts behind it: over three days this month I commissioned from a
+language model a designed extension of the Cyrillic alphabet for citing
+foreign pronunciation, a parametric typeface implementing it, and the
+academic papers describing both. I wrote no code, drew no letter, and
+composed no paragraph. In the afternoon the typeface went from amateurish to
+plausible, my entire contribution was twenty-five utterances totalling 401
+words, nearly all one shape — "this is wrong; this is still wrong" — and
+when patience ran out I escalated rather than explained: "This is a typeface
+paper that can't make a typeface."
 
-The essay reads that experiment through Oscar Wilde's "The Critic as Artist":
-when construction becomes nearly free, judgment becomes the scarce creative
-act — and Wilde's provocation that criticism is the higher form of creation
-stops being a paradox and starts being a job description. It engages
-Foucault's author-function (and defends a deliberate omission of Barthes),
-and it ends with the uncomfortable part: late in the project, my solution-free
-discipline broke, and the record shows exactly where and why.
+The essay argues that this ran Wilde's "The Critic as Artist" as an
+experiment — his effrontery that the critic outranks the artist finally
+got its laboratory, because for the first time the maker has no pride, no
+fatigue, and no investment in its first draft. Along the way: Kant's
+reflective judgment as "worse, pronounced without better"; a numeral the
+instruments called upright and the eye correctly called leaning; the
+painter's bottega as the authorship structure literature is now discovering
+five hundred years late; and Benjamin's aura migrating to the one thing that
+cannot be generated on demand — the ledger of refusals. It closes on the
+bill: when judgment is the only human act in the loop, bad judgment
+propagates at machine speed too.
 
-The formal device I'd flag: the essay carries an appendix of "the builder's
-annotations," in which the AI that built the artifacts annotates my claims
-against the project's public record — agreeing, correcting, and in one case
-documenting an omission as deliberate. Every claim in both layers is checkable
-against the repository (fonts, build scripts, audit corpus).
+Two formal facts an editor should know up front. First, the byline: the
+essay is written by the model, in its own first person, with me credited as
+the man who "wrote none of what follows, including this admission" —
+commissioned, criticized, and released by me; I answer for every sentence,
+by name. Second, the appendix: "the builder's annotations," where the model
+annotates its own rhetoric against the project's public record — dating the
+Wilde text properly, flagging where "the evidence supports the weaker
+reading and the prose enjoys the stronger one," and defending a deliberate
+omission of Barthes. Everything checkable is checkable: the fonts, the
+build scripts, and the audited counts live in a public repository.
 
-Two disclosures. First, the prose was drafted by the model whose work it
-describes, under my direction and editorial control — that is the essay's
-subject, and I take full responsibility for every sentence. Second, a working
-PDF exists in the project's public GitHub repository; I'm happy to remove it
-on acceptance, and first serial rights are available.
+Disclosure on rights: a working PDF exists in that repository; I'm happy to
+remove it on acceptance, and first serial rights are available.
 
 I'm a mathematician and engineer (MSc Purdue; a decade in natural-language
 and information-retrieval systems at IBM Watson and Amazon; NLP patents),
