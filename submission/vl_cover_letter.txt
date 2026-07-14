@@ -1,0 +1,42 @@
+Dear Editors of Visible Language,
+
+I am pleased to submit "The letter as a program: how the Chuzhditsa typeface
+works" for consideration as a research article.
+
+The paper is a concise implementation description of a parametric Cyrillic
+family: four cuts (a register face, a grotesk, a slab serif, and a
+Times-matched inline cut for citations inside serif text), sixteen styles,
+all generated from one set of centerline skeletons by an ~800-line builder
+in which weight, contrast, terminals, slabs, clamps, optical corrections,
+fitting, and kerning are code. Its distinctive application is that the
+font's OpenType layer functions as an executable reference implementation
+of a designed orthography — spelling rules compiled as lookups and verified
+by shaping tests. The family serves Chuzhditsa, a phonological citation
+register for Cyrillic documented in a separate system paper.
+
+I hope the venue fit is evident: the paper's conceptual frame is scoped
+directly against the Knuth–Hofstadter exchange that ran in Visible Language
+16(1) and 16(4), and its claim — parametric type fails as a theory of all
+letterforms and succeeds as a theory of one design language at a time — is
+offered as a working resolution of that debate, forty years on, with the
+builder and byte-reproducible binaries as evidence.
+
+The manuscript is approximately 6,000 words plus figures. It is not under
+consideration elsewhere. Both required versions are supplied (complete and
+anonymized, with [ANON] placeholders and cleaned document properties). All
+figures exist as separate PNG files at print resolution and can be supplied
+in RGB and CMYK on acceptance. The fonts, builder, and test harness are
+public under open licenses.
+
+Author bio (under 100 words): Anastas Stoyanovsky is an independent
+researcher. He designed and directed the Chuzhditsa project — a phonological
+citation register for Cyrillic and the four-family parametric typeface that
+implements it — and is the author of its companion papers on the orthography
+and on the human–AI production process behind the artifacts.
+
+Thank you for your consideration.
+
+Sincerely,
+Anastas Stoyanovsky
+Unaffiliated (independent researcher)
+anastas@stoyanovs.ky
