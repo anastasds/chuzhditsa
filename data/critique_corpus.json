@@ -703,6 +703,16 @@
    "referent": "typeface.tex, whole paper",
    "diagnosis": "restructure: drop historical/process narrative (division of labor with the process paper); concise implementation description for a typeface-venue journal",
    "commit": null
+  },
+  {
+   "id": 70,
+   "ts": "2026-07-14T14:10:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "alright help me prepare a manuscript for visible language",
+   "referent": "typeface paper, Visible Language submission package",
+   "diagnosis": "two-version package (complete + anonymized), VL front matter, APA 7th conversion via tools/gen_vl.py",
+   "commit": "af2a174"
   }
  ]
 }
