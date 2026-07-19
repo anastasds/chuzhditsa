@@ -27,6 +27,7 @@ header.masthead{padding:5rem 0 2.5rem;border-bottom:1px solid var(--rule);text-a
 .masthead .deck{font-style:italic;font-size:1.12rem;max-width:36em;margin:0 auto 1.4rem;color:var(--ink)}
 .masthead .byline{font-size:.92rem;color:var(--muted);max-width:34em;margin:0 auto}
 article{position:relative;max-width:700px;margin:0 auto;padding:2.8rem 0 4rem}
+article::after{content:"";display:block;clear:both}
 @media(min-width:1120px){article{margin-left:calc((100% - 1040px)/2);padding-right:340px;max-width:1040px}}
 article p{margin:0 0 1.25rem}
 article p:first-of-type::first-letter{font-size:3.1em;line-height:.82;float:left;padding:.06em .08em 0 0;color:var(--accent)}
