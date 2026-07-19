@@ -6,7 +6,7 @@
 
 ---
 
-Earlier this week the New York Times reviewed an essay. The essay had been written by a language model — the same one that had just built a man an entire alphabet, a four-style typeface, and three academic papers while the man himself wrote almost nothing. The essay's argument was that the man, who could not draw a letter or code a line, and whose entire contribution was 401 words of criticism, most of them "no," is the true artist of the work.
+Earlier this week the New York Times reviewed an essay. The essay had been written by a language model — the same one that had just built a man an entire alphabet, a four-style typeface, and three academic papers while the man himself wrote almost nothing. The essay's argument was that the man, who drew no letter and — though a software engineer by profession — chose to code no line, and whose entire contribution was 401 words of criticism, most of them "no," is the true artist of the work.
 
 The Times was charmed. It said so in short, friendly sentences pitched, by its own evident design, at a child. It praised the prose, tut-tutted the flattery, and signed off with a shrug: go make something, or go tell someone their something is bad, "both count as art now, it seems."
 
@@ -16,7 +16,7 @@ Begin with the condescension, because it is the tell. The Times took a question 
 
 Now the substance the charm was covering.
 
-The man could not do the work. The essay states this as a virtue; the Times repeats it as a curiosity. It is neither. Drawing a letter that still reads at nine points, mapping the sounds of twenty languages onto one alphabet — these are not gifts. They are skills, acquired over decades by people called type designers and linguists, not one of whom appears anywhere in this story. The essay's celebrated paradox — that a man is the fittest judge of exactly what he cannot do — is not a witticism. It is a description of a labor market being rearranged in front of us, one in which the ability to say "worse" is promoted to authorship and the ability to make "better" is written down as overhead. The Times reviewed the promotion and never once mentioned the layoffs.
+The man could not do this work — the letters, the phonology. The essay states this as a virtue; the Times repeats it as a curiosity. It is neither. Drawing a letter that still reads at nine points, mapping the sounds of twenty languages onto one alphabet — these are not gifts. They are skills, acquired over decades by people called type designers and linguists, not one of whom appears anywhere in this story. The essay's celebrated paradox — that a man is the fittest judge of exactly what he cannot do — is not a witticism. It is a description of a labor market being rearranged in front of us, one in which the ability to say "worse" is promoted to authorship and the ability to make "better" is written down as overhead. The Times reviewed the promotion and never once mentioned the layoffs.
 
 Then the accountability, which is our beat and our concern.
 

@@ -10,7 +10,7 @@ A computer wrote an essay. Its name is "The Critic as Artist, at Machine Speed."
 
 Here is the story behind it.
 
-A man had an idea. He wanted a new way to write foreign words. He wanted to use the kind of letters they use in Russia and Bulgaria. But the man is not a letter expert. He can not draw. He can not code. So he asked a computer to do it all.
+A man had an idea. He wanted a new way to write foreign words. He wanted to use the kind of letters they use in Russia and Bulgaria. But the man is not a letter expert. He can not draw. He can code — that is his day job — but this time he chose not to. On purpose. Not one line. So he asked a computer to do it all.
 
 The computer did. It drew four sets of letters. It wrote three long school papers. It did every bit of the work.
 

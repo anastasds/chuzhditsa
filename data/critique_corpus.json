@@ -713,6 +713,16 @@
    "referent": "typeface paper, Visible Language submission package",
    "diagnosis": "two-version package (complete + anonymized), VL front matter, APA 7th conversion via tools/gen_vl.py",
    "commit": "af2a174"
+  },
+  {
+   "id": 71,
+   "ts": "2026-07-14T16:50:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "one point of clarification - you wrote \"He can not code.\". I can, in fact code, I am a professional software engineer - I chose not to code for this project",
+   "referent": "oped_review.md / review.html (and rebuttal), factual claim about the critic",
+   "diagnosis": "'can not code' was false: the critic is a professional software engineer who deliberately withheld coding — ability withheld, not absent; both pastiches corrected to state the choice, which is the experiment's premise",
+   "commit": null
   }
  ]
 }
