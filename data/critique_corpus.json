@@ -733,6 +733,16 @@
    "referent": "site: submission-status postscript",
    "diagnosis": "statuses added to the experiment section and cards; venues unnamed while under review; the rejection framed by the essay's own logic",
    "commit": null
+  },
+  {
+   "id": 73,
+   "ts": "2026-07-14T19:30:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "write the paper",
+   "referent": "the apophatic essay (commissioned from the first essay's annotation on negative theology)",
+   "diagnosis": "the shortest commission in the record; essay written as paper/apophatic.tex — awaiting the critic's read before joining the site",
+   "commit": null
   }
  ]
 }
