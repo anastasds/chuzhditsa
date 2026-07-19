@@ -53,7 +53,7 @@ a living import — worth stating for consistency with the yus framing.
    what the system handles worst, inflating the exact-rate.
 5. English vowel-length marking (ӣ "weekend") imports a contrast GA lacks.
 
-## Graphic designer — verdict: elegant, but the load-bearing visual claim is fragile
+## Graphic designer — verdict: elegant, but the central visual claim is fragile
 1. **Register-by-font premise is structurally overloaded** — a monoline
    round-bowled Cyrillic reads *modern-geometric* OR *ancient-liturgical*, neither
    "foreign"; the specimen words read as a decorative display face — the exact
@@ -109,7 +109,7 @@ use. Outcome: only **one** entry was actually wrong.
 - **daniels** — orphan entry (fully specified inside comrie96/cubberley); cut. The
   mis-keyed `danielsX` renamed `fishman`.
 - **Cahill & Rice** — unverified "9–25" page span dropped.
-- Faithfulness confirmed exactly for the load-bearing cases: Sampson (the softened
+- Faithfulness confirmed exactly for the critical cases: Sampson (the softened
   featural language now represents him correctly), Bunčić "diaphasic diglyphia",
   Sproat's "Regularity" claim (checked against his full-text PDF), Cubberley (near-
   verbatim), Danchev, Robertson (accented-speech), Irwin (three loan routes).
