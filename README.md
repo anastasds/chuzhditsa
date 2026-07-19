@@ -22,6 +22,7 @@ plain alphabet.
 Current version: **3.0** — four families from one skeleton set
 (**2b** register face, **Grotesk**, **Serif**, and the Times-matched **Inline** the papers
 are set in) — in [fonts/v3/](fonts/v3/), built by [tools/build_font_v3.py](tools/build_font_v3.py).
+**Site: [anastasds.github.io/chuzhditsa](https://anastasds.github.io/chuzhditsa/)** — the essay, live type, and all four papers.
 Start with the [plain-language whitepaper](WHITEPAPER.md), the
 [English specification](CHUZHDITSA.en.md), or the manuscript
 ([paper/chuzhditsa.pdf](paper/chuzhditsa.pdf), on LingBuzz as
