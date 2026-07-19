@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chuzhditsa · Чуждица — a phonological citation register for Cyrillic</title>
+<meta name="description" content="A designed extension of the Cyrillic alphabet for writing foreign words phonetically, a four-family parametric typeface, three papers, and an essay by the machine that built it.">
+<style>
+@font-face{font-family:'Chuzhditsa Inline';src:url('fonts/ChuzhditsaInline-Regular.woff2') format('woff2');font-weight:400}
+@font-face{font-family:'Chuzhditsa Inline';src:url('fonts/ChuzhditsaInline-Bold.woff2') format('woff2');font-weight:700}
+@font-face{font-family:'Chuzhditsa 2b';src:url('fonts/Chuzhditsa2b-Regular.woff2') format('woff2')}
+@font-face{font-family:'Chuzhditsa Grotesk';src:url('fonts/ChuzhditsaGrotesk-Regular.woff2') format('woff2')}
+@font-face{font-family:'Chuzhditsa Serif';src:url('fonts/ChuzhditsaSerif-Regular.woff2') format('woff2')}
+:root{--bg:#faf7f2;--ink:#1c1a17;--muted:#6b6459;--rule:#d8d2c6;--accent:#7a2e2e;--card:#f2ede3}
+@media (prefers-color-scheme: dark){:root{--bg:#191714;--ink:#e8e2d6;--muted:#9a917f;--rule:#3a352c;--accent:#d08770;--card:#211e1a}}
+*{box-sizing:border-box}
+html{font-size:17px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+a{color:var(--accent)}
+.cz{font-family:'Chuzhditsa Inline',serif;font-feature-settings:"liga" 1}
+header.hero{text-align:center;padding:5.5rem 0 3rem;border-bottom:1px solid var(--rule)}
+.hero .glyphs{font-family:'Chuzhditsa 2b',serif;font-size:clamp(3rem,10vw,5.5rem);line-height:1.05;margin:0}
+.hero h1{font-size:1.15rem;font-weight:400;color:var(--muted);margin:1rem 0 0;letter-spacing:.02em}
+.hero .sample{margin:2.2rem auto 0;max-width:34em;font-size:1.25rem;line-height:1.7}
+.hero .sample .lat{font-style:italic}
+.hero .cap{font-size:.85rem;color:var(--muted);margin-top:.8rem}
+section{padding:3rem 0;border-bottom:1px solid var(--rule)}
+h2{font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);font-weight:400;margin:0 0 1.6rem}
+.feature{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:2.2rem 2.4rem;transition:border-color .15s}
+.feature:hover{border-color:var(--accent)}
+.feature .ftitle{font-size:1.9rem;font-weight:700;line-height:1.15;margin:0 0 .7rem}
+.feature .fdeck{font-style:italic;color:var(--ink);margin:0 0 1rem}
+.feature .fby{font-size:.85rem;color:var(--muted)}
+.feature .go{color:var(--accent);font-weight:700}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.4rem 1.6rem}
+.card h3{margin:0 0 .5rem;font-size:1.08rem}
+.card p{margin:0 0 .8rem;font-size:.93rem;color:var(--ink)}
+.card .links{font-size:.9rem}
+.specimen-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:.6rem}
+.spec{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.1rem 1.3rem;text-align:center}
+.spec .line{font-size:1.7rem;line-height:1.3}
+.spec .name{font-size:.8rem;color:var(--muted);margin-top:.5rem}
+.f2b{font-family:'Chuzhditsa 2b',serif}.fgro{font-family:'Chuzhditsa Grotesk',serif}.fser{font-family:'Chuzhditsa Serif',serif}.finl{font-family:'Chuzhditsa Inline',serif}
+pre.bib{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.1rem 1.3rem;font-size:.8rem;overflow-x:auto;line-height:1.5}
+footer{padding:2.5rem 0 4rem;font-size:.9rem;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <p class="glyphs">Чуждица</p>
+  <h1>Chuzhditsa — a phonological citation register for Cyrillic. Katakana's job, done with Cyrillic's own dead letters.</h1>
+  <p class="sample"><span class="lat">We spent the weekend in the mountains and said thanks:</span><br>
+  Прекарахме <span class="cz">ўӣкенда</span> в планината и казахме <span class="cz">ҫӓңкс</span>.</p>
+  <p class="cap">The marked words are live text, set in the Chuzhditsa Inline cut — the typeface below is running in your browser, fusions and all.</p>
+</header>
+
+<section>
+  <h2>The essay</h2>
+  <a class="feature" href="oped.html">
+    <p class="ftitle">The critic as artist, at machine&nbsp;speed</p>
+    <p class="fdeck">A language model built a typeface, an orthography, and three academic papers, steered by a man who wrote nothing and refused, on principle, to say how anything should be fixed. The machine wrote this, too.</p>
+    <p class="fby">by the builder — a language model · with the builder's own margin annotations · ~15 minutes <span class="go">Read it →</span></p>
+  </a>
+</section>
+
+<section>
+  <h2>The project</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>The system</h3>
+      <p>A designed extension of Cyrillic for writing foreign words so their source pronunciation is recoverable — revived Old Bulgarian letters, imports from the wider Cyrillic commonwealth, and a compositional diacritic grammar, audited across twenty languages.</p>
+      <p class="links"><a href="papers/chuzhditsa.pdf">Paper (PDF)</a> · <a href="https://ling.auf.net/lingbuzz/010134">on LingBuzz</a></p>
+    </div>
+    <div class="card">
+      <h3>The typeface</h3>
+      <p>Four families from one skeleton set, generated by an ~800-line parametric builder: weight, contrast, terminals, optical corrections, and kerning are code, and the orthography's rules ship as the font's OpenType features.</p>
+      <p class="links"><a href="papers/typeface.pdf">Paper (PDF)</a> · <a href="https://github.com/anastasds/chuzhditsa/releases/tag/v3.0">Download fonts</a></p>
+    </div>
+    <div class="card">
+      <h3>The process</h3>
+      <p>How it was made: an auditable single-case study of the collaboration — every criticism archived and coded, every count recomputable from the public record by a shipped audit script.</p>
+      <p class="links"><a href="papers/process.pdf">Paper (PDF)</a> · <a href="https://github.com/anastasds/chuzhditsa">Repository</a></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Four cuts, one skeleton</h2>
+  <div class="specimen-row">
+    <div class="spec"><div class="line f2b">жълт ѫгъл</div><div class="name">2b — the register face</div></div>
+    <div class="spec"><div class="line fgro">жълт ѫгъл</div><div class="name">Grotesk — for screens</div></div>
+    <div class="spec"><div class="line fser">жълт ѫгъл</div><div class="name">Serif — for reading</div></div>
+    <div class="spec"><div class="line finl">жълт ѫгъл</div><div class="name">Inline — for citation in serif text</div></div>
+  </div>
+</section>
+
+<section>
+  <h2>Cite</h2>
+  <pre class="bib">@misc{stoyanovsky2026chuzhditsa,
+  author = {Stoyanovsky, Anastas},
+  title  = {Chuzhditsa: a phonological citation register for {Cyrillic}},
+  year   = {2026},
+  month  = jul,
+  note   = {Ms., LingBuzz 010134},
+  url    = {https://ling.auf.net/lingbuzz/010134}
+}</pre>
+</section>
+
+<footer>
+  <p>Designed and directed by Anastas Stoyanovsky; constructed, under his criticism, by Claude (Anthropic).<br>
+  Fonts: SIL OFL 1.1 · Code &amp; docs: MIT · <a href="mailto:anastas@stoyanovs.ky">anastas@stoyanovs.ky</a></p>
+</footer>
+</div>
+</body>
+</html>
