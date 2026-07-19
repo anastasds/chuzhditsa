@@ -723,6 +723,16 @@
    "referent": "oped_review.md / review.html (and rebuttal), factual claim about the critic",
    "diagnosis": "'can not code' was false: the critic is a professional software engineer who deliberately withheld coding — ability withheld, not absent; both pastiches corrected to state the choice, which is the experiment's premise",
    "commit": null
+  },
+  {
+   "id": 72,
+   "ts": "2026-07-14T18:05:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "we should also mention that the chuzhitsa paper has been submitted to a linguistics journal as an extension of the experiment, that the typeface creation paper has also been submitted to a journal, and the op ed was submitted to a fashionable magaizine but was immedately rejected",
+   "referent": "site: submission-status postscript",
+   "diagnosis": "statuses added to the experiment section and cards; venues unnamed while under review; the rejection framed by the essay's own logic",
+   "commit": null
   }
  ]
 }
