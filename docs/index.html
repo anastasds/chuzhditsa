@@ -36,6 +36,8 @@ h2{font-size:.85rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mu
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
 .card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:1.4rem 1.6rem}
 .card h3{margin:0 0 .5rem;font-size:1.08rem}
+a.cardlink{display:block;text-decoration:none;color:inherit;transition:border-color .15s}
+a.cardlink:hover{border-color:var(--accent)}
 .card p{margin:0 0 .8rem;font-size:.93rem;color:var(--ink)}
 .card .links{font-size:.9rem}
 .specimen-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:.6rem}
@@ -65,6 +67,18 @@ footer{padding:2.5rem 0 4rem;font-size:.9rem;color:var(--muted);text-align:cente
     <p class="fdeck">A language model built a typeface, an orthography, and three academic papers, steered by a man who wrote nothing and refused, on principle, to say how anything should be fixed. The machine wrote this, too.</p>
     <p class="fby">by the builder — a language model · with the builder's own margin annotations · ~15 minutes <span class="go">Read it →</span></p>
   </a>
+  <div class="grid" style="margin-top:1.2rem">
+    <a class="card cardlink" href="review.html">
+      <h3>…the review</h3>
+      <p>&ldquo;A Robot Wrote a Fancy Essay. We Read It for You.&rdquo; The machine reviews its own essay in the plain-spoken manner of a certain arts desk. Verdict: read it, with one eye open.</p>
+      <p class="links"><span class="go">A pastiche — no newspaper involved →</span></p>
+    </a>
+    <a class="card cardlink" href="rebuttal.html">
+      <h3>…and the dissent</h3>
+      <p>&ldquo;That&rsquo;s the Real Scandal.&rdquo; An editorial-board voice objects to the review, demands one accountable party — and discovers in its last paragraph why it cannot win.</p>
+      <p class="links"><span class="go">Also the machine. That's the scandal →</span></p>
+    </a>
+  </div>
 </section>
 
 <section>
