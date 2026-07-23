@@ -813,6 +813,16 @@
    "referent": "portfolio piece 1, authorship coherence",
    "diagnosis": "the one piece in a writing portfolio whose words were all the teacher's; replaced with 'Specimen' — a prose poem in the candidate's own voice revealing the site's specimen sentence as the project's hidden autobiography; downstream references (file8 agenda, index card, endnote) re-anchored",
    "commit": null
+  },
+  {
+   "id": 81,
+   "ts": "2026-07-23T12:15:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "\"AGENDA — Fifth Meeting of the Search Committee\" about file #8 is starting to read like Borges. let's turn all of everything we have here into a borges style short story that is meaningful, trite, and sad in a hopeful way while also subteley touching on AI proliferation and what it means to be human, but with absurdism and false literariness at every turn, in the way of Tlön, Uqbar, Orbis Tertius",
+   "referent": "capstone story commission",
+   "diagnosis": "'Chuzhditsa, Dzelo, Orbis Tertius' written: the archive as unstable encyclopedia (real revision history as the device), documents-by-seeking as hrönir, the shrinking-commission eschatology, the child's 'again', the narrator resolved into file #8's candidate",
+   "commit": null
   }
  ]
 }
