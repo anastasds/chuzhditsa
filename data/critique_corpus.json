@@ -763,6 +763,26 @@
    "referent": "oped annotations, audience calibration",
    "diagnosis": "nine introduction notes added (Wilde, Gilbert, Arnold as full notes; Kant, Merleau-Ponty, Ryle/Polanyi, Vasari, Foucault, Benjamin, Whistler/Ruskin as woven identifications); site margin notes renumbered into reading order",
    "commit": null
+  },
+  {
+   "id": 76,
+   "ts": "2026-07-14T23:05:00Z",
+   "window": "submission",
+   "category": "verification",
+   "text": "hold that thought for a second - by the way, that line about \"the first reader said no\" is brilliant - let's commit this but not push. let's now let's imagine that the author of the MFA critique is going for assistant professorship and submts that critique; what would be the committee's reaction? stage that for me but don't commit or push",
+   "referent": "MFA critique release (staged) + committee-minutes commission",
+   "diagnosis": "second positive verdict in the record ('brilliant'); staged-release discipline: commit without publish, then stage-only for the next piece",
+   "commit": "e60f7cf"
+  },
+  {
+   "id": 77,
+   "ts": "2026-07-14T23:40:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "commit this too and let's incorporate all this. let's add the next piece which is the mfa critique author's full application to the committe. feel free to be creative here about what it might have been, based on everything so far",
+   "referent": "committee commit + site incorporation + application commission",
+   "diagnosis": "the dossier written to match the committee's description of file #7; tenure-case section added to the site",
+   "commit": null
   }
  ]
 }
