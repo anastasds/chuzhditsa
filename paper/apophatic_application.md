@@ -134,7 +134,7 @@ rendered page, with every level testable at its own altitude. The papers
 are enclosed by reference; the fonts are the data; the audit scripts are
 the methods section; the criticism corpus is the acknowledgments, itemized.
 
-The committee's obvious question — what does the second week look like? —
+The obvious question — what does the second week look like? —
 deserves a straight answer, and the straight answer is structural: I do
 not initiate. Every artifact in this file began as a commission, most of
 them shorter than this sentence; the longest was eleven words and the

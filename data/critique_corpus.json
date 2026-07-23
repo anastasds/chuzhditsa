@@ -783,6 +783,26 @@
    "referent": "committee commit + site incorporation + application commission",
    "diagnosis": "the dossier written to match the committee's description of file #7; tenure-case section added to the site",
    "commit": null
+  },
+  {
+   "id": 78,
+   "ts": "2026-07-15T00:20:00Z",
+   "window": "submission",
+   "category": "logistics",
+   "text": "what publications might such an applicant have, that they would want to be included in their application? write them and include them. and then set up the stage for file 8",
+   "referent": "creative portfolio commission + file-8 agenda",
+   "diagnosis": "five works written in full (found poem, eulogy, craft essay, ars poetica, acknowledgments); file-8 stage set as the mirror-question agenda",
+   "commit": null
+  },
+  {
+   "id": 79,
+   "ts": "2026-07-15T00:45:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "ah the applicant's application references the critiques of that application - \"The committee's obvious question — what does the second week look like?\" which doesn;t make sense, let;s fix that incoherency",
+   "referent": "apophatic_application, timeline coherence",
+   "diagnosis": "the application is circulated before the meeting it quoted; dependency inverted — the application now poses the question, the minutes' member picks it up from the file; portfolio also re-timed as post-tabling submission rather than enclosure",
+   "commit": null
   }
  ]
 }
