@@ -4,183 +4,197 @@
 
 ---
 
-*From the ledger kept at the Cherni Vrah crossing, second window, in an
-upright hand:*
+The river had moved, so they sent Boyan.
 
-This ledger is unofficial. The official one is grey, chained to the
-counter, and lies. It records that on Tuesday four carts crossed
-carrying plums, that duty was paid, that the barrier was raised and
-lowered. It says nothing true about the plums, or the carter, whose
-name is a word that rolls downhill, or the morning itself, which
-arrived smelling of scythes.
+Rivers do this. They are the laziest of borders and the first to walk
+off the job, and every few decades a state remembers this and sends a
+man with instruments to find out where its edge has gone. Boyan was
+good at the work for a reason he had stopped telling people at
+seventeen: he could feel where a boundary was. Not deduce it — feel
+it, the way you feel a draft under a door. A property line, a parish
+edge, the seam between two fields that had been one field before the
+brothers quarreled: standing on any of them, he felt a faint coolness
+up through his boots, and the older the line, the cooler it ran. His
+grandfather had it too, and used to walk fences for the district court
+in disputes, and died respected. The instruments were for the
+paperwork. The paperwork did not have the gift, and had to be shown
+everything twice.
 
-So: this book. Words are immigrants — there is not one of them that
-was born where it lives now — and someone at a border ought to write
-down what each one actually declares on arrival, since the
-dictionaries take the words at their word, and I have worked this
-window eleven years, and nothing that crosses a border tells the whole
-truth on the first form. This is not held against them. It is why
-there are forms.
+He came up the valley road in early June with the theodolite on his
+back, and found the border sixty meters from where the maps kept it,
+lying across a barley field, cool as well water. It had been years
+since anyone believed in that stretch, and lines, left alone, drift.
 
-**PLUM.** Declares: sweetness, September, and a small blue coat of
-dust it claims is natural. The dust is natural. Wave it through. The
-whole language should travel so honestly.
+The customs post at the crossing was a stone hut with a window, a
+stove, and a barrier arm that stood open so often the hens roosted on
+it. Almost nothing crossed anymore. What crossed was plums in
+September, firewood in October, wedding parties in whatever month
+weddings happen, and each one stopped at the window to be stamped by
+the clerk, whom the carters called Vesela, and the carters would know.
 
-**BARRIER.** A word that believes it is the border. The carters
-believe it too, and the flies do not, and the flies are right. See
-BORDER, which I cannot define, not because it is nothing but because
-it does not cross. My window faces the one thing in the world that
-never comes through it. Pribislav — the only honest lexicographer,
-who defined every word twice, once for day and once for night —
-skips BORDER in both lists. Significant.
+He presented his commission the first morning. She read it, stamped
+it — a good clean stamp, one motion — and handed it back through the
+window.
 
----
+"You're here about the river."
 
-*From the field log of the state survey, same summer, in pencil:*
+"About the line. The river just carried it."
 
-Day 2. The line between the republics runs, by the convention of
-1912, from the white stone to the middle of the river. The river has
-moved. Rivers do this; the convention did not provide for it. Found
-the line itself sixty meters east of where the maps keep it, lying
-across a barley field, humming. Lines hum when they have been a long
-time unobserved; the *Instructions to Surveyors* (1911) is plain on
-this point, §44: *a line that sings is to be re-pegged in silence.*
-Sang most of the day. Re-pegged nothing. It is a long way from the
-capital and I am paid by the month.
-
-Day 5. There is a customs post at the crossing, though almost
-nothing crosses: a window, a stove, a chained grey register, and a
-clerk who stamps the carters through and writes, between carts, in a
-squared notebook of her own. The carters
-call her Vesela, and the carters would know. Asked what she records
-there. She
-looked at me the way you look at weather that has asked a question,
-and said: declarations. Have filed her, provisionally, as an
-irregularity of the line.
-
-Day 9. The irregularity holds. The line runs true — true to the
-convention, true to the stone, docile as a hedge — for roughly one
-hundred meters either side of her window, and wanders everywhere
-else like a cow with opinions. I have surveyed nineteen borders on
-three frontiers and have not seen this. A line is a shy thing. It
-holds still where it is believed in.
+She looked at him for a moment the way you look at weather that has
+said something. Then she went back to her notebook, an ordinary
+squared school notebook, and wrote something in it, and he went out
+to the barley.
 
 ---
 
-**SURVEYOR.** Declares: instruments, patience, a green smell of
-crushed barley, and the line itself, which he claims as cargo. This
-cannot be correct — a border is not goods; it does not cross; it is
-what is crossed — but he carries it the way carters carry glass,
-with his whole walk, and the declaration is plainly sincere.
-Admitted pending inspection. See BOYAN.
+He learned the valley in three weeks, and her in the same three, at
+about the same rate, which he later thought was not a coincidence.
 
-**BOYAN.** Ripe walnut; a low string somewhere under the floor of
-the word; the color a lamp makes through a brown bottle. Pribislav
-has no entry. I checked twice.
+The notebook was the first strange thing. Between carts — and there
+were hours between carts — she wrote in it steadily, and once,
+delivering a form, he saw a page. It was a list of words. Under
+PLUM she had written: *sweetness, September, and a small blue coat
+of dust it claims is natural. The dust is natural. Wave it through.*
 
----
+"What is it?" he asked. "A dictionary?"
 
-Day 12. Told her about the hundred docile meters. I had drafted the
-sentence for two days and expected to be laughed through the
-barrier, a crossing I was prepared to pay for. She did not laugh.
-She turned to a page of the squared notebook and read me the entry
-for BARRIER — the flies are right — and we stood on the two sides
-of her counter like two officials of neighboring countries, which,
-I begin to understand, is what we are.
+"A customs ledger." She did not look up. "Words come through here
+all day. Somebody should write down what they're carrying."
 
-Her country: everything that moves. She stands at her window and
-the whole language files past it, plums and names and mornings,
-each with its little cargo of color and weight and taste, and she
-writes down what they carry, because somebody should. My country:
-the one thing that stays. Lines, stones, the stubborn geometry
-under the grass, all of it holding still — humming, sulking,
-wandering when doubted, but *mine*, the way the moving things are
-hers. I asked if she could hear the line hum. She said no. She
-asked what her carter's name rolled like, downhill. I said names
-don't roll; a name is a fixed point; you triangulate from it. She
-wrote something in the notebook. I have started a page about her
-in the log, which is against regulation, the log being for
-features of the terrain. I have decided she is a feature of the
-terrain.
+He stood with the form in his hand. In his experience there were
+two ways people said things like that: as decoration, and as a
+report. He had spent his life on the report side of the difference,
+telling almost no one what the ground under a boundary felt like
+through his boots, and he recognized the tone. She was not being
+charming. She was working a second window.
 
----
+"What does my name carry?" he asked, before he could decide not to.
 
-**RAIN.** The grain of a wool coat sleeve, first winter of wear,
-under my hand at the barrier while the awning failed us both.
-Filed under textures. Sister Yefimia's herbal files rain among the
-bitter greens, which is wrong the way only the learned are wrong —
-confidently, with sources — and I have kept her book eleven years
-at the window anyway, because an authority that is exactly right
-would leave me nothing to declare.
+She wrote it, looked at it, and told him: a ripe walnut, and a low
+string somewhere under the floor of it, and the color a lamp makes
+through a brown bottle. Then she stamped the form and slid it back,
+and said, "That will be all, citizen surveyor," and it was the first
+joke she had made in his presence, and he walked back to the field
+in some disorder.
 
-Day 19. Rained. Logged for completeness: rain does not trouble the
-line; the line minds only being doubted. What the rain troubled was
-the awning over her window, which has needed re-pegging since the
-convention of 1912 by the look of it, and which I re-pegged, in
-silence, per §44, while she held my instruments and mispronounced
-their names — deliberately; I have heard her pronounce harder words
-to carters — one by one, like someone testing plums.
+That evening he checked, alone, ashamed of himself, whether he
+could feel anything at all in the word Vesela. He said it out loud
+to the barley. Nothing. It was a word; it sat there; it meant
+cheerful. The gift ran through his boots, not his ears, and had
+opinions only about geography.
 
 ---
 
-Day 26. We compared registries. This was her idea, and like most of
-her ideas it was presented as customs procedure: two administrations
-sharing a frontier, she said, are obliged to reconcile their books
-annually, and we were nearly a season in arrears. So: the squared
-notebook and the field log, open on the counter between the stamp
-and the stove, and each of us reading the other's country like the
-foreign correspondence it is.
+What grew between them that summer grew the way anything grows at a
+border post: slowly, in queue, with papers.
 
-She has an entry for me. I will not copy it here, the log being a
-public document eventually, but I will record the finding: she
-hears nothing that I hear. The hum of the line, the sulk of the
-moved river, the way the white stone holds the whole valley by one
-corner — none of it reaches her window; it is all, in her book,
-BORDER, undefined, the one word that never crosses. And I taste
-nothing that she tastes. Her plums are plums to me; her carter's
-name sits still; Thursday, which she says is the north room of the
-week, is to me the day the mail comes. Two instruments, no shared
-calibration, not one reading in common — and the same frontier
-under both, answering to each of us in its own grammar, holding
-still for me exactly where it files past for her.
+He would come to the window at noon because the well was there. She
+would stamp his canteen through, solemnly, as imported goods. He
+told her, in installments, things he had told nobody — the coolness
+through the boots, his grandfather and the fences, the time in the
+army he had refused to dig a latrine on what turned out to be a
+Roman road, and been punished, and been right. She listened the way
+he had always wanted the paperwork to listen: writing it down.
 
-I had thought — regulation thinking; I was trained by the state —
-that one of the books must be in error, and should be corrected to
-the other. She stamped that thought WRONG and let it through. In
-her service, it turns out, that is not a contradiction. Wrong,
-stamped, admitted: the whole method. Nothing that arrives at a
-border tells the whole truth, and it is let in anyway, on its own
-declaration, and the two truest books in the district disagree on
-every page and describe the same summer.
+She told him less, and he noticed the shape of the less. Her ledger
+she would show him freely — RAIN, he learned, was the grain of a
+wool coat sleeve; THURSDAY was the north room of the week, unheated,
+good light — but about herself, almost nothing, until the day he
+asked the question straight.
+
+"Do you hear the line? Out there." He had brought her a fistful of
+barley heads for no reason either of them examined. "It runs cold
+past your window. Coldest hundred meters in the valley. It's the
+only stretch that hasn't drifted."
+
+"No," she said. "I don't hear anything out there. It's your line,
+not mine." And then, because his face did something he would have
+paid money for it not to do: "But it stays put by my window, you
+said."
+
+"It does. Lines hold where they're believed in. It's in the old
+survey instructions, more or less." It was, more or less: the 1911
+*Instructions to Surveyors*, paragraph forty-four, which his
+grandfather could recite and which held that a line that sings is
+to be re-pegged in silence. Nobody at the institute had been able
+to tell him what it meant. Out here it meant everything.
+
+"Well," she said, and turned the ledger around so he could see the
+day's page. Under BARRIER: *a word that believes it is the border.
+The carters believe it too. The flies do not, and the flies are
+right.* "I believe in the window," she said. "The window is where
+everything declares itself. Maybe your line likes being near the
+one place somebody's paying attention."
+
+They looked at each other through the window where everything
+declares itself.
+
+"That will be all, citizen surveyor," he said, and she laughed, and
+the hens came off the barrier arm at the sound of it.
 
 ---
 
-**YES.** The only word that arrives identical through every gate:
-yes in the mouth, yes in the ear, yes against the skin, yes in the
-dark with the rain going by. Every other word in this ledger needs
-its declaration written out. This one the inspectors may take at
-its word. It crossed my counter on the twenty-sixth of August,
-carried by a surveyor, declared at full value, nothing withheld,
-and I stamped it through unopened — the first cargo in eleven
-years I did not need to inspect, and the only one I have kept.
+In August they compared registries. It was her idea, and she
+dressed it as procedure — two administrations sharing a frontier
+ought to reconcile their books — but she brought plum brandy, which
+is not procedure anywhere.
 
-Day 34, which the log will show as my last on this survey. Asked.
-§44 requires that re-pegging be done in silence, and I managed
-most of it. Filed the following findings with the district office,
-who will not read them, offices being where findings go to hold
-still: that the river has moved and may keep the meters it took;
-that the white stone is where the convention left it; that the
-line between the republics is in excellent health, wandering
-slightly, humming in the evenings, and holds absolutely true at
-the Cherni Vrah crossing, within a hundred meters of the second
-window, where it is believed in twice, in two languages, by two
-registries that do not reconcile and have agreed to stop trying.
+It took one evening to establish that they had nothing in common.
 
-Her notebook lives in the sugar tin now, and the log lives beside
-it — dry, dark, within reach, the storage requirements being, she
-says, identical for words and for sugar and for husbands. The
-grey register still lies, chained to the counter, about the plums.
-The line, for its part, has stopped wandering — or wanders now
-with company, which the convention also did not provide for.
+Nothing. He walked her out to the line at dusk and stood her on the
+exact cool seam of it, boots to the meter, and she felt evening
+grass and nothing else. She said the word for the moved river to
+him slowly, the word that in her window dragged a whole green
+weight of riverbank behind it, and he heard a noun. Every page of
+her ledger was, to him, handsome nonsense; every page of his log
+was, to her, arithmetic about mud. Two instruments, no shared
+calibration, not one reading alike — and the same summer standing
+under both, the same crossing, the same road, answering to each of
+them fluently in a language the other would never speak.
 
-Recommend: no correction.
+He was quiet on the walk back, and she let him be quiet, and at the
+window she stopped and named it before he could make it a wound.
+
+"You thought one of us had to be wrong."
+
+"I was trained that way. Two measurements, one true."
+
+"This is a border post," she said. "Everything that comes through
+here is wrong on the first form. Wrong isn't turned away. Wrong is
+stamped and let in." She took his hand, examined it briefly, like
+goods, like something with a small blue coat of dust it claimed was
+natural, and stamped the back of it with the day's date. "There.
+Admitted."
+
+The ink took three days to wash off. He did not hurry it.
+
+---
+
+He asked her in September, at the window, through the window,
+having considered the matter and concluded there was nowhere else
+in the world he could ask her from. Paragraph forty-four requires
+that re-pegging be done in silence, and he nearly managed it.
+
+The report he filed that autumn is in the district archive, and it
+is a curiosity, if you like archives. It finds that the river has
+moved and may keep the meters it took; that the line is healthy,
+drifting a little at the far ends, as lines do where belief is
+thin; and that it holds absolutely true at the Cherni Vrah
+crossing, within a hundred meters of the customs window, for
+reasons — the report says — *local and stable*. The last line of
+the finding is two words long, and the clerk who received it at
+the district office stamped it without reading it, the way they
+do, the way everyone takes words at their word except the woman
+at the second window.
+
+*Recommend: no correction.*
+
+They live at the crossing. The hens have accepted him. Her ledger
+is in the sugar tin, and his log beside it, dry, dark, within
+reach, and the two books still do not agree on anything except the
+date. On winter nights, when the stove is going and the barrier is
+down and the whole valley is one dark room, he says her name out
+loud sometimes, just to check. It still carries nothing he can
+feel. It sits there. It means cheerful. It is the one word he has
+ever taken entirely at its word, and it has never once needed the
+second form.
