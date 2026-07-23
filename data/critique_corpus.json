@@ -753,6 +753,16 @@
    "referent": "the apophatic essay, release read",
    "diagnosis": "the record's first unqualified positive verdict; per the essay's own terms this constituted release — published to the site",
    "commit": null
+  },
+  {
+   "id": 75,
+   "ts": "2026-07-14T22:10:00Z",
+   "window": "submission",
+   "category": "redirection",
+   "text": "I think that the first essay needs some more annotations - it opens with references to Wilde, Gildbert, Matthew Arnold, but most of the audience this will reach will not know who these people are (+ mid-work: same thing with merleu-ponty)",
+   "referent": "oped annotations, audience calibration",
+   "diagnosis": "nine introduction notes added (Wilde, Gilbert, Arnold as full notes; Kant, Merleau-Ponty, Ryle/Polanyi, Vasari, Foucault, Benjamin, Whistler/Ruskin as woven identifications); site margin notes renumbered into reading order",
+   "commit": null
   }
  ]
 }
