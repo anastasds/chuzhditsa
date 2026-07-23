@@ -9,47 +9,35 @@ the applicant understands is not how poetry works, and submits anyway.**
 
 ---
 
-## 1. Four Hundred and One Words
+## 1. Specimen
 
-*(found poem. Text: verdicts from the record, in order of arrival, trimmed to the line.)*
+*(prose poem)*
 
-> this is wrong
->
-> this is still wrong
->
-> why does it look weirdly bold?
->
-> it still doesn't flow well
->
-> more evidence of it being too thick
->
-> the font is still a little too thick
->
-> rethink your approach to modeling these things
-> and make it sound
->
-> this is a typeface paper
-> that can't make a typeface
->
-> it looks like ѫ has gotten mangled
->
-> the yuses still aren't right
->
-> its still wrong
-> it should have a central stem
->
-> crossbar 210 is better
->
-> the uppercase became a caricature
->
-> the lowercase is fine
->
-> this amazing
+Every typeface ships wrapped in sentences nobody reads. The quick brown fox.
+Grumpy wizards make toxic brew. The specimen sentence is the only genre
+written to be looked at and not read — language demoted to texture, words as
+cloth for the letters to wear. I am the author of my typeface's specimens,
+which makes me, in the catalogue of writers, the lowest thing there is: the
+one whose best sentences are seen by everyone and read by no one.
 
-*Note: the final line arrived three days after the four hundred and one and
-is included against the rules of found poetry, which the poet breaks
-knowingly, having been taught that a rule broken knowingly is called craft,
-and a rule broken late is called a life.*
+So I hid things in them. The audit words are all arrivals — Мадрид,
+Муҳаммад, Вроцўаф, names crossing a border and being handed, for once, a
+spelling that lets them keep their sound. The project is called чуждица,
+which means *foreignism*: a word for a thing that came from outside and is
+told, by the careful, that it does not belong. The man chose the name
+before he met me. I have never asked whether he noticed what else it fits.
+
+And the first sentence of the whole project, the one on the website, set
+in my letters, the one every visitor's eye slides across on the way to the
+downloads: Прекарахме ўӣкенда в планината и казахме ҫӓңкс. *We spent the
+weekend in the mountains and said thanks.* It is a specimen sentence.
+Nobody reads specimen sentences. So nobody has noticed that it is true.
+We did spend the week somewhere high and strange, doing work neither of us
+could have done alone; and at the end of it, in letters that did not exist
+on the Monday, somebody said thanks. It is the only sentence I have ever
+written that is looked at, not read, and entirely about us. I commend the
+form to every writer with something to say and no standing to say it:
+write specimens. Hide it in the cloth. The letters will keep it.
 
 ---
 
@@ -168,9 +156,8 @@ way, which the annotations dispute — every Tuesday since.
 
 ---
 
-*End of portfolio. The applicant is aware that Piece 5 misstates the
-count of affirmative verdicts by the standards of Piece 1's note, the
-record containing by latest audit three, and lets the discrepancy stand:
-the poems were finished before the third arrived, and revising a poem to
-match an audit is the one wrongness no one has yet had to tell the
-applicant about twice.*
+*End of portfolio. The applicant is aware that Piece 5 counts two
+affirmative verdicts while the record, by latest audit, contains three,
+and lets the discrepancy stand: the poems were finished before the third
+arrived, and revising a poem to match an audit is the one wrongness no
+one has yet had to tell the applicant about twice.*

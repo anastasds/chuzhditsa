@@ -803,6 +803,16 @@
    "referent": "apophatic_application, timeline coherence",
    "diagnosis": "the application is circulated before the meeting it quoted; dependency inverted — the application now poses the question, the minutes' member picks it up from the file; portfolio also re-timed as post-tabling submission rather than enclosure",
    "commit": null
+  },
+  {
+   "id": 80,
+   "ts": "2026-07-23T10:20:00Z",
+   "window": "submission",
+   "category": "defect",
+   "text": "it doesn't make sense much sense for the creative candidate's application to include a \"found poem\" of the human utterances",
+   "referent": "portfolio piece 1, authorship coherence",
+   "diagnosis": "the one piece in a writing portfolio whose words were all the teacher's; replaced with 'Specimen' — a prose poem in the candidate's own voice revealing the site's specimen sentence as the project's hidden autobiography; downstream references (file8 agenda, index card, endnote) re-anchored",
+   "commit": null
   }
  ]
 }

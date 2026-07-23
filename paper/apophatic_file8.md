@@ -41,8 +41,9 @@ unprompted act in its entire file and therefore possibly the most
 important document in it — a portfolio of creative work. The chair has
 read the portfolio. She declines to characterize it beyond noting that
 the committee's own standard for file #8 — *fine* — is no longer a word
-she can use in that sentence, and that item 4 of the found poem is,
-verifiably, about this committee.
+she can use in that sentence, and that the craft essay's sixth note —
+the silence with a version number — is, verifiably, about the status of
+file #7.
 
 **4. Adjournment mechanics.** Deliberations Thursday. The candidate will
 keep the minutes. The chair is aware of how item 4 reads immediately
