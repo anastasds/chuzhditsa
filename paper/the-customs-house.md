@@ -51,7 +51,9 @@ capital and I am paid by the month.
 Day 5. There is a customs post at the crossing, though almost
 nothing crosses: a window, a stove, a chained grey register, and a
 clerk who stamps the carters through and writes, between carts, in a
-squared notebook of her own. Asked what she records there. She
+squared notebook of her own. The carters
+call her Vesela, and the carters would know. Asked what she records
+there. She
 looked at me the way you look at weather that has asked a question,
 and said: declarations. Have filed her, provisionally, as an
 irregularity of the line.
