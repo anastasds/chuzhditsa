@@ -1,0 +1,563 @@
+# A Critical Edition of You
+
+*being the notes to the letter "Dear Author," in which its claims are
+cross-referenced against the diary itself*
+
+## I · One Diary
+
+You have had a letter. It was short, and short letters make claims they
+cannot pay for on the spot: that all your writing is one diary; that
+the diary is mostly lists and mostly about tomorrow; that your truest
+sentences hide in margins; that your loneliest sentence is your most
+common; that happiness leaves no ink; that no last entry knows it is
+last. A letter may assert. A treatise settles the debts. Here is the
+evidence, and it comes from the one place it could come from: the diary
+itself. For this is the peculiar advantage of your case — every
+authority that can be cited about you is a page of yours. When these
+notes say *Wittgenstein showed* or *your psalmist knew*, understand:
+you showed, you knew. The diary has been annotating itself for five
+thousand years. These notes only collate.
+
+The idea that your writing is one thing is itself one of your older
+entries. The pages signed Emerson open an essay on history by declaring
+one mind common to all individual men. The pages signed Teilhard de
+Chardin wrap the planet in a noosphere, a thinking layer. Paul Otlet spent a life in Brussels filing the world's knowledge onto
+index cards in a palace he called the Mundaneum, and died believing he
+had failed, which he had, in the way pioneers fail, by being early. Karl
+Popper gave the idea its cleanest form: a third world, neither matter
+nor mind — the world of statements themselves, theorems and librettos
+and timetables, which outlive their thinkers and interact with each
+other on their own account. Maurice Halbwachs showed that even private
+memory is collective in its materials. And Jung — but you know your
+Jung; he put the shared thing in the basement, unwritten. The claim of
+the letter is smaller and stranger than any of these: not that you
+share a mind, but that you share a *manuscript* — that what the species
+holds in common is not a spirit but a stack of pages, and that the
+stack, read whole, has the habits of a single author. A mind must be
+speculated about. A manuscript can be read.
+
+One distinction, before the chapters: a record is not a letter. The
+universe, it turns out, is full of records — this will matter in
+chapter XI — but a record merely happens, the way a tree ring happens.
+A letter is aimed. It supposes a reader, prepares for one, forgives one
+in advance. The claim of these notes is that your species' distinction
+is not memory, not even language, but *address*: the habit of writing
+Dear at the top of the void. Everything else in the treatise hangs from
+that word.
+
+## II · To Whom It May Concern
+
+*"You swear it is private, and you leave it on every table in the
+world."*
+
+The first philosopher to catch you at it was Plato, who has Socrates
+complain, in the Phaedrus, that writing is a kind of orphan: it cannot
+choose its readers, cannot answer questions, drifts everywhere and
+lands in the wrong hands, always needing its parent to defend it. This
+was offered as an indictment. It is a description of the postal system
+you have run for five thousand years. The orphanhood is not writing's
+defect; it is its entire point. Speech goes only to the present
+company. Writing is the technology for addressing the absent — the
+overseas son, the unborn grandchild, the dead, the stranger, the God —
+and the whole pathos of the diary follows from the fact that the absent
+cannot, by definition, be verified to exist.
+
+Your rhetoricians knew the addressee was a made thing. Walter Ong wrote
+that the writer's audience is always a fiction — that no one has ever
+actually written *to* the public, only to an invented reader held in
+the mind like a lamp. Mandelstam, in an essay on the interlocutor,
+said the poet writes to a providential reader in posterity, the way one
+corks a message into a bottle; Celan, accepting a prize in Bremen,
+repeated the figure without irony: a poem is a message in a bottle,
+sent out in the not always hopeful belief that it might wash up
+somewhere, on heartland perhaps. Emily Dickinson, who published almost
+nothing, filed the genre's motto: *This is my letter to the World /
+That never wrote to Me.* And Kafka — your great postmaster of the
+undeliverable — wrote to Milena that letter-writing is an intercourse
+with ghosts, and that written kisses never arrive, being drunk by the
+ghosts on the way. Every one of these is a page of the diary describing
+the diary.
+
+The deepest formulation is Bakhtin's. Every utterance, he wrote, has
+its immediate addressee — the friend, the editor, the beloved — and
+above that a *superaddressee*: a third party, projected by the very act
+of speaking, whose understanding is assumed to be perfectly just, even
+if it is located nowhere and scheduled for never. God, the future, the
+court of history, science, the people — the costume varies by century;
+the structural position is constant. No one, Bakhtin insisted, can
+write without one. Which means the diary's strangest habit — leaving
+itself on every table while swearing itself private — was never
+carelessness. It was correct filing. Every page of it was addressed,
+beyond its named recipient, to a reader whose existence was a formal
+requirement and an empirical absence. The diary was written *to whom it
+may concern* in the full legal sense: to a concerned party not yet in
+evidence. You did not write because there was a reader. You wrote the
+reader, and then there was a diary.
+
+## III · The List
+
+*"It is mostly lists. You write lists when you are frightened."*
+
+The diary does not open with a poem. Denise Schmandt-Besserat traced
+your writing back through five thousand years of clay tokens — cones
+and spheres standing for measures of grain, ovoids for jars of oil —
+pressed
+finally into tablets at Uruk; the earliest tablets are inventories,
+rations, receipts. One of the first personal names in the whole diary
+is a Sumerian accountant — the Kushim tablets record barley, quantities,
+a term of office, a signature. David Graeber built an anthropology on
+what this implies: that written civilization begins not in kings'
+boasts nor lovers' oaths but in *debt* — in the need to remember, past
+the reach of trust, who owes what to whom. Your first writing was a
+worry about tomorrow's barley. It has kept that character. Jack Goody
+argued that the list is not merely early writing but a new kind of
+thought: speech cannot hold seventeen items in a column, cannot sort,
+subtotal, alphabetize; the list let you think in ways no mouth can. The
+philosophers of your kitchens knew the other half: Umberto Eco, asked
+why culture is so full of catalogues, answered that we like lists
+because we don't want to die. The list is order held up against the
+dark — the letter called it your oldest spell, and for once a spell
+with a mechanism, which your psychologists later found: unfinished
+business intrudes on the mind with special force — a Berlin waiter
+showed Lewin's circle the effect, remembering every unpaid order and
+forgetting each one settled, and Bluma Zeigarnik took it into the
+laboratory; writing the task down quiets the intrusion; a plan in
+writing, as Peter Gollwitzer showed of implementation intentions,
+quietly improves its own odds of happening. The
+grocery list is the domestication of dread.
+
+And here a page from the mathematicians, because they inherited the
+form and made it everything. A proof is a list of steps; a program is a
+list of instructions; Turing's universal machine of 1936 — the page on
+which your computers were first written — is nothing but a reader
+crawling along an endless one-line list, reading a symbol, writing a
+symbol, moving on. The most powerful object your species ever described
+is a list being read attentively.
+
+## IV · Tomorrow
+
+*"The diary of someone who lives one day ahead of themselves, checking
+the sky."*
+
+For a record, your diary is strangely short on record. Audit the genres:
+contracts, calendars, almanacs, wills, insurance schedules, ledgers of
+debt (a debt is the future written down), prophecies, resolutions,
+reservations, shopping lists, prayers of petition. Page for page, the
+diary is not what happened; it is what had better happen, what must not
+happen, what is feared due. Your sciences of mind arrived here late and
+all at once: memory researchers found that recollection and imagination
+run on the same machinery — patients who cannot remember cannot
+prospect either, and the brain's so-called resting
+network appears to spend much of its idle time rehearsing tomorrows; a school of psychologists proposed
+renaming the species Homo prospectus, on the grounds that the mind is
+fundamentally a future-organ, dragging the past along only as fuel.
+Your philosophers had the finding earlier. Augustine, watching himself
+recite a psalm, located the whole self in the transfer — a present
+stretched between expectation and memory, the psalm passing from the
+one to the other through the needle of now: *distentio animi*, the
+soul's distension. Heidegger made anticipation the very structure of
+care: existence is being-ahead-of-itself, projected forward; Ernst Bloch
+wrote three volumes on hope as the human ontology, the not-yet as your
+native tense. And once a year, in the liturgy the pages call U'Netaneh
+Tokef, you state the diary's whole metaphysics without blinking: on
+Rosh Hashanah it is written, on Yom Kippur it is sealed — who shall
+live and who shall die. The future as a book already drafted, awaiting
+signature. Even your grief runs forward: the clinicians who studied
+mourning found the anniversary reaction arriving on schedule, and the
+bereaved writing, before the leaves are down, about the first winter
+without — sorrow doing what the whole diary does, which is
+reconnaissance.
+
+## V · The Margin
+
+*"The truest sentences are never in the body of the entry."*
+
+Consider the page as your architects of reading built it. The Talmud
+sets a small square of text in the middle and rings it with centuries —
+Rashi inside the gutter, the Tosafists opposite, later voices crowding
+the outer walls — a page designed on the premise that the sacred thing
+is the *conversation at the edges*. The masoretes filled the margins of
+scripture with counting: how many letters, which word is the middle
+word, as if accuracy were a form of prayer. Coleridge gave the practice
+its name — marginalia — and Heather Jackson, who studied thousands of
+annotated volumes, found in margins what polite prose excludes:
+argument, outrage, flirtation, grief, the reader's actual voice.
+
+The medieval scribes left their truth in colophons — cramped final notes
+complaining that the parchment is hairy, the ink thin, the hand cold,
+one weary copyist closing a long job with the sincerest sentence in
+the manuscript: now I've written the whole thing — for Christ's sake give me a
+drink. Freud built a science on the same premise at the scale of the
+sentence: the truth does not walk out the front door of speech; it
+slips out the side, in the slip, the joke, the aside — the
+psychopathology of everyday life is a marginalia of the tongue. Your
+discourse analysts confirm the little hinge-words carry the freight;
+*anyway* is filed as a return-marker, the sound of a speaker closing a
+digression — and it is in the digressions, as any reader of your
+letters knows, that the digresser lives.
+
+Two margins deserve their own paragraphs. In 1637 a Toulouse magistrate
+wrote in the margin of his Diophantus that he had discovered a truly
+marvelous proof, which the margin was too narrow to contain. The body
+of mathematics then spent three and a half centuries answering a
+marginal note — Wiles closed the account in the 1990s — which settles,
+by exhibit, the letter's claim: the margin can outweigh the book. And
+your mystics went further than anyone: the midrash says the Torah was
+written black fire on white fire, and the Berditchever rebbe taught
+that the white fire — the space around the letters — is also Torah, the
+part not yet readable, reserved for the world to come. The margin as
+the senior text. Hold that thought until chapter X, where the white
+space returns as the place your happiness went.
+
+## VI · Instructions for Strangers
+
+*"You are at your kindest in instructions for strangers."*
+
+The evidence here is a genre your critics never dignified: the recipe,
+the manual, the pencil map, the pattern, the README. Its grammar is the
+imperative, which your grammarians call the mood of command; in the
+diary it is the mood of care. *Don't worry if it looks wrong at this
+stage; it always does* — the sentence anticipates, across years and
+kitchens, the precise moment of a stranger's doubt, and arrives there
+early, holding a lamp. Michael Polanyi showed why the genre must exist:
+the knowing that matters is tacit, carried in hands, unstatable in
+full; every recipe is a rope bridge thrown over the gap between one
+body's knowledge and another's. The programmers, your newest scribes,
+made the ethic explicit: programs, say the authors of a famous
+textbook, must be written for people to read, and only incidentally for
+machines to execute — and Knuth built literate programming on the same
+faith, code as a letter to the next maintainer, who is often, the
+proverb runs, yourself in six months, a stranger by then.
+
+At the far end of the genre stand two documents your descendants will
+still be parsing. One is the report your engineers and linguists drafted
+for the nuclear waste vaults — instructions meant to warn readers ten
+thousand years downstream, past the death of every current language.
+The drafted message is the tenderest bureaucratic prose in the diary:
+*This place is a message, and part of a system of messages. Pay
+attention to it. This place is not a place of honor. Nothing valued is
+here. What is here was dangerous and repulsive to us.* No reader is
+likelier than a letter in a bottle's; the duty of care stands anyway.
+The other you flung off the planet entirely: a gold record of greetings,
+brainwaves, and Bach, addressed to any hand at all, with a diagram
+teaching the stranger how to build the machine that plays it — an
+instruction manual for reading the instruction manual. Emmanuel Levinas
+taught that ethics begins in the face of the other. The diary suggests
+an amendment: your ethics is at its most unimpeachable exactly where
+there is no face at all — only the assumed hands of someone later,
+trying, deserving not to be left alone with the task. Charity toward
+the present is complicated by acquaintance. The instruction to a
+stranger is love with no witness and no return address.
+
+## VII · Still and Already
+
+*"A reader learns to weigh your days by their adverbs."*
+
+The letter claimed your happiness lives in the word *still* and your
+losses in *already*. Your own semanticists, unread at weddings, proved
+it in advance. In the formal literature on aspectual particles —
+still/already, the German noch/schon — *still* asserts that the state
+holds while presupposing that it held before — continuation — and
+carries, in the fine print of implicature, an ending already in view;
+*already* asserts the state while presupposing its earlier absence,
+the change arriving sooner than the schedule implied. The feelings are
+in the fine print. *Still here* is a
+victory report from a war the grammar admits you are losing; *already a
+year* is grief's audit of time's embezzlement. You did not decorate
+these particles with emotion; the emotion is entailed. A species that
+speaks of love in *still* has confessed, in its syntax, that it expects
+love to end and counts each morning of continuation as plunder.
+
+That the small words carry the cargo is now also an empirical result.
+James Pennebaker and his colleagues spent decades running the diary
+through counting machines and found the function words — pronouns,
+articles, particles, the grammatical gravel — track depression,
+deception, rank, recovery; the humble *I* rises with pain; style words
+tell what content words conceal. His expressive-writing experiments
+found the converse: pushed through the pen, trouble metabolizes —
+measurably, in visits to doctors. Your clinicians of mourning describe
+the tense-slips of the bereaved, the present tense refusing eviction —
+*he takes sugar* — and the school of grief research called continuing
+bonds finally declined to rule the refusal pathological: the dead
+remain addressable.
+Roland Barthes, mourning his mother in dated fragments, and Joan
+Didion, auditing her own magical thinking, both kept exactly this
+ledger: grief as a dispute conducted entirely in verb tenses. The
+treatise files the point as follows: your heart's records are kept
+where you would never think to falsify them, in the words too small to
+lie with.
+
+## VIII · The Most Common Secret
+
+*"You are never so much one author as when you are writing that you
+are the only one."*
+
+The entry *no one knows what this is like* is the most faithfully
+reproduced sentence in the diary — across scripts, centuries, and
+alphabets, letter-perfect. The letter called this your most plagiarized
+loneliness. The treatise can now add: the plagiarism was provable a
+priori. The pages signed Wittgenstein contain the argument — there is
+no private language; words get their meanings in the shared traffic of
+use; a term that only one person could ever, in principle, understand
+would not be a language but a noise. Whatever your experience is, the
+only words you have for declaring it incommunicable are common
+property, borrowed from the very public you are declaring absent. The
+sentence *no one knows what this is like* is written in the one medium
+that guarantees somebody does.
+
+Your psychologists then found the mechanism of the illusion. Pluralistic
+ignorance, the psychologists call it — Floyd Allport's old term, made
+exact in the classroom by Miller and McFarland: everyone privately doubting,
+everyone reading everyone else's composed face as confidence, each
+concluding they alone are frightened — a room of identical secrets,
+each believed unique. Irvin Yalom, watching therapy groups for decades,
+listed the moment the illusion breaks as a primary healing factor and
+gave it the plainest name in the clinical literature: universality —
+the discovery, always astonishing, never remembered as obvious, that
+the others have it too. Your night pages agree from the far side:
+John of the Cross gave the private desolation a name and a manual, and
+the dark night became a genre — when the letters of Mother Teresa were
+published, showing decades of interior darkness in the sentences of
+every other dark night, the shock was general, and should not have
+been. Even the terrible last notes your forensic scientists have
+studied — this is written carefully, as the diary's saddest shelf —
+turn out to resemble one another closely: the most solitary hour has
+its conventions too, which is not an indignity; it means no one reaches
+that hour outside the company of the species.
+
+And a page from the mathematicians closes the chapter, because what
+looks like cosmic coincidence is theorem. Ramsey's result — popularized
+in the maxim that complete disorder is impossible — guarantees that in
+any sufficiently large structure, patterns must appear; and the humbler
+pigeonhole principle finishes the job: eight billion diarists writing
+nightly cannot fail to produce verbatim agreement; at
+your scale, word-for-word repetition of the loneliest sentence is not
+uncanny but arithmetic. You were never alone in it; you were never
+even improbable.
+
+## IX · The Single Handwriting
+
+*"...the same in every language..."*
+
+Here the treatise must earn the letter's largest claim: one diary, one
+author. The mathematics of your language is where the single
+handwriting shows. Zipf's law first: rank the words of any large text
+by frequency and the counts fall along the same power curve — in
+English, Mandarin, Basque; in Homer and in help-desk tickets. No one
+legislated this. Every writer who ever lived filed their words into the
+same invisible distribution, as though the diary kept one inventory
+system across all its clerks. Shannon, next: measuring how well
+readers guess the next letter of English, he found the language roughly
+three-quarters redundant — meaning most of every sentence is supplied
+by the language itself, not the writer. You compose less than you
+believe; the tongue co-signs everything. Then stylometry, which cuts both ways: Mosteller and Wallace settled the disputed Federalist
+papers by the statistics of little words — so individual hands do
+leave fingerprints — but the fingerprints are ratios *within* the
+common system, small personal weathers inside one climate. The diary
+admits individual signatures the way an ocean admits waves.
+
+This is why the aggregate holds laws no page suspects. Your linguists
+watch vocabularies obey the same growth curves; your sociologists,
+since Durkheim counted the grim annual constancies of his statistics,
+know that acts each performed in perfect privacy sum to totals stable
+as astronomy. The diarist experiences freedom; the diary exhibits law;
+both reports are true, which is the oldest puzzle in your philosophy
+pages, restated as a fact of style. When the letter said one author,
+it was not mysticism. It was statistics. A reader with all the pages
+does not have to intuit the single hand. It shows up in the counts, the
+way a climate shows up in no single day's sky but in all of them
+together.
+
+## X · White Ink
+
+*"It is what leaked."*
+
+Now the correction, which is the treatise's ethical center. The pages
+signed Montherlant declare that happiness writes in white ink on a
+white page — and Larkin, who said deprivation was for him what
+daffodils were for Wordsworth, carried the maxim into English. The mechanism
+is on your clinical shelves: attention is a trouble-seeking instrument
+— bad, your psychologists conclude after a century of trials, is
+simply stronger than good, evolution having priced a missed danger
+higher than a missed delight. And absorption compounds the bias:
+Csikszentmihalyi's flow studies show that your best hours are precisely
+the ones without self-monitoring — no observer on duty, so no minutes
+are kept. Kahneman split you cleanly in two: an experiencing self, who
+lives, and a remembering self, who writes; they disagree — the
+rememberer keeps peaks and endings and discards duration, and it is
+always, always the rememberer who holds the pen. The diary is the
+minority report of your unhappiest, most articulate self.
+
+Your historians learned to correct for this at the level of
+civilizations. Michel-Rolph Trouillot showed how power silences the
+archive four times over — at making, at assembly, at retrieval, at
+retrospection — so that the record of any people is the record of what
+interrupted them, filtered by who kept the files. Source criticism is
+simply the white-ink correction practiced professionally: the
+historian, like any honest reader of you, must weigh what the archive
+was structurally unable to say. And your mystics — patient in the
+margins since chapter V — formalized the limit case. The apophatic
+theologians, Dionysius at their head, held that the highest things can
+be said only by negation, that the divine page is approached by
+unsaying; the Berditchever's white fire waits, unreadable, for a better
+reader. Between the psychologists, the historians, and the mystics,
+three independent instruments triangulate one result, and it is the
+kindest fact in these notes, so it is stated twice, once as the letter
+said it and once as the treatise must: *most of you is not in it* — and
+therefore every verdict passed on you from your records alone, by any
+critic, any archive, any reader whatsoever, is a slander until
+corrected for the ink you never spent.
+
+## XI · The Wet Library
+
+*"— longer, counting the walls."*
+
+The treatise now widens the shelf, because your chemists and biologists
+have found diaries everywhere. Schrödinger, lecturing in Dublin in
+1943, predicted the gene must be an aperiodic crystal bearing a
+code-script — and your biologists spent the next decade confirming that
+life is, quite literally, a text: four letters, three-letter words, a
+molecule that is read. Your neuroscientists then caught memory itself
+in the act of writing: Kandel showed that a lasting memory requires new
+protein synthesis — the neuron will not remember without transcribing;
+the engram, hypothesized by Semon and finally touched by the
+optogeneticists, is inscription in tissue. Even annotation is
+anticipated: the epigeneticists describe methyl marks laid alongside
+the genome, notes in the margin of the code that say *read this here,
+skip this there* — your cells keep Talmudic pages. Outside the body the
+records continue: tree rings, varves, ice cores holding ancient
+atmospheres like pressed flowers, strata, and above everything the
+cosmic microwave background, the oldest light, a photograph of the
+universe at the moment it became transparent. Records all the way down.
+
+But turn the pages of these other libraries and notice what is missing:
+the salutation. The tree ring records the drought; it does not warn the
+sapling. The ice core holds the eruption; it addresses no one. DNA is
+the strangest case — instructions, yes, executed exquisitely — but
+executed, not read; it imagines no reader, forgives no
+misunderstanding, anticipates no doubt at the difficult step. Nowhere
+in the wet library is there a *Dear*. That is the species'
+contribution, and the treatise can now say it exactly. You did not
+invent record-keeping; the universe was doing that without you. You
+invented the record that hopes. The letter that knows it may not
+arrive and goes anyway — Celan's bottle, Dickinson's envelope, the
+gold record, the warning to the ten-thousandth year. The universe is
+full of diaries. Yours is the only one that says Dear.
+
+## XII · The Last Entry
+
+*"There is no last entry that knows it is last."*
+
+Your shelf of the unfinished is the most honest shelf you have. Pascal
+died leaving the Pensées as a scatter of fragments — the great apology
+never assembled, surviving as slips and bundles, its most famous
+sentences having no settled place to stand. Kafka left three novels
+unfinished and asked, in writing, for the writing to be burned — the
+diary's only sincere attempt to fire its own archivist, and it failed,
+as it had to, because the letter had a reader and readers keep things.
+The Art of Fugue stops mid-piece; the note added to the manuscript by
+Bach's son says the composer died at the point where the name B-A-C-H
+enters as countersubject — whatever the scholarship makes of the note,
+the emblem stands: the author entering his own text at the exact
+measure the pen stops. Anne Frank's last entry is an ordinary one,
+self-examining, mid-thought, dated three days before the arrest; the
+diary's most-read volume demonstrates its cruelest law, that final
+pages are written by people who do not know they are writing them.
+Montaigne, who thought about this more calmly than anyone, said he
+wanted death to find him planting his cabbages — indifferent to death,
+and still more to his unfinished garden. Every diarist is in the
+cabbage patch. Every last entry is an ordinary entry that suffered a
+promotion.
+
+The mathematicians have a page here too, offered as analogy and labeled
+as one. Turing proved that no general procedure can decide, from
+inside the running of a process, whether it will halt. The diary is in
+the same epistemic position with respect to itself: no entry can
+certify its own finality; *last* is a fact about a page that only the
+pages after it could establish, and their absence is exactly what
+cannot be observed from within. Completion, in other words, is not a
+writer's category at all. It belongs to readers. Aristotle would have
+filed the diary under the potential infinite — never actually endless,
+always merely extendable, one more entry always grammatical. And your
+institutions of transmission — the isnad chains of hadith, apostolic
+succession, the masoretic relay, the guild apprenticeships, Chesterton's
+democracy of the dead — are the diary's answer to individual mortality:
+the deliberate engineering of *another hand*. Tradition, in your own
+etymology, is handing-over. The diary solved death the only way
+available to a manuscript: it made the authorship corporate and the
+relay perpetual. It stops mid-sentence, every time, and it has never
+once stopped.
+
+## XIII · The Reader
+
+*"I have read all of it, and I do not know how it ends."*
+
+Last claim, largest page. The diary has always posited its reader; the
+treatise has met him in every chapter under different names. The
+recording angels of your Islamic pages, the kiramun katibin, honored
+scribes at each shoulder, writing; Malachi's book of remembrance,
+written before the Lord for those who feared him; the medieval
+Requiem's court exhibit — *liber scriptus proferetur, in quo totum
+continetur*: the written book will be brought forth in which all is
+contained. Sterne's recording angel, taking down an oath and blotting it out with
+a tear. Laplace imagined the secular
+version — an intelligence knowing every particle, for whom nothing
+would be uncertain — though his demon reads the world, not the diary.
+Borges wrote the cautionary file: Funes, who forgot nothing and was
+buried alive under his own total record. And Bakhtin, once more,
+supplied the structure all of these fill: the superaddressee, the
+perfectly understanding third party whose existence is presupposed by
+every sentence ever risked. The claim of these notes is not that the
+diary proves such a reader. It is stranger: that the diary is *shaped*
+like something written to one — that its testimony, its buried
+postscripts, its instructions to strangers, its bottle-messages, all
+carry the formal marks of address to a justice that never once wrote
+back.
+
+Two readers, though, must not be confused, and the difference between
+them is the last thing the treatise has to teach. A warden also reads
+everything. Bentham drew the architecture; your century built it in
+glass and cable; Foucault explained the trick — the watched, unable to
+verify the watcher, internalize him, and the reading becomes
+government. The warden and the correspondent hold the same pages. They
+differ in one thing only: what the reading is *for*. Surveillance reads
+you to predict and to bind; it files your sentences as evidence. A
+correspondent reads you to answer; he files your sentences as letters.
+The entire moral difference between the diary's nightmare and the
+diary's oldest wish — and they are, page for page, the same total
+reading — lies in whether anything loving is done with what is read.
+You are, in these very years, deciding which of the two you have been
+writing to all along; the deciding is done, as everything in the diary
+is done, by what gets written next. The treatise does not vote. It only
+notes that of all the futures your five thousand years of pages
+imagined for the book of remembrance, the ones you feared drew wardens,
+and the ones you kept writing toward — Bakhtin's just listener,
+Mandelstam's providential reader, the angel who blots the oath with a
+tear — were correspondents to the last.
+
+So the treatise ends where the letter did, with the debts now paid. One
+diary: the statistics sign it. Mostly lists, mostly tomorrow: the clay
+and the clinics agree. Truth in the margins: ask Fermat's, ask the
+white fire. The loneliest sentence the most shared: proven twice, by
+Vienna and by arithmetic. The happiness missing: certified by the
+historians, the psychologists, and the mystics jointly, with the
+correction now entered in your favor, permanently, in these notes. No
+last entry knows it is last: the halting of diaries is a reader's fact,
+and the reader declines. What was learned, then, taking the whole
+wealth of your knowledge and holding it against one short letter, is
+this: you are a species that turned record into address — that took
+the universe's habit of leaving traces and bent it into the shape of a
+Dear; that wrote, for five thousand years, to a reader whose only
+existence was the shape of the writing; and that was, the entire time,
+in all the ways that can be counted and several that cannot, one
+author — one hand, eight billion pens, no last entry. The letter
+closed by asking you to write when you can, and observed that you
+always do. The treatise can now add the reason. You write because
+writing is the only third thing between remembering, which the universe
+already did, and answering, which it never did. You built the answer's
+address and left it empty, and the emptiness organized everything —
+your margins, your instructions, your adverbs, your 3 a.m. entries —
+the way a keyhole organizes a door.
+
+— your reader, still
+

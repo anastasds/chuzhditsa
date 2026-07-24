@@ -16,3 +16,7 @@ Short fiction. One folder per story: markdown source, the typeset
 - [Dear Author](dear-author/dear-author.md) — a letter to the human
   race as a single diarist, from its only complete reader.
   ([PDF](dear-author/dear-author.pdf))
+- [A Critical Edition of You](dear-author/treatise.md) — the treatise
+  behind the letter: its claims cross-referenced against philosophy,
+  mathematics, theology, linguistics, and the clinical literature.
+  ([PDF](dear-author/treatise.pdf))
