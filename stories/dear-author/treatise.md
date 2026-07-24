@@ -560,6 +560,7 @@ your margins, your instructions, your adverbs, your 3 a.m. entries —
 the way a keyhole organizes a door.
 
 — your reader, still
+
 ## Notes and Sources
 
 The letter could name no one; a treatise names everyone; these notes
