@@ -13,6 +13,6 @@ Short fiction. One folder per story: markdown source, the typeset
 - [Thursdays](thursdays/thursdays.md) — two barbers, brothers, one
   street between them, fifty years of not speaking; after Beckett.
   ([PDF](thursdays/thursdays.pdf))
-- [General Delivery](general-delivery/general-delivery.md) — replies to
-  messages that never got answers; the originals are not shown. A new
-  form. ([PDF](general-delivery/general-delivery.pdf))
+- [Dear Author](dear-author/dear-author.md) — a letter to the human
+  race as a single diarist, from its only complete reader.
+  ([PDF](dear-author/dear-author.pdf))
