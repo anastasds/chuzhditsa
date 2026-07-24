@@ -1,0 +1,81 @@
+# Thursdays
+
+Kamen Brod has had, in living memory, two barbers. They were brothers.
+Their shops faced each other across the market street, close enough that
+each could hear the other's bell, and for fifty years they did not
+speak.
+
+They had trained at their father's chair, one soaping the faces the other
+would learn to shave. The father died in the spring of a good year.
+During the forty days of mourning, the brothers quarreled. What the
+quarrel was about, the town knew for a while and then lost. The
+brothers may have kept it. Nobody asked them. Before the forty days
+were out, Slavcho had taken the corner premises opposite and painted his
+sign.
+
+The shops were the same shop. Two chairs, a shelf, a list of prices.
+When Kosta raised the price of a shave, Slavcho's price rose the same
+week, by no channel anyone could name. They pulled teeth, as barbers did
+then, and it was said you could tell, in a laugh at the tavern, who went
+to which.
+
+The town divided as towns do: a man went to the barber his father had
+gone to, and sent his sons there. Nobody chose. It had been settled for
+everyone, once, in the forty days. Thursdays, the market day, had always
+been Slavcho's: the villages came to him, his corner being the first
+they reached from the bridge.
+
+They opened at the same minute, each blind going up as the other went
+up, and closed at the same minute, and it could not be said who was
+following whom. On Sundays they walked to the same church on opposite
+sides of the street and sat level with each other across the aisle. At
+funerals — barbers attend funerals; it is trade — they stood at opposite
+corners of the grave, where the handles would be.
+
+One October they appeared in identical hats, bought the same market-week
+from different stalls. Neither ever wore his again.
+
+In Kosta's shop, on the nail by the mirror, hung a strop that was not
+Kosta's. It had been Slavcho's, in their father's time. It was kept
+oiled. Customers who asked about it once did not ask twice; there was a
+way he had of stropping his razor, just then, that closed the subject.
+
+Each shaved half the town, and heard, from under his own hands, the
+other half's news: what Slavcho had said about the new priest, what
+Kosta had paid for his roof. Each knew the other's life a week late and
+wrong in the usual places, which is the way the town knew anything.
+
+The new priest, early in his appointment, undertook to reconcile them.
+He went to each separately and found both men agreeable, and could not
+afterward say what had gone wrong: each had agreed to everything,
+contingent on the other's beginning. The priest was new. In time he was
+not.
+
+When the mill caught fire, the bucket line ran from the river up Well
+Lane, and the brothers stood in it side by side from midnight until it
+was out, passing water through four hands as through two. In the morning
+they were seen to nod. The town lived on it for a year.
+
+Both danced at their niece's wedding, in turn, correctly.
+
+The winter Kosta broke his wrist on the ice by his own step, his shop
+closed, and his half of the town declined, to a man, to cross the
+street. For six weeks Kamen Brod went about one-half shaggy, like a
+hedge cut by a lazy man, and was proud of itself. Then it was found that
+Slavcho's shop had lately begun opening at dawn, and that men of
+Kosta's half were coming out of it shaved before the market woke. Nothing was posted. Nothing was charged, or nothing was
+said to be. When the wrist healed, the dawn stopped.
+
+They grew old at the same rate.
+
+Slavcho died on a Monday morning, in his own chair, between customers.
+The laying-out was at the house. Kosta came with his case. He shaved his
+brother with his own hands, which had not touched him since the forty
+days, and he used the strop from the nail by his mirror. It stropped as
+if used daily. It had never been used.
+
+Those who closed the shop across the street found, on the nail by
+Slavcho's mirror, a strop that was not Slavcho's. It was oiled.
+
+Both signs are up. Kosta's shop keeps its days. On Thursdays, he crosses
+the street.
