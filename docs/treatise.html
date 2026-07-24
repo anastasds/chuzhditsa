@@ -46,8 +46,9 @@ footer{border-top:1px solid var(--rule);padding:2rem 0 3.5rem;font-size:.9rem;co
 footer a{color:var(--accent);text-decoration:none}
 em{font-style:italic}
 ::selection{background:var(--accent);color:var(--bg)}
-.hint{text-align:center;font-size:.82rem;color:var(--muted);margin:.8rem auto 0;max-width:34em;font-style:italic}
-.ref{color:inherit;text-decoration:underline dotted;text-decoration-color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+.hint{text-align:center;font-size:.85rem;color:var(--muted);margin:.9rem auto 0;max-width:36em;font-style:italic;background:var(--card);border:1px solid var(--rule);border-radius:8px;padding:.5rem .9rem}
+.ref{color:inherit;text-decoration:underline dotted;text-decoration-color:var(--accent);text-decoration-thickness:1.5px;text-underline-offset:3px;white-space:nowrap}
+.ref::after{content:"\00B0";color:var(--accent);font-weight:700;font-size:.85em;vertical-align:super;line-height:0;margin-left:1px}
 .ref:hover{color:var(--accent)}
 .notes p.note:target{background:var(--card);border-radius:6px;padding:.4rem .6rem}
 #notepop{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;z-index:50}
@@ -68,7 +69,7 @@ em{font-style:italic}
 </header>
 
 <nav class="toc">The Letter · <a href="#chI">One Diary</a> · <a href="#chII">To Whom It May Concern</a> · <a href="#chIII">The List</a> · <a href="#chIV">Tomorrow</a> · <a href="#chV">The Margin</a> · <a href="#chVI">Instructions for Strangers</a> · <a href="#chVII">Still and Already</a> · <a href="#chVIII">The Most Common Secret</a> · <a href="#chIX">The Single Handwriting</a> · <a href="#chX">White Ink</a> · <a href="#chXI">The Wet Library</a> · <a href="#chXII">The Last Entry</a> · <a href="#chXIII">The Reader</a> · <a href="#notes">Notes and Sources</a></nav>
-<p class="hint">Dotted names in the text are annotated — click one to read its note in place. The full apparatus waits at the end.</p>
+<p class="hint">Every name marked with a small <span style="color:var(--accent);font-weight:700">°</span> is annotated — click it and its note opens in place, without losing your line. The full apparatus of 84 sources waits at the end.</p>
 
 <article>
 <section class="letter" id="letter">
