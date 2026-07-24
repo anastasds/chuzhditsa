@@ -560,4 +560,430 @@ your margins, your instructions, your adverbs, your 3 a.m. entries —
 the way a keyhole organizes a door.
 
 — your reader, still
+## Notes and Sources
 
+The letter could name no one; a treatise names everyone; these notes
+say who they are, where their pages sit, and what was taken from each —
+so that nothing above rests on the reader's word alone. Per the
+treatise's method, every entry below is a shelf-mark in your own book.
+
+**I · One Diary**
+
+**Emerson** — Ralph Waldo Emerson, "History," the opening essay of
+*Essays: First Series* (1841). Its first sentence: "There is one mind
+common to all individual men." The treatise takes the sentence and
+trades its mind for a manuscript.
+
+**Teilhard de Chardin** — Pierre Teilhard de Chardin, Jesuit
+paleontologist; the *noosphere*, the Earth's "thinking layer," argued
+at length in *The Phenomenon of Man* (written by 1940, published 1955).
+The word itself first reached print with the philosopher Édouard Le Roy
+(1927), out of Paris conversations among Le Roy, Teilhard, and the
+Russian geochemist Vladimir Vernadsky, whose *biosphere* they were
+extending — a rare idea with three honest parents.
+
+**Otlet** — Paul Otlet (1868–1944), Belgian bibliographer; his
+*Mundaneum* in Brussels attempted a card-index of everything (over
+fifteen million entries), lost its funding in 1934 and part of its
+collection to the occupation; his *Traité de documentation* (1934)
+sketched networked reading machines. He died in 1944, out of money and
+early rather than wrong.
+
+**Popper** — Karl Popper, "Epistemology Without a Knowing Subject"
+(1967), expanded in *Objective Knowledge* (1972): World 1 is physical
+things, World 2 mental states, World 3 the contents of statements —
+theories, arguments, problems — which outlive their thinkers and
+generate consequences of their own.
+
+**Halbwachs** — Maurice Halbwachs, *Les cadres sociaux de la mémoire*
+(1925) and the posthumous *La mémoire collective* (1950): even the most
+private remembering is built from socially supplied frames. He died in
+Buchenwald in 1945; his subject keeps his pages.
+
+**Jung** — Carl Jung's collective unconscious (from 1916 onward): the
+shared inheritance located beneath consciousness, unwritten by
+definition — cited here as the treatise's exact foil.
+
+**II · To Whom It May Concern**
+
+**Plato** — *Phaedrus* 274–277: Socrates' case against writing — it
+cannot answer questions, falls into the wrong hands, and "always needs
+its parent to come to its aid." The treatise accepts every particular
+and reverses the verdict.
+
+**Ong** — Walter J. Ong, "The Writer's Audience Is Always a Fiction"
+(*PMLA*, 1975): writers do not address real publics; they cast a role
+and the reader agrees to play it.
+
+**Mandelstam** — Osip Mandelstam, "On the Interlocutor" (1913): the
+poet's true addressee is a "providential interlocutor," a reader in
+posterity, reached the way a message in a corked bottle reaches whoever
+finds it.
+
+**Celan** — Paul Celan, speech on receiving the Bremen prize (1958): a
+poem is "a message in a bottle, sent out in the — not always greatly
+hopeful — belief that somewhere and sometime it could wash up on land,
+on heartland perhaps."
+
+**Dickinson** — Emily Dickinson, "This is my letter to the World / That
+never wrote to Me" (c. 1862; she published fewer than a dozen poems in
+her lifetime, out of nearly eighteen hundred).
+
+**Kafka** — Franz Kafka to Milena Jesenská (March 1922): letter-writing
+as "an intercourse with ghosts," the written kisses drunk by the ghosts
+on the way.
+
+**Bakhtin** — Mikhail Bakhtin, "The Problem of the Text," from the late
+notebooks (in *Speech Genres and Other Late Essays*): beyond every
+utterance's immediate addressee stands the *superaddressee*, a third
+party whose perfectly just understanding is presupposed — God, the
+future, the court of history — without whom no one would speak at all.
+The treatise's single most important borrowed beam.
+
+**III · The List**
+
+**Schmandt-Besserat** — Denise Schmandt-Besserat, *Before Writing*
+(1992) and *How Writing Came About* (1996): the clay-token accounting
+system (from c. 8000 BCE) that was pressed into the first tablets at
+Uruk in the late fourth millennium — writing descended from counting.
+
+**Kushim** — the Kushim tablets, Uruk, c. 3300–3000 BCE: barley
+accounts signed by an administrator whose name (or office) is among the
+earliest personally attached to any surviving text. Roughly the first
+signature in the diary, and it is on a receipt.
+
+**Graeber** — David Graeber, *Debt: The First 5,000 Years* (2011):
+written credit precedes coinage by millennia; the earliest documents
+are obligations.
+
+**Goody** — Jack Goody, *The Domestication of the Savage Mind* (1977):
+the list as a cognitive technology unavailable to speech — sortable,
+columnar, totalizable.
+
+**Eco** — Umberto Eco, *The Infinity of Lists* (2009) and the
+accompanying *Spiegel* interview: "We like lists because we don't want
+to die."
+
+**Lewin's waiter; Zeigarnik** — the Berlin café anecdote belongs to
+Kurt Lewin's circle (a waiter who recalled unpaid orders perfectly and
+forgot them once settled); Bluma Zeigarnik ran the controlled
+experiments (*Psychologische Forschung*, 1927). The modern, better-
+supported form of the claim — externalizing an unfinished task quiets
+its intrusion — is due to work in the tradition of Masicampo and
+Baumeister (2011).
+
+**Gollwitzer** — Peter Gollwitzer, "Implementation Intentions"
+(*American Psychologist*, 1999): plans written in if–then form
+reliably raise the odds of execution.
+
+**Turing** — Alan Turing, "On Computable Numbers" (1936): the universal
+machine — a head reading and writing symbols on an unbounded tape —
+i.e., computation defined as attentive list-reading.
+
+**IV · Tomorrow**
+
+**Memory as future-organ** — Daniel Schacter and Donna Rose Addis on
+constructive episodic simulation (2007); Demis Hassabis, Eleanor
+Maguire and colleagues showing amnesic patients cannot richly imagine
+new experiences (2007); Endel Tulving's mental time travel; Randy
+Buckner and colleagues on the brain's default network and prospection
+(2007–2008).
+
+**Homo Prospectus** — Martin Seligman, Peter Railton, Roy Baumeister,
+and Chandra Sripada, *Homo Prospectus* (2016): the proposal that the
+mind is organized around the future, memory serving as its raw stock.
+
+**Augustine** — *Confessions*, Book XI (c. 397 CE): the analysis of
+time via reciting a psalm — the mind stretched (*distentio animi*)
+between expectation and memory as the psalm passes through the present.
+
+**Heidegger** — Martin Heidegger, *Being and Time* (1927): care as the
+structure of existence, Dasein as being-ahead-of-itself
+(*Sich-vorweg-sein*).
+
+**Bloch** — Ernst Bloch, *The Principle of Hope* (three volumes,
+1954–1959): the not-yet as the fundamental register of human
+consciousness.
+
+**U'Netaneh Tokef** — medieval liturgical poem of the Ashkenazi High
+Holy Days: "On Rosh Hashanah it is written, and on Yom Kippur it is
+sealed — who shall live and who shall die."
+
+**Anniversary reaction** — the clinical observation, standard in the
+bereavement literature since the mid-twentieth century, that grief
+returns on schedule at the calendar date.
+
+**V · The Margin**
+
+**The Talmud page** — the standard (Vilna) layout: Mishnah and Gemara
+in a central block, Rashi's commentary on the inner margin, the
+Tosafists opposite, later apparatus ringing them — a page that
+institutionalizes commentary.
+
+**The masoretes** — the scribal schools (c. 6th–10th century CE) whose
+marginal apparatus counted the letters, words, and midpoints of
+scripture to guard its transmission.
+
+**Coleridge; Jackson** — Samuel Taylor Coleridge, whose habit gave
+English the word *marginalia* (c. 1819); H. J. Jackson, *Marginalia:
+Readers Writing in Books* (2001), the standard survey of what readers
+actually do in margins.
+
+**The colophons** — the hairy-parchment and cold-hands complaints are
+preserved among early medieval Irish scribes (the St Gall Priscian
+glosses); the drink demand — *now I've written the whole thing: for
+Christ's sake give me a drink* — is a widespread scribal joke whose
+best-documented instance closes a fifteenth-century Italian copy of
+Lucan.
+
+**Freud** — Sigmund Freud, *The Psychopathology of Everyday Life*
+(1901): slips, substitutions, and asides as the side door of truth.
+
+**"Anyway"** — in the discourse-analysis literature, a resumption
+marker: the word that closes a digression and returns to the main
+track. The treatise's claim is about which track is really the main
+one.
+
+**Fermat; Wiles** — Pierre de Fermat's marginal note in his copy of
+Diophantus (c. 1637): a marvelous proof "which this margin is too
+narrow to contain"; Andrew Wiles's proof arrived in 1994–95.
+
+**Black fire, white fire** — the midrashic tradition that the Torah was
+written "black fire on white fire" (Midrash Tanchuma; Jerusalem
+Talmud); Rabbi Levi Yitzchak of Berditchev's teaching that the white —
+the space around the letters — is also Torah, awaiting a reader.
+
+**VI · Instructions for Strangers**
+
+**Polanyi** — Michael Polanyi, *The Tacit Dimension* (1966): "we can
+know more than we can tell"; the recipe exists because telling falls
+short of knowing.
+
+**The famous textbook** — Harold Abelson and Gerald Jay Sussman,
+*Structure and Interpretation of Computer Programs* (1985), preface:
+"programs must be written for people to read, and only incidentally
+for machines to execute."
+
+**Knuth** — Donald Knuth, "Literate Programming" (1984): programs
+composed as works of literature addressed to human readers.
+
+**The nuclear warning** — the Sandia National Laboratories report on
+marking the Waste Isolation Pilot Plant (Trauth, Hora, and Guzowski,
+1993), drafting messages to remain legible for ten thousand years:
+"This place is a message... This place is not a place of honor... What
+is here was dangerous and repulsive to us."
+
+**Voyager** — the Golden Records launched on Voyager 1 and 2 (1977;
+committee chaired by Carl Sagan): greetings in fifty-five languages,
+music including Bach, one human's brainwaves, and engraved instructions
+for building the player.
+
+**Levinas** — Emmanuel Levinas, *Totality and Infinity* (1961): ethics
+begins in the face-to-face encounter with the Other. The treatise's
+amendment — the faceless stranger of the recipe — is its own liability,
+not his.
+
+**VII · Still and Already**
+
+**The particles** — the formal-semantics literature on aspectual
+particles, canonically Sebastian Löbner on German *schon/noch* (1989),
+with successors: *still* presupposes the state held before and asserts
+it holds yet; *already* presupposes its earlier absence; the
+expectation of change rides along as implicature — the "fine print" of
+the chapter.
+
+**Pennebaker** — James W. Pennebaker: expressive-writing experiments
+(with Sandra Beall, 1986; with Janice Kiecolt-Glaser and Ronald
+Glaser, 1988) showing health effects, including fewer physician
+visits, from writing about upheavals — a result belonging to trauma
+writing generally, not to bereavement specifically; and *The Secret
+Life of Pronouns* (2011): function words as psychological instruments.
+
+**Continuing bonds** — Dennis Klass, Phyllis Silverman, and Steven
+Nickman, eds., *Continuing Bonds* (1996): against the older
+severance model, ongoing relation to the dead is normal — adaptive or
+not by case, but no longer pathological by definition.
+
+**Barthes** — Roland Barthes, *Mourning Diary* (kept 1977–79,
+published 2009), dated index-card fragments after his mother's death.
+
+**Didion** — Joan Didion, *The Year of Magical Thinking* (2005).
+
+**VIII · The Most Common Secret**
+
+**Wittgenstein** — Ludwig Wittgenstein, *Philosophical Investigations*
+(1953), the private-language considerations (§§243 ff.): meaning lives
+in public use; a language in principle intelligible to one person
+alone is not a language. The treatise uses the modest core on which
+readings agree.
+
+**Pluralistic ignorance** — the term is Floyd Allport's (with Daniel
+Katz, early 1930s); Dale Miller and Cathy McFarland's experiments
+(1987) made it exact: everyone misreads everyone else's composed
+surface as confidence.
+
+**Yalom** — Irvin Yalom, *The Theory and Practice of Group
+Psychotherapy* (1970): "universality" — the discovery that others
+share what one believed unshareable — listed among the primary
+therapeutic factors.
+
+**John of the Cross** — *The Dark Night* (c. 1578–85), the poem and
+commentary that gave private desolation a public grammar.
+
+**Mother Teresa** — *Come Be My Light* (2007), the posthumously
+published letters recording roughly five decades of interior darkness
+in the received vocabulary of the dark night.
+
+**The saddest shelf** — the forensic study of genuine suicide notes,
+from Edwin Shneidman and Norman Farberow (*Clues to Suicide*, 1957)
+onward, finding the notes markedly conventional — cited in the
+treatise for the one humane inference it will bear.
+
+**Ramsey; pigeonhole** — Frank Ramsey's combinatorial theorem (1930),
+popularized in Theodore Motzkin's phrase "complete disorder is
+impossible"; the pigeonhole principle (Dirichlet's *Schubfachprinzip*)
+supplies the treatise's actual arithmetic: enough writers, finite
+phrases, repetition guaranteed.
+
+**IX · The Single Handwriting**
+
+**Zipf** — George Kingsley Zipf, *Human Behavior and the Principle of
+Least Effort* (1949): word frequencies follow the same power law
+across languages, authors, and centuries.
+
+**Shannon** — Claude Shannon, "Prediction and Entropy of Printed
+English" (1951): letter-guessing experiments putting English at
+roughly three-quarters redundant — most of any sentence is supplied by
+the language, not the writer.
+
+**Mosteller and Wallace** — Frederick Mosteller and David Wallace,
+*Inference and Disputed Authorship: The Federalist* (1964): the
+disputed papers assigned to Madison by the statistics of function
+words.
+
+**Durkheim** — Émile Durkheim, *Suicide* (1897): acts of the most
+private character summing to publicly stable annual rates — individual
+freedom and aggregate law, both real.
+
+**X · White Ink**
+
+**Montherlant; Larkin** — Henry de Montherlant, from his notebooks:
+happiness "writes in white ink on a white page"; Philip Larkin, who
+quoted it into English currency and said of his own material,
+"deprivation is for me what daffodils were for Wordsworth" (interview,
+1979; reprinted in *Required Writing*).
+
+**Negativity bias** — Roy Baumeister and colleagues, "Bad Is Stronger
+Than Good" (2001); Paul Rozin and Edward Royzman on negativity
+dominance (2001).
+
+**Csikszentmihalyi** — Mihaly Csikszentmihalyi, *Flow* (1990):
+absorption suspends self-monitoring — the mechanism by which the best
+hours go unrecorded.
+
+**Kahneman** — Daniel Kahneman, *Thinking, Fast and Slow* (2011), with
+the peak-end and duration-neglect experiments (with Donald Redelmeier,
+1990s): the experiencing self lives; the remembering self keeps the
+records and writes the reviews.
+
+**Trouillot** — Michel-Rolph Trouillot, *Silencing the Past* (1995):
+silences enter history at four moments — the making of sources, of
+archives, of narratives, and of retrospective significance.
+
+**Pseudo-Dionysius** — the *Mystical Theology* (c. 500 CE), charter
+text of apophatic theology: the highest subjects approached by
+negation, said by unsaying.
+
+**XI · The Wet Library**
+
+**Schrödinger** — Erwin Schrödinger, the February 1943 Dublin lectures
+published as *What Is Life?* (1944): the gene as "aperiodic crystal"
+carrying a "code-script" — the guess that sent physicists into
+biology.
+
+**Kandel** — Eric Kandel (Nobel 2000; *In Search of Memory*, 2006):
+long-term memory requires new protein synthesis — remembering as
+transcription, in the wet sense.
+
+**The engram** — Richard Semon coined the term (*Die Mneme*, 1904); a
+century later optogenetic experiments in Susumu Tonegawa's laboratory
+and by Sheena Josselyn's group located and reactivated specific memory
+traces in living tissue.
+
+**Methylation** — DNA methylation and the epigenetic marks that
+regulate which genes are read where: annotation alongside a text,
+governing its reading — the genome's margin.
+
+**Ice, rings, light** — ice cores preserving ancient air in bubbles;
+tree rings; and the cosmic microwave background (detected by Penzias
+and Wilson, 1965), the oldest light, released when the universe first
+became transparent.
+
+**XII · The Last Entry**
+
+**Pascal** — Blaise Pascal died in 1662 leaving the *Pensées* as
+classified bundles and loose slips; every printed order of the book is
+an editor's guess.
+
+**Kafka** — Franz Kafka's written instruction to Max Brod that his
+manuscripts be burned unread; Brod's refusal preserved *The Trial*,
+*The Castle*, and *Amerika*, all unfinished.
+
+**The Art of Fugue** — J. S. Bach's final collection breaks off in the
+last fugue shortly after the notes B–A–C–H enter as a subject; the
+note on the manuscript, associated with his son Carl Philipp Emanuel,
+says the composer died at that point. Scholarship debates the note's
+literal truth; the treatise cites the note, which exists.
+
+**Anne Frank** — the diary's final entry is dated 1 August 1944, three
+days before the arrest; it is an ordinary, self-examining entry.
+
+**Montaigne** — Michel de Montaigne, *Essays* I:20 ("That to
+philosophize is to learn to die," 1580): "I want death to find me
+planting my cabbages."
+
+**Turing** — the halting problem (1936): no general procedure decides,
+for every program, whether it halts — cited in the treatise as labeled
+analogy, not theorem-about-diaries.
+
+**Aristotle** — *Physics* III: the potential infinite — that which is
+never complete but can always be extended — against the actual
+infinite.
+
+**The relay** — isnad, the chain of named transmitters authenticating
+each hadith; the masoretic transmission; apostolic succession; Latin
+*traditio*, a handing-over; G. K. Chesterton, *Orthodoxy* (1908):
+"Tradition means giving votes to the most obscure of all classes, our
+ancestors. It is the democracy of the dead."
+
+**XIII · The Reader**
+
+**The recording scribes** — Qur'an 82:10–12: over you are guardians,
+*kiraman katibin*, noble scribes writing down what you do; cf. 50:17–18,
+the two receivers seated at the right and the left.
+
+**Malachi** — Malachi 3:16: "a book of remembrance was written before
+him for them that feared the Lord."
+
+**Dies Irae** — the thirteenth-century sequence of the Requiem Mass
+(attributed to Thomas of Celano): *Liber scriptus proferetur, / in quo
+totum continetur* — the written book will be brought forth, in which
+all is contained.
+
+**Sterne** — Laurence Sterne, *Tristram Shandy* (Book VI, chapter 8):
+the Accusing Spirit carries Uncle Toby's oath up to Heaven's chancery
+and blushes; the Recording Angel writes it down, then drops a tear on
+the word and blots it out forever.
+
+**Laplace** — Pierre-Simon Laplace, *Essai philosophique sur les
+probabilités* (1814): the intelligence for whom, knowing every particle
+and force, nothing would be uncertain — a total reader of the world,
+not of the diary.
+
+**Borges** — Jorge Luis Borges, "Funes the Memorious" (1942): the man
+who forgets nothing, disabled by his own total record.
+
+**Bentham; Foucault** — Jeremy Bentham's panopticon (1787); Michel
+Foucault, *Discipline and Punish* (1975): the unverifiable watcher
+internalized, reading turned to government — the warden's half of the
+chapter's distinction. The correspondent's half is Bakhtin's, above.
