@@ -926,7 +926,7 @@ became transparent.
 classified bundles and loose slips; every printed order of the book is
 an editor's guess.
 
-**Kafka** — Franz Kafka's written instruction to Max Brod that his
+**Kafka's request** — Franz Kafka's written instruction to Max Brod that his
 manuscripts be burned unread; Brod's refusal preserved *The Trial*,
 *The Castle*, and *Amerika*, all unfinished.
 
@@ -943,7 +943,7 @@ days before the arrest; it is an ordinary, self-examining entry.
 philosophize is to learn to die," 1580): "I want death to find me
 planting my cabbages."
 
-**Turing** — the halting problem (1936): no general procedure decides,
+**The halting problem** — Turing's result (1936): no general procedure decides,
 for every program, whether it halts — cited in the treatise as labeled
 analogy, not theorem-about-diaries.
 
