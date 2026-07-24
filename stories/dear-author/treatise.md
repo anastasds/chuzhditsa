@@ -721,6 +721,12 @@ in a central block, Rashi's commentary on the inner margin, the
 Tosafists opposite, later apparatus ringing them — a page that
 institutionalizes commentary.
 
+**Rashi and the Tosafists** — Rashi (Rabbi Shlomo Yitzchaki of
+Troyes, 1040–1105), the indispensable running commentary printed beside
+Talmud and Torah alike; the Tosafists — his descendants and their
+schools of the twelfth and thirteenth centuries — whose dialectical
+glosses face Rashi's across the text on the standard page.
+
 **The masoretes** — the scribal schools (c. 6th–10th century CE) whose
 marginal apparatus counted the letters, words, and midpoints of
 scripture to guard its transmission.
@@ -748,6 +754,11 @@ one.
 **Fermat; Wiles** — Pierre de Fermat's marginal note in his copy of
 Diophantus (c. 1637): a marvelous proof "which this margin is too
 narrow to contain"; Andrew Wiles's proof arrived in 1994–95.
+
+**Diophantus** — Diophantus of Alexandria (third century CE), whose
+*Arithmetica* poses the number problems Fermat was reading; Fermat's
+copy was Bachet's 1621 edition, and his son Samuel published the
+marginal notes after his death — margin and all.
 
 **Black fire, white fire** — the midrashic tradition that the Torah was
 written "black fire on white fire" (Midrash Tanchuma; Jerusalem
@@ -848,6 +859,11 @@ phrases, repetition guaranteed.
 
 **IX · The Single Handwriting**
 
+**Homer** — the *Iliad* and *Odyssey*, the diary's oldest monumental
+poems, composed orally and written down early in the alphabet's life —
+cited here as the old end of the frequency curve that help-desk tickets
+hold down at the new end.
+
 **Zipf** — George Kingsley Zipf, *Human Behavior and the Principle of
 Least Effort* (1949): word frequencies follow the same power law
 across languages, authors, and centuries.
@@ -873,6 +889,10 @@ happiness "writes in white ink on a white page"; Philip Larkin, who
 quoted it into English currency and said of his own material,
 "deprivation is for me what daffodils were for Wordsworth" (interview,
 1979; reprinted in *Required Writing*).
+
+**Wordsworth** — William Wordsworth, "I Wandered Lonely as a Cloud"
+(1807): the daffodils. In Larkin's sentence they stand for a poet's
+native and inexhaustible subject.
 
 **Negativity bias** — Roy Baumeister and colleagues, "Bad Is Stronger
 Than Good" (2001); Paul Rozin and Edward Royzman on negativity
